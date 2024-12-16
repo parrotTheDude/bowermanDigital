@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Important Links -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <base href="https://bowermandigital.com/"> -->
+
+    <!-- Links for style sheets -->
+    <link rel="stylesheet" href="style.css">
+
+        <!--Add favorites icons-->   
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="icons/appleTouch.webp"/>
+    <link rel="icon" type="image/x-icon" href="icons/favicon.webp"/>
+
+    <!-- Title and Description tags -->
+    <title>Bowerman Digital: Web Development & SEO Experts</title>
+    <meta name="description" content="“Empowering Australian businesses with modern web development and SEO strategies. Build, optimize, and grow your online presence with Bowerman Digital.”" />
+
+    <meta property="og:title" content="Bowerman Digital: Web Development & SEO Experts" />
+    <meta property="og:locale" content="en" />
+    <meta property="og:description" content="Empowering Australian businesses with modern web development and SEO strategies. Build, optimize, and grow your online presence with Bowerman Digital." />
+    <meta property="og:site_name" content="Bowerman Digital: Web Development & SEO Experts" />
+</head>
+
+<body id="top">
+    <header>
+      <div class="desktopContainer">
+        <aside class="logoContainer">
+          <img src="img/logo.webp" alt="Bowerman Digital Logo">
+        </aside>
+        <nav>
+          <li><a class="navLinks" href="#">Web Development</a></li>
+          <li><a class="navLinks" href="#">Portfolio</a></li>
+          <li><a class="navLinks" href="#">About</a></li>
+          <li><a class="navLinks" href="#">Contact</a></li>
+        </nav>
+      </div>
+        
+
+      <div class="mobileContainer">
+        <button id="burger" class="open-main-nav">
+          <span class="burger"></span>
+          <span class="burger-text">Menu</span>
+        </button>
+        <nav class="main-nav" id="main-nav">
+          <ul>
+            <li><a class="navLinks" href="#">Web Development</a></li>
+            <li><a class="navLinks" href="#">Portfolio</a></li>
+            <li><a class="navLinks" href="#">About</a></li>
+            <li><a class="navLinks" href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    
+
+    <main>
+        <section class="hero">
+        </section>
+    </main>
+
+    <footer>
+        
+    </footer>
+
+    <script type="text/javascript">
+        let burger = document.getElementById('burger'),
+     nav    = document.getElementById('main-nav'),
+     slowmo = document.getElementById('slowmo');
+
+burger.addEventListener('click', function(e){
+    this.classList.toggle('is-open');
+    nav.classList.toggle('is-open');
+});
+
+slowmo.addEventListener('click', function(e){
+    this.classList.toggle('is-slowmo');
+});
+    </script>
+</body>
+</html>

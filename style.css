@@ -1,0 +1,296 @@
+* {
+	margin: 0;
+	font-family: space, dhurjati, sans-serif;
+}
+
+header {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	position: absolute;
+	width: 100%;
+	color: #fff;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.desktopContainer {
+	display: none;
+	z-index: 99;
+	width: 100%;
+}
+
+.logoContainer {
+	width: 20%;
+	margin: auto;
+}
+
+.logoContainer img {
+	width: 13rem;
+  height: 6rem;
+  animation: slideIn 0.7s ease-in-out;
+}
+
+nav {
+	list-style-type: none;
+	display: flex;
+	margin: auto;
+  animation: slideInOpposite 0.7s ease-in-out;
+}
+
+.navLinks {
+	padding: 1rem;
+	text-decoration: none;
+	color: #fff;
+}
+
+.hero {
+	background-image: url(img/pixelBg.jpg);
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	width: 100%;
+}
+
+
+
+/* Main menu positioning */
+.main-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0);
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    transition: all .375s;
+}
+
+.main-nav.is-open {
+    opacity: 1;
+    z-index: 100;
+    visibility: visible;
+}
+
+/* Yellow band effect */
+.main-nav::before {
+	 content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: -15px;
+    background: rgba(0,0,0,0.6);
+    transform-origin: 0 0;
+    transform: skew(-14deg) translateX(-120%);
+    transition: all .4s .1s;
+}
+
+.main-nav.is-open::before {
+    transform: skew(-14deg) translateX(0);
+}
+
+/* Skewing effect on menu links */
+.main-nav ul {
+    display: inline-flex;
+    flex-direction: column;
+    height: 100%; /* Should be 100%, but we have a notice message :D */
+    align-items: flex-end;
+    justify-content: center;
+    transform: translateX(-18%) skew(-16deg);
+}
+
+.main-nav li {
+    display: block;
+    margin: .5rem 0;
+    text-align: right;
+    transform: skew(16deg);
+}
+
+/* Apparition effect on links */
+.main-nav a {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.main-nav.is-open a {
+    opacity: 1;
+    transform: translateY(0);
+}
+.main-nav li:nth-child(1) a {
+	transition: all 275ms 175ms
+}
+.main-nav li:nth-child(2) a {
+	transition: all 275ms 225ms
+}
+.main-nav li:nth-child(3) a {
+	transition: all 275ms 275ms
+}
+.main-nav li:nth-child(4) a {
+	transition: all 275ms 325ms
+}
+.main-nav li:nth-child(5) a {
+	transition: all 275ms 375ms
+}
+
+
+/* Decoration */
+.main-nav ul,
+.main-nav li {
+	list-style: none;
+	padding: 0;
+}
+.main-nav a {
+	display: block;
+	padding: 2rem;
+	color: #fff;
+	font-size: 1.4em;
+	text-decoration: none;
+	font-weight: bold;
+	width: 100%;
+}
+
+/* Burger Style */
+.open-main-nav {
+	position: absolute;
+	top: 15px;
+	padding-top: 20px;
+	right: 15px;
+	z-index: 1000;
+	background: none;
+	border: 0;
+	cursor: pointer;
+}
+.open-main-nav:focus {
+	outline: none;
+}
+.burger {
+	position: relative;
+	display: block;
+	width: 2rem;
+	height: 4px;
+	margin: 0 auto;
+	background: #fff;
+	transition: all .4s;
+}
+
+.burger:after,
+.burger:before {
+	content: '';
+	display: block;
+	height: 100%;
+	background: #fff;
+	transition: all .4s;
+}
+
+.burger:after {
+	transform: translateY(-12px) translateX(-2px) skew(-20deg);
+}
+
+.burger:before {
+	transform: translateY(-16px) skew(-10deg);
+}
+
+/* Toggle State part */
+.is-open .burger {
+	transform: skew(5deg) translateY(-8px) rotate(-45deg);
+}
+
+.is-open .burger:before {
+	transform: translateY(0px) skew(-10deg) rotate(75deg);
+}
+
+.is-open .burger:after {
+	transform: translateY(-12px) translateX(10px) skew(-20deg);
+    opacity: 0;
+}
+
+/* MENU Text part */
+
+.burger-text {
+	display: block;
+	font-size: .675rem;
+	letter-spacing: .05em;
+	margin-top: .5em;
+	text-transform: uppercase;
+	font-weight: 500;
+	text-align: center;
+	color: #fff;
+}
+
+.mobileContainer {
+	z-index: 99;
+	position: absolute;
+	top: 0; right: 0;
+	bottom: 0; left: 0;
+	overflow: hidden;
+}
+
+
+/* MEDIA QUERIES */
+/* Bigger than a tablet */
+@media screen and (min-width: 1024px) { 
+	.mobileContainer {
+		display: none;
+	}
+	.desktopContainer {
+		display: flex;
+	}
+}
+
+/* Tablets or smaller */
+@media screen and (max-width: 1024px) { 
+	header {
+		height: 100vh;
+		padding: 0;
+		background-color: rgba(0, 0, 0, 0);
+	}
+}
+
+
+/* KEYFRAME CSS */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInOpposite {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+/* FONT FAMILY CSS */
+
+@font-face { font-family: dhurjati; src: url('fonts/Dhurjati-Regular.ttf'); 
+  font-display: swap;
+ }
+@font-face { font-family: space; src: url('fonts/SpaceGrotesk-VariableFont_wght.ttf'); 
+  font-display: swap;
+ }
