@@ -1,5 +1,14 @@
+:root {
+	  --color-dark-blue: #212932;
+	  --color-light-blue: #00A8B1;
+	  --color-white: #fff;
+	  --color-black: #000;
+  }
+
 * {
 	margin: 0;
+	padding: 0;
+  box-sizing: border-box;
 	font-family: space, dhurjati, sans-serif;
 }
 
@@ -9,10 +18,10 @@ header {
 	justify-content: space-around;
 	position: absolute;
 	width: 100%;
-	color: #fff;
+	color: var(--color-white);
 	padding-top: 1rem;
 	padding-bottom: 1rem;
-	background-color: rgba(0, 0, 0, 0.3);
+	background-color: var(--color-dark-blue);
 }
 
 .desktopContainer {
@@ -22,13 +31,12 @@ header {
 }
 
 .logoContainer {
-	width: 20%;
 	margin: auto;
 }
 
 .logoContainer img {
 	width: 13rem;
-  height: 6rem;
+  height: 4rem;
   animation: slideIn 0.7s ease-in-out;
 }
 
@@ -42,7 +50,11 @@ nav {
 .navLinks {
 	padding: 1rem;
 	text-decoration: none;
-	color: #fff;
+	color: var(--color-white);
+}
+
+#activeLink {
+	color: var(--color-light-blue);
 }
 
 .hero {
@@ -147,7 +159,7 @@ nav {
 .main-nav a {
 	display: block;
 	padding: 2rem;
-	color: #fff;
+	color: var(--color-white);
 	font-size: 1.4em;
 	text-decoration: none;
 	font-weight: bold;
@@ -174,7 +186,7 @@ nav {
 	width: 2rem;
 	height: 4px;
 	margin: 0 auto;
-	background: #fff;
+	background: var(--color-white);
 	transition: all .4s;
 }
 
@@ -183,7 +195,7 @@ nav {
 	content: '';
 	display: block;
 	height: 100%;
-	background: #fff;
+	background: var(--color-white);
 	transition: all .4s;
 }
 
@@ -219,7 +231,7 @@ nav {
 	text-transform: uppercase;
 	font-weight: 500;
 	text-align: center;
-	color: #fff;
+	color: var(--color-white);
 }
 
 .mobileContainer {
