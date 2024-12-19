@@ -67,6 +67,10 @@ nav {
   animation: slideInOpposite 0.7s ease-in-out;
 }
 
+.flash {
+	animation: flash 1s infinite;
+}
+
 #activeLink {
 	color: #00A8B1;
 }
@@ -365,7 +369,6 @@ nav {
   transform: rotate(0);
 }
 
-
 .el {
   background: conic-gradient(from 180deg at 50% 70%,hsla(0,0%,98%,1) 0deg,#eec32d 72.0000010728836deg,#ec4b4b 144.0000021457672deg,#709ab9 216.00000858306885deg,#4dffbf 288.0000042915344deg,hsla(0,0%,98%,1) 1turn);
   width: 100%;
@@ -377,16 +380,6 @@ nav {
   animation: flicker 20s infinite linear;
   position: absolute;
 }
-
-@keyframes flicker {
-  to {
-    mask-position: 50% 50%, 0 50%;
-  }
-}
-
-
-
-
 
 
 /* MEDIA QUERIES */
@@ -411,6 +404,20 @@ nav {
 
 
 /* KEYFRAME CSS */
+@keyframes flicker {
+  to {
+    mask-position: 50% 50%, 0 50%;
+  }
+}
+
+@keyframes flash {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
 
 @keyframes fadeIn {
   from {
