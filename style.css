@@ -40,8 +40,8 @@ header {
 }
 
 header:hover {
-	padding-top: 1rem;
-	padding-bottom: 1rem;
+	padding-top: 1.4rem;
+	padding-bottom: 1.4rem;
 }
 
 .desktopContainer {
@@ -72,32 +72,63 @@ nav {
 }
 
 .hero {
-	background-image: url(img/pixelBg.jpg);
-	background-size: cover;
-	background-position: center;
 	height: 100vh;
 	width: 100%;
-	display: block;
+	display: flex;
+	flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding-top: 5%;
 }
 
 .heroContainer {
-	padding: 20rem;
-	display: inherit;
-  justify-content: center;
-  align-items: center;
+  width: 50%;
+	height: 100vh;
+  display: block;
+  text-align: left;
+  vertical-align: middle;
+  margin: auto;
+  margin-top: 10%;
+  padding-left: 3rem;
 }
 
 .heroContainer h1 {
-	color: #fff;
-  font-size: 2.5rem;
-  width: 100%;
+	color: white;
+	font-size: 2rem;
+	width: 80%;
+	margin: auto;
 }
 
-.flicker {
-	animation: wordFlicker 3s linear infinite;
+.heroContainer p {
+	color: white;
+	width: 80%;
+	margin: auto;
+}
+
+.btnContainer {
+	width: 80%;
+	margin: auto;
+}
+
+.heroContainer button {
+	padding: 0.5rem 3rem;
+  font-size: 1rem;
+  background-color: rgba(0,0,0,0);
+  color: #fff;
+  border: 2px solid #fff;
+  margin-top: 1rem;
+}
+
+.portfolioSlide {
+	width: 50%;
+	display: block;
+	height: 100vh;
+}
+
+.portfolioSlide img {
+	height: 10rem;
+	width: 8rem;
 }
 
 
@@ -344,6 +375,7 @@ nav {
     url("https://assets.codepen.io/605876/noise-mask.png") 256px 50% / 256px 256px;
   mask-composite: intersect;
   animation: flicker 20s infinite linear;
+  position: absolute;
 }
 
 @keyframes flicker {
@@ -351,6 +383,8 @@ nav {
     mask-position: 50% 50%, 0 50%;
   }
 }
+
+
 
 
 
@@ -407,15 +441,6 @@ nav {
     transform: translateX(0);
     opacity: 1;
   }
-}
-
-@keyframes wordFlicker {
-	0%, 19%, 22%, 62%, 64%, 70%, 100% {
-		opacity: 0.99;
-	}
-	20%, 21%, 63%, 65%, 69.9% {
-		opacity: 0.4;
-	}
 }
 
 
