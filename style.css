@@ -459,6 +459,8 @@ nav {
 
 .subHeading {
   font-size: 1.2rem;
+  width: 100%;
+  text-align: center;
 }
 
 .gloatContainer {
@@ -502,6 +504,60 @@ nav {
 	display: flex;
   justify-content: center;
 }
+
+
+/* Portfilio Index Section */
+.portfolioIndexContainer {
+	display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+  z-index: 10;
+  color: #fff;
+  padding: 5rem 2rem;
+}
+
+.portfolioIndexContainer h2 {
+  width: 100%;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 2rem;
+}
+
+#portfolioIndex {
+	height: 60rem;
+}
+
+.contentContainer {
+	width: 29%;
+  height: 46rem;
+  border: 1px solid #000;
+  margin: 3rem 0;
+  overflow: hidden;
+  border-radius: 2rem;
+  background-color: #000;
+}
+
+.imgContentContainer {
+	width: 100%;
+	display: flex;
+  justify-content: center;
+}
+
+.imgClassContentContainer {
+	width: 50rem;
+  height: 33.5rem;
+  border-radius: 1rem;
+}
+
+.titleContentContainer {
+	margin: 2rem;
+	text-align: center;
+}
+
+
 
 
 /* MEDIA QUERIES */
