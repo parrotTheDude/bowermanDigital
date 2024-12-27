@@ -25,7 +25,7 @@
 </head>
 
 <body id="top">
-  <header>
+  <header id="header">
     <div class="desktopContainer">
       <aside class="logoContainer">
         <a href="/">
@@ -118,7 +118,6 @@
         <section class="heroContainer">
           <h1>Build, optimize, and grow your online presence <span class="flash">|</span></h1>
           <p class="hideMobile">Welcome to Bowerman Digital 🤘🏼 Based in Sydney, we specialize in creating modern, user-focused websites and strategies tailored to elevate your business.</p>
-          <p class="hideMobile">Using the latest technology, we program your website from the ground up. We’re here to deliver exceptional experiences for your customers and growth for your brand.</p>
           <p class="hideMobile">Know what you're looking for? Submit a short brief below to get started.</p>
           <section class="btnssss">
             <section class="btnContainer">
@@ -177,17 +176,17 @@
       <h2>Experts in digital experiences</h2>
       <p class="subHeading">From custom websites to seamless SEO strategies, we craft digital experiences that inspire</p>
       <section class="gloatContainer">
-        <aside class="valueContainer glow-on-hover">
+        <aside class="valueContainer">
           <img class="icon" alt="Simple Icon" src="icons/simplify.svg">
           <h3>Simple</h3>
           <p>We focus on simplicity, making it easy for clients to manage, grow, and succeed online.</p>
         </aside>
-        <aside class="valueContainer glow-on-hover">
+        <aside class="valueContainer">
           <img class="icon" alt="Quality Icon" src="icons/quality.svg">
           <h3>Quality</h3>
           <p>Delivering exceptional quality in every project, ensuring your brand shines in the digital world.</p>
         </aside>
-        <aside class="valueContainer glow-on-hover">
+        <aside class="valueContainer">
           <img class="icon" alt="Reliable Icon" src="icons/handshake.svg">
           <h3>Reliable</h3>
           <p>Count on us for reliable solutions that keep your business running smoothly and efficiently online.</p>
@@ -201,7 +200,32 @@
       </section>
     </section>
 
-    
+    <section class="contactIndexContainer">
+      <section class="contactIndexContainerTitle">
+        <h2>Get in touch</h2>
+        <p class="subHeading">Fill up the form below to send us a message.</p>
+      </section>
+      <section class="formContainer">
+        <form action="https://api.web3forms.com/submit" method="POST" id="form">
+          <input type="hidden" name="access_key" value="d7489182-19e2-45f3-a751-884085b8df59" />
+          <input type="hidden" name="subject" value="BowerDigi enquire" />
+          <input type="checkbox" name="botcheck" id="" style="display: none;" />
+
+            <input type="text" name="name" id="name" placeholder="John Smith" required class="formInput" />
+            <input type="email" name="email" id="email" placeholder="you@company.com" required class="formInput" />
+          </div>
+          <div class="formInputDiv">
+            <input type="text" name="phone" id="phone" placeholder="+61 456 665 554" required class="formInput" />
+            <textarea rows="5" name="message" id="message" placeholder="Your Message" class="formInputMsg" required></textarea>
+          <div class="formBtnContainer">
+            <button type="submit" class="glow-on-hover formBtn">
+              Send Message
+            </button>
+          </div>
+          <p class="text-base text-center text-gray-400" id="result"></p>
+        </form>
+      </section>
+    </section>
   </main>
 
   <footer>
@@ -212,14 +236,64 @@
     let burger = document.getElementById('burger');
     nav = document.getElementById('main-nav');
     slowmo = document.getElementById('slowmo');
+    head = document.getElementById('header');
 
     burger.addEventListener('click', function(e){
       this.classList.toggle('is-open');
       nav.classList.toggle('is-open');
+      head.classList.toggle('is-open');
     });
 
     slowmo.addEventListener('click', function(e){
       this.classList.toggle('is-slowmo');
+    });
+
+
+
+    const form = document.getElementById("form");
+    const result = document.getElementById("result");
+
+    form.addEventListener("submit", function (e) {
+      const formData = new FormData(form);
+      e.preventDefault();
+      var object = {};
+      formData.forEach((value, key) => {
+        object[key] = value;
+      });
+      var json = JSON.stringify(object);
+      result.innerHTML = "Please wait...";
+
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: json
+      })
+        .then(async (response) => {
+          let json = await response.json();
+          if (response.status == 200) {
+            result.innerHTML = json.message;
+            result.classList.remove("text-gray-500");
+            result.classList.add("text-green-500");
+          } else {
+            console.log(response);
+            result.innerHTML = json.message;
+            result.classList.remove("text-gray-500");
+            result.classList.add("text-red-500");
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+          result.innerHTML = "Something went wrong!";
+        })
+        .then(function () {
+          form.reset();
+          setTimeout(() => {
+            result.style.display = "none";
+          }, 5000);
+        });
     });
   </script>
 </body>
