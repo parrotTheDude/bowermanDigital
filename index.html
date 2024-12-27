@@ -33,6 +33,7 @@
         </a>
       </aside>
       <nav>
+        <menu>
         <li><a href="#" class="link">
           <span class="mask">
             <div class="link-container">
@@ -76,6 +77,7 @@
             </div>
           </span>
         </a></li>
+      </menu>
       </nav>
     </div>
 
@@ -106,12 +108,6 @@
       <!-- Fancy Background -->
       <section class="el">
       </section>
-
-      <div class="progress-wrap">
-        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-          <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-        </svg>
-      </div>
 
       <!-- Hero Div -->
       <section class="hero">
@@ -204,6 +200,8 @@
         </section>
       </section>
     </section>
+
+    
   </main>
 
   <footer>
@@ -211,59 +209,18 @@
   </footer>
 
   <script type="text/javascript">
-      let burger = document.getElementById('burger'),
-    nav    = document.getElementById('main-nav'),
+    let burger = document.getElementById('burger');
+    nav = document.getElementById('main-nav');
     slowmo = document.getElementById('slowmo');
 
     burger.addEventListener('click', function(e){
-        this.classList.toggle('is-open');
-        nav.classList.toggle('is-open');
+      this.classList.toggle('is-open');
+      nav.classList.toggle('is-open');
     });
 
     slowmo.addEventListener('click', function(e){
-        this.classList.toggle('is-slowmo');
+      this.classList.toggle('is-slowmo');
     });
   </script>
-  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
-  <script>(function($) { "use strict";
-
-$(document).ready(function(){"use strict";
-
-    //Scroll back to top
-
-    var progressPath = document.querySelector('.progress-wrap path');
-    var pathLength = progressPath.getTotalLength();
-    progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
-    progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
-    progressPath.style.strokeDashoffset = pathLength;
-    progressPath.getBoundingClientRect();
-    progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
-    var updateProgress = function () {
-      var scroll = $(window).scrollTop();
-      var height = $(document).height() - $(window).height();
-      var progress = pathLength - (scroll * pathLength / height);
-      progressPath.style.strokeDashoffset = progress;
-    }
-    updateProgress();
-    $(window).scroll(updateProgress);
-    var offset = 50;
-    var duration = 550;
-    jQuery(window).on('scroll', function() {
-      if (jQuery(this).scrollTop() > offset) {
-        jQuery('.progress-wrap').addClass('active-progress');
-      } else {
-        jQuery('.progress-wrap').removeClass('active-progress');
-      }
-    });
-    jQuery('.progress-wrap').on('click', function(event) {
-      event.preventDefault();
-      jQuery('html, body').animate({scrollTop: 0}, duration);
-      return false;
-    })
-
-
-  });
-
-})(jQuery);</script>
 </body>
 </html>
