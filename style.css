@@ -646,6 +646,46 @@ header.is-open {
   width: 20%;
 }
 
+footer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 2rem;
+  background-color: #000;
+  position: relative;
+  z-index: 999;
+}
+
+.footerLogoContainer {
+  text-align: center;
+  width: 100%;
+}
+
+.footerLinks {
+  text-align: center;
+}
+
+.lastWord {
+  width: 100%;
+}
+
+.bottomContainer {
+  padding: 0.5rem;
+}
+
+.footerNote {
+  font-size: 0.7rem;
+  text-decoration: none;
+}
+
+.footerLogo {
+  width: 9rem;
+  height: 2.8rem;
+  z-index: 999;
+  position: relative;
+}
+
 
 /* MEDIA QUERIES */
 /* Bigger than a tablet */
