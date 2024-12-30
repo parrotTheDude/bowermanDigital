@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <?php
-    $page_title = 'Bowerman Digital: Web Development & SEO Experts';
-    $page_decription = 'Empowering Australian businesses with modern web development and SEO strategies. Build, optimize, and grow your online presence with Bowerman Digital.';
+    $page_title = '404 Error | Bowerman Digital';
+    $page_decription = 'Looks like this page is missing!';
     $page_name = '/';
     include ('inc/head.php');
   ?>
@@ -54,5 +54,7 @@
   <script type="text/javascript">
     <?php include ('inc/js.php');?>
   </script>
+  
+  <?php include ('inc/simpleAnalytics.php');?>
 </body>
 </html>

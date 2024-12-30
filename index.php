@@ -146,5 +146,7 @@
   <script type="text/javascript">
     <?php include ('inc/js.php');?>
   </script>
+
+  <?php include ('inc/simpleAnalytics.php');?>
 </body>
 </html>

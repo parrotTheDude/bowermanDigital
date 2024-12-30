@@ -624,6 +624,7 @@ header.is-open {
 
 .formContainer {
   padding: 2rem;
+  width: 100%;
 }
 
 .formInput {
@@ -711,8 +712,14 @@ footer {
 .lostTop h1 {
   color: #fff;
   font-size: 2rem;
+  padding-bottom: 1rem;
 }
 
+/* CONTACT page */
+#contactHero {
+  height: auto;
+  padding: 10rem 0rem;
+}
 
 
 /* MEDIA QUERIES */
@@ -736,6 +743,12 @@ footer {
 		padding: 0;
 		background-color: rgba(0, 0, 0, 0);
 	}
+  #lostHero {
+    padding: 5rem 0rem;
+  }
+  #contactHero {
+    padding: 5rem 0rem;
+  }
   .footerMenu {
     display: block;
   }
