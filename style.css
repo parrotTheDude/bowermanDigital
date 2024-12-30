@@ -142,7 +142,7 @@ nav {
 
 .btnContainer {
 	width: 42%;
-  margin-left: 3rem;
+  margin-left: 4.5rem;
 }
 
 .btnContainer a {
@@ -548,6 +548,7 @@ header.is-open {
 	margin: auto;
 	display: flex;
   justify-content: center;
+  z-index: 999;
 }
 
 
@@ -644,6 +645,8 @@ header.is-open {
 .formBtn {
   padding: 1rem;
   width: 20%;
+  font-size: 1rem;
+  font-family: space, mono, sans-serif;
 }
 
 footer {
@@ -666,17 +669,23 @@ footer {
   text-align: center;
 }
 
+.footerMenu {
+  display: flex;
+  padding: 1rem 0rem;
+}
+
+.footerMenu li {
+  padding: 1rem;
+}
+
+.footA {
+  padding: 1rem;
+  text-decoration: none;
+  color: #fff;
+}
+
 .lastWord {
   width: 100%;
-}
-
-.bottomContainer {
-  padding: 0.5rem;
-}
-
-.footerNote {
-  font-size: 0.7rem;
-  text-decoration: none;
 }
 
 .footerLogo {
@@ -685,6 +694,25 @@ footer {
   z-index: 999;
   position: relative;
 }
+
+
+/* 404 PAGE STUFF */
+#lostHero {
+  height: auto;
+  padding: 8rem 0rem;
+}
+
+.lostTop {
+  padding: 2rem;
+  display: block;
+  width: 100%; 
+}
+
+.lostTop h1 {
+  color: #fff;
+  font-size: 2rem;
+}
+
 
 
 /* MEDIA QUERIES */
@@ -708,6 +736,13 @@ footer {
 		padding: 0;
 		background-color: rgba(0, 0, 0, 0);
 	}
+  .footerMenu {
+    display: block;
+  }
+  .footerMenu li {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
   .hero {
     display: block;
     text-align: left;
