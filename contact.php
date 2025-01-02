@@ -23,12 +23,12 @@
       <!-- Hero Div -->
       <section class="hero" id="contactHero">
         <section class="lostTop">
-          <h1>It's time to create something special, together.</h1>
+          <h1>It's time to create something special together.</h1>
           <p>Fill out the contact form below to get started on your new digital journey.</p>
           <p>Include a brief description of what you're looking for and one of our team members will reach out.</p>
         </section>
         <section class="formContainer">
-          <form action="https://api.web3forms.com/submit" method="POST" id="form" class="needs-validation formStyle" novalidate>
+          <form action="thank-you" method="POST" id="form" class="formStyle">
             <input type="hidden" name="access_key" value="d7489182-19e2-45f3-a751-884085b8df59" />
             <input type="hidden" name="subject" value="Bowerman Digital form submission" />
             <input type="checkbox" name="botcheck" id="" style="display: none;" />
@@ -37,16 +37,16 @@
               <input type="email" name="email" id="email" placeholder="you@company.com" required class="formInput" />
             </div>
             <div class="formInputDiv">
-              <input type="text" name="phone" id="phone" placeholder="+61 456 665 554" required class="formInput" />
-              <textarea rows="5" name="message" id="message" placeholder="Your Message" class="formInputMsg" required></textarea>
+              <input type="number" name="phone" id="phone"  title="Australian number must be 10 digits long. Format like this example: 0456654456" placeholder="0456 665 554" required class="formInput" />
+
+              <textarea rows="5" name="message" id="message" form="form" placeholder="Your Message" class="formInputMsg" required></textarea>
             <div class="h-captcha" data-sitekey="685e80e4-7d9c-42fe-b4aa-b46c61f8e8cc"></div>
             <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
             <div class="formBtnContainer">
-              <button type="submit" id="formBtn" class="glow-on-hover formBtn">
+              <button type="submit" name="submit" id="formBtn" class="glow-on-hover formBtn">
                 Send Message
               </button>
             </div>
-            <p id="result"></p>
           </form>
         </section>
       </section>
@@ -62,7 +62,7 @@
   </script>
 
   <script>
-  const form = document.getElementById('YOUR_FORM_ID');
+  const form = document.getElementById('form');
 
   form.addEventListener('submit', function(e) {
 

@@ -77,6 +77,10 @@ nav {
 	animation: flash 1s infinite;
 }
 
+.h-captcha {
+  text-align: center;
+}
+
 #activeLink {
 	color: #00A8B1;
 }

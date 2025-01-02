@@ -1,1 +1,12 @@
-let burger=document.getElementById("burger");nav=document.getElementById("main-nav"),head=document.getElementById("header"),burger.addEventListener("click",(function(e){this.classList.toggle("is-open"),nav.classList.toggle("is-open"),head.classList.toggle("is-open")}));const form=document.getElementById("form"),result=document.getElementById("result");form.addEventListener("submit",(function(e){const t=new FormData(form);e.preventDefault();var s={};t.forEach((e,t)=>{s[t]=e});var n=JSON.stringify(s);result.innerHTML="Please wait...",fetch("https://api.web3forms.com/submit",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:n}).then(async e=>{let t=await e.json();200==e.status?(result.innerHTML=t.message,result.classList.remove("text-gray-500"),result.classList.add("text-green-500")):(console.log(e),result.innerHTML=t.message,result.classList.remove("text-gray-500"),result.classList.add("text-red-500"))}).catch(e=>{console.log(e),result.innerHTML="Something went wrong!"}).then((function(){form.reset(),setTimeout(()=>{result.style.display="none"},5e3)}))}));
+let burger = document.getElementById('burger');
+nav = document.getElementById('main-nav');
+head = document.getElementById('header');
+
+burger.addEventListener('click', function(e){
+  this.classList.toggle('is-open');
+  nav.classList.toggle('is-open');
+  head.classList.toggle('is-open');
+});
+
+
+

@@ -114,28 +114,9 @@
     <section class="contactIndexContainer">
       <section class="contactIndexContainerTitle">
         <h2>Get in touch</h2>
-        <p class="subHeading">Fill up the form below to send us a message.</p>
+        <p class="subHeading">Head over to our contact page to find out more!</p>
       </section>
-      <section class="formContainer">
-        <form action="https://api.web3forms.com/submit" method="POST" id="form" class="needs-validation formStyle" novalidate>
-          <input type="hidden" name="access_key" value="d7489182-19e2-45f3-a751-884085b8df59" />
-          <input type="hidden" name="subject" value="Bowerman Digital form submission" />
-          <input type="checkbox" name="botcheck" id="" style="display: none;" />
-
-            <input type="text" name="name" id="name" placeholder="John Smith" required class="formInput" />
-            <input type="email" name="email" id="email" placeholder="you@company.com" required class="formInput" />
-          </div>
-          <div class="formInputDiv">
-            <input type="text" name="phone" id="phone" placeholder="+61 456 665 554" required class="formInput" />
-            <textarea rows="5" name="message" id="message" placeholder="Your Message" class="formInputMsg" required></textarea>
-          <div class="formBtnContainer">
-            <button type="submit" id="formBtn" class="glow-on-hover formBtn">
-              Send Message
-            </button>
-          </div>
-          <p id="result"></p>
-        </form>
-      </section>
+      
     </section>
   </main>
 
