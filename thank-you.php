@@ -11,7 +11,7 @@
     $message = $_POST['message'];
     $postmarkToken = POSTMARK_TOKEN;
 
-    $client = new PostmarkClient("ef0550a8-e646-4936-a3e4-41e9a546949c");
+    $client = new PostmarkClient($postmarkToken);
     $fromEmail = $email;
     $toEmail = "hello@bowermandigital.com";
     $subject = $name . " contact form!";
