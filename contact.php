@@ -37,7 +37,7 @@
               <input type="email" name="email" id="email" placeholder="you@company.com" required class="formInput" />
             </div>
             <div class="formInputDiv">
-              <input type="number" name="phone" id="phone"  title="Australian number must be 10 digits long. Format like this example: 0456654456" placeholder="0456 665 554" required class="formInput" />
+              <input type="number" name="phone" id="phone"  title="Australian number must be 10 digits long. Format like this example: 0456654456" placeholder="0456665554" required class="formInput" />
 
               <textarea rows="5" name="message" id="message" form="form" placeholder="Your Message" class="formInputMsg" required></textarea>
             <div class="h-captcha" data-sitekey="685e80e4-7d9c-42fe-b4aa-b46c61f8e8cc"></div>

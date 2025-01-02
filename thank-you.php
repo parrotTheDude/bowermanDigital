@@ -1,48 +1,4 @@
-<?php
-  // Import the Postmark Client Class:
-  require_once('./vendor/autoload.php');
-  require_once('inc/variables.php');
-  use Postmark\PostmarkClient;
-
-  if(isset($_POST['submit'])) {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $message = $_POST['message'];
-    $postmarkToken = POSTMARK_TOKEN;
-
-    $client = new PostmarkClient($postmarkToken);
-    $fromEmail = $email;
-    $toEmail = "hello@bowermandigital.com";
-    $subject = $name . " contact form!";
-    $htmlBody = "<strong>Hello!</strong> My name is " . $name . ". <br /><br />Email: " . $email . "<br />Phone: " . $phone . "<br /><br />Message:<br />" . $message;
-    $textBody = "Hello! My name is " . $name  . ".Email: " . $email . "Phone: " . $phone . "Message:" . $message;;
-    $tag = "contact-form-enquiry";
-    $trackOpens = false;
-    $trackLinks = "None";
-    $messageStream = "outbound";
-
-    // Send an email:
-    $sendResult = $client->sendEmail(
-      $fromEmail,
-      $toEmail,
-      $subject,
-      $htmlBody,
-      $textBody,
-      $tag,
-      $trackOpens,
-      NULL, // Reply To
-      NULL, // CC
-      NULL, // BCC
-      NULL, // Header array
-      NULL, // Attachment array
-      $trackLinks,
-      NULL, // Metadata array
-      $messageStream
-    );
-  }
-?>
-
+<?php include ('inc/sendmail.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,11 +30,10 @@
         <section class="formContainer">
           
           <p>Here are your message details:</p>
-
+          <br />
           <p>Email: <?php echo $email; ?></p>
           <p>Telephone: <?php echo $phone; ?></p>
           <p>Message: <?php echo $message; ?></p>
-          
         </section>
       </section>
     </section>
