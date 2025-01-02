@@ -39,6 +39,8 @@
             <div class="formInputDiv">
               <input type="text" name="phone" id="phone" placeholder="+61 456 665 554" required class="formInput" />
               <textarea rows="5" name="message" id="message" placeholder="Your Message" class="formInputMsg" required></textarea>
+            <div class="h-captcha" data-sitekey="685e80e4-7d9c-42fe-b4aa-b46c61f8e8cc"></div>
+            <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
             <div class="formBtnContainer">
               <button type="submit" id="formBtn" class="glow-on-hover formBtn">
                 Send Message
@@ -57,6 +59,21 @@
 
   <script type="text/javascript">
     <?php include ('inc/js.php');?>
+  </script>
+
+  <script>
+  const form = document.getElementById('YOUR_FORM_ID');
+
+  form.addEventListener('submit', function(e) {
+
+      const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+
+      if (!hCaptcha) {
+          e.preventDefault();
+          alert("Please fill out captcha field")
+          return
+      }
+  });
   </script>
   
   <?php include ('inc/simpleAnalytics.php');?>
