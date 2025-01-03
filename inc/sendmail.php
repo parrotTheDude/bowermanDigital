@@ -16,7 +16,7 @@
     if (preg_match("/^[a-zA-Z-' ]*$/",$name)) {
       if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $client = new PostmarkClient($postmarkToken);
-        $fromEmail = $email;
+        $fromEmail = "hello@bowermandigital.com";
         $toEmail = "hello@bowermandigital.com";
         $subject = $name . " wants to get in contact.";
         $htmlBody = "<strong>Hello!</strong> My name is " . $name . ". <br /><br />Email: " . $email . "<br />Phone: " . $phone . "<br /><br />Message:<br />" . $message;
