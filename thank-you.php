@@ -24,7 +24,7 @@
       <!-- Hero Div -->
       <section class="hero" id="contactHero">
         <section class="lostTop">
-          <h1>Thanks for getting in touch <?php echo $name; ?></h1>
+          <h1>Thanks for getting in touch, <?php echo $name; ?></h1>
           <p>We will be in touch soon.</p>
         </section>
         <section class="formContainer">

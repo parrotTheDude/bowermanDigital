@@ -11,7 +11,7 @@
   $status = false;
 
   if(isset($_POST['submit'])) {
-    $name = ucfirst(strtolower($_POST['name']));
+    $name = ucwords(strtolower($_POST['name']));
     $email = str_replace(' ', '', strtolower($_POST['email']));
     $phone = preg_replace("/[^0-9]/", '', $_POST['phone']);
     $message = $_POST['message'];
