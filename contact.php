@@ -29,15 +29,11 @@
         </section>
         <section class="formContainer">
           <form action="thank-you" method="POST" id="form" class="formStyle">
-            <input type="hidden" name="access_key" value="d7489182-19e2-45f3-a751-884085b8df59" />
-            <input type="hidden" name="subject" value="Bowerman Digital form submission" />
-            <input type="checkbox" name="botcheck" id="" style="display: none;" />
-
               <input type="text" name="name" id="name" placeholder="John Smith" required class="formInput" />
               <input type="email" name="email" id="email" placeholder="you@company.com" required class="formInput" />
             </div>
             <div class="formInputDiv">
-              <input type="number" name="phone" id="phone"  title="Australian number must be 10 digits long. Format like this example: 0456654456" placeholder="0456665554" required class="formInput" />
+              <input type="number" name="phone" id="phone" title="Australian number must be 10 digits long. Format like this example: 0456654456" placeholder="0456665554" required class="formInput" />
 
               <textarea rows="5" name="message" id="message" form="form" placeholder="Your Message" class="formInputMsg" required></textarea>
             <div class="h-captcha" data-sitekey="685e80e4-7d9c-42fe-b4aa-b46c61f8e8cc"></div>
