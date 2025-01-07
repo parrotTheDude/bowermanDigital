@@ -21,7 +21,7 @@
 <meta property="og:title" content="<?php echo htmlspecialchars($page_title); ?>" />
 <meta property="og:locale" content="en" />
 <meta property="og:description" content="<?php echo htmlspecialchars($page_decription); ?>" />
-<meta property="og:site_name" content="Bowerman Digital: Web Development & SEO Experts" />
+<meta property="og:site_name" content="<?php echo htmlspecialchars($page_title); ?>" />
 <meta property="og:url" content="https://bowermandigital.com<?php echo htmlspecialchars($page_name); ?>" />
 <meta property="og:type" content="website" />
 

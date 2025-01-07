@@ -6,6 +6,7 @@
     $page_decription = 'Empowering Australian businesses with modern web development and SEO strategies. Build, optimize, and grow your online presence with Bowerman Digital.';
     $page_name = '/';
     include ('inc/head.php');
+    include ('inc/schema.php');
   ?>
 </head>
 
@@ -158,7 +159,6 @@
         </section>
       </section>
       </section>
-      
     </section>
   </main>
 

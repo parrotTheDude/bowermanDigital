@@ -6,6 +6,7 @@
     $page_decription = 'Build, optimize, and grow your online presence by getting in touch today!';
     $page_name = '/contact';
     include ('inc/head.php');
+    include ('inc/schema.php');
   ?>
 </head>
 
