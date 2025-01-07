@@ -4,7 +4,7 @@
 <head>
   <?php
     $page_title = 'Website Development Portfolio | Bowerman Digital';
-    $page_decription = 'Build, optimize, and grow your online presence by getting in touch today!';
+    $page_decription = 'All out work';
     $page_name = '/portfolio';
     include ('inc/head.php');
     include ('inc/schema.php');
