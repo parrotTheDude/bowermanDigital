@@ -41,7 +41,7 @@ header {
 }
 
 h1 {
-  color: white;
+  color: #fff;
   font-size: 2rem;
   width: 80%;
   margin: auto;
@@ -50,6 +50,7 @@ h1 {
 
 h2 {
   font-size: 1.5rem;
+  color: #fff;
 }
 
 .landingContainer {
@@ -773,6 +774,10 @@ footer {
   height: 28rem;
 }
 
+#workHero {
+  height: 33rem;
+}
+
 #tdacTitle {
   font-size: 1.5rem;
 }
@@ -786,11 +791,15 @@ footer {
 }
 
 .portfolioWorkContainer {
-  width:50%;
+  width: 40%;
+  text-align: left;
+  padding-top: 2.5rem;
 }
 
 .detailsContainer {
-  width: 50%;
+  width: 20%;
+  text-align: left;
+  padding: 1rem;
 }
 
 .sectionsContainer {
@@ -798,6 +807,60 @@ footer {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+}
+
+.noMargin {
+  margin: 0;
+}
+
+.detailsContainerText p {
+  padding: 1rem 0;
+}
+
+.workLink {
+  color: #00A8B1;
+  text-decoration: underline;
+}
+
+.workLink:hover {
+  color: #fff;
+}
+
+.workContentContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: #fff;
+  color: #000;
+}
+
+.workContent {
+  width: 45%;
+  padding: 4rem 1rem;
+}
+
+.workContent h2 {
+  font-size: 2rem;
+  color: #000;
+  padding-bottom: 2rem;
+}
+
+.workContent p {
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.imgHolder {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.imgHolder img {
+  width: 45%;
+  height: auto;
 }
 
 
@@ -849,6 +912,10 @@ footer {
     min-height: 37rem;
   }
   #portHero {
+    height: 21rem;
+    min-height: 21rem;
+  }
+  #workHero {
     height: 21rem;
     min-height: 21rem;
   }
@@ -968,6 +1035,37 @@ footer {
   .lostTop h1 {
     font-size: 1.5rem;
     margin: 0;
+  }
+  .portfolioWorkContainer {
+    width: 100%;
+    padding: 0;
+  }
+  .detailsContainer {
+    padding: 0;
+    width: 100%;
+  }
+  #workHero {
+    height: 33rem;
+  }
+  .workContent {
+    width: 95%;
+  }
+  .imgHolder img {
+    width: 100%;
+  }
+}
+
+/* Smaller screens */
+@media screen and (max-width: 550px) { 
+  .portfolioWorkContainer {
+    width: 90%;
+  }
+  .detailsContainer {
+    width: 90%;
+    white-space: initial;
+  }
+  #workHero {
+    height: 44rem;
   }
 }
 

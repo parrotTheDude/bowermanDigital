@@ -23,45 +23,58 @@
       </section>
 
       <!-- Hero Div -->
-      <section class="hero" id="portHero">
+      <section class="hero" id="workHero">
         <section class="sectionsContainer">
           <section class="portfolioWorkContainer">
-            <h1>That Disability Adventure Company <span class="flash">|</span></h1>
+            <h1 class="noMargin">That Disability Adventure Company <span class="flash">|</span></h1>
             <p>TDAC is an NDIS disability service provider located in Melbourne and Gippsland. They provide services for those dealing with a range of disabilities to lead fulfilling lives and develop independent living skills</p>
           </section>
           <section class="detailsContainer">
-            <section>
-              <p>Live link: <a href="https://thatdisabilityadventurecompany.com.au/">thatdisabilityadventurecompany.com.au</a></p>
-              <p>Industry we helped: Disability and Health</p>
-              <p>How we helped: SEO Optimization, Website Development, Ongoing Support and Maintainence, Digital Design</p>
+            <section class="detailsContainerText">
+              <p>Live link: <a class="workLink" target="_blank" href="https://thatdisabilityadventurecompany.com.au/">thatdisabilityadventurecompany</a></p>
+              <p>Industry we helped:<br /><span class="workLink">Disability and Health</span></p>
+              <p>How we helped:<br /><span class="workLink">SEO Optimization</span>, <span class="workLink">Website Development</span>, <span class="workLink">Ongoing Support and Maintainence</span>, <span class="workLink">Digital Design</span></p>
             </section>
           </section>
         </section>
       </section>
     </section>
 
+    <section class="workContentContainer">
+      <section class="workContent">
+        <h2>The challenge</h2>
+        <p>That Disability Adventure Company camem to us with an issue. Their current website was broken. Content was all over the place and the website lacked a proper flow. On top of that, there was no SEO optimisation which was paramount for TDAC.</p>
+        <p>The team tasked us with a full website redesign to drive home their brand identity as well as allow a clear display of their products. They wanted the website to work quickly and functionally across all devices and browsers. They also wanted a easy to use contact form.</p>
+      </section>
+
+      <section class="imgHolder">
+        <img src="img/tdac.webp" alt="TDAC's display image">
+      </section>
+
+      <section class="workContent">
+        <h2>What we did</h2>
+        <p>We redesigned the website from the ground up ensuring we optimised every component to get the best scores for Google and other search engines.</p>
+      </section>
+
+      <section class="imgHolder">
+        <img src="img/tdacWebScreenGrab.webp" alt="TDAC website screenshot">
+      </section>
+
+      <section class="workContent">
+        <h2>The result</h2>
+        <p>A new, clear website for Tdac to enjoy and all the people too</p>
+      </section>
+    </section>
+
     <!-- Portfilio Section -->
     <section class="portfolioIndexContainer">
-      <section class="contentContainer glow-on-hover">
-        <section class="imgContentContainer">
-          <img src="img/tdac.webp" alt="TDAC Promotional Picture" class="imgClassContentContainer">
-        </section>
-        <section class="titleContentContainer">
-          <h2 id="tdacTitle">That Disability Adventure Company</h2>
-          <p>Website rebuild & SEO optimisation</p>
-        </section>
-        <section class="btnContainer" id="aboutBtn">
-          <a href="https://bowermandigital.com/that-disability-adventure-company">
-            <div class="glow-on-hover"><p>More on project TDAC</p></div>
-          </a>
-        </section>
-      </section>
+      <h2>Check out some of our other work</h2>
       <section class="contentContainer glow-on-hover">
         <section class="imgContentContainer">
           <img src="img/evie.webp" alt="Evie Bowerman Promotional Picture" class="imgClassContentContainer">
         </section>
         <section class="titleContentContainer">
-          <h2 id="evieTitle"">Evie's Graphics Portfolio</h2>
+          <h2 id="evieTitle">Evie's Graphics Portfolio</h2>
           <p>Website rebuild</p>
         </section>
         <section class="btnContainer" id="aboutBtn">
@@ -74,8 +87,8 @@
 
     <section class="contactIndexContainer">
       <section class="contactIndexContainerTitle">
-        <h2 id="inTouchTitle">Get in touch</h2>
-        <p class="subHeading">What are you waiting for? Click the button below to get to our contact form!</p>
+        <h2 id="inTouchTitle">Interested in working with us?</h2>
+        <p class="subHeading">Click the button below to get to our contact form.</p>
         <img src="icons/arrow.svg" class="downArrow" alt="Arrow pointing to the contact form">
         <section class="btnContainer" id="aboutBtn">
           <a href="https://bowermandigital.com/contact">

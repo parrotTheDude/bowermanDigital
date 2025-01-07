@@ -23,6 +23,7 @@
 <meta property="og:description" content="<?php echo htmlspecialchars($page_decription); ?>" />
 <meta property="og:site_name" content="<?php echo htmlspecialchars($page_title); ?>" />
 <meta property="og:url" content="https://bowermandigital.com<?php echo htmlspecialchars($page_name); ?>" />
+<meta property="og:image" content="https://bowermandigital.com/img/bowermanDigitalCover.webp" />
 <meta property="og:type" content="website" />
 
 <meta name="theme-color" content="#000"/>
