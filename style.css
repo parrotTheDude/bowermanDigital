@@ -256,7 +256,7 @@ nav {
 }
 
 header.is-open {
-  height: 45rem;
+  height: 100%;
 }
 
 /* Band effect */
@@ -510,6 +510,7 @@ header.is-open {
   font-size: 1.2rem;
   width: 100%;
   text-align: center;
+  padding-bottom: 1rem;
 }
 
 .gloatContainer {
@@ -576,6 +577,13 @@ header.is-open {
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-size: 2rem;
+}
+
+.portfolioIndexContainer p {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 1rem;
+  font-size: 1rem;
 }
 
 #portfolioIndex {
@@ -700,7 +708,6 @@ footer {
   position: relative;
 }
 
-
 /* 404 PAGE STUFF */
 #lostHero {
   height: auto;
@@ -723,6 +730,12 @@ footer {
 #contactHero {
   height: auto;
   padding: 10rem 0rem;
+}
+
+.downArrow {
+  height: 3rem;
+  width: 3rem;
+  filter: invert(1);
 }
 
 
