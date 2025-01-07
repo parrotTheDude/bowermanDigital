@@ -629,6 +629,11 @@ header.is-open {
 	text-align: center;
 }
 
+.titleContentContainer p {
+  width: 90%;
+  margin: auto;
+}
+
 .contactIndexContainer {
   background-color: #000;
   z-index: 99;
@@ -754,7 +759,6 @@ footer {
 /* Portfolio CSS */
 .portfolioContainer {
   width: 90%;
-  padding-top: 5%;
   text-align: center;
   display: block;
   margin: auto;
@@ -1052,6 +1056,9 @@ footer {
   }
   .imgHolder img {
     width: 100%;
+  }
+  .portfolioContainer{
+    padding-top: 5%;
   }
 }
 

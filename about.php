@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <?php
-    $page_title = 'About Us| Bowerman Digital';
+    $page_title = 'About Us | Bowerman Digital';
     $page_decription = 'Everything you want to know about Bowerman Digital!';
     $page_name = '/about';
     include ('inc/head.php');
@@ -22,33 +22,37 @@
       </section>
 
       <!-- Hero Div -->
-      <section class="hero" id="lostHero">
-        <section class="lostTop">
-          <h1>Page coming soon...</h1>
-          <p>No worries! Here are some quick links to get you moving.</p>
-        </section>
-        <section class="404Links">
-          <section class="btnContainer" id="aboutBtn">
-            <a href="https://bowermandigital.com/portfolio">
-              <div class="glow-on-hover"><p>Portfolio</p></div>
-            </a>
-          </section>
-          <section class="btnContainer" id="aboutBtn">
-            <a href="https://bowermandigital.com/blog">
-              <div class="glow-on-hover"><p>Blog</p></div>
-            </a>
-          </section>
-          <section class="btnContainer" id="aboutBtn">
-            <a href="https://bowermandigital.com/contact">
-              <div class="glow-on-hover"><p>Contact</p></div>
-            </a>
+      <section class="hero" id="portHero">
+        <section class="portfolioContainer">
+          <h1>Who is Bowerman Digital <span class="flash">|</span></h1>
+          <p>This is the story of who we are and how we came to be</p>
+          <section class="btnssss">
+            <section class="portfolioBtn">
+              <a href="https://bowermandigital.com/contact">
+                <div class="glow-on-hover"><p>Get in touch</p></div>
+              </a>
+            </section>
           </section>
         </section>
       </section>
     </section>
+
+    <section class="contactIndexContainer">
+      <section class="contactIndexContainerTitle">
+        <h2 id="inTouchTitle">Get in touch</h2>
+        <p class="subHeading">What are you waiting for? Click the button below to get to our contact form!</p>
+        <img src="icons/arrow.svg" class="downArrow" alt="Arrow pointing to the contact form">
+        <section class="btnContainer" id="aboutBtn">
+          <a href="https://bowermandigital.com/contact">
+            <div class="glow-on-hover"><p>Contact us today</p></div>
+          </a>
+        </section>
+      </section>
+      </section>
+    </section>
   </main>
 
-  <footer>
+ <footer>
     <?php include ('inc/footer.php');?>
   </footer>
 

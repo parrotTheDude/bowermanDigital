@@ -46,7 +46,7 @@
         </section>
         <section class="titleContentContainer">
           <h2 id="tdacTitle">That Disability Adventure Company</h2>
-          <p>Website rebuild & SEO optimisation</p>
+          <p>TDAC is an NDIS disability service provider located in Melbourne and Gippsland. They provide services for those dealing with a range of disabilities to lead fulfilling lives and develop independent living skills</p>
         </section>
         <section class="btnContainer" id="aboutBtn">
           <a href="https://bowermandigital.com/that-disability-adventure-company">
@@ -60,7 +60,7 @@
         </section>
         <section class="titleContentContainer">
           <h2 id="evieTitle"">Evie's Graphics Portfolio</h2>
-          <p>Website rebuild</p>
+          <p>Evie is a recent graduate of graphic design out of Northumbria University. She reached out for us to build her a website to display her digital portfolio to help her get work and show off her projects</p>
         </section>
         <section class="btnContainer" id="aboutBtn">
           <a href="https://bowermandigital.com/evie-graphic-design">
