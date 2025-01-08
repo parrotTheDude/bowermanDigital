@@ -867,6 +867,28 @@ footer {
   height: auto;
 }
 
+/* Services CSS */
+.servicesHero {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.servicesContainer {
+  width: 95%;
+  display: inherit;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.service {
+  width: 40%;
+  border: 1px solid #fff;
+  text-align: center;
+  padding: 4rem;
+  margin: 4rem;
+}
+
 
 /* MEDIA QUERIES */
 /* Bigger than a tablet */

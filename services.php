@@ -37,6 +37,33 @@
       </section>
     </section>
 
+    <!-- Services Container -->
+    <section class="servicesHero">
+      <section class="servicesContainer">
+        <section class="service">
+          <script type="module" src="https://unpkg.com/@dotlottie/player-component@1.0.0/dist/dotlottie-player.js"></script>
+          <dotlottie-player autoplay loop mode="normal"
+            src="test.lottie"
+            style="width: 320px;height:320px;">  
+          </dotlottie-player>
+          <h2>web design</h2>
+          <p>tehc thech heaioewsndjoipa</p>
+        </section>
+        <section class="service">
+          <h2>web design</h2>
+          <p>tehc thech heaioewsndjoipa</p>
+        </section>
+        <section class="service">
+          <h2>web design</h2>
+          <p>tehc thech heaioewsndjoipa</p>
+        </section>
+        <section class="service">
+          <h2>web design</h2>
+          <p>tehc thech heaioewsndjoipa</p>
+        </section>
+      </section>
+    </section>
+
     <section class="contactIndexContainer">
       <section class="contactIndexContainerTitle">
         <h2 id="inTouchTitle">Get in touch</h2>
