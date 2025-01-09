@@ -86,7 +86,7 @@
     <section class="contactIndexContainer">
       <section class="contactIndexContainerTitle">
         <h2 id="inTouchTitle">Interested in working with us?</h2>
-        <p class="subHeading">Click the button below to get to our contact form.</p>
+        <p>Click the button below to get to our contact form.</p>
         <img src="icons/arrow.svg" class="downArrow" alt="Arrow pointing to the contact form">
         <section class="btnContainer" id="aboutBtn">
           <a href="https://bowermandigital.com/contact">

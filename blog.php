@@ -40,7 +40,7 @@
     <section class="contactIndexContainer">
       <section class="contactIndexContainerTitle">
         <h2 id="inTouchTitle">Get in touch</h2>
-        <p class="subHeading">What are you waiting for? Click the button below to get to our contact form!</p>
+        <p>What are you waiting for? Click the button below to get to our contact form!</p>
         <img src="icons/arrow.svg" class="downArrow" alt="Arrow pointing to the contact form">
         <section class="btnContainer" id="aboutBtn">
           <a href="https://bowermandigital.com/contact">
