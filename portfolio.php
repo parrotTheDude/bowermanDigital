@@ -4,7 +4,7 @@
 <head>
   <?php
     $page_title = 'Website Development Portfolio | Bowerman Digital';
-    $page_decription = 'All out work';
+    $page_decription = 'Every project we have ever worked on. All displayed beautifully on one page.';
     $page_name = '/portfolio';
     include ('inc/head.php');
     include ('inc/schema.php');

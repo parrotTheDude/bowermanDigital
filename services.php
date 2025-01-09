@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <?php
-    $page_title = 'services | Bowerman Digital';
-    $page_decription = 'All our available services';
+    $page_title = 'Digital Services | Bowerman Digital';
+    $page_decription = 'This is a page to display all of our available services.';
     $page_name = '/services';
     include ('inc/head.php');
     include ('inc/schema.php');

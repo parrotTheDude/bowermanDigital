@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <?php
-    $page_title = 'Bowerman Digital: Web Development & SEO Experts';
-    $page_decription = 'Empowering Australian businesses with modern web development and SEO strategies. Build, optimize, and grow your online presence with Bowerman Digital.';
+    $page_title = 'Web Development & SEO Agency | Bowerman Digital';
+    $page_decription = "We don't work for your competitors. We are a small digital agency located in Sydney, who decides to grow your business over the rest. It's simple as that.";
     $page_name = '/';
     include ('inc/head.php');
     include ('inc/schema.php');
@@ -60,6 +60,7 @@
         </section>
         <section class="titleContentContainer">
           <h3>That Disability Adventure Company</h3>
+          <p>TDAC is an NDIS disability service provider located in Melbourne and Gippsland. They provide services for those dealing with a range of disabilities to lead fulfilling lives and develop independent living skills</p>
         </section>
         <section class="btnContainer" id="aboutBtn">
           <a href="https://bowermandigital.com/that-disability-adventure-company">
@@ -73,6 +74,7 @@
         </section>
         <section class="titleContentContainer">
           <h3>Evie's Graphics Portfolio</h3>
+          <p>Evie is a recent graduate of graphic design out of Northumbria University. She reached out for us to build her a website to display her digital portfolio to help her get work and show off her projects</p>
         </section>
         <section class="btnContainer" id="aboutBtn">
           <a href="https://bowermandigital.com/evie-graphic-design">

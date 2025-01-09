@@ -3,7 +3,7 @@
 <head>
   <?php
     $page_title = 'Contact | Bowerman Digital';
-    $page_decription = 'Build, optimize, and grow your online presence by getting in touch today!';
+    $page_decription = 'Get in contact with us, and begin your digital journey today!';
     $page_name = '/contact';
     include ('inc/head.php');
     include ('inc/schema.php');

@@ -4,7 +4,7 @@
 <head>
   <?php
     $page_title = 'That Disability Adventure Company | Bowerman Digital';
-    $page_decription = 'TDACS portfolio';
+    $page_decription = "This is the showcase page for TDAC's website. A project we did to fully redesign their website.";
     $page_name = '/that-disability-adventure-company';
     include ('inc/head.php');
     include ('inc/schema.php');

@@ -3,7 +3,7 @@
 <head>
   <?php
     $page_title = 'Evie Graphic Design | Bowerman Digital';
-    $page_decription = 'Evies graphic design portfolio!';
+    $page_decription = "Showcase page for Evie's Graphic Design website.";
     $page_name = '/evie-graphic-design';
     include ('inc/head.php');
     include ('inc/schema.php');

@@ -3,8 +3,8 @@
 <html lang="en">
 <head>
   <?php
-    $page_title = 'Thanks for getting in touch | Bowerman Digital';
-    $page_decription = 'Build, optimize, and grow your online presence by getting in touch today!';
+    $page_title = 'Thank You | Bowerman Digital';
+    $page_decription = 'This is our thank you page. So thanks for getting in touch!';
     $page_name = '/thank-you';
     include ('inc/head.php');
   ?>
