@@ -41,25 +41,55 @@
     <section class="servicesHero">
       <section class="servicesContainer">
         <section class="service">
-          <script type="module" src="https://unpkg.com/@dotlottie/player-component@1.0.0/dist/dotlottie-player.js"></script>
-          <dotlottie-player autoplay loop mode="normal"
-            src="test.lottie"
-            style="width: 320px;height:320px;">  
-          </dotlottie-player>
-          <h2>web design</h2>
-          <p>tehc thech heaioewsndjoipa</p>
+          <img class="serviceIcon" src="icons/webDev.svg" alt="Support Icon">
+          <h2>Website Development</h2>
+          <p>Your website is often the first experience people have with your brand. Make your first impression count.</p>
         </section>
         <section class="service">
-          <h2>web design</h2>
-          <p>tehc thech heaioewsndjoipa</p>
+          <img class="serviceIcon" src="icons/seo.svg" alt="SEO Icon">
+          <h2>SEO Optimization</h2>
+          <p>Developing a strong SEO strategy for your website can change the game. Making your website go from ticking along to a global force.</p>
         </section>
         <section class="service">
-          <h2>web design</h2>
-          <p>tehc thech heaioewsndjoipa</p>
+          <img class="serviceIcon" src="icons/support.svg" alt="Support Icon">
+          <h2>Ongoing Support and Maintainence</h2>
+          <p>Continuing to work with us beyond the delivery of a single project can have significant advantages in terms of protecting and optimising your digital assets.</p>
         </section>
         <section class="service">
-          <h2>web design</h2>
-          <p>tehc thech heaioewsndjoipa</p>
+          <img class="serviceIcon" src="icons/design.svg" alt="Design Icon">
+          <h2>Digital Design</h2>
+          <p>Our award winning design team adopts a user-centric approach when designing digital services and products.</p>
+        </section>
+      </section>
+    </section>
+
+    <!-- Portfilio Section -->
+    <section class="portfolioIndexContainer ">
+      <h2>Proof of what we can do</h2>
+      <section class="contentContainer glow-on-hover">
+        <section class="imgContentContainer">
+          <img src="img/tdac.webp" alt="TDAC Promotional Picture" class="imgClassContentContainer">
+        </section>
+        <section class="titleContentContainer">
+          <h3>That Disability Adventure Company</h3>
+        </section>
+        <section class="btnContainer" id="aboutBtn">
+          <a href="https://bowermandigital.com/that-disability-adventure-company">
+            <div class="glow-on-hover"><p>TDAC's Journey</p></div>
+          </a>
+        </section>
+      </section>
+      <section class="contentContainer glow-on-hover">
+        <section class="imgContentContainer">
+          <img src="img/evie.webp" alt="Evie Bowerman Promotional Picture" class="imgClassContentContainer">
+        </section>
+        <section class="titleContentContainer">
+          <h3>Evie's Graphics Portfolio</h3>
+        </section>
+        <section class="btnContainer" id="aboutBtn">
+          <a href="https://bowermandigital.com/evie-graphic-design">
+            <div class="glow-on-hover"><p>Evie's Journey</p></div>
+          </a>
         </section>
       </section>
     </section>

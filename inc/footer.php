@@ -12,7 +12,6 @@
       <li><a class="footA" href="https://bowermandigital.com/portfolio">portfolio</a></li>
       <li><a class="footA" href="https://bowermandigital.com/services">services</a></li>
       <li><a class="footA" href="https://bowermandigital.com/blog">blog</a></li>
-      <li><a class="footA" href="https://bowermandigital.com/about">about</a></li>
       <li><a class="footA" href="https://bowermandigital.com/contact">contact</a></li>
     </menu>
 </section>

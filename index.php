@@ -53,7 +53,7 @@
     <!-- Portfilio Section -->
     <section class="portfolioIndexContainer ">
       <h2>Our work so far</h2>
-      <p>Something something... dark side</p>
+      <p>Here are some of our project so far. Feel free to check out what we did with each project</p>
       <section class="contentContainer glow-on-hover">
         <section class="imgContentContainer">
           <img src="img/tdac.webp" alt="TDAC Promotional Picture" class="imgClassContentContainer">

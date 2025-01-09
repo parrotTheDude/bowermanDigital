@@ -9,8 +9,8 @@
 
     <!--Add favorites icons-->   
 <meta name="apple-mobile-web-app-capable" content="yes">
-<link rel="apple-touch-icon" href="icons/appleTouch.webp"/>
-<link rel="icon" type="image/x-icon" href="icons/favicon.ico"/>
+<link rel="apple-touch-icon" href="icons/touchIcon.webp"/>
+<link rel="icon" type="image/x-icon" href="favicon.ico"/>
 
 <!-- Title and Description tags -->
 <title>

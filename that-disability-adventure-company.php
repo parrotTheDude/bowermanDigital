@@ -43,7 +43,7 @@
     <section class="workContentContainer">
       <section class="workContent">
         <h2>The challenge</h2>
-        <p>That Disability Adventure Company camem to us with an issue. Their current website was broken. Content was all over the place and the website lacked a proper flow. On top of that, there was no SEO optimisation which was paramount for TDAC.</p>
+        <p>That Disability Adventure Company came to us with an issue. Their current website was broken. Content was all over the place and the website lacked a proper flow. On top of that, there was no SEO optimisation which was paramount for TDAC.</p>
         <p>The team tasked us with a full website redesign to drive home their brand identity as well as allow a clear display of their products. They wanted the website to work quickly and functionally across all devices and browsers. They also wanted a easy to use contact form.</p>
       </section>
 
