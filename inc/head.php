@@ -1,7 +1,7 @@
 <!-- Important Links -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- <base href="https://bowermandigital.com/"> -->
+<base href="https://bowermandigital.com/">
 
 <!-- Links for style sheets -->
 <link rel="stylesheet" href="style.css">
