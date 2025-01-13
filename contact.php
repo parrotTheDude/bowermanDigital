@@ -37,8 +37,9 @@
               <input type="number" name="phone" id="phone" title="Australian number must be 10 digits long. Format like this example: 0456654456" placeholder="0456665554" required class="formInput" />
 
               <textarea rows="5" name="message" id="message" form="form" placeholder="Your Message" class="formInputMsg" required></textarea>
-            <div class="h-captcha" data-sitekey="685e80e4-7d9c-42fe-b4aa-b46c61f8e8cc"></div>
-            <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+              <!-- Deacticated hCaptcha -->
+            <!-- <div class="h-captcha" data-sitekey="685e80e4-7d9c-42fe-b4aa-b46c61f8e8cc"></div>
+            <script src="https://js.hcaptcha.com/1/api.js" async defer></script> -->
             <div class="formBtnContainer">
               <button type="submit" name="submit" id="formBtn" class="glow-on-hover formBtn">
                 Send Message
@@ -59,18 +60,19 @@
   </script>
 
   <script>
-  const form = document.getElementById('form');
+    //hCaptcha js
+  // const form = document.getElementById('form');
 
-  form.addEventListener('submit', function(e) {
+  // form.addEventListener('submit', function(e) {
 
-      const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+  //     const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
 
-      if (!hCaptcha) {
-          e.preventDefault();
-          alert("Please fill out captcha field")
-          return
-      }
-  });
+  //     if (!hCaptcha) {
+  //         e.preventDefault();
+  //         alert("Please fill out captcha field")
+  //         return
+  //     }
+  // });
   </script>
   
   <?php include ('inc/simpleAnalytics.php');?>
