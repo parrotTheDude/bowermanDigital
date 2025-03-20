@@ -30,6 +30,14 @@
         </section>
         <section class="formContainer">
           <form action="thank-you" method="POST" id="form" class="formStyle">
+            <!-- Traditional honeypot (should remain empty) -->
+            <input type="text" name="website" id="website" style="display:none;">
+
+            <!-- CSS-hidden honeypot -->
+            <div class="hidden-field">
+              <label for="hiddenField">Ignore this field</label>
+              <input type="text" name="hiddenField" id="hiddenField">
+            </div>
               <input type="text" name="name" id="name" placeholder="John Smith" required class="formInput" />
               <input type="email" name="email" id="email" placeholder="you@company.com" required class="formInput" />
             </div>
