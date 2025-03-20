@@ -38,6 +38,11 @@ if(isset($_POST['submit'])) {
     $id = hash('sha256', $hash);
     $emailValid = 0;
 
+    // Block "Robertnip"
+    if (strtolower($name) === 'robertnip') {
+        die('Spam detected: Invalid name.');
+    }
+
     // Insert into database
     $sql_statement = "
     INSERT INTO users (id, name, email, phone, message, emailValid, dateCreated) 
