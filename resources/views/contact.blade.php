@@ -261,7 +261,7 @@
               <button
                 type="submit"
                 id="submitBtn"
-                class="glow-on-hover relative inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 disabled:opacity-60 disabled:cursor-not-allowed"
+                class="glow-on-hover !w-full sm:w-auto relative inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 disabled:opacity-60 disabled:cursor-not-allowed"
                 aria-live="polite"
                 aria-busy="false"
                 data-loading="false"
@@ -278,10 +278,6 @@
                   Sending…
                 </span>
               </button>
-              <a href="{{ url('/services') }}"
-                 class="rounded-xl border border-white/10 bg-white/0 px-6 py-3 text-center text-white transition hover:bg-white/10">
-                See services
-              </a>
             </div>
             <p class="mt-3 text-xs text-white/40">
               This site is protected by reCAPTCHA and the Google

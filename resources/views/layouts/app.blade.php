@@ -102,7 +102,7 @@
           </ul>
 
           <a href="{{ url('/contact') }}"
-            class="hidden lg:inline-flex items-center rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-white transition hover:bg-white/10 hover:scale-[1.03]">
+            class="hidden lg:inline-flex glow-static items-center rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/60">
             Start a Project
           </a>
         </nav>
@@ -184,6 +184,13 @@
 
       <nav class="mt-6 grow overflow-y-auto">
         <ul class="space-y-1 text-base">
+          <li class="md:hidden">
+            <a href="{{ url('/') }}"
+              class="flex items-center justify-between rounded-xl px-4 py-3 text-white hover:bg-white/5 focus:bg-white/10 focus:outline-none">
+              <span>Home</span>
+              <span class="text-white/40">→</span>
+            </a>
+          </li>
           @foreach ($nav as $item)
             <li>
               <a href="{{ $item['href'] }}"
