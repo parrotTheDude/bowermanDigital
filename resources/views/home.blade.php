@@ -21,34 +21,60 @@
 <section class="relative bg-black">
   <div class="el pointer-events-none"></div>
 
-  <section class="relative z-10 mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 pb-20 pt-32 md:grid-cols-2 md:pt-40">
-    <div class="order-2 flex flex-col justify-center opacity-0 translate-y-6 transition-all duration-700 ease-out md:order-1 will-change-transform reveal" data-delay="0">
-      <span class="inline-flex w-fit items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/80 backdrop-blur">Web • SEO • Email</span>
-      <h1 class="mt-4 text-balance text-4xl font-bold text-white md:text-6xl">
-        Build, optimize, and grow your online presence <span class="flash align-baseline">|</span>
-      </h1>
-      <p class="mt-5 hidden max-w-xl text-white/80 md:block">
-        Welcome to Bowerman Digital 🤘🏼 Based in Sydney, we specialize in creating modern,
-        user-focused websites and strategies tailored to elevate your business.
-      </p>
-      <p class="mt-2 hidden max-w-xl text-white/80 md:block">
-        Know what you're looking for? Submit a short brief below to get started.
-      </p>
+  {{-- MOBILE phone pinned to bottom of hero --}}
+  <div class="absolute inset-x-0 bottom-0 pb-8 z-10 mx-auto flex justify-center md:hidden pointer-events-none">
+    <a href="{{ url('/portfolio/evie-graphic-design') }}" class="block">
+      <img
+        class="h-auto w-80 translate-y-6" {{-- padding pushes phone further down, clear of navbar --}}
+        src="{{ asset('images/mockups/evie-mobile2.webp') }}"
+        alt="Evie Bowerman portfolio website"
+      >
+    </a>
+  </div>
 
-      <div class="mt-8 flex flex-col gap-4 sm:flex-row">
-        <a href="{{ url('/contact') }}" class="no-underline">
-          <div class="glow-on-hover"><p class="text-center">Get in touch</p></div>
-        </a>
-        <a href="{{ url('/services') }}" class="rounded-xl border border-white/10 bg-white/0 px-6 py-3 text-center text-white hover:bg-white/10 transition will-change-transform hover:scale-[1.02]">See services</a>
+  {{-- Fade overlay above phone but below text --}}
+  <div class="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-52 bg-gradient-to-t from-black via-black/70 to-transparent md:hidden"></div>
+
+  {{-- GRID with copy sits above everything --}}
+  <section class="relative z-30 mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 pt-96 md:grid-cols-2 md:pt-40">
+    {{-- LEFT copy --}}
+    <div class="order-2 relative flex flex-col justify-end md:justify-center opacity-0 translate-y-6 transition-all duration-700 ease-out md:order-1 will-change-transform reveal"
+         data-delay="0">
+      <div class="relative">
+        <span class="inline-flex w-fit items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/80 backdrop-blur">
+          Web • SEO • Email
+        </span>
+
+        <h1 class="mt-4 text-balance text-4xl font-bold text-white md:text-6xl">
+          Build, optimize, and grow your online presence <span class="flash align-baseline">|</span>
+        </h1>
+
+        <p class="mt-5 hidden max-w-xl text-white/80 md:block">
+          Welcome to Bowerman Digital 🤘🏼 Based in Sydney, we specialize in creating modern,
+          user-focused websites and strategies tailored to elevate your business.
+        </p>
+        <p class="mt-2 hidden max-w-xl text-white/80 md:block">
+          Know what you're looking for? Submit a short brief below to get started.
+        </p>
+
+        {{-- Buttons side-by-side --}}
+        <div class="mt-8 flex flex-row flex-wrap items-center gap-3">
+          <a href="{{ url('/contact') }}" class="no-underline">
+            <div class="glow-on-hover"><p class="text-center">Get in touch</p></div>
+          </a>
+          <a href="{{ url('/services') }}"
+             class="rounded-xl border border-white/10 bg-white/0 px-6 py-3 text-center text-white hover:bg-white/10 transition will-change-transform hover:scale-[1.02]">
+            See services
+          </a>
+        </div>
       </div>
     </div>
 
-    <div class="order-1 relative flex items-center justify-center md:order-2">
-      <a href="{{ url('/portfolio/evie-graphic-design') }}" class="block md:hidden opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="100">
-        <img class="mx-auto h-auto w-80" src="{{ asset('images/mockups/evie-mobile2.webp') }}" alt="Evie Bowerman portfolio website">
-      </a>
-      <div class="group hidden md:block perspective-1000 opacity-0 [transform:translateY(12px)] transition-all duration-700 ease-out reveal" data-delay="100">
-        <a href="{{ url('/portfolio/evie-graphic-design') }}" class="inline-block transform-gpu transition will-change-transform group-hover:scale-[1.02] group-hover:-rotate-1">
+    {{-- RIGHT: desktop mock unchanged --}}
+    <div class="order-1 relative hidden items-center justify-center md:order-2 md:flex">
+      <div class="group perspective-1000 opacity-0 [transform:translateY(12px)] transition-all duration-700 ease-out reveal" data-delay="100">
+        <a href="{{ url('/portfolio/evie-graphic-design') }}"
+           class="inline-block transform-gpu transition will-change-transform group-hover:scale-[1.02] group-hover:-rotate-1">
           <img class="h-auto w-[40rem] max-w-full" src="{{ asset('images/mockups/evie-mobile.webp') }}" alt="eviebowerman.com iPhone mockup">
         </a>
       </div>
