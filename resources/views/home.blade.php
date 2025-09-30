@@ -62,14 +62,13 @@
             Know what you're looking for? Submit a short brief below to get started.
           </p>
 
-          {{-- Buttons side-by-side --}}
-          <div class="mt-8 flex flex-row flex-wrap items-center gap-3">
-            <a href="{{ url('/contact') }}" class="no-underline">
-              <div class="glow-on-hover"><p class="text-center">Get in touch</p></div>
-            </a>
-            <a href="{{ url('/services') }}"
-              class="rounded-xl border border-white/10 bg-white/0 px-6 py-3 text-center text-white hover:bg-white/10 transition will-change-transform hover:scale-[1.02]">
-              See services
+          {{-- Button --}}
+          <div class="mt-8 flex justify-center md:justify-start">
+            <a href="{{ url('/contact') }}" 
+              class="w-full md:w-auto">
+              <div class="glow-on-hover !w-full px-6 py-3">
+                <p class="text-center font-semibold">Get in touch</p>
+              </div>
             </a>
           </div>
         </div>
