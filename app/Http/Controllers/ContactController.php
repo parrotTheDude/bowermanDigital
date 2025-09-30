@@ -26,9 +26,9 @@ class ContactController extends Controller
         $toOwner = env('POSTMARK_OWNER_TO', 'hello@bowermandigital.com');
         $stream  = env('POSTMARK_MESSAGE_STREAM', 'outbound');
 
-        $tplConfirm = (int) env('POSTMARK_CONFIRMATION_TEMPLATE_ID');
+        $tplConfirm = 41653909;
         // accept either var spelling for safety
-        $tplOwner   = (int) (env('POSTMARK_ENQUIRES_TEMPLATE_ID') ?? env('POSTMARK_ENQUIRIES_TEMPLATE_ID'));
+        $tplOwner   = 41653895;
 
         // template model
         $model = [
