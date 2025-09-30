@@ -33,7 +33,7 @@ class ContactController extends Controller
         // template model
         $model = [
             'product_name' => config('app.name', 'Bowerman Digital'),
-            'submitted_at' => now()->format('Y-m-d H:i'),
+            'submitted_at' => now()->format('H:i d-m-Y'),
             'name'         => $name,
             'email'        => $email,
             'phone'        => $phone,
