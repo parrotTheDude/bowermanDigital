@@ -80,7 +80,7 @@
               {{-- Name --}}
               @php $hasNameErr = $errors->has('name'); @endphp
               <div>
-                <label for="name" class="block text-xs uppercase tracking-wide text-white/60">Full name *</label>
+                <label for="name" class="block text-xs uppercase tracking-wide text-white/60">Name *</label>
                 <input
                   id="name"
                   name="name"
@@ -88,7 +88,7 @@
                   required
                   value="{{ old('name') }}"
                   class="mt-2 w-full rounded-xl border {{ $hasNameErr ? 'border-red-400/60 focus:border-red-400/60' : 'border-white/10 focus:border-cyan-400/40' }} bg-white/5 px-4 py-3 text-white placeholder-white/40 outline-none transition"
-                  placeholder="Full name"
+                  placeholder="Name"
                   @if($hasNameErr) aria-invalid="true" aria-describedby="name-error" @endif
                 >
                 @error('name')
@@ -157,11 +157,10 @@
               {{-- Project type --}}
               @php $hasTypeErr = $errors->has('project_type'); @endphp
               <div>
-                <label for="project_type" class="block text-xs uppercase tracking-wide text-white/60">Project type *</label>
+                <label for="project_type" class="block text-xs uppercase tracking-wide text-white/60">Project type</label>
                 <select
                   id="project_type"
                   name="project_type"
-                  required
                   class="mt-2 w-full rounded-xl border {{ $hasTypeErr ? 'border-red-400/60 focus:border-red-400/60' : 'border-white/10 focus:border-cyan-400/40' }} bg-white/5 px-4 py-3 text-white outline-none transition"
                   @if($hasTypeErr) aria-invalid="true" aria-describedby="project_type-error" @endif
                 >
@@ -179,11 +178,10 @@
               {{-- Budget --}}
               @php $hasBudgetErr = $errors->has('budget'); @endphp
               <div>
-                <label for="budget" class="block text-xs uppercase tracking-wide text-white/60">Budget (AUD) *</label>
+                <label for="budget" class="block text-xs uppercase tracking-wide text-white/60">Budget (AUD)</label>
                 <select
                   id="budget"
                   name="budget"
-                  required
                   class="mt-2 w-full rounded-xl border {{ $hasBudgetErr ? 'border-red-400/60 focus:border-red-400/60' : 'border-white/10 focus:border-cyan-400/40' }} bg-white/5 px-4 py-3 text-white outline-none transition"
                   @if($hasBudgetErr) aria-invalid="true" aria-describedby="budget-error" @endif
                 >
@@ -201,11 +199,10 @@
               {{-- Timeline --}}
               @php $hasTimelineErr = $errors->has('timeline'); @endphp
               <div>
-                <label for="timeline" class="block text-xs uppercase tracking-wide text-white/60">Timeline *</label>
+                <label for="timeline" class="block text-xs uppercase tracking-wide text-white/60">Timeline</label>
                 <select
                   id="timeline"
                   name="timeline"
-                  required
                   class="mt-2 w-full rounded-xl border {{ $hasTimelineErr ? 'border-red-400/60 focus:border-red-400/60' : 'border-white/10 focus:border-cyan-400/40' }} bg-white/5 px-4 py-3 text-white outline-none transition"
                   @if($hasTimelineErr) aria-invalid="true" aria-describedby="timeline-error" @endif
                 >

@@ -16,9 +16,9 @@ class ContactRequest extends FormRequest
             'email'        => ['required','email','max:160'],
             'company'      => ['nullable','string','max:160'],
             'phone'        => ['nullable','string','max:40'],
-            'project_type' => ['required','string','max:80'],
-            'budget'       => ['required','string','max:40'],
-            'timeline'     => ['required','string','max:40'],
+            'project_type' => ['nullable','string','max:80'],
+            'budget'       => ['nullable','string','max:40'],
+            'timeline'     => ['nullable','string','max:40'],
             'message'      => ['required','string','max:5000'],
             'consent'      => ['accepted'],
             // recaptcha token (client-side)

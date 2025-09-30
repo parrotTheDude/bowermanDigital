@@ -41,42 +41,45 @@
     </div>
 
     <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <!-- Web Development -->
       <div class="group rounded-2xl border border-white/10 bg-black/60 p-6 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30">
         <div class="mb-3 text-sm text-white/70">01</div>
-        <h3 class="text-lg font-semibold text-white">Web Development</h3>
-        <p class="mt-2 text-sm text-white/70">Tailored Laravel/Blade or headless builds with clean code, fast TTFB, image/CDN optimization, and on-brand UI.</p>
+        <h3 class="text-lg font-semibold text-white">Websites That Work</h3>
+        <p class="mt-2 text-sm text-white/70">We build websites that look great, load fast, and help you win more customers—without the tech headache.</p>
         <ul class="mt-4 space-y-2 text-sm text-white/70">
-          <li>• Component-based UI with accessibility baked in</li>
-          <li>• Best-practice metadata, OG, and schema</li>
-          <li>• Lighthouse performance and Core Web Vitals</li>
+          <li>• Easy for you (and your customers) to use</li>
+          <li>• Built to show up properly on Google & social media</li>
+          <li>• Fast, mobile-friendly, and reliable</li>
         </ul>
         <div class="mt-5">
           <a href="{{ url('/portfolio') }}" class="text-cyan-300 hover:text-cyan-200">See examples →</a>
         </div>
       </div>
 
+      <!-- SEO -->
       <div class="group rounded-2xl border border-white/10 bg-black/60 p-6 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30">
         <div class="mb-3 text-sm text-white/70">02</div>
-        <h3 class="text-lg font-semibold text-white">Technical SEO</h3>
-        <p class="mt-2 text-sm text-white/70">Fix crawl issues, structure content, and earn traffic that compounds. We prioritize high-intent pages first.</p>
+        <h3 class="text-lg font-semibold text-white">Get Found on Google (SEO)</h3>
+        <p class="mt-2 text-sm text-white/70">We fix the issues that stop your site from showing up and create a clear plan to bring in more customers through search engines.</p>
         <ul class="mt-4 space-y-2 text-sm text-white/70">
-          <li>• Site audits, indexation, and internal linking</li>
-          <li>• Schema (JSON-LD), sitemaps, canonical strategy</li>
-          <li>• Content roadmaps tied to revenue</li>
+          <li>• Full check-up on your website’s health</li>
+          <li>• Better structure so Google actually shows you</li>
+          <li>• Content ideas that drive enquiries & sales</li>
         </ul>
         <div class="mt-5">
           <a href="{{ url('/contact') }}" class="text-cyan-300 hover:text-cyan-200">Get an audit →</a>
         </div>
       </div>
 
+      <!-- Email Marketing -->
       <div class="group rounded-2xl border border-white/10 bg-black/60 p-6 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30">
         <div class="mb-3 text-sm text-white/70">03</div>
-        <h3 class="text-lg font-semibold text-white">Lifecycle Email</h3>
-        <p class="mt-2 text-sm text-white/70">Set up flows that welcome, nurture, and win back. We integrate copy, segments, and testing for lift.</p>
+        <h3 class="text-lg font-semibold text-white">Smart Email Marketing</h3>
+        <p class="mt-2 text-sm text-white/70">Stay in touch with your customers automatically. From first-time buyers to repeat business, we set up emails that convert.</p>
         <ul class="mt-4 space-y-2 text-sm text-white/70">
-          <li>• Welcome, post-purchase, winback flows</li>
-          <li>• Segmentation & experimentation</li>
-          <li>• Deliverability and template performance</li>
+          <li>• Welcome emails for new customers</li>
+          <li>• Follow-ups that encourage repeat business</li>
+          <li>• Clear reporting so you know it’s working</li>
         </ul>
         <div class="mt-5">
           <a href="{{ url('/contact') }}" class="text-cyan-300 hover:text-cyan-200">Plan a flow →</a>
@@ -86,29 +89,29 @@
 
     <div class="mt-16 grid gap-6 lg:grid-cols-2">
       <div class="rounded-2xl border border-white/10 bg-black/60 p-6 backdrop-blur-sm">
-        <h3 class="text-lg font-semibold text-white">How we work</h3>
+        <h3 class="text-lg font-semibold text-white">Your Journey With Us</h3>
         <ol class="mt-4 space-y-3 text-sm text-white/70">
-          <li>1. Discovery — goals, constraints, stack</li>
-          <li>2. Plan — roadmap, deliverables, timeline</li>
-          <li>3. Build — weekly checkpoints and previews</li>
-          <li>4. Launch — QA, performance, analytics</li>
-          <li>5. Grow — SEO/content and email iterations</li>
+          <li>1. Chat — We learn about your business and what you need</li>
+          <li>2. Plan — We map out the best approach and timeline</li>
+          <li>3. Build — You see regular updates as we bring it to life</li>
+          <li>4. Launch — We test, fine-tune, and get everything live</li>
+          <li>5. Grow — Ongoing support, SEO, and marketing to keep momentum</li>
         </ol>
       </div>
       <div class="rounded-2xl border border-white/10 bg-black/60 p-6 backdrop-blur-sm">
         <h3 class="text-lg font-semibold text-white">FAQs</h3>
         <div class="mt-4 space-y-4 text-sm text-white/70">
           <div>
-            <p class="font-medium text-white">How quickly can we start?</p>
-            <p class="mt-1">Usually within 1–2 weeks. Smaller engagements can start sooner.</p>
+            <p class="font-medium text-white">How soon can we get started?</p>
+            <p class="mt-1">Most projects kick off in about a week or two. Quick jobs can start even faster.</p>
           </div>
           <div>
-            <p class="font-medium text-white">Do you maintain sites?</p>
-            <p class="mt-1">Yes. We offer lightweight retainers for updates, monitoring, and growth.</p>
+            <p class="font-medium text-white">Will you look after my website once it’s live?</p>
+            <p class="mt-1">Absolutely. We can keep things updated, secure, and running smoothly so you don’t have to worry about it.</p>
           </div>
           <div>
-            <p class="font-medium text-white">What does success look like?</p>
-            <p class="mt-1">Clear goals upfront — faster site, more leads, ranked pages, or higher LTV.</p>
+            <p class="font-medium text-white">What does “success” mean for my business?</p>
+            <p class="mt-1">That depends on your goals — more enquiries, more sales, a faster site, or showing up higher on Google. We set clear targets together.</p>
           </div>
         </div>
       </div>
@@ -116,7 +119,7 @@
 
     <div class="mx-auto mt-14 flex justify-center">
       <a href="{{ url('/contact') }}" class="no-underline">
-        <div class="glow-on-hover"><p>Let’s get started</p></div>
+        <div class="glow-on-hover"><p>Start a Project</p></div>
       </a>
     </div>
   </div>

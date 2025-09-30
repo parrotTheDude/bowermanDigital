@@ -83,7 +83,7 @@
 
           <a href="{{ url('/contact') }}"
             class="hidden lg:inline-flex items-center rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-white transition hover:bg-white/10 hover:scale-[1.03]">
-            Start a project
+            Start a Project
           </a>
         </nav>
       </div>
@@ -179,7 +179,7 @@
       <div class="mt-4 space-y-3">
         <a href="{{ url('/contact') }}"
           class="block rounded-xl border border-cyan-400/30 bg-cyan-400/10 px-4 py-3 text-center font-medium text-cyan-300 hover:bg-cyan-400/15">
-          Start a project
+          Start a Project
         </a>
       </div>
     </aside>

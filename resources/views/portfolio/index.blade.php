@@ -35,7 +35,6 @@
     <div class="mx-auto max-w-3xl text-center">
       <span class="inline-flex w-fit items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/80 backdrop-blur">Selected work</span>
       <h1 class="mt-4 text-4xl font-bold text-white md:text-5xl">Projects that ship and scale</h1>
-      <p class="mt-4 text-white/70">A snapshot of recent builds and growth programs. Each card opens a case study with details.</p>
     </div>
 
     <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -45,7 +44,6 @@
             <img src="{{ asset('images/tdac.webp') }}" alt="That Disability Adventure Company website" class="w-full rounded-xl transition duration-700 group-hover:scale-[1.03]">
           </div>
           <h3 class="mt-5 text-lg font-semibold text-white">That Disability Adventure Company</h3>
-          <p class="mt-2 text-sm text-white/70">Accessible service site + SEO foundations to capture local demand across Gippsland & Melbourne.</p>
           <div class="mt-4 text-cyan-300">View case study →</div>
         </a>
       </article>
@@ -55,8 +53,7 @@
           <div class="overflow-hidden rounded-xl">
             <img src="{{ asset('images/evie.webp') }}" alt="Evie Bowerman portfolio" class="w-full rounded-xl transition duration-700 group-hover:scale-[1.03]">
           </div>
-          <h3 class="mt-5 text-lg font-semibold text-white">Evie’s Graphics Portfolio</h3>
-          <p class="mt-2 text-sm text-white/70">Fast, elegant portfolio for a design grad, with CMS-free workflow and image optimization.</p>
+          <h3 class="mt-5 text-lg font-semibold text-white">Evie’s Design Portfolio</h3>
           <div class="mt-4 text-cyan-300">View case study →</div>
         </a>
       </article>
@@ -68,7 +65,6 @@
             <span class="text-white/60">New project coming soon</span>
           </div>
           <h3 class="mt-5 text-lg font-semibold text-white">Coming soon</h3>
-          <p class="mt-2 text-sm text-white/70">Web build + lifecycle email with measurable results.</p>
           <div class="mt-4 text-cyan-300">Explore soon →</div>
         </a>
       </article>
@@ -76,7 +72,7 @@
 
     <div class="mx-auto mt-12 flex justify-center">
       <a href="{{ url('/contact') }}" class="no-underline">
-        <div class="glow-on-hover"><p>Start your project</p></div>
+        <div class="glow-on-hover"><p>Start a Project</p></div>
       </a>
     </div>
   </div>
