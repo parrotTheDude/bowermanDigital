@@ -26,8 +26,28 @@
   <meta name="twitter:image" content="@yield('twitter_image', asset('images/og-default.jpg'))">
 
   <meta name="theme-color" content="#000"/>
-  <link rel="icon" href="{{ asset('favicon.ico') }}">
-  <link rel="apple-touch-icon" href="{{ asset('icons/touchIcon.webp') }}"/>
+  
+  <!-- Standard favicon -->
+  <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+  <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
+
+  <!-- PNG favicons -->
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png') }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}">
+
+  <!-- Apple iOS icon -->
+  <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}">
+
+  <!-- Android Chrome icons -->
+  <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('android-chrome-192x192.png') }}">
+  <link rel="icon" type="image/png" sizes="512x512" href="{{ asset('android-chrome-512x512.png') }}">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="author" content="Bowerman Digital">
+  <meta name="robots" content="index,follow"> 
+  <link rel="manifest" href="{{ asset('site.webmanifest') }}">
 
   <link rel="preload" href="{{ asset('fonts/SpaceGrotesk-VariableFont_wght.ttf') }}" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="{{ asset('fonts/ShareTechMono-Regular.ttf') }}" as="font" type="font/ttf" crossorigin>
