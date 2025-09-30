@@ -8,6 +8,7 @@
   <meta property="og:description" content="Reach out for web, SEO, or email strategy. Sydney-based, boutique and hands-on.">
   <meta property="og:url" content="{{ url('/contact') }}">
   <meta property="og:image" content="{{ asset('images/og-default.jpg') }}">
+  <style> .grecaptcha-badge { visibility: hidden !important; } </style>
 @endpush
 
 @push('schema')
@@ -262,6 +263,11 @@
                 See services
               </a>
             </div>
+            <p class="mt-3 text-xs text-white/40">
+              This site is protected by reCAPTCHA and the Google
+              <a href="https://policies.google.com/privacy" class="underline" rel="noopener noreferrer">Privacy Policy</a> and
+              <a href="https://policies.google.com/terms" class="underline" rel="noopener noreferrer">Terms of Service</a> apply.
+            </p>
           </form>
         </div>
       </div>
