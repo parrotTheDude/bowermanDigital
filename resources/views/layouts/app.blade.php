@@ -102,7 +102,7 @@
           </ul>
 
           <a href="{{ url('/contact') }}"
-            class="hidden lg:inline-flex glow-static items-center rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/60">
+            class="hidden md:inline-flex glow-static items-center rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/60">
             Start a Project
           </a>
         </nav>
