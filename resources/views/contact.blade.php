@@ -8,7 +8,11 @@
   <meta property="og:description" content="Reach out for web, SEO, or email strategy. Sydney-based, boutique and hands-on.">
   <meta property="og:url" content="{{ url('/contact') }}">
   <meta property="og:image" content="{{ asset('images/og-default.jpg') }}">
-  <style> .grecaptcha-badge { visibility: hidden !important; } </style>
+  <style>
+    .grecaptcha-badge { visibility: hidden !important; }
+    #submitBtn[data-loading="true"] [data-when="idle"] { display: none; }
+    #submitBtn[data-loading="true"] [data-when="loading"] { display: inline-flex; }
+  </style>
 @endpush
 
 @push('schema')
@@ -257,7 +261,26 @@
 
             {{-- Actions --}}
             <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <button type="submit" class="glow-on-hover"><p>Send enquiry</p></button>
+              <button
+                type="submit"
+                id="submitBtn"
+                class="glow-on-hover relative inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 disabled:opacity-60 disabled:cursor-not-allowed"
+                aria-live="polite"
+                aria-busy="false"
+                data-loading="false"
+              >
+                {{-- Idle state --}}
+                <span data-when="idle">Send enquiry</span>
+
+                {{-- Loading state --}}
+                <span data-when="loading" class="hidden items-center gap-2">
+                  <svg class="h-4 w-4 animate-spin" viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="4" opacity=".25"/>
+                    <path d="M22 12a10 10 0 0 1-10 10" fill="none" stroke="currentColor" stroke-width="4"/>
+                  </svg>
+                  Sending…
+                </span>
+              </button>
               <a href="{{ url('/services') }}"
                  class="rounded-xl border border-white/10 bg-white/0 px-6 py-3 text-center text-white transition hover:bg-white/10">
                 See services
@@ -277,33 +300,50 @@
 </section>
 
 @push('scripts')
-  <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.site_key') }}"></script>
+  <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.site_key') }}" async defer></script>
   <script>
     (function () {
       const siteKey = "{{ config('services.recaptcha.site_key') }}";
       const form = document.querySelector('form[action="{{ route('contact.submit') }}"]');
       if (!form || !siteKey) return;
 
+      const tokenInput = document.getElementById('recaptcha_token');
+      const btn = document.getElementById('submitBtn');
       let submitting = false;
 
+      function setLoading(on) {
+        if (!btn) return;
+        btn.dataset.loading = on ? 'true' : 'false';
+        btn.disabled = on;
+        btn.setAttribute('aria-busy', on ? 'true' : 'false');
+      }
+
       form.addEventListener('submit', function (e) {
-        // If token is already present (refresh/resubmit), allow through
-        if (submitting || document.getElementById('recaptcha_token').value) return;
+        // If we already have a token (e.g., BFCache resubmit), let it submit normally
+        if (submitting || (tokenInput && tokenInput.value)) return;
 
         e.preventDefault();
+        setLoading(true);
+
+        if (typeof grecaptcha === 'undefined') {
+          setLoading(false);
+          alert('reCAPTCHA failed to load. Please try again.');
+          return;
+        }
+
         submitting = true;
 
         grecaptcha.ready(function () {
-          grecaptcha.execute(siteKey, {action: 'contact'}).then(function (token) {
-            document.getElementById('recaptcha_token').value = token;
-            form.submit();
+          grecaptcha.execute(siteKey, { action: 'contact' }).then(function (token) {
+            if (tokenInput) tokenInput.value = token;
+            form.submit(); // normal POST
           }).catch(function () {
             submitting = false;
-            // Optional: show a friendly message or retry
+            setLoading(false);
             alert('reCAPTCHA failed to load. Please try again.');
           });
         });
-      }, {capture: true});
+      }, { capture: true });
     })();
   </script>
 @endpush
