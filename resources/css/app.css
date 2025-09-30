@@ -1,0 +1,125 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+/* Self-hosted fonts */
+@font-face {
+  font-family: "ShareTechMono";
+  src: url("/fonts/ShareTechMono-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url("/fonts/SpaceGrotesk-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Tailwind v4 theme tokens */
+@theme {
+  --font-sans: "SpaceGrotesk", ui-sans-serif, system-ui, sans-serif,
+               "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  --font-mono: "ShareTechMono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* Base (dark-first) */
+html { scroll-behavior: smooth; }
+body { @apply bg-black text-white antialiased; }
+h1, h2, h3, h4, h5, h6 { @apply text-white; }
+
+/* Conic “el” background — solid black base + conic layer */
+.el{
+  position: absolute;
+  inset: 0;
+  background-color: #000; /* persistent base */
+  background-image: conic-gradient(
+    from 180deg at 50% 70%,
+    #fafafa 0deg,
+    #eec32d 72deg,
+    #ec4b4b 144deg,
+    #709ab9 216deg,
+    #4dffbf 288deg,
+    #fafafa 360deg
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  mask:
+    radial-gradient(circle at 50% 50%, white 2px, transparent 2.5px) 50% 50% / 20px 20px,
+    url("https://assets.codepen.io/605876/noise-mask.png") 256px 50% / 256px 256px;
+  -webkit-mask-composite: source-in;
+          mask-composite: intersect;
+  animation: flicker 20s linear infinite;
+  pointer-events: none;
+}
+
+/* Glow button */
+.glow-on-hover{
+  position:relative; width:220px; height:50px; border-radius:10px;
+  border:1px solid #fff; background:#111; color:#fff;
+  display:flex; align-items:center; justify-content:center;
+}
+.glow-on-hover p{ padding-top:.1rem; }
+.glow-on-hover::before{
+  content:""; position:absolute; inset:-2px; border-radius:10px; z-index:-1;
+  background: linear-gradient(45deg,#f00,#f70,#ff0,#4f0,#0ff,#02f,#70f,#f0c,#f00);
+  background-size:400%;
+  filter: blur(5px);
+  animation: glowing 20s linear infinite;
+  opacity:0; transition:opacity .3s ease-in-out;
+}
+.glow-on-hover:hover::before{ opacity:1; }
+.glow-on-hover::after{
+  content:""; position:absolute; inset:0; border-radius:10px; background:#111; z-index:-1;
+}
+
+/* Mobile nav animations */
+.main-nav{
+  position:fixed; inset:0; text-align:center; background:rgba(0,0,0,0); opacity:0;
+  visibility:hidden; z-index:-1; transition:all .375s;
+}
+.main-nav.is-open{ opacity:1; visibility:visible; z-index:100; }
+header.is-open{ height:100%; }
+.main-nav::before{
+  content:""; position:absolute; inset:0 -15px 0 0; background:rgba(0,0,0,1);
+  transform-origin:0 0; transform:skew(-14deg) translateX(-120%); transition:all .4s .1s;
+}
+.main-nav.is-open::before{ transform:skew(-14deg) translateX(0); }
+.main-nav ul{
+  display:inline-flex; flex-direction:column; height:100%; align-items:flex-end; justify-content:center;
+  transform:skew(-16deg); width:60%;
+}
+.main-nav li{ margin:.5rem 0; transform:translateY(-1rem) skew(16deg); }
+.main-nav a{
+  display:block; padding:1rem; color:#fff; font-size:1.1rem; font-weight:700; text-decoration:none; width:100%;
+  opacity:0; transform:translateY(-10px); transition:all .275s;
+}
+.main-nav.is-open a{ opacity:1; transform:translateY(0); }
+.open-main-nav .burger,
+.open-main-nav .burger::before,
+.open-main-nav .burger::after{ background:#fff; }
+.open-main-nav .burger{
+  position:relative; width:2rem; height:4px; transition:all .4s;
+}
+.open-main-nav .burger::before,
+.open-main-nav .burger::after{
+  content:""; position:relative; display:block; height:4px; transition:all .4s;
+}
+.open-main-nav .burger::after{ transform:translateY(-12px) translateX(-2px) skew(-20deg); }
+.open-main-nav .burger::before{ transform:translateY(-16px) skew(-10deg); }
+.open-main-nav.is-open .burger{ transform:skew(5deg) translateY(-8px) rotate(-45deg); }
+.open-main-nav.is-open .burger::before{ transform:translateY(0) skew(-10deg) rotate(75deg); }
+.open-main-nav.is-open .burger::after{ transform:translateY(-12px) translateX(10px) skew(-20deg); opacity:0; }
+
+.flash{ animation: flash 1s infinite; }
+.downArrow{ filter: invert(1); }
+
+/* Keyframes */
+@keyframes glowing { 0%{background-position:0 0} 50%{background-position:400% 0} 100%{background-position:0 0} }
+@keyframes flicker { to { mask-position:50% 50%, 0 50% } }
+@keyframes flash { from,to{color:transparent} 50%{color:#fff} }
