@@ -21,19 +21,19 @@
 <section class="relative bg-black">
   <div class="el pointer-events-none"></div>
 
-  {{-- MOBILE phone pinned to bottom of hero --}}
-  <div class="absolute inset-x-0 bottom-0 pb-8 z-10 mx-auto flex justify-center md:hidden pointer-events-none">
+  {{-- MOBILE phone pinned to bottom of hero, raised higher --}}
+  <div class="-mb-8 absolute inset-x-0 bottom-28 z-10 mx-auto flex justify-center md:hidden pointer-events-none">
     <a href="{{ url('/portfolio/evie-graphic-design') }}" class="block">
       <img
-        class="h-auto w-80 translate-y-6" {{-- padding pushes phone further down, clear of navbar --}}
+        class="h-auto w-80"
         src="{{ asset('images/mockups/evie-mobile2.webp') }}"
         alt="Evie Bowerman portfolio website"
       >
     </a>
   </div>
 
-  {{-- Fade overlay above phone but below text --}}
-  <div class="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-52 bg-gradient-to-t from-black via-black/70 to-transparent md:hidden"></div>
+{{-- Fade overlay above phone but below text --}}
+<div class="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-80 bg-gradient-to-t from-black via-black/90 to-transparent md:hidden"></div>
 
   {{-- GRID with copy sits above everything --}}
   <section class="relative z-30 mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 pt-96 md:grid-cols-2 md:pt-40">
