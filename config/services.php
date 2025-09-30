@@ -15,7 +15,14 @@ return [
     */
 
     'postmark' => [
-        'token' => env('POSTMARK_TOKEN'),
+        'token'       => env('POSTMARK_TOKEN'),
+        'from'        => env('POSTMARK_FROM', 'hello@bowermandigital.com'),
+        'owner_to'    => env('POSTMARK_OWNER_TO', 'hello@bowermandigital.com'),
+        'stream'      => env('POSTMARK_MESSAGE_STREAM', 'outbound'),
+
+        // template IDs
+        'confirmation_template' => env('POSTMARK_CONFIRMATION_TEMPLATE_ID'),
+        'enquiries_template'    => env('POSTMARK_ENQUIRIES_TEMPLATE_ID'),
     ],
 
     'resend' => [
