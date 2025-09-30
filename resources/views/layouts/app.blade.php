@@ -49,8 +49,8 @@
   <meta name="robots" content="index,follow"> 
   <link rel="manifest" href="{{ asset('site.webmanifest') }}">
 
-  <link rel="preload" href="{{ asset('fonts/SpaceGrotesk-VariableFont_wght.ttf') }}" as="font" type="font/ttf" crossorigin>
-  <link rel="preload" href="{{ asset('fonts/ShareTechMono-Regular.ttf') }}" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="{{ asset('fonts/SpaceGrotesk-Variable.woff2') }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ asset('fonts/ShareTechMono-Regular.woff2') }}" as="font" type="font/woff2" crossorigin>
 
   @vite(['resources/js/app.js'])
 
@@ -193,15 +193,15 @@
               </a>
             </li>
           @endforeach
+          <li>
+            <a href="{{ url('/contact') }}"
+              class="glow-static bg-white/5 flex items-center justify-between rounded-xl border border-white/10 px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400/60">
+              <span class="font-medium">Start a Project</span>
+              <span class="text-white/60">→</span>
+            </a>
+          </li>
         </ul>
       </nav>
-
-      <div class="mt-4 space-y-3">
-        <a href="{{ url('/contact') }}"
-          class="block rounded-xl border border-cyan-400/30 bg-cyan-400/10 px-4 py-3 text-center font-medium text-cyan-300 hover:bg-cyan-400/15">
-          Start a Project
-        </a>
-      </div>
     </aside>
   </div>
 

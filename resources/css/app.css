@@ -5,18 +5,24 @@
 @source '../**/*.blade.php';
 @source '../**/*.js';
 
-/* Self-hosted fonts */
+/* Self-hosted fonts (use WOFF2) */
 @font-face {
   font-family: "ShareTechMono";
-  src: url("/fonts/ShareTechMono-Regular.ttf") format("truetype");
+  src:
+    url("/fonts/ShareTechMono-Regular.woff2") format("woff2"),
+    url("/fonts/ShareTechMono-Regular.ttf") format("truetype"); 
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
+  /* Variable font */
   font-family: "SpaceGrotesk";
-  src: url("/fonts/SpaceGrotesk-VariableFont_wght.ttf") format("truetype");
-  font-weight: 100 700;
+  src:
+    url("/fonts/SpaceGrotesk-Variable.woff2") format("woff2-variations"),
+    url("/fonts/SpaceGrotesk-VariableFont_wght.ttf") format("truetype"); 
+  font-weight: 100 700; 
   font-style: normal;
   font-display: swap;
 }
@@ -118,6 +124,53 @@ header.is-open{ height:100%; }
 
 .flash{ animation: flash 1s infinite; }
 .downArrow{ filter: invert(1); }
+
+.glow-static {
+  position: relative;
+  border-radius: 12px; /* matches Tailwind rounded-xl */
+  overflow: hidden;    /* trims glow to rounded corners */
+  z-index: 0;
+}
+
+.glow-static::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px; /* thickness of glow border */
+  background: linear-gradient(
+    45deg,
+    #f00,
+    #f70,
+    #ff0,
+    #4f0,
+    #0ff,
+    #02f,
+    #70f,
+    #f0c,
+    #f00
+  );
+  background-size: 400%;
+  animation: glowing 20s linear infinite;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+.glow-static::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: #111; /* inner background */
+  z-index: -2;
+}
+
+/* Optional: a slightly softer glow for dark UIs */
+.glow-static--subtle::before { filter: blur(4px) opacity(.9); }
 
 /* Keyframes */
 @keyframes glowing { 0%{background-position:0 0} 50%{background-position:400% 0} 100%{background-position:0 0} }
