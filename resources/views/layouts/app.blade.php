@@ -56,10 +56,9 @@
 
     @php
       $nav = [
-        ['label' => 'portfolio', 'href' => url('/portfolio'), 'match' => 'portfolio'],
-        ['label' => 'services',  'href' => url('/services'),  'match' => 'services'],
+        ['label' => 'Our Work', 'href' => url('/portfolio'), 'match' => 'portfolio'],
+        ['label' => 'Services',  'href' => url('/services'),  'match' => 'services'],
         // ['label' => 'blog',      'href' => url('/blog'),      'match' => 'blog'], // uncomment when ready
-        ['label' => 'contact',   'href' => url('/contact'),   'match' => 'contact'],
       ];
     @endphp
 
@@ -127,18 +126,12 @@
         <nav>
           <ul class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm
                      [&_a]:text-white [&_a:hover]:text-cyan-400 [&_a:visited]:text-white">
-            <li><a href="{{ url('/') }}">home</a></li>
-            <li><a href="{{ url('/portfolio') }}">portfolio</a></li>
-            <li><a href="{{ url('/services') }}">services</a></li>
-            <li><a href="{{ url('/contact') }}">contact</a></li>
+            <li><a href="{{ url('/') }}">Home</a></li>
+            <li><a href="{{ url('/portfolio') }}">Our Work</a></li>
+            <li><a href="{{ url('/services') }}">Services</a></li>
+            <li><a href="{{ url('/contact') }}">Start a Project</a></li>
           </ul>
         </nav>
-
-        <div class="flex items-center gap-4 text-sm">
-          <a href="#" aria-label="LinkedIn" class="text-white/80 hover:text-white transition hover:-translate-y-0.5">LinkedIn</a>
-          <span class="text-white/20">•</span>
-          <a href="#" aria-label="GitHub" class="text-white/80 hover:text-white transition hover:-translate-y-0.5">GitHub</a>
-        </div>
 
         <p class="mt-2 text-xs text-white/60">&copy; {{ date('Y') }} Bowerman Digital</p>
       </div>
@@ -188,11 +181,6 @@
           class="block rounded-xl border border-cyan-400/30 bg-cyan-400/10 px-4 py-3 text-center font-medium text-cyan-300 hover:bg-cyan-400/15">
           Start a project
         </a>
-        <div class="flex items-center justify-center gap-5 text-sm">
-          <a href="#" class="text-white/80 hover:text-white">LinkedIn</a>
-          <span class="text-white/20">•</span>
-          <a href="#" class="text-white/80 hover:text-white">GitHub</a>
-        </div>
       </div>
     </aside>
   </div>

@@ -55,11 +55,13 @@
           </h1>
 
           <p class="mt-5 hidden max-w-xl text-white/80 md:block">
-            Welcome to Bowerman Digital 🤘🏼 Based in Sydney, we specialize in creating modern,
-            user-focused websites and strategies tailored to elevate your business.
+            Welcome to Bowerman Digital 🤘🏼
           </p>
           <p class="mt-2 hidden max-w-xl text-white/80 md:block">
-            Know what you're looking for? Submit a short brief below to get started.
+            We're a Sydney-based digital studio specialising in modern, user-focused websites and strategies that elevate your business.
+          </p>
+          <p class="mt-2 hidden max-w-xl text-white/80 md:block">
+            Ready to get started? Share your brief below.
           </p>
 
           {{-- Button --}}
@@ -67,7 +69,7 @@
             <a href="{{ url('/contact') }}" 
               class="w-full md:w-auto">
               <div class="glow-on-hover !w-full px-6 py-3">
-                <p class="text-center font-semibold">Get in touch</p>
+                <p class="text-center font-semibold">Start a project</p>
               </div>
             </a>
           </div>
@@ -89,8 +91,7 @@
 
 <section class="relative z-20 bg-black px-6 py-16">
   <div class="mx-auto max-w-7xl">
-    <h2 class="text-center text-3xl font-semibold text-white opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="0">Our work so far</h2>
-    <p class="mt-3 text-center text-white/80 opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="50">Here are some of our projects so far. Check out what we did with each project.</p>
+    <h2 class="text-center text-3xl font-semibold text-white opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="0">Our Work</h2>
 
     <div class="mt-10 grid gap-6 md:grid-cols-2">
       <article class="group rounded-2xl border border-white/10 bg-black/60 p-5 backdrop-blur-sm transition-all duration-500 will-change-transform hover:-translate-y-1 hover:border-cyan-400/30 hover:shadow-[0_0_0_1px_rgba(34,211,238,0.15)] opacity-0 translate-y-6 reveal" data-delay="100">
@@ -100,8 +101,8 @@
         <div class="mt-6 text-center">
           <h3 class="text-lg font-semibold text-white">That Disability Adventure Company</h3>
           <p class="mx-auto mt-2 max-w-prose text-sm text-white/80">
-            TDAC is an NDIS disability service provider located in Melbourne and Gippsland. They provide services
-            for those dealing with a range of disabilities to lead fulfilling lives and develop independent living skills.
+            For TDAC, we delivered a comprehensive solution including a <b>new website, a consistent SEO strategy supported by blog content, a custom backend CRM platform, and an EDM strategy.</b> 
+            These initiatives elevated TDAC's digital performance, growing monthly website traffic <b>from 90 visitors in 2024 to 500+ in 2025</b> while streamlining internal operations and enhancing client communications.
           </p>
         </div>
         <div class="mx-auto mt-6 flex justify-center">
@@ -116,10 +117,10 @@
           <img src="{{ asset('images/evie.webp') }}" alt="Evie Bowerman Promotional Picture" class="max-w-full rounded-xl transform-gpu transition duration-700 group-hover:scale-[1.03]">
         </div>
         <div class="mt-6 text-center">
-          <h3 class="text-lg font-semibold text-white">Evie's Graphics Portfolio</h3>
+          <h3 class="text-lg font-semibold text-white">Evie's Design Portfolio</h3>
           <p class="mx-auto mt-2 max-w-prose text-sm text-white/80">
-            Evie is a recent graduate of graphic design out of Northumbria University. We built a website to
-            display her digital portfolio, helping her land work and showcase her projects.
+            We designed and developed a sleek, modern website for Evie, a freelance graphic designer, to showcase her digital portfolio. With <b>clean UX, responsive design, and SEO integration, </b>
+            the site not only highlights her creative work but has also helped her attract new clients and secure multiple projects.
           </p>
         </div>
         <div class="mx-auto mt-6 flex justify-center">
@@ -137,7 +138,7 @@
     <div class="el h-full w-full"></div>
   </div>
   <div class="mx-auto max-w-7xl">
-    <h2 class="text-center text-3xl font-semibold text-white opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="0">Experts in digital experiences</h2>
+    <h2 class="text-center text-3xl font-semibold text-white opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="0">Experts in all things digital</h2>
     <p class="mx-auto mt-3 max-w-2xl text-center text-white/80 opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="50">
       From custom websites to seamless SEO strategies, we craft digital experiences that inspire.
     </p>
@@ -146,23 +147,23 @@
       <aside class="rounded-2xl border border-white/10 bg-black/60 p-6 text-center backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30 opacity-0 translate-y-6 reveal" data-delay="100">
         <img class="mx-auto mb-3 h-16 w-16 invert transition-transform duration-500 will-change-transform group-hover:rotate-3" alt="Simple Icon" src="{{ asset('icons/simplify.svg') }}">
         <h3 class="text-lg font-semibold text-white">Simple</h3>
-        <p class="mt-2 text-sm text-white/80">We focus on simplicity, making it easy to manage, grow, and succeed online.</p>
+        <p class="mt-2 text-sm text-white/80">Making it easy to manage, grow, and succeed online.</p>
       </aside>
       <aside class="rounded-2xl border border-white/10 bg-black/60 p-6 text-center backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30 opacity-0 translate-y-6 reveal" data-delay="150">
         <img class="mx-auto mb-3 h-16 w-16 invert transition-transform duration-500 will-change-transform group-hover:-rotate-3" alt="Quality Icon" src="{{ asset('icons/quality.svg') }}">
         <h3 class="text-lg font-semibold text-white">Quality</h3>
-        <p class="mt-2 text-sm text-white/80">Exceptional quality in every project so your brand shines.</p>
+        <p class="mt-2 text-sm text-white/80">In every project so your brand shines.</p>
       </aside>
       <aside class="rounded-2xl border border-white/10 bg-black/60 p-6 text-center backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30 opacity-0 translate-y-6 reveal" data-delay="200">
         <img class="mx-auto mb-3 h-16 w-16 invert transition-transform duration-500 will-change-transform group-hover:rotate-1" alt="Reliable Icon" src="{{ asset('icons/handshake.svg') }}">
         <h3 class="text-lg font-semibold text-white">Reliable</h3>
-        <p class="mt-2 text-sm text-white/80">Count on us for solutions that keep your business running smoothly.</p>
+        <p class="mt-2 text-sm text-white/80">Solutions that keep your business running smoothly.</p>
       </aside>
     </div>
 
     <div class="mx-auto mt-10 flex justify-center opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="250">
       <a href="{{ url('/services') }}" class="no-underline">
-        <div class="glow-on-hover"><p>Learn about our services</p></div>
+        <div class="glow-on-hover"><p>Our Services</p></div>
       </a>
     </div>
   </div>
@@ -170,12 +171,12 @@
 
 <section class="relative z-20 bg-black px-6 py-16 text-center">
   <div class="mx-auto max-w-3xl">
-    <h2 class="text-3xl font-semibold text-white opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="0">Get in touch</h2>
-    <p class="mt-3 text-white/80 opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="75">What are you waiting for? Click below to reach our contact form!</p>
+    <h2 class="text-3xl font-semibold text-white opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="0">Get in Touch</h2>
+    <p class="mt-3 text-white/80 opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="75">What are you waiting for?</p>
     <img src="{{ asset('icons/arrow.svg') }}" alt="Arrow pointing to the contact form" class="mx-auto mt-6 h-10 w-10 invert opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="150" />
     <div class="mx-auto mt-6 flex justify-center opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="200">
       <a href="{{ url('/contact') }}" class="no-underline">
-        <div class="glow-on-hover"><p>Contact us today</p></div>
+        <div class="glow-on-hover"><p>Start a Project</p></div>
       </a>
     </div>
   </div>
