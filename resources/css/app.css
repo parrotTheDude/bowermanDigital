@@ -172,6 +172,13 @@ header.is-open{ height:100%; }
 /* Optional: a slightly softer glow for dark UIs */
 .glow-static--subtle::before { filter: blur(4px) opacity(.9); }
 
+/* Hide scrollbar utility for horizontal scrollers */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none;    /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+
 /* Keyframes */
 @keyframes glowing { 0%{background-position:0 0} 50%{background-position:400% 0} 100%{background-position:0 0} }
 @keyframes flicker { to { mask-position:50% 50%, 0 50% } }

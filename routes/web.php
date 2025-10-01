@@ -19,6 +19,7 @@ Route::post('/contact', [\App\Http\Controllers\ContactController::class, 'submit
 // Portfolio index
 Route::view('/portfolio', 'portfolio.index')->name('portfolio');
 Route::view('/portfolio/that-disability-adventure-company', 'portfolio.tdac')->name('portfolio.tdac');
+Route::view('/portfolio/vizzbud', 'portfolio.vizzbud')->name('portfolio.vizzbud');
 Route::view('/portfolio/evie-graphic-design', 'portfolio.evie')->name('portfolio.evie');
 
 Route::get('sitemap.xml', function () {

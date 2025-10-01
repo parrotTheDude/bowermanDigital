@@ -36,10 +36,12 @@
 <section class="relative bg-black">
   <div class="el pointer-events-none"></div>
 
-  <section class="relative z-10 mx-auto max-w-7xl px-6 pb-12 pt-32 md:pt-40">
-    <div class="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
-      <div class="md:w-[60%] will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="0">
-        <span class="inline-flex w-fit items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] tracking-wide text-white/80 backdrop-blur">Case study</span>
+    <section class="relative z-10 mx-auto max-w-7xl px-6 pb-12 pt-32 md:pt-32">
+      {{-- Title + summary --}}
+      <div class="mx-auto max-w-4xl will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="0">
+        <span class="inline-flex w-fit items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] tracking-wide text-white/80 backdrop-blur">
+          Case study
+        </span>
         <h1 class="mt-4 text-balance text-4xl font-bold text-white md:text-5xl">
           {{ $title }} <span class="flash align-baseline">|</span>
         </h1>
@@ -48,76 +50,88 @@
         @endif
       </div>
 
-      <aside class="md:w-[32%] will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="100">
-        <div class="relative">
-          <div class="pointer-events-none absolute -inset-[1px] rounded-2xl bg-gradient-to-r from-cyan-400/35 via-fuchsia-400/25 to-emerald-400/35 blur-[2px]"></div>
-          <div class="relative rounded-2xl border border-white/10 bg-black/60 p-5 backdrop-blur">
-            <ul class="space-y-4 text-white/90">
-              @if($liveUrl)
-                <li>
-                  <span class="block text-xs uppercase tracking-wide text-white/60">Live link</span>
-                  <a class="inline-flex items-center gap-2 underline decoration-white/30 underline-offset-2 transition hover:text-cyan-400"
-                     target="_blank" rel="noopener" href="{{ $liveUrl }}">
-                    <svg class="h-4 w-4 opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-width="1.8" stroke-linecap="round" d="M14 3h7v7M21 3l-9 9"/><path stroke-width="1.8" stroke-linecap="round" d="M5 12v7a2 2 0 0 0 2 2h7"/></svg>
-                    {{ parse_url($liveUrl, PHP_URL_HOST) ?? $liveUrl }}
-                  </a>
-                </li>
-              @endif
+      {{-- Inline bar: Visit site + Industry (aligned to hero width) --}}
+      @if($liveUrl || $industry)
+        <div class="mt-6 will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="60">
+          <div class="mx-auto flex w-full max-w-5xl flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            {{-- Visit site --}}
+            @if($liveUrl)
+              @php $host = parse_url($liveUrl, PHP_URL_HOST) ?: $liveUrl; @endphp
+              <a href="{{ $liveUrl }}" target="_blank" rel="noopener noreferrer"
+                aria-label="Visit website: {{ $host }}"
+                class="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/85 transition hover:bg-white/10 sm:w-auto">
+                <svg class="h-4 w-4 opacity-70" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path stroke-width="1.8" stroke-linecap="round" d="M14 3h7v7M21 3l-9 9"/>
+                  <path stroke-width="1.8" stroke-linecap="round" d="M5 12v7a2 2 0 0 0 2 2h7"/>
+                </svg>
+                Visit website →
+              </a>
+            @endif
 
-              @if($industry)
-                <li>
-                  <span class="block text-xs uppercase tracking-wide text-white/60">Industry</span>
-                  <span class="text-cyan-300">{{ $industry }}</span>
-                </li>
-              @endif
-
-              @if(!empty($services))
-                <li>
-                  <span class="block text-xs uppercase tracking-wide text-white/60">How we helped</span>
-                  <div class="mt-1 flex flex-wrap gap-2">
-                    @foreach($services as $s)
-                      <span class="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-xs text-white/80">{{ $s }}</span>
-                    @endforeach
-                  </div>
-                </li>
-              @endif
-
-              @if(!empty($tools))
-                <li>
-                  <span class="block text-xs uppercase tracking-wide text-white/60">Tools & stack</span>
-                  <div class="mt-1 flex flex-wrap gap-2">
-                    @foreach($tools as $t)
-                      <span class="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-xs text-white/80">{{ $t }}</span>
-                    @endforeach
-                  </div>
-                </li>
-              @endif
-
-              @if($timeline)
-                <li>
-                  <span class="block text-xs uppercase tracking-wide text-white/60">Timeline</span>
-                  <p class="mt-1 text-sm text-white/80">{{ $timeline }}</p>
-                </li>
-              @endif
-            </ul>
+            {{-- Industry --}}
+            @if($industry)
+              <span class="inline-flex w-full items-center justify-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-cyan-300 sm:w-auto">
+                {{ $industry }}
+              </span>
+            @endif
           </div>
         </div>
-      </aside>
-    </div>
+      @endif
 
-    @if($heroImage)
-      <div class="mt-16 flex justify-center will-change-transform opacity-0 [transform:translateY(12px)] transition-all duration-700 ease-out reveal" data-delay="150">
-        <div class="group perspective-1000">
-          <img
-            src="{{ \Illuminate\Support\Str::startsWith($heroImage, ['http','/']) ? $heroImage : asset($heroImage) }}"
-            alt="{{ $title }} hero"
-            class="w-full max-w-5xl rounded-xl border border-white/10 bg-white/5 transform-gpu transition will-change-transform group-hover:scale-[1.01]"
-            data-tilt
-          >
+      {{-- How we helped (match hero width + gentler GPU use) --}}
+      @if(!empty($services))
+        <div class="mt-6 will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="90">
+          <div class="relative mx-auto w-full max-w-5xl">
+            <div class="pointer-events-none absolute -inset-[1px] rounded-2xl bg-gradient-to-r from-cyan-400/35 via-fuchsia-400/25 to-emerald-400/35 blur-[2px]" style="contain:paint;"></div>
+            <div class="relative rounded-2xl border border-white/10 bg-black/60 p-5 backdrop-blur">
+              <div class="flex flex-col gap-3">
+                <span class="block text-xs uppercase tracking-wide text-white/60">How we helped</span>
+                <div class="flex flex-wrap justify-center gap-2">
+                  @foreach($services as $s)
+                    <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-white/80">
+                      {{ $s }}
+                    </span>
+                  @endforeach
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    @endif
-  </section>
+      @endif
+
+      {{-- Hero image (ratio, responsive, and centered) --}}
+      @if($heroImage)
+        <div class="mt-12 flex justify-center will-change-transform opacity-0 [transform:translateY(12px)] transition-all duration-700 ease-out reveal" data-delay="150">
+          <div class="group perspective-1000 w-full max-w-5xl">
+            <div class="relative mx-auto w-full overflow-hidden rounded-xl border border-white/10 bg-white/5">
+              {{-- Maintain aspect ratio to reduce CLS (adjust as needed) --}}
+              <div class="aspect-[16/9]">
+                <picture>
+                  {{-- Optional: supply a .webp and a fallback; if $heroImage is already webp, this still works --}}
+                  @php
+                    $isAbsolute = \Illuminate\Support\Str::startsWith($heroImage, ['http','/']);
+                    $src = $isAbsolute ? $heroImage : asset($heroImage);
+                  @endphp
+                  <source srcset="{{ $src }}" type="image/webp">
+                  <img
+                    src="{{ $src }}"
+                    alt="{{ $title }} hero"
+                    class="h-full w-full object-cover transition group-hover:scale-[1.01]"
+                    loading="eager"
+                    decoding="async"
+                    fetchpriority="high"
+                    sizes="(min-width: 1280px) 960px, (min-width: 768px) 80vw, 100vw"
+                    srcset="
+                      {{ $src }} 960w
+                    "
+                  >
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      @endif
+    </section>
 </section>
 
 <section class="bg-white text-black">
@@ -127,14 +141,21 @@
     @if(!empty($goals))
       <div class="mx-auto max-w-5xl will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="0">
         <h2 class="text-2xl font-semibold !text-black">Goals</h2>
-        <div class="mt-5 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+
+        <dl class="mt-5 grid gap-3 sm:grid-cols-2 md:grid-cols-3">
           @foreach($goals as $g)
-            <div class="rounded-xl border border-black/10 bg-black/5 p-4">
-              <div class="text-sm text-black/60">{{ $g['label'] ?? '' }}</div>
-              <div class="mt-1 text-lg font-semibold">{{ $g['value'] ?? '' }}</div>
+            <div class="group relative h-full rounded-lg border border-black/10 bg-black/[0.03] p-4 transition hover:-translate-y-0.5 hover:border-cyan-400/30">
+              {{-- subtle accent bar --}}
+              <span aria-hidden="true" class="absolute inset-y-0 left-0 w-[2px] rounded-l-lg bg-gradient-to-b from-cyan-400/60 via-fuchsia-400/45 to-emerald-400/60"></span>
+
+              <dt class="pl-2 text-xs uppercase tracking-wide text-black/60">{{ $g['label'] ?? '' }}</dt>
+
+              <dd class="pl-2 mt-1 text-lg font-semibold tracking-tight text-black">
+                {{ $g['value'] ?? '' }}
+              </dd>
             </div>
           @endforeach
-        </div>
+        </dl>
       </div>
     @endif
 
@@ -142,22 +163,28 @@
     @if($challenge)
       <div class="mx-auto mt-12 max-w-4xl will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="50">
         <h2 class="text-2xl font-semibold !text-black">The challenge</h2>
-        <p class="mt-4">{{ $challenge }}</p>
+        <div class="mt-4 prose prose-neutral max-w-none leading-relaxed">
+          {!! nl2br(e($challenge)) !!}
+        </div>
       </div>
     @endif
 
-    {{-- Before / After --}}
+    {{-- Showcase (key visuals) --}}
     @if($beforeAfter && !empty($beforeAfter['before']) && !empty($beforeAfter['after']))
       <div class="mx-auto mt-10 max-w-5xl will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="100">
-        <h3 class="text-xl font-semibold">Before & after</h3>
+        <h3 class="text-xl font-semibold">Highlights</h3>
         <div class="mt-4 grid gap-4 md:grid-cols-2">
           <figure class="rounded-xl border border-black/10 bg-white p-3">
-            <img class="w-full rounded-lg" src="{{ asset($beforeAfter['before']) }}" alt="Before">
-            <figcaption class="mt-2 text-sm text-black/70">Before</figcaption>
+            <img class="w-full rounded-lg" src="{{ asset($beforeAfter['before']) }}" alt="Refreshed homepage">
+            <figcaption class="mt-2 text-sm text-black/70">
+              {{ $beforeAfter['caption_before'] ?? 'Refreshed homepage' }}
+            </figcaption>
           </figure>
           <figure class="rounded-xl border border-black/10 bg-white p-3">
-            <img class="w-full rounded-lg" src="{{ asset($beforeAfter['after']) }}" alt="After">
-            <figcaption class="mt-2 text-sm text-black/70">After</figcaption>
+            <img class="w-full rounded-lg" src="{{ asset($beforeAfter['after']) }}" alt="Activities page">
+            <figcaption class="mt-2 text-sm text-black/70">
+              {{ $beforeAfter['caption_after'] ?? 'Activities page' }}
+            </figcaption>
           </figure>
         </div>
         @if(!empty($beforeAfter['caption']))
@@ -170,7 +197,7 @@
     @if($whatWeDid)
       <div class="mx-auto mt-12 max-w-4xl will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="150">
         <h2 class="text-2xl font-semibold !text-black">What we did</h2>
-        <div class="prose prose-neutral prose-h3:mt-6 max-w-none">
+        <div class="mt-4 prose prose-neutral max-w-none leading-relaxed">
           {!! nl2br(e($whatWeDid)) !!}
         </div>
       </div>
@@ -201,16 +228,28 @@
       </div>
     @endif
 
-    {{-- Simple Screens Gallery --}}
-    @if(!empty($screens))
-      <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-{{ min(count($screens), 2) }}">
-        @foreach($screens as $img)
-          <div class="flex justify-center">
-            <img src="{{ \Illuminate\Support\Str::startsWith($img, ['http','/']) ? $img : asset($img) }}"
-                 alt="{{ $title }} screenshot"
-                 class="w-full max-w-5xl rounded-xl shadow-sm">
-          </div>
-        @endforeach
+    {{-- Screens showcase (styled like before/after) --}}
+    @if(!empty($screens) && count($screens) >= 2)
+      <div class="mx-auto mt-12 max-w-5xl will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="180">
+        <h3 class="text-xl font-semibold !text-black">Highlights from the build</h3>
+        <div class="mt-4 grid gap-6 md:grid-cols-2">
+          @foreach($screens as $i => $img)
+            <figure class="rounded-xl border border-black/10 bg-white p-3">
+              <img src="{{ \Illuminate\Support\Str::startsWith($img, ['http','/']) ? $img : asset($img) }}"
+                  alt="{{ $title }} screenshot {{ $i+1 }}"
+                  class="w-full rounded-lg shadow-sm">
+              <figcaption class="mt-2 text-sm text-black/70">
+                {{ $captions[$i] ?? 'Screenshot' }}
+              </figcaption>
+            </figure>
+          @endforeach
+        </div>
+      </div>
+    @elseif(!empty($screens))
+      <div class="mx-auto mt-12 max-w-5xl flex justify-center">
+        <img src="{{ \Illuminate\Support\Str::startsWith($screens[0], ['http','/']) ? $screens[0] : asset($screens[0]) }}"
+            alt="{{ $title }} screenshot"
+            class="w-full max-w-5xl rounded-xl shadow-sm">
       </div>
     @endif
 
@@ -220,9 +259,9 @@
         <h2 class="text-2xl font-semibold !text-black">Outcomes</h2>
         <div class="mt-5 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
           @foreach($metrics as $m)
-            <div class="rounded-xl border border-black/10 bg-emerald-50 p-4">
-              <div class="text-sm text-black/60">{{ $m['label'] ?? '' }}</div>
-              <div class="mt-1 text-lg font-semibold">{{ $m['value'] ?? '' }}</div>
+            <div class="rounded-lg border border-black/10 bg-emerald-50 px-4 py-3">
+              <div class="text-xs font-medium text-black/60 tracking-wide">{{ $m['label'] ?? '' }}</div>
+              <div class="mt-1 text-base font-semibold">{{ $m['value'] ?? '' }}</div>
             </div>
           @endforeach
         </div>
@@ -233,18 +272,41 @@
     @if($result)
       <div class="mx-auto mt-12 max-w-4xl will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="300">
         <h2 class="text-2xl font-semibold !text-black">The result</h2>
-        <p class="mt-4">{{ $result }}</p>
+        <div class="mt-4 prose prose-neutral max-w-none leading-relaxed">
+          {!! nl2br(e($result)) !!}
+        </div>
       </div>
     @endif
 
     {{-- Testimonial --}}
     @if($quote && !empty($quote['text']))
-      <figure class="mx-auto mt-12 max-w-4xl will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="350">
-        <blockquote class="rounded-2xl border border-black/10 bg-black/5 p-6 text-lg leading-relaxed">
-          “{{ $quote['text'] }}”
-        </blockquote>
-        <figcaption class="mt-3 text-sm text-black/70">
-          — {{ $quote['author'] ?? 'Client' }} @if(!empty($quote['role'])) • <span>{{ $quote['role'] }}</span> @endif
+      <figure class="mx-auto mt-16 max-w-4xl will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="350">
+
+        {{-- gradient frame --}}
+        <div class="relative rounded-3xl border border-white/10 bg-gradient-to-br from-black/80 via-black/70 to-black/80 p-8 shadow-xl backdrop-blur">
+          
+          {{-- testimonial label pill --}}
+          <div class="mb-6 flex justify-center">
+            <span class="inline-flex items-center rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-cyan-300">
+              Client Testimonial
+            </span>
+          </div>
+
+          <blockquote class="text-xl font-medium leading-relaxed text-white text-center">
+            “{!! str_replace(
+              ['Highly Recommend', 'game changer', 'easier for participants', 'positive feedback'],
+              ['<span class="text-cyan-300 font-semibold">Highly Recommend</span>',
+              '<span class="text-cyan-300 font-semibold">game changer</span>',
+              '<span class="text-cyan-300 font-semibold">easier for participants</span>',
+              '<span class="text-cyan-300 font-semibold">positive feedback</span>'],
+              nl2br(e($quote['text']))
+            ) !!}”
+          </blockquote>
+        </div>
+
+        <figcaption class="mt-4 text-sm font-medium text-white/70 text-center">
+          — {{ $quote['author'] ?? 'Client' }} 
+          @if(!empty($quote['role'])) <span class="text-white/50">• {{ $quote['role'] }}</span> @endif
         </figcaption>
       </figure>
     @endif
@@ -268,56 +330,54 @@
   </div>
 
   {{-- standout CTA --}}
-  <div class="mx-auto max-w-6xl">
-    <div class="relative mx-auto max-w-5xl overflow-hidden rounded-3xl pb-8">
-      {{-- animated glow border --}}
-      <div class="pointer-events-none absolute -inset-[1.5px] rounded-3xl bg-[conic-gradient(at_30%_50%,#22d3ee33,transparent_25%,#a78bfa33_50%,transparent_75%,#34d39933)] blur-[4px]"></div>
+<div class="mx-auto max-w-6xl">
+  <div class="relative mx-auto max-w-5xl overflow-hidden rounded-3xl pb-8">
+    {{-- animated glow border (subtle) --}}
+    <div class="pointer-events-none absolute -inset-px rounded-3xl bg-[conic-gradient(at_30%_50%,#22d3ee2b,transparent_25%,#a78bfa26_50%,transparent_75%,#34d3992b)] blur-[3px]"></div>
 
-      {{-- subtle spotlight + grid --}}
-      <div class="absolute inset-0 -z-0">
-        <div class="absolute -top-32 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-cyan-400/15 blur-3xl"></div>
-        <div class="absolute -bottom-24 -left-16 h-56 w-56 rounded-full bg-fuchsia-400/15 blur-3xl"></div>
-        <svg class="absolute inset-0 opacity-[0.08]" aria-hidden="true">
-          <defs>
-            <pattern id="dots" width="16" height="16" patternUnits="userSpaceOnUse">
-              <circle cx="1" cy="1" r="1" fill="white"></circle>
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#dots)"></rect>
-        </svg>
+    {{-- subtle spotlight + grid --}}
+    <div class="absolute inset-0 -z-0" aria-hidden="true">
+      <div class="absolute -top-32 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-cyan-400/10 blur-3xl"></div>
+      <div class="absolute -bottom-24 -left-16 h-56 w-56 rounded-full bg-fuchsia-400/10 blur-3xl"></div>
+      <svg class="absolute inset-0 opacity-[0.06]" focusable="false">
+        <defs>
+          <pattern id="dots-cta" width="16" height="16" patternUnits="userSpaceOnUse">
+            <circle cx="1" cy="1" r="1" fill="white"></circle>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#dots-cta)"></rect>
+      </svg>
+    </div>
+
+    <div class="relative isolate rounded-3xl border border-white/10 bg-black/60 p-8 text-center shadow-2xl backdrop-blur md:p-14">
+      {{-- badge --}}
+      <div class="mx-auto inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] tracking-wide text-white/80">
+        <span class="inline-block h-2 w-2 animate-pulse rounded-full bg-emerald-400"></span>
+        Work with us
       </div>
 
-      <div class="relative isolate rounded-3xl border border-white/10 bg-black/60 p-8 text-center shadow-2xl backdrop-blur md:p-14">
-        <div class="mx-auto inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] tracking-wide text-white/80">
-          <span class="inline-block h-2 w-2 animate-pulse rounded-full bg-emerald-400"></span>
-          Work with us
-        </div>
+      <h2 class="mt-4 text-3xl font-semibold leading-tight text-white md:text-4xl">
+        Ready to turn your idea into real results?
+      </h2>
 
-        <h2 class="mt-4 text-3xl font-semibold leading-tight text-white md:text-4xl">
-          Ready to turn your idea into real results?
-        </h2>
-        <p class="mx-auto mt-3 max-w-2xl text-white/80">
-          Share a quick brief and we’ll map the fastest path to launch, traction, and measurable growth.
-        </p>
+      {{-- trust badges (match your pill style) --}}
+      <div class="mx-auto mt-6 flex flex-wrap items-center justify-center gap-2 text-sm">
+        <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-white/70">Replies in &lt; 1 business day</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-white/70">One client at a time</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-white/70">Sydney-based</span>
+      </div>
 
-        {{-- trust badges --}}
-        <div class="mx-auto mt-6 flex flex-wrap items-center justify-center gap-2 text-sm">
-          <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-white/70">Replies in &lt; 1 business day</span>
-          <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-white/70">One client at a time</span>
-          <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-white/70">Sydney-based</span>
-        </div>
-
-        <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          <a href="{{ url('/contact') }}" class="no-underline">
-            <div class="glow-on-hover"><p>Start your brief</p></div>
-          </a>
-          <a href="{{ url('/services') }}" class="rounded-xl border border-white/10 bg-white/0 px-6 py-3 text-white transition hover:bg-white/10">
-            Explore services
-          </a>
-        </div>
+      <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <a href="{{ url('/contact') }}" class="no-underline">
+          <div class="glow-on-hover"><p>Start your brief</p></div>
+        </a>
+        <a href="{{ url('/services') }}" class="rounded-xl border border-white/10 bg-white/0 px-6 py-3 text-white transition hover:bg-white/10">
+          Explore services
+        </a>
       </div>
     </div>
   </div>
+</div>
 </section>
 
 @if($moreWork)

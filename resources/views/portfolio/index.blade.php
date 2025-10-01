@@ -58,14 +58,14 @@
         </a>
       </article>
 
-      {{-- Example placeholder for your next project — duplicate/replace as you add work --}}
+      {{-- Vizzbud --}}
       <article class="group rounded-2xl border border-white/10 bg-black/60 p-5 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30">
-        <a href="#" class="block no-underline">
-          <div class="grid h-44 place-items-center rounded-xl bg-gradient-to-br from-white/5 to-white/0">
-            <span class="text-white/60">New project coming soon</span>
+        <a href="{{ url('/portfolio/vizzbud') }}" class="block no-underline">
+          <div class="overflow-hidden rounded-xl">
+            <img src="{{ asset('images/turtle.webp') }}" alt="Vizzbud diving platform" class="w-full rounded-xl transition duration-700 group-hover:scale-[1.03]">
           </div>
-          <h3 class="mt-5 text-lg font-semibold text-white">Coming soon</h3>
-          <div class="mt-4 text-cyan-300">Explore soon →</div>
+          <h3 class="mt-5 text-lg font-semibold text-white">Vizzbud</h3>
+          <div class="mt-4 text-cyan-300">View case study →</div>
         </a>
       </article>
     </div>

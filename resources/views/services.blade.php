@@ -85,6 +85,55 @@
           <a href="{{ url('/contact') }}" class="text-cyan-300 hover:text-cyan-200">Plan a flow →</a>
         </div>
       </div>
+
+            <!-- CRM Platforms -->
+      <div class="group rounded-2xl border border-white/10 bg-black/60 p-6 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30">
+        <div class="mb-3 text-sm text-white/70">04</div>
+        <h3 class="text-lg font-semibold text-white">CRM Setup & Automation</h3>
+        <p class="mt-2 text-sm text-white/70">
+          Keep all your leads, customers, and sales in one tidy place. We set up a CRM that fits your business and automate the boring bits.
+        </p>
+        <ul class="mt-4 space-y-2 text-sm text-white/70">
+          <li>• Pick the right tool (HubSpot, Pipedrive, or simple alternatives)</li>
+          <li>• Track enquiries from website to sale with clear stages</li>
+          <li>• Automations for follow-ups, reminders, and hand-offs</li>
+        </ul>
+        <div class="mt-5">
+          <a href="{{ url('/contact') }}" class="text-cyan-300 hover:text-cyan-200">Chat about CRM →</a>
+        </div>
+      </div>
+
+      <!-- Privacy & Security -->
+      <div class="group rounded-2xl border border-white/10 bg-black/60 p-6 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30">
+        <div class="mb-3 text-sm text-white/70">05</div>
+        <h3 class="text-lg font-semibold text-white">Privacy & Security Basics</h3>
+        <p class="mt-2 text-sm text-white/70">
+          Protect your business and customer data without the hassle. We set sensible defaults and keep things up to date.
+        </p>
+        <ul class="mt-4 space-y-2 text-sm text-white/70">
+          <li>• SSL, backups, access control, and updates covered</li>
+          <li>• Privacy policy, cookie banner, and data requests made simple</li>
+          <li>• Best-practice security headers and uptime monitoring</li>
+        </ul>
+        <div class="mt-5">
+          <a href="{{ url('/contact') }}" class="text-cyan-300 hover:text-cyan-200">Book a quick check →</a>
+        </div>
+      </div>
+
+      <!-- Content & Strategy -->
+      <div class="group rounded-2xl border border-white/10 bg-black/60 p-6 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30">
+        <div class="mb-3 text-sm text-white/70">06</div>
+        <h3 class="text-lg font-semibold text-white">Content & Strategy</h3>
+        <p class="mt-2 text-sm text-white/70">We help you plan, create, and publish content that connects with your audience and supports your business goals.</p>
+        <ul class="mt-4 space-y-2 text-sm text-white/70">
+          <li>• Blog posts and articles that build trust</li>
+          <li>• Campaign ideas tailored to your customers</li>
+          <li>• A clear strategy so content works (not just fills space)</li>
+        </ul>
+        <div class="mt-5">
+          <a href="{{ url('/contact') }}" class="text-cyan-300 hover:text-cyan-200">Plan content →</a>
+        </div>
+      </div>
     </div>
 
     <div class="mt-16 grid gap-6 lg:grid-cols-2">
