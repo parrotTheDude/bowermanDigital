@@ -346,54 +346,54 @@
   </div>
 
   {{-- standout CTA --}}
-<div class="mx-auto max-w-6xl">
-  <div class="relative mx-auto max-w-5xl overflow-hidden rounded-3xl pb-8">
-    {{-- animated glow border (subtle) --}}
-    <div class="pointer-events-none absolute -inset-px rounded-3xl bg-[conic-gradient(at_30%_50%,#22d3ee2b,transparent_25%,#a78bfa26_50%,transparent_75%,#34d3992b)] blur-[3px]"></div>
+  <div class="mx-auto max-w-6xl">
+    <div class="relative mx-auto max-w-5xl overflow-hidden rounded-3xl pb-8">
+      {{-- animated glow border (subtle) --}}
+      <div class="pointer-events-none absolute -inset-px rounded-3xl bg-[conic-gradient(at_30%_50%,#22d3ee2b,transparent_25%,#a78bfa26_50%,transparent_75%,#34d3992b)] blur-[3px]"></div>
 
-    {{-- subtle spotlight + grid --}}
-    <div class="absolute inset-0 -z-0" aria-hidden="true">
-      <div class="absolute -top-32 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-cyan-400/10 blur-3xl"></div>
-      <div class="absolute -bottom-24 -left-16 h-56 w-56 rounded-full bg-fuchsia-400/10 blur-3xl"></div>
-      <svg class="absolute inset-0 opacity-[0.06]" focusable="false">
-        <defs>
-          <pattern id="dots-cta" width="16" height="16" patternUnits="userSpaceOnUse">
-            <circle cx="1" cy="1" r="1" fill="white"></circle>
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#dots-cta)"></rect>
-      </svg>
-    </div>
-
-    <div class="relative isolate rounded-3xl border border-white/10 bg-black/60 p-8 text-center shadow-2xl backdrop-blur md:p-14">
-      {{-- badge --}}
-      <div class="mx-auto inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] tracking-wide text-white/80">
-        <span class="inline-block h-2 w-2 animate-pulse rounded-full bg-emerald-400"></span>
-        Work with us
+      {{-- subtle spotlight + grid --}}
+      <div class="absolute inset-0 -z-0" aria-hidden="true">
+        <div class="absolute -top-32 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-cyan-400/10 blur-3xl"></div>
+        <div class="absolute -bottom-24 -left-16 h-56 w-56 rounded-full bg-fuchsia-400/10 blur-3xl"></div>
+        <svg class="absolute inset-0 opacity-[0.06]" focusable="false">
+          <defs>
+            <pattern id="dots-cta" width="16" height="16" patternUnits="userSpaceOnUse">
+              <circle cx="1" cy="1" r="1" fill="white"></circle>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#dots-cta)"></rect>
+        </svg>
       </div>
 
-      <h2 class="mt-4 text-3xl font-semibold leading-tight text-white md:text-4xl">
-        Ready to turn your idea into real results?
-      </h2>
+      <div class="relative isolate rounded-3xl border border-white/10 bg-black/60 p-8 text-center shadow-2xl backdrop-blur md:p-14">
+        {{-- badge --}}
+        <div class="mx-auto inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] tracking-wide text-white/80">
+          <span class="inline-block h-2 w-2 animate-pulse rounded-full bg-emerald-400"></span>
+          Work with us
+        </div>
 
-      {{-- trust badges (match your pill style) --}}
-      <div class="mx-auto mt-6 flex flex-wrap items-center justify-center gap-2 text-sm">
-        <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-white/70">Replies in &lt; 1 business day</span>
-        <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-white/70">One client at a time</span>
-        <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-white/70">Sydney-based</span>
-      </div>
+        <h2 class="mt-4 text-3xl font-semibold leading-tight text-white md:text-4xl">
+          Ready to turn your idea into real results?
+        </h2>
 
-      <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-        <a href="{{ url('/contact') }}" class="no-underline">
-          <div class="glow-on-hover"><p>Start your brief</p></div>
-        </a>
-        <a href="{{ url('/services') }}" class="rounded-xl border border-white/10 bg-white/0 px-6 py-3 text-white transition hover:bg-white/10">
-          Explore services
-        </a>
+        {{-- trust badges (match your pill style) --}}
+        <div class="mx-auto mt-6 flex flex-wrap items-center justify-center gap-2 text-sm">
+          <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-white/70">Replies in &lt; 1 business day</span>
+          <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-white/70">One client at a time</span>
+          <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-white/70">Sydney-based</span>
+        </div>
+
+        <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <a href="{{ url('/contact') }}" class="no-underline">
+            <div class="glow-on-hover"><p>Start your brief</p></div>
+          </a>
+          <a href="{{ url('/services') }}" class="rounded-xl border border-white/10 bg-white/0 px-6 py-3 text-white transition hover:bg-white/10">
+            Explore services
+          </a>
+        </div>
       </div>
     </div>
   </div>
-</div>
 </section>
 
 @if($moreWork)

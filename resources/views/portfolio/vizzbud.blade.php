@@ -1,97 +1,90 @@
 @extends('layouts.app')
 
 @section('title', 'Vizzbud | Bowerman Digital')
-@section('meta_description', "Lightweight brand site and growth foundations for Vizzbud — faster load times, clearer story, and a smoother path to enquiries.")
+@section('meta_description', "Realtime dive conditions and a slick logbook for Sydney divers — fast, accurate, and privacy-first.")
 
 @push('head')
   <meta property="og:title" content="Vizzbud | Bowerman Digital">
-  <meta property="og:description" content="Lightweight brand site and growth foundations for Vizzbud — faster load times, clearer story, and a smoother path to enquiries.">
+  <meta property="og:description" content="Realtime dive conditions and a slick logbook for Sydney divers — fast, accurate, and privacy-first.">
   <meta property="og:url" content="{{ url('/portfolio/vizzbud') }}">
+  {{-- Use your best hero here; swap if you have a branded shot --}}
   <meta property="og:image" content="{{ asset('images/turtle.webp') }}">
 @endpush
 
 @section('content')
   @include('partials.portfolio.case', [
     'title'     => 'Vizzbud',
-    'summary'   => 'A crisp, fast site paired with clear messaging and simple enquiry paths. Built to scale content and SEO without adding complexity.',
-    'liveUrl'   => null, // add the live URL if/when you have it, e.g. 'https://vizzbud.com'
-    'industry'  => 'Tech & Education', // tweak if you want something more specific
+    'summary'   => "A lightweight tool that gives Sydney divers realtime site conditions (wind, swell, tides & more) plus a beautifully simple dive log. Built for speed, accuracy, and repeat use.",
+    'liveUrl'   => 'https://vizzbud.com/',
+    'industry'  => 'Outdoor Recreation / Marine',
 
-    // Services (plain-English, outcome-first)
+    // Keep services human + outcome-oriented
     'services'  => [
-      'Lean website build with fast page loads',
-      'Clear homepage story & service pages',
-      'SEO-ready structure (titles, headings, internal links)',
-      'Contact & capture flows that reduce friction',
-      'Analytics & privacy-friendly tracking',
+      'Progressive Web App (PWA)',
+      'Realtime conditions pipeline (wind/swell/tide)',
+      'Sydney site database + map',
+      'Dive log with photos, stats & gear',
+      'Account system + privacy controls',
+      'Email notices (tide windows, conditions)',
+      'Analytics with zero tracking creep',
     ],
 
-    // Hero
-    'heroImage' => 'images/turtle.webp',
+    // Hero (swap to your preferred hero asset)
+    'heroImage' => 'images/vizzbud/turtle.webp',
 
-    // Goals (quick hits that guided the work)
+    // Goals (clear, user-centric)
     'goals' => [
-      ['label' => 'Tell the story quickly',   'value' => 'Clear value prop above the fold'],
-      ['label' => 'Speed matters',             'value' => 'Core Web Vitals friendly'],
-      ['label' => 'More enquiries',            'value' => 'Simple CTAs + short forms'],
+      ['label' => 'Check if it’s worth the drive', 'value' => 'Realtime local conditions at a glance'],
+      ['label' => 'Log dives you’re proud of',      'value' => 'Fast, photo-first, auto-captured stats'],
+      ['label' => 'Come back often',               'value' => 'Snappy PWA + useful notifications'],
     ],
 
-    // Metrics — placeholders you can update later
+    // Headline metrics (marketable, diver-friendly)
     'metrics' => [
-      ['label' => 'Page load (TTFB)',          'value' => '< 200ms on AU hosting'],
-      ['label' => 'Bounce rate',               'value' => 'Down after clarity pass'],
-      ['label' => 'Qualified enquiries',       'value' => 'Up with focused CTAs'],
+      ['label' => 'Time to conditions', 'value' => '< 2 seconds'],
+      ['label' => 'Users',      'value' => '5+'],
+      ['label' => 'Dive logs created',  'value' => '10+'],
     ],
 
-    // The story
-    'challenge' => "Vizzbud needed a modern site that explains the value in seconds, loads fast on mobile, and makes it effortless for visitors to get in touch or learn more — without heavy maintenance overhead.",
+    // Challenge (plain-English)
+    'challenge' => "Divers needed one trustworthy place to check today’s conditions per site (not generic ocean forecasts) and a way to log dives quickly without wrestling a bloated app. Prior tools were either slow, global, or ad-heavy, and didn’t fit how Sydney shore dives actually work.",
 
-    'whatWeDid' => "• Designed a clean, focused layout that highlights the value proposition up front.\n
-• Built a lightweight site with best-practice metadata, headings, and internal links.\n
-• Sharpened copy on key pages to reduce jargon and encourage action.\n
-• Simplified the enquiry path with short forms and clear follow-ups.\n
-• Added privacy-friendly analytics for decision-making without bloat.",
+    // What we did (concise, user-first)
+    'whatWeDid' => "• Created a lightweight app divers can save to their phone and use anywhere.\n
+    • Pulled in the latest wind, swell, and tide data for each Sydney dive site.\n
+    • Designed simple cards that highlight if conditions look good, with details just a tap away.\n
+    • Built a photo-led dive log that auto-fills key info like tide, time, and weather.\n
+    • Added handy extras: bookmark favourite sites, get gentle reminders when conditions look good, and keep full control of your privacy.\n
+    • Made sure it’s fast and reliable, so it works smoothly even with spotty reception.\n
+    • Kept the focus on divers’ needs, not ads or noise — just clean, useful tools.",
 
-    'result' => "The site feels faster, clearer, and more trustworthy. Visitors find the right info sooner and have a simpler path to reach out — setting a strong base for content and SEO growth.",
-
-    // Optional before/after (add your own grabs later or remove this block)
+    // Highlights (rename images to match your assets)
     'beforeAfter' => [
-      'before'  => null,
-      'after'   => 'images/turtle.webp',
-      'caption' => 'A clean, fast hero with a focused message.',
+      'before'         => 'images/vizzbud/sitemap.webp', // dive site map / conditions
+      'after'          => 'images/vizzbud/divelog.webp', // dive logbook entry
+      'caption_before' => 'Interactive dive site map with live conditions',
+      'caption_after'  => 'Streamlined dive log to record dives quickly',
     ],
 
-    // Simple gallery (swap/add as needed)
+    // Screens (extra showcase)
     'screens' => [
-      'images/turtle.webp',
+      'images/vizzbud/home.webp',
+      'images/vizzbud/divelogger.webp',
+    ],
+    'captions' => [
+      'Home page for Vizzbud',
+      'Dive Logger page',
     ],
 
-    // Optional chapters to go a bit deeper
-    'chapters' => [
-      [
-        'title' => 'Messaging & structure',
-        'body'  => "We prioritised a short headline and subhead that explain the offering fast. Navigation stays minimal; each page answers who it’s for, what’s included, and how to start.",
-        'images'=> [],
-      ],
-      [
-        'title' => 'Performance & SEO foundation',
-        'body'  => "We kept the build lean (no heavy plugins), optimised images, and aligned titles/headings to real search terms. Internal linking sets up future content to perform.",
-        'images'=> [],
-      ],
-      [
-        'title' => 'Simpler enquiries',
-        'body'  => "CTAs are consistent and forms are short. Success messages set expectations, and notifications ensure quick follow-up.",
-        'images'=> [],
-      ],
-    ],
+    'result' => "Vizzbud gives divers the confidence to plan smarter and log easier. Conditions are clear at a glance, the logbook feels effortless to use, and it all works offline right at the pier. By focusing on speed, simplicity, and privacy, we built something divers actually enjoy coming back to — not just another app they forget about.",
 
-    // Cross-link to another project
+    // Cross-link to another case if you like
     'moreWork'  => [
       'title'    => 'That Disability Adventure Company',
-      'subtitle' => 'Website refresh & local SEO',
-      'img'      => 'images/tdac.webp',
+      'subtitle' => 'Website redesign + CRM & automations',
+      'img'      => 'images/tdac/tdac.webp',
       'href'     => url('/portfolio/that-disability-adventure-company'),
-      'label'    => 'View TDAC case study',
+      'label'    => "See TDAC case study",
     ],
   ])
 @endsection
