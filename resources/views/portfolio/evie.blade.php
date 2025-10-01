@@ -18,46 +18,48 @@
     'liveUrl'   => 'https://eviebowerman.com/',
     'industry'  => 'Digital Design / Creative Portfolio',
 
-    'services'  => [
-      'Portfolio website (custom theme)',
-      'Image optimisation & lazy loading',
-      'Content structure & copy polish',
-      'SEO foundations',
-      'Ongoing support',
+    'services' => [
+      'Image-first portfolio redesign',
+      'Clear project structure & captions',
+      'Image optimisation + mobile performance',
+      'SEO foundations (titles, meta, alt, OG)',
+      'Light analytics & simple reporting',
+      'Easy updates, training & support',
     ],
 
-    'heroImage' => 'images/evie.webp',
+    'heroImage' => 'images/evie/evie.webp',
 
-    // Quick goals
     'goals' => [
-      ['label' => 'Showcase projects clearly', 'value' => 'Large imagery + simple nav'],
-      ['label' => 'Be fast on mobile',         'value' => 'Under ~2s on 4G'],
-      ['label' => 'Update without friction',   'value' => 'Simple edit flow'],
+      ['label' => 'Showcase work',        'value' => 'Large images, clean layout'],
+      ['label' => 'Smooth mobile use',    'value' => 'Fast load, easy tap targets'],
+      ['label' => 'Simple updates',       'value' => 'Add new projects in minutes'],
     ],
 
-    // Headline metrics (tweak if you have different numbers)
+    // Headline metrics
     'metrics' => [
-      ['label' => 'Portfolio views / mo',  'value' => '120 → 380 (+216%)'],
-      ['label' => 'Avg. time on page',     'value' => '0:42 → 1:35'],
-      ['label' => 'Project link clicks',   'value' => '↑ 3.1×'],
+      ['label' => 'Monthly portfolio views', 'value' => '120 → 380 (+216%)'],
+      ['label' => 'Average time on page',    'value' => '0:42 → 1:35'],
+      ['label' => 'Project link clicks',     'value' => '3.1× increase'],
     ],
 
-    'challenge' => "Evie needed a clean, distraction-free site that lets the work shine. No heavy CMS, no complex back end — just a portfolio that’s easy to browse, fast on phones, and looks great when shared.",
+    'challenge' => "Evie’s old portfolio made it harder than it should be for people to enjoy her work. She needed a clean, distraction-free site where the projects take centre stage — no bulky CMS, no complex back end. Just a simple, professional portfolio that’s easy to browse, quick on mobile, and looks great when shared.",
 
-    'whatWeDid' => "• Designed a type-led layout with big, consistent imagery and clear captions.\n
-• Structured projects so visitors can scan quickly and dive deeper when they like.\n
-• Compressed and resized images, added lazy loading, and tuned for mobile performance.\n
-• Set sensible SEO basics: titles, meta descriptions, alt text, and open-graph images.\n
-• Added tasteful hover/reveal animations that feel polished without getting in the way.\n
-• Set up a simple update flow so new work can be added in minutes.",
+    'whatWeDid' => "• Created a clean, type-led layout with consistent imagery and clear captions.\n
+    • Structured projects so visitors can scan at a glance or dive deeper into details.\n
+    • Optimised images: compressed, resized, lazy-loaded, and tuned for fast mobile load times.\n
+    • Set SEO foundations: meaningful titles, meta descriptions, alt text, and OG images.\n
+    • Added subtle hover and reveal animations for polish without distraction.\n
+    • Built a simple update flow so new work can be added in minutes.",
 
-    'result' => "A focused, fast portfolio that helps Evie present her work professionally and share links with confidence. Studios and clients can browse on any device without friction.",
+    'result' => "A clean, fast portfolio that puts Evie’s work first — professional to share, effortless to update, and smooth to browse on any device. Studios and clients can quickly explore projects without friction.",
 
     // Optional before/after
     'beforeAfter' => [
-      'before'  => 'images/evieScreenGrab.webp',
-      'after'   => 'images/evie.webp',
-      'caption' => 'Cleaner typography, bigger imagery, simpler navigation.',
+      'before'         => 'images/evie/home.webp',
+      'after'          => 'images/evie/portfolio.webp',
+      'caption_before' => 'Homepage — clean entry, focused intro',
+      'caption_after'  => 'Portfolio showcase — bold imagery, simple navigation',
+      'caption'        => 'Cleaner typography, bigger images, and a navigation that makes the work easy to explore.',
     ],
 
     // Gallery
@@ -73,22 +75,24 @@
         'title'  => 'Showcase-first layout',
         'body'   => "Minimal UI with generous whitespace. Projects open into clean detail views so the work takes centre stage.",
         'images' => ['images/mockups/evie-mobile2.webp'],
-      ],
-      [
-        'title'  => 'Mobile experience',
-        'body'   => "Spacing, tap-targets and loading tuned for handheld viewing — where most portfolio traffic starts.",
-      ],
-      [
-        'title'  => 'Search & share basics',
-        'body'   => "Clear page titles, meta descriptions, alt text and OG images so search results and social previews look professional.",
-      ],
+      ]
+    ],
+
+    // Screens (About & Contact showcase)
+    'screens' => [
+      'images/evie/about.webp',
+      'images/evie/contact.webp',
+    ],
+    'captions' => [
+      'About page — personal yet professional intro',
+      'Contact page — simple form and clear links',
     ],
 
     // Cross-link to TDAC
     'moreWork'  => [
       'title'    => 'That Disability Adventure Company',
       'subtitle' => 'Website redesign + SEO foundations',
-      'img'      => 'images/tdac.webp',
+      'img'      => 'images/tdac/tdac.webp',
       'href'     => url('/portfolio/that-disability-adventure-company'),
       'label'    => "See TDAC case study",
     ],

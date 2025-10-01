@@ -17,17 +17,17 @@
     'liveUrl'   => 'https://thatdisabilityadventurecompany.com.au/',
     'industry'  => 'Disability & Health',
 
-    // Keep services human and outcome-oriented
-    'services'  => [
-      'Website redesign & copy polish',
-      'Clear service pages + accessibility tweaks',
-      'Local SEO foundations',
-      'Contact flow & email notifications',
-      'Ongoing updates & support',
+    'services' => [
+      'Website redesign',
+      'CRM for participant management',
+      'Email automations',
+      'Reusable email templates + segments',
+      'Local SEO + performance & accessibility',
+      'Analytics, training & ongoing support',
     ],
 
     // Hero
-    'heroImage' => 'images/tdac.webp',
+    'heroImage' => 'images/tdac/tdac.webp',
 
     // Quick goals we optimised for
     'goals' => [
@@ -59,8 +59,8 @@
 
     // Showcase (two key visuals)
     'beforeAfter' => [
-      'before'          => 'images/tdacWebScreenGrab.webp',   // refreshed homepage
-      'after'           => 'images/tdacWebScreenGrab2.webp',        // activities page
+      'before'          => 'images/tdac/tdacWebScreenGrab.webp',   // refreshed homepage
+      'after'           => 'images/tdac/tdacWebScreenGrab2.webp',        // activities page
       'caption_before'  => 'Refreshed homepage — clearer structure and faster to scan.',
       'caption_after'   => 'Activities page — services grouped with next steps.',
       // 'caption' => 'Optional overall note, if you want one.'
@@ -68,8 +68,8 @@
 
     // Screens (CRM showcase)
     'screens' => [
-      'images/tdacCrmHome.webp',
-      'images/tdacCrmEvents.webp',
+      'images/tdac/tdacCrmHome.webp',
+      'images/tdac/tdacCrmEvents.webp',
     ],
     'captions' => [
       'CRM dashboard for participant management',
@@ -88,7 +88,7 @@
     'moreWork'  => [
       'title'    => "Evie’s Graphic Design Portfolio",
       'subtitle' => 'Clean, fast portfolio build',
-      'img'      => 'images/evie.webp',
+      'img'      => 'images/evie/evie.webp',
       'href'     => url('/portfolio/evie-graphic-design'),
       'label'    => "View Evie’s case study",
     ],

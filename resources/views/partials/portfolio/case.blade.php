@@ -203,30 +203,46 @@
       </div>
     @endif
 
-    {{-- Chapters (Design / Build / SEO / Email / Ops) --}}
-    @if(!empty($chapters))
-      <div class="mx-auto mt-12 max-w-5xl space-y-12">
-        @foreach($chapters as $i => $ch)
-          <section class="will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="{{ 200 + ($i*50) }}">
-            <h3 class="text-xl font-semibold !text-black">{{ $ch['title'] ?? 'Section' }}</h3>
-            @if(!empty($ch['body']))
-              <div class="mt-3 prose prose-neutral max-w-none">
-                {!! nl2br(e($ch['body'])) !!}
+  {{-- Chapters (Design / Build / SEO / Email / Ops) --}}
+  @if(!empty($chapters))
+    <div class="mx-auto mt-12 max-w-5xl space-y-12">
+      @foreach($chapters as $i => $ch)
+        <section class="will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="{{ 200 + ($i*50) }}">
+          <h3 class="text-xl font-semibold !text-black">{{ $ch['title'] ?? 'Section' }}</h3>
+          
+          @if(!empty($ch['body']))
+            <div class="mt-3 prose prose-neutral max-w-none">
+              {!! nl2br(e($ch['body'])) !!}
+            </div>
+          @endif
+
+          @if(!empty($ch['images']))
+            @if(count($ch['images']) === 1)
+              {{-- Single image — centered --}}
+              <div class="mt-5 flex justify-center">
+                <div class="overflow-hidden rounded-xl border border-black/10 bg-white max-w-md">
+                  <img src="{{ \Illuminate\Support\Str::startsWith($ch['images'][0],['http','/']) ? $ch['images'][0] : asset($ch['images'][0]) }}" 
+                      alt="{{ $ch['title'] ?? 'chapter' }}" 
+                      class="w-full">
+                </div>
               </div>
-            @endif
-            @if(!empty($ch['images']))
+            @else
+              {{-- Multiple images — grid --}}
               <div class="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2">
                 @foreach($ch['images'] as $img)
                   <div class="overflow-hidden rounded-xl border border-black/10 bg-white">
-                    <img src="{{ \Illuminate\Support\Str::startsWith($img,['http','/']) ? $img : asset($img) }}" alt="{{ $ch['title'] ?? 'chapter' }}" class="w-full">
+                    <img src="{{ \Illuminate\Support\Str::startsWith($img,['http','/']) ? $img : asset($img) }}" 
+                        alt="{{ $ch['title'] ?? 'chapter' }}" 
+                        class="w-full">
                   </div>
                 @endforeach
               </div>
             @endif
-          </section>
-        @endforeach
-      </div>
-    @endif
+          @endif
+        </section>
+      @endforeach
+    </div>
+  @endif
 
     {{-- Screens showcase (styled like before/after) --}}
     @if(!empty($screens) && count($screens) >= 2)

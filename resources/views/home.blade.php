@@ -96,7 +96,7 @@
     <div class="mt-10 grid gap-6 md:grid-cols-2">
       <article class="group rounded-2xl border border-white/10 bg-black/60 p-5 backdrop-blur-sm transition-all duration-500 will-change-transform hover:-translate-y-1 hover:border-cyan-400/30 hover:shadow-[0_0_0_1px_rgba(34,211,238,0.15)] opacity-0 translate-y-6 reveal" data-delay="100">
         <div class="flex justify-center overflow-hidden rounded-xl">
-          <img src="{{ asset('images/tdac.webp') }}" alt="TDAC Promotional Picture" class="max-w-full rounded-xl transform-gpu transition duration-700 group-hover:scale-[1.03]">
+          <img src="{{ asset('images/tdac/tdac.webp') }}" alt="TDAC Promotional Picture" class="max-w-full rounded-xl transform-gpu transition duration-700 group-hover:scale-[1.03]">
         </div>
         <div class="mt-6 text-center">
           <h3 class="text-lg font-semibold text-white">That Disability Adventure Company</h3>
@@ -114,7 +114,7 @@
 
       <article class="group rounded-2xl border border-white/10 bg-black/60 p-5 backdrop-blur-sm transition-all duration-500 will-change-transform hover:-translate-y-1 hover:border-cyan-400/30 hover:shadow-[0_0_0_1px_rgba(34,211,238,0.15)] opacity-0 translate-y-6 reveal" data-delay="150">
         <div class="flex justify-center overflow-hidden rounded-xl">
-          <img src="{{ asset('images/evie.webp') }}" alt="Evie Bowerman Promotional Picture" class="max-w-full rounded-xl transform-gpu transition duration-700 group-hover:scale-[1.03]">
+          <img src="{{ asset('images/evie/evie.webp') }}" alt="Evie Bowerman Promotional Picture" class="max-w-full rounded-xl transform-gpu transition duration-700 group-hover:scale-[1.03]">
         </div>
         <div class="mt-6 text-center">
           <h3 class="text-lg font-semibold text-white">Evie's Design Portfolio</h3>
