@@ -21,7 +21,7 @@
 @section('content')
   @include('partials.portfolio.case', [
     'title'     => 'That Disability Adventure Company',
-    'summary'   => 'A complete refresh of TDAC's website and outreach—focused on clarity, trust, and making it easy for families to enquire.',
+    'summary'   => "A complete refresh of TDAC's website and outreach — focused on clarity, trust, and making it easy for families to enquire.",
     'liveUrl'   => 'https://thatdisabilityadventurecompany.com.au/',
     'industry'  => 'Disability & Health',
 
