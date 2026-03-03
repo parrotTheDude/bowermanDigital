@@ -7,7 +7,15 @@
   <meta property="og:title" content="Evie Graphic Design Portfolio | Bowerman Digital">
   <meta property="og:description" content="Clean, fast portfolio that puts Evie’s work first — simple to browse, great on mobile, and easy to keep updated.">
   <meta property="og:url" content="{{ url('/portfolio/evie-graphic-design') }}">
-  <meta property="og:image" content="{{ asset('images/evie.webp') }}">
+  <meta property="og:image" content="{{ asset('images/evie/evie.webp') }}">
+@endpush
+
+@push('schema')
+  @include('partials.schema.breadcrumb', ['breadcrumbs' => [
+    ['name' => 'Home', 'url' => url('/')],
+    ['name' => 'Portfolio', 'url' => url('/portfolio')],
+    ['name' => "Evie's Graphic Design Portfolio", 'url' => url('/portfolio/evie-graphic-design')],
+  ]])
 @endpush
 
 @section('content')
@@ -60,13 +68,6 @@
       'caption_before' => 'Homepage — clean entry, focused intro',
       'caption_after'  => 'Portfolio showcase — bold imagery, simple navigation',
       'caption'        => 'Cleaner typography, bigger images, and a navigation that makes the work easy to explore.',
-    ],
-
-    // Gallery
-    'screens' => [
-      'images/evie.webp',
-      'images/evieScreenGrab.webp',
-      'images/mockups/evie-mobile2.webp',
     ],
 
     // Optional chapters

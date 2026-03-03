@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
-use Spatie\Sitemap\SitemapGenerator;
+use App\Http\Controllers\SitemapController;
 
 Route::view('/', 'home')->name('home');
 
@@ -22,6 +22,4 @@ Route::view('/portfolio/that-disability-adventure-company', 'portfolio.tdac')->n
 Route::view('/portfolio/vizzbud', 'portfolio.vizzbud')->name('portfolio.vizzbud');
 Route::view('/portfolio/evie-graphic-design', 'portfolio.evie')->name('portfolio.evie');
 
-Route::get('sitemap.xml', function () {
-    return SitemapGenerator::create(config('app.url'))->getSitemap()->toResponse(request());
-});
+Route::get('sitemap.xml', SitemapController::class);

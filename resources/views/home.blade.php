@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
 @section('title', 'Web Development & SEO Agency | Bowerman Digital')
-@section('meta_description', "We don't work for your competitors. We are a small digital agency located in Sydney, who decides to grow your business over the rest. It's simple as that.")
+@section('meta_description', "Sydney digital agency specialising in web development, SEO, and email marketing. We partner with one business at a time to deliver real results.")
 
 @push('head')
   <meta name="robots" content="index,follow">
   <meta property="og:title" content="Web Development & SEO Agency | Bowerman Digital">
-  <meta property="og:description" content="We don't work for your competitors. We are a small digital agency located in Sydney, who decides to grow your business over the rest. It's simple as that.">
+  <meta property="og:description" content="Sydney digital agency specialising in web development, SEO, and email marketing. We partner with one business at a time to deliver real results.">
   <meta property="og:url" content="{{ url('/') }}">
   <meta property="og:image" content="{{ asset('images/og-default.jpg') }}">
   <meta name="twitter:card" content="summary_large_image">
@@ -82,7 +82,7 @@
       <div class="group perspective-1000 opacity-0 transition-all duration-700 ease-out reveal" data-delay="100">
         <a href="{{ url('/portfolio/evie-graphic-design') }}"
           class="inline-block transform-gpu transition will-change-transform origin-bottom group-hover:scale-[1.02] group-hover:-rotate-1">
-          <img class="h-auto w-[40rem] max-w-full" src="{{ asset('images/mockups/evie-mobile.webp') }}" alt="eviebowerman.com iPhone mockup">
+          <img class="h-auto w-[40rem] max-w-full" src="{{ asset('images/mockups/evie-mobile.webp') }}" alt="eviebowerman.com iPhone mockup" data-perspective-mock>
         </a>
       </div>
     </div>
@@ -96,7 +96,7 @@
     <div class="mt-10 grid gap-6 md:grid-cols-2">
       <article class="group rounded-2xl border border-white/10 bg-black/60 p-5 backdrop-blur-sm transition-all duration-500 will-change-transform hover:-translate-y-1 hover:border-cyan-400/30 hover:shadow-[0_0_0_1px_rgba(34,211,238,0.15)] opacity-0 translate-y-6 reveal" data-delay="100">
         <div class="flex justify-center overflow-hidden rounded-xl">
-          <img src="{{ asset('images/tdac/tdac.webp') }}" alt="TDAC Promotional Picture" class="max-w-full rounded-xl transform-gpu transition duration-700 group-hover:scale-[1.03]">
+          <img src="{{ asset('images/tdac/tdac.webp') }}" alt="TDAC Promotional Picture" class="max-w-full rounded-xl transform-gpu transition duration-700 group-hover:scale-[1.03]" loading="lazy">
         </div>
         <div class="mt-6 text-center">
           <h3 class="text-lg font-semibold text-white">That Disability Adventure Company</h3>
@@ -114,7 +114,7 @@
 
       <article class="group rounded-2xl border border-white/10 bg-black/60 p-5 backdrop-blur-sm transition-all duration-500 will-change-transform hover:-translate-y-1 hover:border-cyan-400/30 hover:shadow-[0_0_0_1px_rgba(34,211,238,0.15)] opacity-0 translate-y-6 reveal" data-delay="150">
         <div class="flex justify-center overflow-hidden rounded-xl">
-          <img src="{{ asset('images/evie/evie.webp') }}" alt="Evie Bowerman Promotional Picture" class="max-w-full rounded-xl transform-gpu transition duration-700 group-hover:scale-[1.03]">
+          <img src="{{ asset('images/evie/evie.webp') }}" alt="Evie Bowerman Promotional Picture" class="max-w-full rounded-xl transform-gpu transition duration-700 group-hover:scale-[1.03]" loading="lazy">
         </div>
         <div class="mt-6 text-center">
           <h3 class="text-lg font-semibold text-white">Evie's Design Portfolio</h3>
@@ -145,17 +145,17 @@
 
     <div class="mx-auto mt-10 grid w-full grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
       <aside class="rounded-2xl border border-white/10 bg-black/60 p-6 text-center backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30 opacity-0 translate-y-6 reveal" data-delay="100">
-        <img class="mx-auto mb-3 h-16 w-16 invert transition-transform duration-500 will-change-transform group-hover:rotate-3" alt="Simple Icon" src="{{ asset('icons/simplify.svg') }}">
+        <img class="mx-auto mb-3 h-16 w-16 invert transition-transform duration-500 will-change-transform group-hover:rotate-3" alt="Simplified workflow icon representing our streamlined approach" src="{{ asset('icons/simplify.svg') }}">
         <h3 class="text-lg font-semibold text-white">Simple</h3>
         <p class="mt-2 text-sm text-white/80">Making it easy to manage, grow, and succeed online.</p>
       </aside>
       <aside class="rounded-2xl border border-white/10 bg-black/60 p-6 text-center backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30 opacity-0 translate-y-6 reveal" data-delay="150">
-        <img class="mx-auto mb-3 h-16 w-16 invert transition-transform duration-500 will-change-transform group-hover:-rotate-3" alt="Quality Icon" src="{{ asset('icons/quality.svg') }}">
+        <img class="mx-auto mb-3 h-16 w-16 invert transition-transform duration-500 will-change-transform group-hover:-rotate-3" alt="Quality badge icon representing high standards in every project" src="{{ asset('icons/quality.svg') }}">
         <h3 class="text-lg font-semibold text-white">Quality</h3>
         <p class="mt-2 text-sm text-white/80">In every project so your brand shines.</p>
       </aside>
       <aside class="rounded-2xl border border-white/10 bg-black/60 p-6 text-center backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30 opacity-0 translate-y-6 reveal" data-delay="200">
-        <img class="mx-auto mb-3 h-16 w-16 invert transition-transform duration-500 will-change-transform group-hover:rotate-1" alt="Reliable Icon" src="{{ asset('icons/handshake.svg') }}">
+        <img class="mx-auto mb-3 h-16 w-16 invert transition-transform duration-500 will-change-transform group-hover:rotate-1" alt="Handshake icon representing reliable partnership and support" src="{{ asset('icons/handshake.svg') }}">
         <h3 class="text-lg font-semibold text-white">Reliable</h3>
         <p class="mt-2 text-sm text-white/80">Solutions that keep your business running smoothly.</p>
       </aside>
@@ -210,14 +210,20 @@
 
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-    const mock = document.querySelector('.md\\:block a img');
+    const mock = document.querySelector('[data-perspective-mock]');
     if (mock) {
       const wrap = mock.closest('.group');
+      let ticking = false;
       wrap.addEventListener('mousemove', (e) => {
-        const rect = wrap.getBoundingClientRect();
-        const x = ((e.clientX - rect.left) / rect.width - 0.5) * 6;
-        const y = ((e.clientY - rect.top) / rect.height - 0.5) * 6;
-        mock.style.transform = `translateZ(0) rotateX(${ -y }deg) rotateY(${ x }deg) scale(1.02)`;
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(() => {
+          const rect = wrap.getBoundingClientRect();
+          const x = ((e.clientX - rect.left) / rect.width - 0.5) * 6;
+          const y = ((e.clientY - rect.top) / rect.height - 0.5) * 6;
+          mock.style.transform = `translateZ(0) rotateX(${ -y }deg) rotateY(${ x }deg) scale(1.02)`;
+          ticking = false;
+        });
       });
       wrap.addEventListener('mouseleave', () => {
         mock.style.transform = '';

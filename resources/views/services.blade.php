@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('title', 'Services | Bowerman Digital')
-@section('meta_description', 'Web development, technical SEO, and lifecycle email. Clean code, fast performance, and clear outcomes.')
+@section('meta_description', 'Web development, technical SEO, email marketing, and CRM setup. We build fast, accessible websites and growth strategies with clear, measurable outcomes.')
 
 @push('head')
   <meta property="og:title" content="Services | Bowerman Digital">
-  <meta property="og:description" content="Web development, technical SEO, and lifecycle email. Clean code, fast performance, and clear outcomes.">
+  <meta property="og:description" content="Web development, technical SEO, email marketing, and CRM setup. We build fast, accessible websites and growth strategies with clear, measurable outcomes.">
   <meta property="og:url" content="{{ url('/services') }}">
   <meta property="og:image" content="{{ asset('images/og-default.jpg') }}">
 @endpush
@@ -44,7 +44,7 @@
       <!-- Web Development -->
       <div class="group rounded-2xl border border-white/10 bg-black/60 p-6 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30">
         <div class="mb-3 text-sm text-white/70">01</div>
-        <h3 class="text-lg font-semibold text-white">Websites That Work</h3>
+        <h2 class="text-lg font-semibold text-white">Websites That Work</h2>
         <p class="mt-2 text-sm text-white/70">We build websites that look great, load fast, and help you win more customers—without the tech headache.</p>
         <ul class="mt-4 space-y-2 text-sm text-white/70">
           <li>• Easy for you (and your customers) to use</li>
@@ -59,7 +59,7 @@
       <!-- SEO -->
       <div class="group rounded-2xl border border-white/10 bg-black/60 p-6 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30">
         <div class="mb-3 text-sm text-white/70">02</div>
-        <h3 class="text-lg font-semibold text-white">Get Found on Google (SEO)</h3>
+        <h2 class="text-lg font-semibold text-white">Get Found on Google (SEO)</h2>
         <p class="mt-2 text-sm text-white/70">We fix the issues that stop your site from showing up and create a clear plan to bring in more customers through search engines.</p>
         <ul class="mt-4 space-y-2 text-sm text-white/70">
           <li>• Full check-up on your website’s health</li>
@@ -74,7 +74,7 @@
       <!-- Email Marketing -->
       <div class="group rounded-2xl border border-white/10 bg-black/60 p-6 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30">
         <div class="mb-3 text-sm text-white/70">03</div>
-        <h3 class="text-lg font-semibold text-white">Smart Email Marketing</h3>
+        <h2 class="text-lg font-semibold text-white">Smart Email Marketing</h2>
         <p class="mt-2 text-sm text-white/70">Stay in touch with your customers automatically. From first-time buyers to repeat business, we set up emails that convert.</p>
         <ul class="mt-4 space-y-2 text-sm text-white/70">
           <li>• Welcome emails for new customers</li>
@@ -89,7 +89,7 @@
             <!-- CRM Platforms -->
       <div class="group rounded-2xl border border-white/10 bg-black/60 p-6 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30">
         <div class="mb-3 text-sm text-white/70">04</div>
-        <h3 class="text-lg font-semibold text-white">CRM Setup & Automation</h3>
+        <h2 class="text-lg font-semibold text-white">CRM Setup & Automation</h2>
         <p class="mt-2 text-sm text-white/70">
           Keep all your leads, customers, and sales in one tidy place. We set up a CRM that fits your business and automate the boring bits.
         </p>
@@ -106,7 +106,7 @@
       <!-- Privacy & Security -->
       <div class="group rounded-2xl border border-white/10 bg-black/60 p-6 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30">
         <div class="mb-3 text-sm text-white/70">05</div>
-        <h3 class="text-lg font-semibold text-white">Privacy & Security Basics</h3>
+        <h2 class="text-lg font-semibold text-white">Privacy & Security Basics</h2>
         <p class="mt-2 text-sm text-white/70">
           Protect your business and customer data without the hassle. We set sensible defaults and keep things up to date.
         </p>
@@ -123,7 +123,7 @@
       <!-- Content & Strategy -->
       <div class="group rounded-2xl border border-white/10 bg-black/60 p-6 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30">
         <div class="mb-3 text-sm text-white/70">06</div>
-        <h3 class="text-lg font-semibold text-white">Content & Strategy</h3>
+        <h2 class="text-lg font-semibold text-white">Content & Strategy</h2>
         <p class="mt-2 text-sm text-white/70">We help you plan, create, and publish content that connects with your audience and supports your business goals.</p>
         <ul class="mt-4 space-y-2 text-sm text-white/70">
           <li>• Blog posts and articles that build trust</li>
@@ -138,7 +138,7 @@
 
     <div class="mt-16 grid gap-6 lg:grid-cols-2">
       <div class="rounded-2xl border border-white/10 bg-black/60 p-6 backdrop-blur-sm">
-        <h3 class="text-lg font-semibold text-white">Your Journey With Us</h3>
+        <h2 class="text-lg font-semibold text-white">Your Journey With Us</h2>
         <ol class="mt-4 space-y-3 text-sm text-white/70">
           <li>1. Chat — We learn about your business and what you need</li>
           <li>2. Plan — We map out the best approach and timeline</li>
@@ -148,7 +148,7 @@
         </ol>
       </div>
       <div class="rounded-2xl border border-white/10 bg-black/60 p-6 backdrop-blur-sm">
-        <h3 class="text-lg font-semibold text-white">FAQs</h3>
+        <h2 class="text-lg font-semibold text-white">FAQs</h2>
         <div class="mt-4 space-y-4 text-sm text-white/70">
           <div>
             <p class="font-medium text-white">How soon can we get started?</p>

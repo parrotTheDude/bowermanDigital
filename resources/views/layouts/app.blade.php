@@ -94,7 +94,7 @@
           <ul class="nav-underline flex gap-6 [&_a]:text-white [&_a:hover]:text-cyan-400 [&_a:visited]:text-white">
             @foreach ($nav as $item)
               <li>
-                <a href="{{ $item['href'] }}" class="{{ request()->is($item['match']) ? 'text-cyan-400' : '' }}">
+                <a href="{{ $item['href'] }}" class="{{ request()->is($item['match'].'*') ? 'text-cyan-400' : '' }}" {!! request()->is($item['match'].'*') ? 'aria-current="page"' : '' !!}>
                   {{ $item['label'] }}
                 </a>
               </li>

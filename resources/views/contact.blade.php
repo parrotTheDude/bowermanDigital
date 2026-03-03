@@ -72,7 +72,7 @@
         <div class="absolute -inset-[1px] rounded-2xl bg-gradient-to-r from-cyan-400/40 via-fuchsia-400/30 to-emerald-400/40 blur-[2px]"></div>
 
         <div class="relative rounded-2xl border border-white/10 bg-black/60 p-6 backdrop-blur md:p-8">
-          <form action="{{ route('contact.submit') }}" method="POST" novalidate>
+          <form id="contact-form" action="{{ route('contact.submit') }}" method="POST" novalidate>
             @csrf
 
             {{-- Name + Email --}}
@@ -297,12 +297,24 @@
   <script>
     (function () {
       const siteKey = "{{ config('services.recaptcha.site_key') }}";
-      const form = document.querySelector('form[action="{{ route('contact.submit') }}"]');
+      const form = document.getElementById('contact-form');
       if (!form || !siteKey) return;
 
       const tokenInput = document.getElementById('recaptcha_token');
       const btn = document.getElementById('submitBtn');
       let submitting = false;
+
+      function showInlineError(msg) {
+        let el = document.getElementById('recaptcha-error');
+        if (!el) {
+          el = document.createElement('div');
+          el.id = 'recaptcha-error';
+          el.className = 'mt-3 rounded-xl border border-red-400/30 bg-red-400/10 px-4 py-3 text-sm text-red-200';
+          el.setAttribute('role', 'alert');
+          btn.parentNode.insertBefore(el, btn.nextSibling);
+        }
+        el.textContent = msg;
+      }
 
       function setLoading(on) {
         if (!btn) return;
@@ -318,9 +330,13 @@
         e.preventDefault();
         setLoading(true);
 
+        // Remove any previous inline error
+        const prevErr = document.getElementById('recaptcha-error');
+        if (prevErr) prevErr.remove();
+
         if (typeof grecaptcha === 'undefined') {
           setLoading(false);
-          alert('reCAPTCHA failed to load. Please try again.');
+          showInlineError('reCAPTCHA failed to load. Please refresh the page and try again.');
           return;
         }
 
@@ -333,7 +349,7 @@
           }).catch(function () {
             submitting = false;
             setLoading(false);
-            alert('reCAPTCHA failed to load. Please try again.');
+            showInlineError('reCAPTCHA verification failed. Please refresh the page and try again.');
           });
         });
       }, { capture: true });

@@ -175,13 +175,13 @@
         <h3 class="text-xl font-semibold">Highlights</h3>
         <div class="mt-4 grid gap-4 md:grid-cols-2">
           <figure class="rounded-xl border border-black/10 bg-white p-3">
-            <img class="w-full rounded-lg" src="{{ asset($beforeAfter['before']) }}" alt="Refreshed homepage">
+            <img class="w-full rounded-lg" src="{{ asset($beforeAfter['before']) }}" alt="{{ $beforeAfter['caption_before'] ?? $title . ' — before' }}" loading="lazy">
             <figcaption class="mt-2 text-sm text-black/70">
               {{ $beforeAfter['caption_before'] ?? 'Refreshed homepage' }}
             </figcaption>
           </figure>
           <figure class="rounded-xl border border-black/10 bg-white p-3">
-            <img class="w-full rounded-lg" src="{{ asset($beforeAfter['after']) }}" alt="Activities page">
+            <img class="w-full rounded-lg" src="{{ asset($beforeAfter['after']) }}" alt="{{ $beforeAfter['caption_after'] ?? $title . ' — after' }}" loading="lazy">
             <figcaption class="mt-2 text-sm text-black/70">
               {{ $beforeAfter['caption_after'] ?? 'Activities page' }}
             </figcaption>
@@ -252,8 +252,9 @@
           @foreach($screens as $i => $img)
             <figure class="rounded-xl border border-black/10 bg-white p-3">
               <img src="{{ \Illuminate\Support\Str::startsWith($img, ['http','/']) ? $img : asset($img) }}"
-                  alt="{{ $title }} screenshot {{ $i+1 }}"
-                  class="w-full rounded-lg shadow-sm">
+                  alt="{{ $captions[$i] ?? $title . ' screenshot ' . ($i+1) }}"
+                  class="w-full rounded-lg shadow-sm"
+                  loading="lazy">
               <figcaption class="mt-2 text-sm text-black/70">
                 {{ $captions[$i] ?? 'Screenshot' }}
               </figcaption>
@@ -355,7 +356,7 @@
       <div class="absolute inset-0 -z-0" aria-hidden="true">
         <div class="absolute -top-32 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-cyan-400/10 blur-3xl"></div>
         <div class="absolute -bottom-24 -left-16 h-56 w-56 rounded-full bg-fuchsia-400/10 blur-3xl"></div>
-        <svg class="absolute inset-0 opacity-[0.06]" focusable="false">
+        <svg class="absolute inset-0 opacity-[0.06]" focusable="false" aria-hidden="true">
           <defs>
             <pattern id="dots-cta" width="16" height="16" patternUnits="userSpaceOnUse">
               <circle cx="1" cy="1" r="1" fill="white"></circle>
@@ -435,7 +436,7 @@
   <div class="mx-auto max-w-3xl will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="0">
     <h2 class="text-2xl font-semibold text-white">Interested in working with us?</h2>
     <p class="mt-2 text-white/80">Click below to get to our contact form.</p>
-    <img src="{{ asset('icons/arrow.svg') }}" class="mx-auto mt-6 h-10 w-10 invert" alt="">
+    <img src="{{ asset('icons/arrow.svg') }}" class="mx-auto mt-6 h-10 w-10 invert" alt="" aria-hidden="true">
     <div class="mt-6 flex justify-center">
       <a href="{{ url('/contact') }}" class="no-underline">
         <div class="glow-on-hover"><p>Contact us today</p></div>

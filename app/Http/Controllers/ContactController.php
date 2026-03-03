@@ -20,15 +20,23 @@ class ContactController extends Controller
         $timeline = (string) $request->string('timeline');
         $message  = (string) $request->string('message');
 
-        // Postmark setup
-        $client  = new PostmarkClient(config('services.postmark.token', env('POSTMARK_TOKEN')));
-        $from    = config('mail.from.address', env('POSTMARK_FROM', 'hello@bowermandigital.com'));
-        $toOwner = env('POSTMARK_OWNER_TO', 'hello@bowermandigital.com');
-        $stream  = env('POSTMARK_MESSAGE_STREAM', 'outbound');
+        // Postmark setup — all values from config (no direct env() calls)
+        $token = config('services.postmark.token');
 
-        $tplConfirm = 41653909;
-        // accept either var spelling for safety
-        $tplOwner   = 41653895;
+        if (empty($token)) {
+            logger()->error('Postmark token is not configured');
+            return back()->withErrors([
+                'status' => 'There was an issue sending your message. Please try again.',
+            ])->withInput();
+        }
+
+        $client  = new PostmarkClient($token);
+        $from    = config('services.postmark.from', 'hello@bowermandigital.com');
+        $toOwner = config('services.postmark.owner_to', 'hello@bowermandigital.com');
+        $stream  = config('services.postmark.stream', 'outbound');
+
+        $tplConfirm = (int) config('services.postmark.confirmation_template', 41653909);
+        $tplOwner   = (int) config('services.postmark.enquiries_template', 41653895);
 
         // template model
         $model = [
@@ -42,18 +50,20 @@ class ContactController extends Controller
             'budget'       => $budget,
             'timeline'     => $timeline,
             'message'      => $message,
-            'product_url'  => url('/'),         // confirmation only
-            'sender_name'  => env('SENDER_NAME', 'Jacob'), // confirmation only
-            'admin_url'    => url('/admin')     // owner only (if you have one)
+            'product_url'  => url('/'),
+            'sender_name'  => config('app.sender_name', 'Jacob'),
+            'admin_url'    => url('/admin'),
         ];
 
-        // 1) Customer confirmation (don’t fail request if this hiccups)
+        // 1) Customer confirmation (don't fail request if this hiccups)
         try {
             $client->sendEmailWithTemplate(
                 $from, $email, $tplConfirm, $model, true, 'enquiry-confirmation', true,
                 null, null, null, null, null, 'None', null, $stream
             );
-        } catch (\Throwable $e) {
+        } catch (\Postmark\Models\PostmarkException $e) {
+            logger()->warning('Postmark confirmation failed', ['error' => $e->getMessage()]);
+        } catch (\Exception $e) {
             logger()->warning('Postmark confirmation failed', ['error' => $e->getMessage()]);
         }
 
@@ -63,13 +73,18 @@ class ContactController extends Controller
                 $from, $toOwner, $tplOwner, $model, true, 'contact-form-enquiry', true,
                 null, null, null, null, null, 'None', null, $stream
             );
-        } catch (\Throwable $e) {
+        } catch (\Postmark\Models\PostmarkException $e) {
+            logger()->error('Postmark owner notification failed', ['error' => $e->getMessage()]);
+            return back()->withErrors([
+                'status' => 'There was an issue sending your message. Please try again.',
+            ])->withInput();
+        } catch (\Exception $e) {
             logger()->error('Postmark owner notification failed', ['error' => $e->getMessage()]);
             return back()->withErrors([
                 'status' => 'There was an issue sending your message. Please try again.',
             ])->withInput();
         }
 
-        return back()->with('status', 'Thanks! We’ve received your enquiry and will reply within 1 business day.');
+        return back()->with('status', 'Thanks! We've received your enquiry and will reply within 1 business day.');
     }
 }

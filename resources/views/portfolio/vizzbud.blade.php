@@ -7,8 +7,15 @@
   <meta property="og:title" content="Vizzbud | Bowerman Digital">
   <meta property="og:description" content="Realtime dive conditions and a slick logbook for Sydney divers — fast, accurate, and privacy-first.">
   <meta property="og:url" content="{{ url('/portfolio/vizzbud') }}">
-  {{-- Use your best hero here; swap if you have a branded shot --}}
-  <meta property="og:image" content="{{ asset('images/turtle.webp') }}">
+  <meta property="og:image" content="{{ asset('images/vizzbud/turtle.webp') }}">
+@endpush
+
+@push('schema')
+  @include('partials.schema.breadcrumb', ['breadcrumbs' => [
+    ['name' => 'Home', 'url' => url('/')],
+    ['name' => 'Portfolio', 'url' => url('/portfolio')],
+    ['name' => 'Vizzbud', 'url' => url('/portfolio/vizzbud')],
+  ]])
 @endpush
 
 @section('content')

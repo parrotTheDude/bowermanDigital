@@ -57,7 +57,7 @@ h1, h2, h3, h4, h5, h6 { @apply text-white; }
   background-size: cover;
   mask:
     radial-gradient(circle at 50% 50%, white 2px, transparent 2.5px) 50% 50% / 20px 20px,
-    url("https://assets.codepen.io/605876/noise-mask.png") 256px 50% / 256px 256px;
+    url("/images/noise-mask.png") 256px 50% / 256px 256px;
   -webkit-mask-composite: source-in;
           mask-composite: intersect;
   animation: flicker 20s linear infinite;
@@ -87,13 +87,13 @@ h1, h2, h3, h4, h5, h6 { @apply text-white; }
 /* Mobile nav animations */
 .main-nav{
   position:fixed; inset:0; text-align:center; background:rgba(0,0,0,0); opacity:0;
-  visibility:hidden; z-index:-1; transition:all .375s;
+  visibility:hidden; z-index:0; transition:opacity .375s, visibility .375s, background .375s;
 }
 .main-nav.is-open{ opacity:1; visibility:visible; z-index:100; }
 header.is-open{ height:100%; }
 .main-nav::before{
   content:""; position:absolute; inset:0 -15px 0 0; background:rgba(0,0,0,1);
-  transform-origin:0 0; transform:skew(-14deg) translateX(-120%); transition:all .4s .1s;
+  transform-origin:0 0; transform:skew(-14deg) translateX(-120%); transition:transform .4s .1s;
 }
 .main-nav.is-open::before{ transform:skew(-14deg) translateX(0); }
 .main-nav ul{
@@ -181,5 +181,5 @@ header.is-open{ height:100%; }
 
 /* Keyframes */
 @keyframes glowing { 0%{background-position:0 0} 50%{background-position:400% 0} 100%{background-position:0 0} }
-@keyframes flicker { to { mask-position:50% 50%, 0 50% } }
+@keyframes flicker { from { mask-position:50% 50%, 256px 50% } to { mask-position:50% 50%, 0 50% } }
 @keyframes flash { from,to{color:transparent} 50%{color:#fff} }
