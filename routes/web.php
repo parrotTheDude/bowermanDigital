@@ -8,7 +8,7 @@ Route::view('/', 'home')->name('home');
 
 // Pages
 Route::view('/services',  'services')->name('services');
-Route::view('/blog',      'blog')->name('blog'); 
+// Route::view('/blog', 'blog')->name('blog'); // uncomment when blog view is built
 
 // Contact
 Route::view('/contact', 'contact')->name('contact');

@@ -85,6 +85,6 @@ class ContactController extends Controller
             ])->withInput();
         }
 
-        return back()->with('status', 'Thanks! We've received your enquiry and will reply within 1 business day.');
+        return back()->with('status', "Thanks! We've received your enquiry and will reply within 1 business day.");
     }
 }
