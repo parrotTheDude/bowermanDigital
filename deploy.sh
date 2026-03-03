@@ -50,12 +50,15 @@ php artisan view:cache
 
 # 6. Clear any stale application cache
 echo "--- Clearing application cache..."
-php artisan cache:clear
+php artisan cache:clear 2>/dev/null || echo "    (skipped — cache permissions managed by hosting)"
 
-# 7. Ensure storage directories have correct permissions (skip if not allowed)
-echo "--- Setting storage permissions..."
-chmod -R 775 storage bootstrap/cache 2>/dev/null || echo "    (skipped — permissions already managed by hosting)"
-chown -R www-data:www-data storage bootstrap/cache 2>/dev/null || true
+# 7. Ensure storage & cache directories are writable
+echo "--- Checking permissions..."
+# On shared hosting (digijake user) these dirs are already owned by you,
+# so no chmod/chown needed. Uncomment below only if running on a VPS
+# where the web server user (www-data) differs from the deploy user.
+# chmod -R 775 storage bootstrap/cache
+# chown -R www-data:www-data storage bootstrap/cache
 
 echo ""
 echo "==> Deploy complete!"
