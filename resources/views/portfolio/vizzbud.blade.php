@@ -41,8 +41,8 @@
 
     // Goals (clear, user-centric)
     'goals' => [
-      ['label' => 'Check if it’s worth the drive', 'value' => 'Realtime local conditions at a glance'],
-      ['label' => 'Log dives you’re proud of',      'value' => 'Fast, photo-first, auto-captured stats'],
+      ['label' => "Check if it's worth the drive", 'value' => 'Realtime local conditions at a glance'],
+      ['label' => "Log dives you're proud of",     'value' => 'Fast, photo-first, auto-captured stats'],
       ['label' => 'Come back often',               'value' => 'Snappy PWA + useful notifications'],
     ],
 
@@ -54,7 +54,7 @@
     ],
 
     // Challenge (plain-English)
-    'challenge' => "Divers needed one trustworthy place to check today’s conditions per site (not generic ocean forecasts) and a way to log dives quickly without wrestling a bloated app. Prior tools were either slow, global, or ad-heavy, and didn’t fit how Sydney shore dives actually work.",
+    'challenge' => "Divers needed one trustworthy place to check today's conditions per site (not generic ocean forecasts) and a way to log dives quickly without wrestling a bloated app. Prior tools were either slow, global, or ad-heavy, and didn't fit how Sydney shore dives actually work.",
 
     // What we did (concise, user-first)
     'whatWeDid' => "• Created a lightweight app divers can save to their phone and use anywhere.\n
@@ -62,8 +62,8 @@
     • Designed simple cards that highlight if conditions look good, with details just a tap away.\n
     • Built a photo-led dive log that auto-fills key info like tide, time, and weather.\n
     • Added handy extras: bookmark favourite sites, get gentle reminders when conditions look good, and keep full control of your privacy.\n
-    • Made sure it’s fast and reliable, so it works smoothly even with spotty reception.\n
-    • Kept the focus on divers’ needs, not ads or noise — just clean, useful tools.",
+    • Made sure it's fast and reliable, so it works smoothly even with spotty reception.\n
+    • Kept the focus on divers' needs, not ads or noise — just clean, useful tools.",
 
     // Highlights (rename images to match your assets)
     'beforeAfter' => [

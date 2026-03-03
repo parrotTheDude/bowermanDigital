@@ -23,11 +23,11 @@
 
   {{-- MOBILE phone pinned to bottom of hero, raised higher --}}
   <div class="-mb-8 absolute inset-x-0 bottom-28 z-10 mx-auto flex justify-center md:hidden pointer-events-none">
-    <a href="{{ url('/portfolio/evie-graphic-design') }}" class="block">
+    <a href="{{ url('/portfolio/vizzbud') }}" class="block">
       <img
         class="h-auto w-80"
-        src="{{ asset('images/mockups/evie-mobile2.webp') }}"
-        alt="Evie Bowerman portfolio website"
+        src="{{ asset('images/vizzbud/home.webp') }}"
+        alt="Vizzbud dive conditions platform"
       >
     </a>
   </div>
@@ -76,13 +76,13 @@
         </div>
       </div>
 
-    {{-- RIGHT: desktop mock unchanged --}}
-    <div class="order-1 relative hidden items-center justify-center 
+    {{-- RIGHT: desktop mock --}}
+    <div class="order-1 relative hidden items-center justify-center
               md:order-2 md:flex md:col-span-5">
       <div class="group perspective-1000 opacity-0 transition-all duration-700 ease-out reveal" data-delay="100">
-        <a href="{{ url('/portfolio/evie-graphic-design') }}"
+        <a href="{{ url('/portfolio/vizzbud') }}"
           class="inline-block transform-gpu transition will-change-transform origin-bottom group-hover:scale-[1.02] group-hover:-rotate-1">
-          <img class="h-auto w-[40rem] max-w-full" src="{{ asset('images/mockups/evie-mobile.webp') }}" alt="eviebowerman.com iPhone mockup" data-perspective-mock>
+          <img class="h-auto w-[40rem] max-w-full rounded-2xl" src="{{ asset('images/vizzbud/home.webp') }}" alt="Vizzbud dive conditions platform" data-perspective-mock>
         </a>
       </div>
     </div>
@@ -93,16 +93,34 @@
   <div class="mx-auto max-w-7xl">
     <h2 class="text-center text-3xl font-semibold text-white opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="0">Our Work</h2>
 
-    <div class="mt-10 grid gap-6 md:grid-cols-2">
+    <div class="mt-10 grid gap-6 md:grid-cols-3">
+      {{-- 1. Vizzbud (featured) --}}
       <article class="group rounded-2xl border border-white/10 bg-black/60 p-5 backdrop-blur-sm transition-all duration-500 will-change-transform hover:-translate-y-1 hover:border-cyan-400/30 hover:shadow-[0_0_0_1px_rgba(34,211,238,0.15)] opacity-0 translate-y-6 reveal" data-delay="100">
-        <div class="flex justify-center overflow-hidden rounded-xl">
-          <img src="{{ asset('images/tdac/tdac.webp') }}" alt="TDAC Promotional Picture" class="max-w-full rounded-xl transform-gpu transition duration-700 group-hover:scale-[1.03]" loading="lazy">
+        <div class="aspect-[16/9] overflow-hidden rounded-xl">
+          <img src="{{ asset('images/vizzbud/home.webp') }}" alt="Vizzbud dive conditions platform" class="h-full w-full object-cover object-top rounded-xl transform-gpu transition duration-700 group-hover:scale-[1.03]" loading="lazy">
+        </div>
+        <div class="mt-6 text-center">
+          <h3 class="text-lg font-semibold text-white">Vizzbud</h3>
+          <p class="mx-auto mt-2 max-w-prose text-sm text-white/80">
+            A <b>progressive web app</b> giving Sydney divers realtime conditions, tide windows, and a personal dive log. Built with a <b>realtime data pipeline, interactive maps, and privacy-first account system.</b>
+          </p>
+        </div>
+        <div class="mx-auto mt-6 flex justify-center">
+          <a href="{{ url('/portfolio/vizzbud') }}" class="no-underline">
+            <div class="glow-on-hover"><p>Vizzbud's Journey</p></div>
+          </a>
+        </div>
+      </article>
+
+      {{-- 2. TDAC --}}
+      <article class="group rounded-2xl border border-white/10 bg-black/60 p-5 backdrop-blur-sm transition-all duration-500 will-change-transform hover:-translate-y-1 hover:border-cyan-400/30 hover:shadow-[0_0_0_1px_rgba(34,211,238,0.15)] opacity-0 translate-y-6 reveal" data-delay="150">
+        <div class="aspect-[16/9] overflow-hidden rounded-xl">
+          <img src="{{ asset('images/tdac/tdac.webp') }}" alt="TDAC Promotional Picture" class="h-full w-full object-cover object-center rounded-xl transform-gpu transition duration-700 group-hover:scale-[1.03]" loading="lazy">
         </div>
         <div class="mt-6 text-center">
           <h3 class="text-lg font-semibold text-white">That Disability Adventure Company</h3>
           <p class="mx-auto mt-2 max-w-prose text-sm text-white/80">
-            For TDAC, we delivered a comprehensive solution including a <b>new website, a consistent SEO strategy supported by blog content, a custom backend CRM platform, and an EDM strategy.</b> 
-            These initiatives elevated TDAC's digital performance, growing monthly website traffic <b>from 90 visitors in 2024 to 500+ in 2025</b> while streamlining internal operations and enhancing client communications.
+            A <b>new website, SEO strategy, custom CRM, and EDM program</b> that grew monthly traffic <b>from 90 to 500+ visitors</b> while streamlining operations and client communications.
           </p>
         </div>
         <div class="mx-auto mt-6 flex justify-center">
@@ -112,15 +130,15 @@
         </div>
       </article>
 
-      <article class="group rounded-2xl border border-white/10 bg-black/60 p-5 backdrop-blur-sm transition-all duration-500 will-change-transform hover:-translate-y-1 hover:border-cyan-400/30 hover:shadow-[0_0_0_1px_rgba(34,211,238,0.15)] opacity-0 translate-y-6 reveal" data-delay="150">
-        <div class="flex justify-center overflow-hidden rounded-xl">
-          <img src="{{ asset('images/evie/evie.webp') }}" alt="Evie Bowerman Promotional Picture" class="max-w-full rounded-xl transform-gpu transition duration-700 group-hover:scale-[1.03]" loading="lazy">
+      {{-- 3. Evie --}}
+      <article class="group rounded-2xl border border-white/10 bg-black/60 p-5 backdrop-blur-sm transition-all duration-500 will-change-transform hover:-translate-y-1 hover:border-cyan-400/30 hover:shadow-[0_0_0_1px_rgba(34,211,238,0.15)] opacity-0 translate-y-6 reveal" data-delay="200">
+        <div class="aspect-[16/9] overflow-hidden rounded-xl">
+          <img src="{{ asset('images/evie/evie.webp') }}" alt="Evie Bowerman Promotional Picture" class="h-full w-full object-cover object-center rounded-xl transform-gpu transition duration-700 group-hover:scale-[1.03]" loading="lazy">
         </div>
         <div class="mt-6 text-center">
           <h3 class="text-lg font-semibold text-white">Evie's Design Portfolio</h3>
           <p class="mx-auto mt-2 max-w-prose text-sm text-white/80">
-            We designed and developed a sleek, modern website for Evie, a freelance graphic designer, to showcase her digital portfolio. With <b>clean UX, responsive design, and SEO integration, </b>
-            the site not only highlights her creative work but has also helped her attract new clients and secure multiple projects.
+            A sleek portfolio site with <b>clean UX, responsive design, and SEO integration</b> that helped Evie attract new clients and secure multiple freelance projects.
           </p>
         </div>
         <div class="mx-auto mt-6 flex justify-center">

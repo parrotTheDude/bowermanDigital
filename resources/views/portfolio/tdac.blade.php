@@ -21,7 +21,7 @@
 @section('content')
   @include('partials.portfolio.case', [
     'title'     => 'That Disability Adventure Company',
-    'summary'   => 'A complete refresh of TDAC’s website and outreach—focused on clarity, trust, and making it easy for families to enquire.',
+    'summary'   => 'A complete refresh of TDAC's website and outreach—focused on clarity, trust, and making it easy for families to enquire.',
     'liveUrl'   => 'https://thatdisabilityadventurecompany.com.au/',
     'industry'  => 'Disability & Health',
 
@@ -52,7 +52,7 @@
     ],
 
     // The story (kept plain-English)
-   'challenge' => "Families found it hard to understand TDAC’s services or know how to start. The old site was clunky on mobile, slow to load, and didn’t guide people toward enquiring. On top of that, search visibility was weak and day-to-day admin tasks like managing participants and sending emails were eating up time.",
+   'challenge' => "Families found it hard to understand TDAC's services or know how to start. The old site was clunky on mobile, slow to load, and didn't guide people toward enquiring. On top of that, search visibility was weak and day-to-day admin tasks like managing participants and sending emails were eating up time.",
 
     'whatWeDid' => "• Re-designed and rebuilt the entire website for clarity, trust, and mobile-first performance.\n
     • Re-structured service pages and rewrote content so families can quickly understand what TDAC offers and how to get started.\n
@@ -85,20 +85,20 @@
     ],
 
     'quote' => [
-      'text' => "We had a frustrating experience with previous web developers — poor communication, clunky systems, and a site that didn’t reflect who we were. Then we made the switch to Jacob and it was a complete game changer. The process was collaborative, smooth, and genuinely exciting. Jacob took the time to understand our values, our community, and what we were trying to build at TDAC, and translated that into a website that actually feels like us. 
+      'text' => "We had a frustrating experience with previous web developers — poor communication, clunky systems, and a site that didn't reflect who we were. Then we made the switch to Jacob and it was a complete game changer. The process was collaborative, smooth, and genuinely exciting. Jacob took the time to understand our values, our community, and what we were trying to build at TDAC, and translated that into a website that actually feels like us. 
 
-      Not only does it look great, but it’s easier for participants and families to navigate, and we’ve already seen more enquiries and positive feedback. The backend is also a dream compared to what we had before. If you’re in the tourism or adventure space and looking to grow your digital presence with someone who gets it, I couldn’t recommend Jacob highly enough.",
+      Not only does it look great, but it's easier for participants and families to navigate, and we've already seen more enquiries and positive feedback. The backend is also a dream compared to what we had before. If you're in the tourism or adventure space and looking to grow your digital presence with someone who gets it, I couldn't recommend Jacob highly enough.",
         'author' => "That Disability Adventure Company",
         'role'   => "Directors",
       ],
 
     // Cross-link to other work
     'moreWork'  => [
-      'title'    => "Evie’s Graphic Design Portfolio",
+      'title'    => "Evie's Graphic Design Portfolio",
       'subtitle' => 'Clean, fast portfolio build',
       'img'      => 'images/evie/evie.webp',
       'href'     => url('/portfolio/evie-graphic-design'),
-      'label'    => "View Evie’s case study",
+      'label'    => "View Evie's case study",
     ],
   ])
 @endsection

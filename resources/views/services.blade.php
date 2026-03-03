@@ -62,7 +62,7 @@
         <h2 class="text-lg font-semibold text-white">Get Found on Google (SEO)</h2>
         <p class="mt-2 text-sm text-white/70">We fix the issues that stop your site from showing up and create a clear plan to bring in more customers through search engines.</p>
         <ul class="mt-4 space-y-2 text-sm text-white/70">
-          <li>• Full check-up on your website’s health</li>
+          <li>• Full check-up on your website's health</li>
           <li>• Better structure so Google actually shows you</li>
           <li>• Content ideas that drive enquiries & sales</li>
         </ul>
@@ -79,7 +79,7 @@
         <ul class="mt-4 space-y-2 text-sm text-white/70">
           <li>• Welcome emails for new customers</li>
           <li>• Follow-ups that encourage repeat business</li>
-          <li>• Clear reporting so you know it’s working</li>
+          <li>• Clear reporting so you know it's working</li>
         </ul>
         <div class="mt-5">
           <a href="{{ url('/contact') }}" class="text-cyan-300 hover:text-cyan-200">Plan a flow →</a>
@@ -155,11 +155,11 @@
             <p class="mt-1">Most projects kick off in about a week or two. Quick jobs can start even faster.</p>
           </div>
           <div>
-            <p class="font-medium text-white">Will you look after my website once it’s live?</p>
-            <p class="mt-1">Absolutely. We can keep things updated, secure, and running smoothly so you don’t have to worry about it.</p>
+            <p class="font-medium text-white">Will you look after my website once it's live?</p>
+            <p class="mt-1">Absolutely. We can keep things updated, secure, and running smoothly so you don't have to worry about it.</p>
           </div>
           <div>
-            <p class="font-medium text-white">What does “success” mean for my business?</p>
+            <p class="font-medium text-white">What does "success" mean for my business?</p>
             <p class="mt-1">That depends on your goals — more enquiries, more sales, a faster site, or showing up higher on Google. We set clear targets together.</p>
           </div>
         </div>
