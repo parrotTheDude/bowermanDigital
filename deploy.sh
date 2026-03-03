@@ -21,7 +21,7 @@ echo ""
 
 # 1. Pull latest code
 echo "--- Pulling latest changes..."
-git pull origin main
+git pull origin master
 
 # 2. Install PHP dependencies (no dev, optimised autoloader)
 echo "--- Installing Composer dependencies..."
