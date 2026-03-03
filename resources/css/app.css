@@ -57,7 +57,7 @@ h1, h2, h3, h4, h5, h6 { @apply text-white; }
   background-size: cover;
   mask:
     radial-gradient(circle at 50% 50%, white 2px, transparent 2.5px) 50% 50% / 20px 20px,
-    url("/images/noise-mask.png") 256px 50% / 256px 256px;
+    url("https://assets.codepen.io/605876/noise-mask.png") 256px 50% / 256px 256px;
   -webkit-mask-composite: source-in;
           mask-composite: intersect;
   animation: flicker 20s linear infinite;
