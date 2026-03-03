@@ -52,9 +52,9 @@ php artisan view:cache
 echo "--- Clearing application cache..."
 php artisan cache:clear
 
-# 7. Ensure storage directories have correct permissions
+# 7. Ensure storage directories have correct permissions (skip if not allowed)
 echo "--- Setting storage permissions..."
-chmod -R 775 storage bootstrap/cache
+chmod -R 775 storage bootstrap/cache 2>/dev/null || echo "    (skipped — permissions already managed by hosting)"
 chown -R www-data:www-data storage bootstrap/cache 2>/dev/null || true
 
 echo ""
