@@ -3,6 +3,7 @@
 .env.backup
 .env.production
 /auth.json
+deploy.sh
 
 # Dependencies (rebuilt on server)
 /vendor
