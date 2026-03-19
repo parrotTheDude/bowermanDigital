@@ -106,9 +106,13 @@
   </section>
 </section>
 
-<section class="relative z-20 bg-zinc-950 px-6 pt-8 pb-16 md:py-16">
+<section class="relative z-20 bg-zinc-900 px-6 pt-10 pb-16 md:pt-12 md:pb-20">
+  {{-- Top divider --}}
+  <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent"></div>
+
   <div class="mx-auto max-w-7xl">
-    <h2 class="text-center text-3xl font-semibold text-white opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="0">Our Work</h2>
+    <span class="mx-auto mb-3 block w-fit rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs tracking-wide text-white/60 opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="0">Portfolio</span>
+    <h2 class="text-center text-3xl font-semibold text-white opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="50">Our Work</h2>
 
     <div class="mt-10 grid gap-6 md:grid-cols-3">
       {{-- 1. Vizzbud (featured) --}}
