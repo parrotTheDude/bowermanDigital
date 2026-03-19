@@ -80,6 +80,14 @@ h1, h2, h3, h4, h5, h6 { @apply text-white; }
   opacity:0; transition:opacity .3s ease-in-out;
 }
 .glow-on-hover:hover::before{ opacity:1; }
+/* On mobile: subtle glow pulse so the CTA draws the eye */
+@media (max-width: 767px) {
+  .glow-on-hover::before{ opacity:1; animation: glowing 20s linear infinite, glow-pulse 2.5s ease-in-out infinite; }
+}
+@keyframes glow-pulse {
+  0%, 100% { opacity:.35; filter: blur(4px); }
+  50%      { opacity:.75; filter: blur(8px); }
+}
 .glow-on-hover::after{
   content:""; position:absolute; inset:0; border-radius:10px; background:#111; z-index:-1;
 }

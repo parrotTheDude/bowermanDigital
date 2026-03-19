@@ -106,7 +106,7 @@
   </section>
 </section>
 
-<section class="relative z-20 bg-black px-6 py-16">
+<section class="relative z-20 bg-zinc-950 px-6 pt-8 pb-16 md:py-16">
   <div class="mx-auto max-w-7xl">
     <h2 class="text-center text-3xl font-semibold text-white opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="0">Our Work</h2>
 
@@ -114,7 +114,7 @@
       {{-- 1. Vizzbud (featured) --}}
       <article class="group rounded-2xl border border-white/10 bg-black/60 p-5 backdrop-blur-sm transition-all duration-500 will-change-transform hover:-translate-y-1 hover:border-cyan-400/30 hover:shadow-[0_0_0_1px_rgba(34,211,238,0.15)] opacity-0 translate-y-6 reveal" data-delay="100">
         <div class="aspect-[16/9] overflow-hidden rounded-xl">
-          <img src="{{ asset('images/vizzbud/home.webp') }}" alt="Vizzbud dive conditions platform" class="h-full w-full object-cover object-top rounded-xl transform-gpu transition duration-700 group-hover:scale-[1.03]" loading="lazy">
+          <img src="{{ asset('images/vizzbud/turtle.webp') }}" alt="Vizzbud dive conditions platform" class="h-full w-full object-cover object-top rounded-xl transform-gpu transition duration-700 group-hover:scale-[1.03]" loading="lazy">
         </div>
         <div class="mt-6 text-center">
           <h3 class="text-lg font-semibold text-white">Vizzbud</h3>
