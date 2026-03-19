@@ -49,7 +49,7 @@
   <meta name="robots" content="index,follow"> 
   <link rel="manifest" href="{{ asset('site.webmanifest') }}">
 
-  <link rel="preload" href="{{ asset('fonts/SpaceGrotesk-Variable.woff2') }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ asset('fonts/SpaceGrotesk-VariableFont_wght.woff2') }}" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="{{ asset('fonts/ShareTechMono-Regular.woff2') }}" as="font" type="font/woff2" crossorigin>
 
   @vite(['resources/js/app.js'])
