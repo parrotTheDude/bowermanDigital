@@ -62,7 +62,7 @@
     {{-- LEFT copy --}}
     <div class="relative flex flex-col justify-center
                 opacity-0 translate-y-6 transition-all duration-700 ease-out
-                will-change-transform reveal col-span-7"
+                will-change-transform reveal col-span-5"
         data-delay="0">
         <div class="relative">
           <span class="inline-flex w-fit items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/80 backdrop-blur">
@@ -94,12 +94,12 @@
         </div>
       </div>
 
-    {{-- RIGHT: desktop mock --}}
-    <div class="relative flex items-center justify-center col-span-5">
+    {{-- RIGHT: desktop mock — overflows right edge for impact --}}
+    <div class="relative flex items-center justify-end col-span-7 -mr-6 overflow-visible">
       <div class="group perspective-1000 opacity-0 transition-all duration-700 ease-out reveal" data-delay="100">
         <a href="{{ url('/portfolio/evie-graphic-design') }}"
           class="inline-block transform-gpu transition will-change-transform origin-bottom group-hover:scale-[1.02] group-hover:-rotate-1">
-          <img class="h-auto w-[40rem] max-w-full rounded-2xl" src="{{ asset('images/mockups/evie-desktop.webp') }}" alt="Evie Graphic Design website on desktop" data-perspective-mock>
+          <img class="h-auto w-full max-w-none rounded-2xl" src="{{ asset('images/mockups/evie-desktop.webp') }}" alt="Evie Graphic Design website on desktop" data-perspective-mock>
         </a>
       </div>
     </div>
