@@ -172,31 +172,35 @@
   </div>
 </section>
 
-<section class="relative z-20 bg-black px-6 pb-14 pt-14">
+<section class="relative z-20 bg-black px-6 pb-16 pt-12">
+  {{-- Top divider --}}
+  <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent"></div>
+
   <div class="pointer-events-none absolute inset-0 -z-10 opacity-40">
     <div class="el h-full w-full"></div>
   </div>
   <div class="mx-auto max-w-7xl">
-    <h2 class="text-center text-3xl font-semibold text-white opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="0">Experts in all things digital</h2>
-    <p class="mx-auto mt-3 max-w-2xl text-center text-white/80 opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="50">
+    <span class="mx-auto mb-3 block w-fit rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs tracking-wide text-white/60 opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="0">Why us</span>
+    <h2 class="text-center text-3xl font-semibold text-white opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="50">Experts in all things digital</h2>
+    <p class="mx-auto mt-3 max-w-2xl text-center text-white/80 opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="75">
       From custom websites to seamless SEO strategies, we craft digital experiences that inspire.
     </p>
 
     <div class="mx-auto mt-10 grid w-full grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
-      <aside class="rounded-2xl border border-white/10 bg-black/60 p-6 text-center backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30 opacity-0 translate-y-6 reveal" data-delay="100">
-        <img class="mx-auto mb-3 h-16 w-16 invert transition-transform duration-500 will-change-transform group-hover:rotate-3" alt="Simplified workflow icon representing our streamlined approach" src="{{ asset('icons/simplify.svg') }}">
+      <aside class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 text-center backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-white/[0.06] opacity-0 translate-y-6 reveal" data-delay="100">
+        <img class="mx-auto mb-3 h-16 w-16 invert transition-transform duration-500 will-change-transform group-hover:rotate-3 group-hover:scale-110" alt="Simplified workflow icon representing our streamlined approach" src="{{ asset('icons/simplify.svg') }}">
         <h3 class="text-lg font-semibold text-white">Simple</h3>
-        <p class="mt-2 text-sm text-white/80">Making it easy to manage, grow, and succeed online.</p>
+        <p class="mt-2 text-sm text-white/80">No jargon, no bloat. We keep things straightforward so you can focus on running your business while we handle the digital side.</p>
       </aside>
-      <aside class="rounded-2xl border border-white/10 bg-black/60 p-6 text-center backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30 opacity-0 translate-y-6 reveal" data-delay="150">
-        <img class="mx-auto mb-3 h-16 w-16 invert transition-transform duration-500 will-change-transform group-hover:-rotate-3" alt="Quality badge icon representing high standards in every project" src="{{ asset('icons/quality.svg') }}">
+      <aside class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 text-center backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-white/[0.06] opacity-0 translate-y-6 reveal" data-delay="150">
+        <img class="mx-auto mb-3 h-16 w-16 invert transition-transform duration-500 will-change-transform group-hover:-rotate-3 group-hover:scale-110" alt="Quality badge icon representing high standards in every project" src="{{ asset('icons/quality.svg') }}">
         <h3 class="text-lg font-semibold text-white">Quality</h3>
-        <p class="mt-2 text-sm text-white/80">In every project so your brand shines.</p>
+        <p class="mt-2 text-sm text-white/80">Clean code, modern design, and performance-first builds. We treat every project like it's our own because our reputation depends on it.</p>
       </aside>
-      <aside class="rounded-2xl border border-white/10 bg-black/60 p-6 text-center backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30 opacity-0 translate-y-6 reveal" data-delay="200">
-        <img class="mx-auto mb-3 h-16 w-16 invert transition-transform duration-500 will-change-transform group-hover:rotate-1" alt="Handshake icon representing reliable partnership and support" src="{{ asset('icons/handshake.svg') }}">
+      <aside class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 text-center backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-white/[0.06] opacity-0 translate-y-6 reveal" data-delay="200">
+        <img class="mx-auto mb-3 h-16 w-16 invert transition-transform duration-500 will-change-transform group-hover:rotate-3 group-hover:scale-110" alt="Handshake icon representing reliable partnership and support" src="{{ asset('icons/handshake.svg') }}">
         <h3 class="text-lg font-semibold text-white">Reliable</h3>
-        <p class="mt-2 text-sm text-white/80">Solutions that keep your business running smoothly.</p>
+        <p class="mt-2 text-sm text-white/80">We partner with one business at a time so you always get our full attention. Fast replies, clear timelines, and no disappearing acts.</p>
       </aside>
     </div>
 
@@ -208,12 +212,17 @@
   </div>
 </section>
 
-<section class="relative z-20 bg-black px-6 py-16 text-center">
-  <div class="mx-auto max-w-3xl">
-    <h2 class="text-3xl font-semibold text-white opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="0">Get in Touch</h2>
-    <p class="mt-3 text-white/80 opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="75">What are you waiting for?</p>
-    <img src="{{ asset('icons/arrow.svg') }}" alt="Arrow pointing to the contact form" class="mx-auto mt-6 h-10 w-10 invert opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="150" />
-    <div class="mx-auto mt-6 flex justify-center opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="200">
+<section class="relative z-20 overflow-hidden bg-zinc-900 px-6 pt-6 pb-16 md:pt-10 md:pb-20 text-center">
+  {{-- Top divider --}}
+  <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent"></div>
+  {{-- Subtle radial glow behind the CTA --}}
+  <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(34,211,238,0.06)_0%,transparent_70%)]"></div>
+
+  <div class="relative mx-auto max-w-3xl">
+    <span class="mx-auto mb-3 block w-fit rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs tracking-wide text-white/60 opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="0">Ready?</span>
+    <h2 class="text-3xl font-semibold text-white md:text-4xl opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="50">Let's build something great together</h2>
+    <p class="mx-auto mt-4 max-w-lg text-white/70 opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="100">Share a few details about your project and we'll get back to you within one business day.</p>
+    <div class="mx-auto mt-8 flex justify-center opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="150">
       <a href="{{ url('/contact') }}" class="no-underline">
         <div class="glow-on-hover"><p>Start a Project</p></div>
       </a>
@@ -233,11 +242,15 @@
       return;
     }
 
+    const isMobile = window.innerWidth < 768;
+
     const io = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const el = entry.target;
-          const delay = parseInt(el.getAttribute('data-delay') || '0', 10);
+          // On mobile: shorter delays for a flowing cascade instead of staggered pops
+          const baseDelay = parseInt(el.getAttribute('data-delay') || '0', 10);
+          const delay = isMobile ? Math.min(baseDelay * 0.4, 80) : baseDelay;
           setTimeout(() => {
             el.style.opacity = '1';
             el.style.transform = 'none';
@@ -245,9 +258,16 @@
           io.unobserve(el);
         }
       });
-    }, { threshold: 0.2 });
+    }, { threshold: isMobile ? 0.05 : 0.2 });
 
-    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    document.querySelectorAll('.reveal').forEach(el => {
+      // On mobile: softer movement — smaller translate for a gentler entrance
+      if (isMobile) {
+        el.style.transitionDuration = '900ms';
+        el.style.transform = 'translateY(12px)';
+      }
+      io.observe(el);
+    });
 
     const mock = document.querySelector('[data-perspective-mock]');
     if (mock) {
