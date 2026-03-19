@@ -28,6 +28,7 @@
         class="h-auto w-80 object-contain"
         src="{{ asset('images/mockups/evie-mobile2.webp') }}"
         alt="Evie Graphic Design website on mobile"
+        fetchpriority="high"
       >
     </a>
   </div>
@@ -99,7 +100,7 @@
       <div class="group perspective-1000 opacity-0 transition-all duration-700 ease-out reveal" data-delay="100">
         <a href="{{ url('/portfolio/evie-graphic-design') }}"
           class="inline-block transform-gpu transition will-change-transform origin-bottom group-hover:scale-[1.02] group-hover:-rotate-1">
-          <img class="h-auto w-full max-w-none rounded-2xl" src="{{ asset('images/mockups/evie-desktop.webp') }}" alt="Evie Graphic Design website on desktop" data-perspective-mock>
+          <img class="h-auto w-full max-w-none rounded-2xl" src="{{ asset('images/mockups/evie-desktop.webp') }}" alt="Evie Graphic Design website on desktop" fetchpriority="high" data-perspective-mock>
         </a>
       </div>
     </div>
