@@ -68,7 +68,7 @@
     @endif
 
     {{-- Two-column: form + trust signals --}}
-    <div class="mx-auto mt-10 max-w-5xl grid grid-cols-1 gap-10 lg:grid-cols-[1fr_320px] lg:items-start">
+    <div class="mx-auto mt-6 max-w-5xl grid grid-cols-1 gap-10 lg:grid-cols-[1fr_320px] lg:items-start">
 
       {{-- Form card --}}
       <div class="relative opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="150">
@@ -243,7 +243,7 @@
 <section class="relative bg-zinc-900">
   <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
 
-  <div class="relative z-10 mx-auto max-w-5xl px-6 py-16 md:py-20">
+  <div class="relative z-10 mx-auto max-w-5xl px-6 pt-8 pb-10 md:pt-10 md:pb-14">
     <div class="grid grid-cols-1 gap-10 md:grid-cols-3">
 
       {{-- Email --}}
