@@ -172,16 +172,16 @@
     {{-- Showcase (key visuals) --}}
     @if($beforeAfter && !empty($beforeAfter['before']) && !empty($beforeAfter['after']))
       <div class="mx-auto mt-10 max-w-5xl will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="100">
-        <h3 class="text-xl font-semibold">Highlights</h3>
+        <h2 class="text-xl font-semibold !text-black">Highlights</h2>
         <div class="mt-4 grid gap-4 md:grid-cols-2">
           <figure class="rounded-xl border border-black/10 bg-white p-3">
-            <img class="w-full rounded-lg" src="{{ asset($beforeAfter['before']) }}" alt="{{ $beforeAfter['caption_before'] ?? $title . ' — before' }}" loading="lazy">
+            <img class="w-full rounded-lg" src="{{ asset($beforeAfter['before']) }}" alt="{{ $beforeAfter['caption_before'] ?? $title . ' — before' }}" loading="lazy" width="800" height="450">
             <figcaption class="mt-2 text-sm text-black/70">
               {{ $beforeAfter['caption_before'] ?? 'Refreshed homepage' }}
             </figcaption>
           </figure>
           <figure class="rounded-xl border border-black/10 bg-white p-3">
-            <img class="w-full rounded-lg" src="{{ asset($beforeAfter['after']) }}" alt="{{ $beforeAfter['caption_after'] ?? $title . ' — after' }}" loading="lazy">
+            <img class="w-full rounded-lg" src="{{ asset($beforeAfter['after']) }}" alt="{{ $beforeAfter['caption_after'] ?? $title . ' — after' }}" loading="lazy" width="800" height="450">
             <figcaption class="mt-2 text-sm text-black/70">
               {{ $beforeAfter['caption_after'] ?? 'Activities page' }}
             </figcaption>
@@ -208,7 +208,7 @@
     <div class="mx-auto mt-12 max-w-5xl space-y-12">
       @foreach($chapters as $i => $ch)
         <section class="will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="{{ 200 + ($i*50) }}">
-          <h3 class="text-xl font-semibold !text-black">{{ $ch['title'] ?? 'Section' }}</h3>
+          <h2 class="text-xl font-semibold !text-black">{{ $ch['title'] ?? 'Section' }}</h2>
           
           @if(!empty($ch['body']))
             <div class="mt-3 prose prose-neutral max-w-none">
@@ -221,9 +221,10 @@
               {{-- Single image — centered --}}
               <div class="mt-5 flex justify-center">
                 <div class="overflow-hidden rounded-xl border border-black/10 bg-white max-w-md">
-                  <img src="{{ \Illuminate\Support\Str::startsWith($ch['images'][0],['http','/']) ? $ch['images'][0] : asset($ch['images'][0]) }}" 
-                      alt="{{ $ch['title'] ?? 'chapter' }}" 
-                      class="w-full">
+                  <img src="{{ \Illuminate\Support\Str::startsWith($ch['images'][0],['http','/']) ? $ch['images'][0] : asset($ch['images'][0]) }}"
+                      alt="{{ $ch['title'] ?? 'chapter' }}"
+                      class="w-full"
+                      loading="lazy">
                 </div>
               </div>
             @else
@@ -231,9 +232,10 @@
               <div class="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2">
                 @foreach($ch['images'] as $img)
                   <div class="overflow-hidden rounded-xl border border-black/10 bg-white">
-                    <img src="{{ \Illuminate\Support\Str::startsWith($img,['http','/']) ? $img : asset($img) }}" 
-                        alt="{{ $ch['title'] ?? 'chapter' }}" 
-                        class="w-full">
+                    <img src="{{ \Illuminate\Support\Str::startsWith($img,['http','/']) ? $img : asset($img) }}"
+                        alt="{{ $ch['title'] ?? 'chapter' }}"
+                        class="w-full"
+                        loading="lazy">
                   </div>
                 @endforeach
               </div>
@@ -247,14 +249,15 @@
     {{-- Screens showcase (styled like before/after) --}}
     @if(!empty($screens) && count($screens) >= 2)
       <div class="mx-auto mt-12 max-w-5xl will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="180">
-        <h3 class="text-xl font-semibold !text-black">Highlights from the build</h3>
+        <h2 class="text-xl font-semibold !text-black">Highlights from the build</h2>
         <div class="mt-4 grid gap-6 md:grid-cols-2">
           @foreach($screens as $i => $img)
             <figure class="rounded-xl border border-black/10 bg-white p-3">
               <img src="{{ \Illuminate\Support\Str::startsWith($img, ['http','/']) ? $img : asset($img) }}"
                   alt="{{ $captions[$i] ?? $title . ' screenshot ' . ($i+1) }}"
                   class="w-full rounded-lg shadow-sm"
-                  loading="lazy">
+                  loading="lazy"
+                  width="800" height="408">
               <figcaption class="mt-2 text-sm text-black/70">
                 {{ $captions[$i] ?? 'Screenshot' }}
               </figcaption>
@@ -266,7 +269,8 @@
       <div class="mx-auto mt-12 max-w-5xl flex justify-center">
         <img src="{{ \Illuminate\Support\Str::startsWith($screens[0], ['http','/']) ? $screens[0] : asset($screens[0]) }}"
             alt="{{ $title }} screenshot"
-            class="w-full max-w-5xl rounded-xl shadow-sm">
+            class="w-full max-w-5xl rounded-xl shadow-sm"
+            loading="lazy" width="960" height="490">
       </div>
     @endif
 
@@ -291,6 +295,18 @@
         <h2 class="text-2xl font-semibold !text-black">The result</h2>
         <div class="mt-4 prose prose-neutral max-w-none leading-relaxed">
           {!! nl2br(e($result)) !!}
+        </div>
+      </div>
+    @endif
+
+    {{-- Tools / Tech Stack --}}
+    @if(!empty($tools))
+      <div class="mx-auto mt-12 max-w-5xl will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="320">
+        <h2 class="text-2xl font-semibold !text-black">Built with</h2>
+        <div class="mt-4 flex flex-wrap gap-2">
+          @foreach($tools as $tool)
+            <span class="rounded-full border border-black/10 bg-black/[0.03] px-4 py-1.5 text-sm font-medium text-black/75">{{ $tool }}</span>
+          @endforeach
         </div>
       </div>
     @endif
@@ -343,6 +359,30 @@
           @endforeach
         </div>
       </div>
+
+      {{-- FAQ Schema --}}
+      @push('schema')
+        @php
+          $faqItems = [];
+          foreach ($faqs as $f) {
+            if (!empty($f['q']) && !empty($f['a'])) {
+              $faqItems[] = [
+                '@type' => 'Question',
+                'name' => $f['q'],
+                'acceptedAnswer' => [
+                  '@type' => 'Answer',
+                  'text' => $f['a'],
+                ],
+              ];
+            }
+          }
+        @endphp
+        <script type="application/ld+json">{!! json_encode([
+          '@'.'context' => 'https://schema.org',
+          '@type' => 'FAQPage',
+          'mainEntity' => $faqItems,
+        ], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}</script>
+      @endpush
     @endif
   </div>
 
@@ -409,7 +449,8 @@
             @if(!empty($moreWork['img']))
               <div class="flex justify-center overflow-hidden rounded-xl">
                 <img src="{{ asset($moreWork['img']) }}" alt="{{ $moreWork['title'] ?? 'Project' }}"
-                     class="max-w-full rounded-xl transform-gpu transition duration-700 group-hover:scale-[1.02]">
+                     class="max-w-full rounded-xl transform-gpu transition duration-700 group-hover:scale-[1.02]"
+                     loading="lazy" width="800" height="437">
               </div>
             @endif
             <div class="mt-5 text-center">
@@ -432,18 +473,6 @@
   </section>
 @endif
 
-<section class="bg-black px-6 pb-16 pt-8 text-center">
-  <div class="mx-auto max-w-3xl will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="0">
-    <h2 class="text-2xl font-semibold text-white">Interested in working with us?</h2>
-    <p class="mt-2 text-white/80">Click below to get to our contact form.</p>
-    <img src="{{ asset('icons/arrow.svg') }}" class="mx-auto mt-6 h-10 w-10 invert" alt="" aria-hidden="true">
-    <div class="mt-6 flex justify-center">
-      <a href="{{ url('/contact') }}" class="no-underline">
-        <div class="glow-on-hover"><p>Contact us today</p></div>
-      </a>
-    </div>
-  </div>
-</section>
 
 @once
   @push('head')

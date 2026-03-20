@@ -56,6 +56,17 @@
 
     'result' => "A clean, fast portfolio that puts Evie's work first — professional to share, effortless to update, and smooth to browse on any device. Studios and clients can quickly explore projects without friction.",
 
+    'tools' => [
+      'Laravel', 'Tailwind CSS', 'Vite', 'WebP Optimisation',
+      'Simple Analytics', 'Responsive Images',
+    ],
+
+    'faqs' => [
+      ['q' => 'How easy is it for Evie to add new projects?', 'a' => 'Very simple — new work can be added in minutes without touching code or needing a developer. The update flow is designed around a designer\'s workflow.'],
+      ['q' => 'How does the portfolio perform on mobile?', 'a' => 'Images are optimised, compressed, and lazy-loaded for fast mobile load times. The layout adapts cleanly to any screen size with easy tap targets.'],
+      ['q' => 'Does the site help with SEO?', 'a' => 'Yes — meaningful titles, meta descriptions, alt text, and Open Graph images are all set up so the portfolio looks professional when shared or found via search.'],
+    ],
+
     // Optional before/after
     'beforeAfter' => [
       'before'         => 'images/evie/home.webp',

@@ -44,7 +44,7 @@
             <span class="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-2.5 py-0.5 text-[11px] text-cyan-300">PWA</span>
             <span class="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-2.5 py-0.5 text-[11px] text-cyan-300">Realtime Data</span>
           </div>
-          <h3 class="mt-3 text-lg font-semibold text-white">Vizzbud</h3>
+          <h2 class="mt-3 text-lg font-semibold text-white">Vizzbud</h2>
           <p class="mt-1 text-sm text-white/60">A progressive web app giving Sydney divers realtime conditions, tide windows, and a personal dive log.</p>
           <div class="mt-4 text-sm font-medium text-cyan-300 transition-colors group-hover:text-cyan-200">View case study →</div>
         </a>
@@ -61,7 +61,7 @@
             <span class="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-2.5 py-0.5 text-[11px] text-cyan-300">SEO</span>
             <span class="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-2.5 py-0.5 text-[11px] text-cyan-300">Email</span>
           </div>
-          <h3 class="mt-3 text-lg font-semibold text-white">That Disability Adventure Company</h3>
+          <h2 class="mt-3 text-lg font-semibold text-white">That Disability Adventure Company</h2>
           <p class="mt-1 text-sm text-white/60">A new website, SEO strategy, and EDM program that grew monthly traffic from 90 to 500+ visitors.</p>
           <div class="mt-4 text-sm font-medium text-cyan-300 transition-colors group-hover:text-cyan-200">View case study →</div>
         </a>
@@ -78,7 +78,7 @@
             <span class="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-2.5 py-0.5 text-[11px] text-cyan-300">Design</span>
             <span class="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-2.5 py-0.5 text-[11px] text-cyan-300">SEO</span>
           </div>
-          <h3 class="mt-3 text-lg font-semibold text-white">Evie's Design Portfolio</h3>
+          <h2 class="mt-3 text-lg font-semibold text-white">Evie's Design Portfolio</h2>
           <p class="mt-1 text-sm text-white/60">A sleek portfolio with clean UX and SEO integration that helped Evie attract clients and land freelance projects.</p>
           <div class="mt-4 text-sm font-medium text-cyan-300 transition-colors group-hover:text-cyan-200">View case study →</div>
         </a>

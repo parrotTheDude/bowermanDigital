@@ -80,6 +80,17 @@
 
     'result' => "Vizzbud gives divers the confidence to plan smarter and log easier. Conditions are clear at a glance, the logbook feels effortless to use, and it all works offline right at the pier. By focusing on speed, simplicity, and privacy, we built something divers actually enjoy coming back to — not just another app they forget about.",
 
+    'tools' => [
+      'Laravel', 'Vue.js', 'Tailwind CSS', 'PWA', 'MySQL',
+      'BOM Weather API', 'Leaflet Maps', 'Simple Analytics',
+    ],
+
+    'faqs' => [
+      ['q' => 'Does Vizzbud work offline?', 'a' => 'Yes — it\'s a Progressive Web App, so divers can check cached conditions and log dives even without reception at the pier.'],
+      ['q' => 'Where does the conditions data come from?', 'a' => 'Realtime data is pulled from official Australian Bureau of Meteorology feeds, plus tide and swell sources specific to Sydney dive sites.'],
+      ['q' => 'Is my data private?', 'a' => 'Absolutely. Vizzbud uses privacy-first analytics with no third-party tracking. Dive logs and personal data stay under the diver\'s control.'],
+    ],
+
     // Cross-link to another case if you like
     'moreWork'  => [
       'title'    => 'That Disability Adventure Company',

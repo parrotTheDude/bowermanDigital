@@ -60,6 +60,17 @@
 
     'result' => "TDAC is now easier to discover, easier to trust, and easier to contact. Families are finding them through search, spending more time on the site, and sending more enquiries. Behind the scenes, the team has a streamlined CRM, email automations, and a site they can confidently update—freeing them to focus on participants instead of tech.",
 
+    'tools' => [
+      'Laravel', 'Tailwind CSS', 'MySQL', 'Postmark',
+      'Custom CRM', 'Google Analytics', 'cPanel',
+    ],
+
+    'faqs' => [
+      ['q' => 'How did the website redesign help TDAC?', 'a' => 'The new site made it immediately clear what TDAC offers and how families can get started. Unique visitors grew from 90 to over 500 per month within six months.'],
+      ['q' => 'What does the custom CRM do?', 'a' => 'It manages participant records, automates intake workflows, sends personalised emails for events and updates, and reduces the admin time the team spends on day-to-day operations.'],
+      ['q' => 'Can TDAC update the site themselves?', 'a' => 'Yes — the site is built so the team can update content, add events, and manage communications without needing a developer for routine changes.'],
+    ],
+
     // Showcase (two key visuals)
     'beforeAfter' => [
       'before'          => 'images/tdac/tdacWebScreenGrab.webp',   // refreshed homepage
