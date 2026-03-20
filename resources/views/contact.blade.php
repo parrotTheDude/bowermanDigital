@@ -190,7 +190,7 @@
 
         {{-- What happens next --}}
         <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5 backdrop-blur-sm opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="200">
-          <h2 class="text-sm font-semibold text-white">What happens next</h3>
+          <h2 class="text-sm font-semibold text-white">What happens next</h2>
           <ol class="mt-3 space-y-3">
             <li class="flex items-start gap-3">
               <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-cyan-400/10 text-xs font-bold text-cyan-300">1</span>
@@ -209,7 +209,7 @@
 
         {{-- Quick facts --}}
         <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5 backdrop-blur-sm opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="250">
-          <h2 class="text-sm font-semibold text-white">Why Bowerman Digital</h3>
+          <h2 class="text-sm font-semibold text-white">Why Bowerman Digital</h2>
           <ul class="mt-3 space-y-2.5">
             <li class="flex items-start gap-2.5">
               <svg class="mt-0.5 h-4 w-4 shrink-0 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
@@ -247,7 +247,7 @@
         <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-400/10">
           <svg class="h-5 w-5 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
         </div>
-        <h2 class="mt-3 text-sm font-semibold text-white">Email us</h3>
+        <h2 class="mt-3 text-sm font-semibold text-white">Email us</h2>
         <a href="mailto:hello@bowermandigital.com" class="mt-1 block text-sm text-cyan-300 hover:text-cyan-200 transition-colors no-underline">hello@bowermandigital.com</a>
       </div>
 
@@ -256,7 +256,7 @@
         <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-400/10">
           <svg class="h-5 w-5 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
         </div>
-        <h2 class="mt-3 text-sm font-semibold text-white">Based in</h3>
+        <h2 class="mt-3 text-sm font-semibold text-white">Based in</h2>
         <p class="mt-1 text-sm text-white/60">Sydney, Australia</p>
       </div>
 
@@ -265,7 +265,7 @@
         <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-400/10">
           <svg class="h-5 w-5 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
         </div>
-        <h2 class="mt-3 text-sm font-semibold text-white">Response time</h3>
+        <h2 class="mt-3 text-sm font-semibold text-white">Response time</h2>
         <p class="mt-1 text-sm text-white/60">Within 1 business day</p>
       </div>
 
