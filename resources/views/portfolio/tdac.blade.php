@@ -62,7 +62,7 @@
 
     'tools' => [
       'Laravel', 'Tailwind CSS', 'MySQL', 'Postmark',
-      'Custom CRM', 'Google Analytics', 'cPanel',
+      'Custom CRM', 'Simple Analytics', 'cPanel',
     ],
 
     'faqs' => [

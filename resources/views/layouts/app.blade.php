@@ -139,7 +139,7 @@
     @yield('content')
   </main>
 
-  <footer class="relative z-[101] bg-black px-6 pt-14 pb-10">
+  <footer class="relative z-[101] bg-black px-6 pb-10">
     <div class="mx-auto max-w-6xl">
 
       <div class="h-px w-full bg-gradient-to-r from-transparent via-white/15 to-transparent mb-12"></div>

@@ -365,51 +365,6 @@
         </figcaption>
       </figure>
     @endif
-
-    @if(($quote && !empty($quote['text'])) && !empty($faqs))
-      <hr style="border:none;height:1px;background:linear-gradient(to right,transparent,rgba(0,0,0,0.1),transparent)" class="mx-auto mt-14 max-w-3xl">
-    @endif
-
-    {{-- FAQ --}}
-    @if(!empty($faqs))
-      <div class="mx-auto mt-12 max-w-4xl will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="400">
-        <h2 class="text-2xl font-semibold !text-black">Project FAQ</h2>
-        <div class="mt-4 space-y-3">
-          @foreach($faqs as $f)
-            <details class="rounded-xl border border-black/10 bg-white p-4">
-              <summary class="cursor-pointer select-none text-base font-medium">{{ $f['q'] ?? '' }}</summary>
-              @if(!empty($f['a']))
-                <div class="mt-2 text-black/80">{{ $f['a'] }}</div>
-              @endif
-            </details>
-          @endforeach
-        </div>
-      </div>
-
-      {{-- FAQ Schema --}}
-      @push('schema')
-        @php
-          $faqItems = [];
-          foreach ($faqs as $f) {
-            if (!empty($f['q']) && !empty($f['a'])) {
-              $faqItems[] = [
-                '@type' => 'Question',
-                'name' => $f['q'],
-                'acceptedAnswer' => [
-                  '@type' => 'Answer',
-                  'text' => $f['a'],
-                ],
-              ];
-            }
-          }
-        @endphp
-        <script type="application/ld+json">{!! json_encode([
-          '@'.'context' => 'https://schema.org',
-          '@type' => 'FAQPage',
-          'mainEntity' => $faqItems,
-        ], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}</script>
-      @endpush
-    @endif
   </div>
 
   {{-- ── CTA ── --}}
@@ -442,7 +397,7 @@
 </section>
 
 @if($moreWork)
-  <section class="bg-black px-6 py-14">
+  <section class="bg-black px-6 py-14 pt-6">
     <div class="mx-auto max-w-6xl">
       <h2 class="text-center text-2xl font-semibold text-white will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="0">More work</h2>
 
