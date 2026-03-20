@@ -159,6 +159,10 @@
       </div>
     @endif
 
+    @if(!empty($goals) && ($challenge || $whatWeDid || ($beforeAfter && !empty($beforeAfter['before'])) || !empty($screens) || !empty($metrics) || $result))
+      <hr style="border:none;height:1px;background:linear-gradient(to right,transparent,rgba(0,0,0,0.1),transparent)" class="mx-auto mt-14 max-w-3xl">
+    @endif
+
     {{-- Challenge --}}
     @if($challenge)
       <div class="mx-auto mt-12 max-w-4xl will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="50">
@@ -167,6 +171,10 @@
           {!! nl2br(e($challenge)) !!}
         </div>
       </div>
+    @endif
+
+    @if($challenge && (($beforeAfter && !empty($beforeAfter['before'])) || $whatWeDid))
+      <hr style="border:none;height:1px;background:linear-gradient(to right,transparent,rgba(0,0,0,0.1),transparent)" class="mx-auto mt-14 max-w-3xl">
     @endif
 
     {{-- Showcase (key visuals) --}}
@@ -191,6 +199,10 @@
           <p class="mt-2 text-sm text-black/60">{{ $beforeAfter['caption'] }}</p>
         @endif
       </div>
+    @endif
+
+    @if(($beforeAfter && !empty($beforeAfter['before'])) && $whatWeDid)
+      <hr style="border:none;height:1px;background:linear-gradient(to right,transparent,rgba(0,0,0,0.1),transparent)" class="mx-auto mt-14 max-w-3xl">
     @endif
 
     {{-- What we did --}}
@@ -246,6 +258,10 @@
     </div>
   @endif
 
+    @if(($whatWeDid || !empty($chapters)) && !empty($screens))
+      <hr style="border:none;height:1px;background:linear-gradient(to right,transparent,rgba(0,0,0,0.1),transparent)" class="mx-auto mt-14 max-w-3xl">
+    @endif
+
     {{-- Screens showcase (styled like before/after) --}}
     @if(!empty($screens) && count($screens) >= 2)
       <div class="mx-auto mt-12 max-w-5xl will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="180">
@@ -274,6 +290,10 @@
       </div>
     @endif
 
+    @if(!empty($screens) && !empty($metrics))
+      <hr style="border:none;height:1px;background:linear-gradient(to right,transparent,rgba(0,0,0,0.1),transparent)" class="mx-auto mt-14 max-w-3xl">
+    @endif
+
     {{-- Metrics / Outcomes --}}
     @if(!empty($metrics))
       <div class="mx-auto mt-12 max-w-5xl will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="250">
@@ -289,6 +309,10 @@
       </div>
     @endif
 
+    @if(!empty($metrics) && $result)
+      <hr style="border:none;height:1px;background:linear-gradient(to right,transparent,rgba(0,0,0,0.1),transparent)" class="mx-auto mt-14 max-w-3xl">
+    @endif
+
     {{-- Result Summary --}}
     @if($result)
       <div class="mx-auto mt-12 max-w-4xl will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="300">
@@ -297,6 +321,10 @@
           {!! nl2br(e($result)) !!}
         </div>
       </div>
+    @endif
+
+    @if($result && !empty($tools))
+      <hr style="border:none;height:1px;background:linear-gradient(to right,transparent,rgba(0,0,0,0.1),transparent)" class="mx-auto mt-14 max-w-3xl">
     @endif
 
     {{-- Tools / Tech Stack --}}
@@ -342,6 +370,10 @@
           @if(!empty($quote['role'])) <span class="text-white/50">• {{ $quote['role'] }}</span> @endif
         </figcaption>
       </figure>
+    @endif
+
+    @if(($quote && !empty($quote['text'])) && !empty($faqs))
+      <hr style="border:none;height:1px;background:linear-gradient(to right,transparent,rgba(0,0,0,0.1),transparent)" class="mx-auto mt-14 max-w-3xl">
     @endif
 
     {{-- FAQ --}}

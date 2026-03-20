@@ -139,27 +139,46 @@
     @yield('content')
   </main>
 
-  <footer class="relative z-[101] bg-black px-4 py-12">
-    <div class="mx-auto max-w-7xl">
-      <div class="h-px w-full bg-gradient-to-r from-transparent via-white/15 to-transparent mb-8"></div>
+  <footer class="relative z-[101] bg-black px-6 pt-14 pb-10">
+    <div class="mx-auto max-w-6xl">
 
-      <div class="flex flex-col items-center gap-6 text-center">
-        <a href="{{ url('/') }}" class="group">
-          <img class="h-12 w-auto transition-transform duration-300 group-hover:scale-[1.03]" src="{{ asset('images/logo.webp') }}" alt="Bowerman Digital Logo" width="400" height="124">
+      <div class="h-px w-full bg-gradient-to-r from-transparent via-white/15 to-transparent mb-12"></div>
+
+      <div class="flex flex-col items-center text-center gap-8">
+
+        {{-- Logo --}}
+        <a href="{{ url('/') }}" class="group inline-block">
+          <img class="h-10 w-auto transition-transform duration-300 group-hover:scale-[1.03]" src="{{ asset('images/logo.webp') }}" alt="Bowerman Digital Logo" width="400" height="124">
         </a>
 
+        {{-- Navigate --}}
         <nav>
-          <ul class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm
-                     [&_a]:text-white [&_a:hover]:text-cyan-400 [&_a:visited]:text-white">
-            <li><a href="{{ url('/') }}">Home</a></li>
-            <li><a href="{{ url('/portfolio') }}">Our Work</a></li>
-            <li><a href="{{ url('/services') }}">Services</a></li>
-            <li><a href="{{ url('/contact') }}">Start a Project</a></li>
+          <ul class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
+            <li><a href="{{ url('/') }}" class="text-white/70 transition hover:text-cyan-400">Home</a></li>
+            <li><a href="{{ url('/portfolio') }}" class="text-white/70 transition hover:text-cyan-400">Our Work</a></li>
+            <li><a href="{{ url('/services') }}" class="text-white/70 transition hover:text-cyan-400">Services</a></li>
+            <li><a href="{{ url('/contact') }}" class="text-white/70 transition hover:text-cyan-400">Start a Project</a></li>
           </ul>
         </nav>
 
-        <p class="mt-2 text-xs text-white/60">&copy; {{ date('Y') }} Bowerman Digital</p>
+        {{-- Get in touch --}}
+        <div class="flex flex-col items-center gap-2 text-sm">
+          <a href="mailto:hello@bowermandigital.com" class="text-white/70 transition hover:text-cyan-400">hello@bowermandigital.com</a>
+          <span class="text-white/40">Sydney, Australia</span>
+        </div>
+
+        {{-- Bottom --}}
+        <div class="-mt-4 h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+        <div class="-mt-5 flex flex-col items-center gap-3 sm:flex-row sm:justify-between sm:w-full">
+          <p class="text-xs text-white/40">&copy; {{ date('Y') }} Bowerman Digital</p>
+          <div class="flex items-center gap-1.5 text-xs text-white/40">
+            <span class="inline-block h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            One client at a time
+          </div>
+        </div>
+
       </div>
+
     </div>
   </footer>
 
