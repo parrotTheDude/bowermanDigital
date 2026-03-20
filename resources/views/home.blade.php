@@ -20,6 +20,8 @@
         class="h-auto w-80 object-contain"
         src="{{ asset('images/mockups/evie-mobile2.webp') }}"
         alt="Evie Graphic Design website on mobile"
+        width="1200"
+        height="1600"
         fetchpriority="high"
       >
     </a>

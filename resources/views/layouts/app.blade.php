@@ -92,7 +92,7 @@
     <div class="mx-auto max-w-7xl px-4">
       <div class="hidden md:flex items-center justify-between py-4">
         <a href="{{ url('/') }}" class="inline-flex items-center gap-2 group">
-          <img src="{{ asset('images/logo.webp') }}" alt="Bowerman Digital Logo" class="h-10 w-auto md:h-12 transition-transform duration-300 group-hover:scale-[1.03]">
+          <img src="{{ asset('images/logo.webp') }}" alt="Bowerman Digital Logo" width="2246" height="700" class="h-10 w-auto md:h-12 transition-transform duration-300 group-hover:scale-[1.03]">
         </a>
 
         <nav class="flex items-center gap-6 text-sm">
@@ -117,7 +117,7 @@
     {{-- Mobile header --}}
     <div class="md:hidden flex items-center justify-between py-3 px-4">
     <a href="{{ url('/') }}" class="inline-flex items-center">
-        <img src="{{ asset('images/logo.webp') }}" alt="Bowerman Digital Logo" class="h-10 w-auto">
+        <img src="{{ asset('images/logo.webp') }}" alt="Bowerman Digital Logo" width="2246" height="700" class="h-10 w-auto">
     </a>
 
     <button id="mnav-trigger"
@@ -145,7 +145,7 @@
 
       <div class="flex flex-col items-center gap-6 text-center">
         <a href="{{ url('/') }}" class="group">
-          <img class="h-12 w-auto transition-transform duration-300 group-hover:scale-[1.03]" src="{{ asset('images/logo.webp') }}" alt="Bowerman Digital Logo">
+          <img class="h-12 w-auto transition-transform duration-300 group-hover:scale-[1.03]" src="{{ asset('images/logo.webp') }}" alt="Bowerman Digital Logo" width="2246" height="700">
         </a>
 
         <nav>
