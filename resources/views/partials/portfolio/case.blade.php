@@ -36,31 +36,30 @@
 <section class="relative bg-black">
   <div class="el pointer-events-none"></div>
 
-    <section class="relative z-10 mx-auto max-w-7xl px-6 pb-12 pt-20 md:pt-32">
+    <section class="relative z-10 mx-auto max-w-7xl px-5 pb-10 pt-16 md:px-6 md:pb-12 md:pt-32">
       {{-- Title + summary --}}
       <div class="mx-auto max-w-4xl will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="0">
         <span class="inline-flex w-fit items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] tracking-wide text-white/80 backdrop-blur">
           Case study
         </span>
-        <h1 class="mt-4 text-balance text-4xl font-bold text-white md:text-5xl">
+        <h1 class="mt-3 text-balance text-3xl font-bold text-white md:mt-4 md:text-5xl">
           {{ $title }} <span class="flash align-baseline">|</span>
         </h1>
         @if($summary)
-          <p class="mt-4 text-white/80">{{ $summary }}</p>
+          <p class="mt-2 text-sm text-white/70 md:mt-4 md:text-base md:text-white/80">{{ $summary }}</p>
         @endif
       </div>
 
-      {{-- Inline bar: Visit site + Industry (aligned to hero width) --}}
+      {{-- Inline bar: Visit site + Industry --}}
       @if($liveUrl || $industry)
-        <div class="mt-6 will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="60">
-          <div class="mx-auto flex w-full max-w-5xl flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            {{-- Visit site --}}
+        <div class="mt-4 will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal md:mt-6" data-delay="60">
+          <div class="mx-auto flex w-full max-w-5xl flex-col gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-3">
             @if($liveUrl)
               @php $host = parse_url($liveUrl, PHP_URL_HOST) ?: $liveUrl; @endphp
               <a href="{{ $liveUrl }}" target="_blank" rel="noopener noreferrer"
                 aria-label="Visit website: {{ $host }}"
-                class="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/85 transition hover:bg-white/10 sm:w-auto">
-                <svg class="h-4 w-4 opacity-70" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                class="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/20 bg-zinc-900 px-5 py-2 text-sm font-medium text-white transition hover:bg-zinc-800 sm:w-auto">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                   <path stroke-width="1.8" stroke-linecap="round" d="M14 3h7v7M21 3l-9 9"/>
                   <path stroke-width="1.8" stroke-linecap="round" d="M5 12v7a2 2 0 0 0 2 2h7"/>
                 </svg>
@@ -68,9 +67,8 @@
               </a>
             @endif
 
-            {{-- Industry --}}
             @if($industry)
-              <span class="inline-flex w-full items-center justify-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-cyan-300 sm:w-auto">
+              <span class="inline-flex w-full items-center justify-center rounded-full border border-white/20 bg-zinc-900 px-4 py-1.5 text-sm font-medium text-cyan-300 sm:w-auto sm:py-2">
                 {{ $industry }}
               </span>
             @endif
@@ -78,36 +76,32 @@
         </div>
       @endif
 
-      {{-- How we helped (match hero width + gentler GPU use) --}}
+      {{-- How we helped — horizontal auto-scrolling marquee --}}
       @if(!empty($services))
-        <div class="mt-6 will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="90">
-          <div class="relative mx-auto w-full max-w-5xl">
-            <div class="pointer-events-none absolute -inset-[1px] rounded-2xl bg-gradient-to-r from-cyan-400/35 via-fuchsia-400/25 to-emerald-400/35 blur-[2px]" style="contain:paint;"></div>
-            <div class="relative rounded-2xl border border-white/10 bg-black/60 p-5 backdrop-blur">
-              <div class="flex flex-col gap-3">
-                <span class="block text-xs uppercase tracking-wide text-white/60">How we helped</span>
-                <div class="flex flex-wrap justify-center gap-2">
-                  @foreach($services as $s)
-                    <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-white/80">
-                      {{ $s }}
-                    </span>
-                  @endforeach
-                </div>
+        <div class="mt-4 will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal md:mt-6" data-delay="90">
+          <div class="relative mx-auto w-full max-w-5xl overflow-hidden rounded-2xl border border-white/10 bg-black/60 px-4 py-3 backdrop-blur md:px-5 md:py-4">
+            <span class="block text-xs uppercase tracking-wide text-white/60 mb-2">How we helped</span>
+            <div class="overflow-hidden relative" style="mask-image:linear-gradient(to right,transparent,black 4%,black 96%,transparent)">
+              <div class="flex gap-2 animate-marquee whitespace-nowrap">
+                @foreach($services as $s)
+                  <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] text-white/80 md:text-xs shrink-0">{{ $s }}</span>
+                @endforeach
+                @foreach($services as $s)
+                  <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] text-white/80 md:text-xs shrink-0" aria-hidden="true">{{ $s }}</span>
+                @endforeach
               </div>
             </div>
           </div>
         </div>
       @endif
 
-      {{-- Hero image (ratio, responsive, and centered) --}}
+      {{-- Hero image --}}
       @if($heroImage)
-        <div class="mt-12 flex justify-center will-change-transform opacity-0 [transform:translateY(12px)] transition-all duration-700 ease-out reveal" data-delay="150">
+        <div class="mt-8 flex justify-center will-change-transform opacity-0 [transform:translateY(12px)] transition-all duration-700 ease-out reveal md:mt-12" data-delay="150">
           <div class="group perspective-1000 w-full max-w-5xl">
             <div class="relative mx-auto w-full overflow-hidden rounded-xl border border-white/10 bg-white/5">
-              {{-- Maintain aspect ratio to reduce CLS (adjust as needed) --}}
               <div class="aspect-[16/9]">
                 <picture>
-                  {{-- Optional: supply a .webp and a fallback; if $heroImage is already webp, this still works --}}
                   @php
                     $isAbsolute = \Illuminate\Support\Str::startsWith($heroImage, ['http','/']);
                     $src = $isAbsolute ? $heroImage : asset($heroImage);
@@ -514,6 +508,9 @@
       }
       .flash{animation:flash 1.1s steps(2,end) infinite}
       @keyframes flash{50%{opacity:0}}
+      .animate-marquee{animation:marquee 12s linear infinite;will-change:transform}
+      @keyframes marquee{0%{transform:translate3d(0,0,0)}100%{transform:translate3d(-50%,0,0)}}
+      @media (prefers-reduced-motion: reduce){.animate-marquee{animation:none}}
     </style>
   @endpush
 
