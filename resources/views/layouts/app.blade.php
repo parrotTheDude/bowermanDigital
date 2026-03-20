@@ -19,16 +19,16 @@
   @endphp
   <meta property="og:type" content="@yield('og_type','website')" />
   <meta property="og:site_name" content="Bowerman Digital" />
-  <meta property="og:title" content="{!! e($ogTitle) !!}" />
-  <meta property="og:description" content="{!! e($ogDesc) !!}" />
+  <meta property="og:title" content="{!! $ogTitle !!}" />
+  <meta property="og:description" content="{!! $ogDesc !!}" />
   <meta property="og:url" content="{{ $canonical }}" />
-  <meta property="og:image" content="{!! e($ogImage) !!}" />
+  <meta property="og:image" content="{!! $ogImage !!}" />
   <meta property="og:locale" content="en_AU"/>
 
   <meta name="twitter:card" content="@yield('twitter_card','summary_large_image')">
-  <meta name="twitter:title" content="{!! e($ogTitle) !!}">
-  <meta name="twitter:description" content="{!! e($ogDesc) !!}">
-  <meta name="twitter:image" content="{!! e($ogImage) !!}">
+  <meta name="twitter:title" content="{!! $ogTitle !!}">
+  <meta name="twitter:description" content="{!! $ogDesc !!}">
+  <meta name="twitter:image" content="{!! $ogImage !!}">
 
   <meta name="theme-color" content="#000"/>
   

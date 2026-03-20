@@ -14,7 +14,7 @@
 @push('schema')
   @php
     $schemaContact = [
-      '@@context' => 'https://schema.org',
+      '@'.'context' => 'https://schema.org',
       '@type'    => 'ContactPage',
       'name'     => 'Contact | Bowerman Digital',
       'url'      => url('/contact'),

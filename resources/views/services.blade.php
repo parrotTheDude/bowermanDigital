@@ -7,7 +7,7 @@
 @push('schema')
   @php
     $schema = [
-      '@@context' => 'https://schema.org',
+      '@'.'context' => 'https://schema.org',
       '@type' => 'Service',
       'name' => 'Web Development, SEO & Email',
       'provider' => [

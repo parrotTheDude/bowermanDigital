@@ -7,7 +7,7 @@
 @push('schema')
   @php
     $schema = [
-      '@@context' => 'https://schema.org',
+      '@'.'context' => 'https://schema.org',
       '@type' => 'CollectionPage',
       'name' => 'Portfolio | Bowerman Digital',
       'url' => url('/portfolio'),
