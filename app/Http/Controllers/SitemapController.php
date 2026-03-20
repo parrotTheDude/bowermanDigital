@@ -22,7 +22,7 @@ class SitemapController extends Controller
             ['url' => '/contact',                               'priority' => 0.7,  'freq' => Url::CHANGE_FREQUENCY_MONTHLY],
         ];
 
-        $now = Carbon::now()->toW3cString();
+        $now = Carbon::now();
 
         foreach ($pages as $page) {
             $sitemap->add(
