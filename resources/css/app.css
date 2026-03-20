@@ -130,7 +130,7 @@ header.is-open{ height:100%; }
 .open-main-nav.is-open .burger::before{ transform:translateY(0) skew(-10deg) rotate(75deg); }
 .open-main-nav.is-open .burger::after{ transform:translateY(-12px) translateX(10px) skew(-20deg); opacity:0; }
 
-.flash{ animation: flash 1.2s ease-in-out infinite; }
+.flash{ animation: flash 1s step-end infinite; }
 .downArrow{ filter: invert(1); }
 
 .glow-static {
@@ -190,4 +190,4 @@ header.is-open{ height:100%; }
 /* Keyframes */
 @keyframes glowing { 0%{background-position:0 0} 50%{background-position:400% 0} 100%{background-position:0 0} }
 @keyframes flicker { from { mask-position:50% 50%, 256px 50% } to { mask-position:50% 50%, 0 50% } }
-@keyframes flash { 0%,100%{opacity:0} 50%{opacity:1} }
+@keyframes flash { 0%{opacity:1} 50%{opacity:0} 100%{opacity:1} }

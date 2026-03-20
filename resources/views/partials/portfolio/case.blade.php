@@ -439,8 +439,8 @@
       @media (prefers-reduced-motion: reduce){
         .reveal{opacity:1 !important; transform:none !important; transition:none !important}
       }
-      .flash{animation:flash 1.2s ease-in-out infinite}
-      @keyframes flash{50%{opacity:0}}
+      .flash{animation:flash 1s step-end infinite}
+      @keyframes flash{0%{opacity:1}50%{opacity:0}100%{opacity:1}}
       .animate-marquee{animation:marquee 12s linear infinite;will-change:transform}
       @keyframes marquee{0%{transform:translate3d(0,0,0)}100%{transform:translate3d(-50%,0,0)}}
       @media (prefers-reduced-motion: reduce){.animate-marquee{animation:none}}
