@@ -14,13 +14,8 @@ class ContactRequest extends FormRequest
             // form fields
             'name'         => ['required','string','max:120','regex:/^[a-zA-Z \'-]+$/u'],
             'email'        => ['required','email','max:160'],
-            'company'      => ['nullable','string','max:160'],
             'phone'        => ['nullable','string','max:40'],
-            'project_type' => ['nullable','string','max:80'],
-            'budget'       => ['nullable','string','max:40'],
-            'timeline'     => ['nullable','string','max:40'],
             'message'      => ['required','string','max:5000'],
-            'consent'      => ['accepted'],
             // recaptcha token (client-side)
             'recaptcha_token' => ['required','string'],
         ];
