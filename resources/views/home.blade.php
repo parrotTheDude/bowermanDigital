@@ -14,10 +14,10 @@
   <div class="el pointer-events-none"></div>
 
   {{-- MOBILE hero image — absolute, fills the section, anchored to top --}}
-  <div class="absolute inset-0 z-10 flex items-start justify-center pt-20 overflow-hidden md:hidden pointer-events-none">
+  <div class="absolute inset-0 z-10 flex items-start justify-center pt-16 overflow-hidden md:hidden pointer-events-none">
     <a href="{{ url('/portfolio/evie-graphic-design') }}" class="block pointer-events-auto">
       <img
-        class="h-auto w-80 object-contain"
+        class="h-auto w-72 object-contain rounded-2xl shadow-2xl"
         src="{{ asset('images/mockups/evie-mobile2.webp') }}"
         alt="Evie Graphic Design website on mobile"
         width="1200"
@@ -28,23 +28,27 @@
   </div>
 
   {{-- Dark gradient overlay — dark at bottom, clear at top so text is readable --}}
-  <div class="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-[60%] bg-gradient-to-t from-black via-black/85 to-transparent md:hidden"></div>
+  <div class="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-[70%] bg-gradient-to-t from-black via-black/90 to-transparent md:hidden"></div>
 
   {{-- MOBILE copy pinned to bottom of viewport --}}
-  <div class="relative z-30 mt-auto px-6 pb-16 md:hidden">
+  <div class="relative z-30 mt-auto px-5 pb-10 md:hidden">
     <div class="opacity-0 translate-y-6 transition-all duration-700 ease-out will-change-transform reveal" data-delay="0">
-      <span class="inline-flex w-fit items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/80 backdrop-blur">
+      <span class="inline-flex w-fit items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] tracking-wide text-white/80 backdrop-blur">
         Web • SEO • Email
       </span>
 
-      <h1 class="mt-4 text-balance text-4xl font-bold text-white">
+      <h1 class="mt-3 text-balance text-3xl font-bold leading-tight text-white">
         Build, optimize, and grow your online presence <span class="flash align-baseline">|</span>
       </h1>
 
-      <div class="mt-4 flex justify-center">
+      <p class="mt-3 text-sm text-white/60 leading-relaxed">
+        Sydney-based digital studio specialising in modern, user-focused websites.
+      </p>
+
+      <div class="mt-5 flex justify-center">
         <a href="{{ url('/contact') }}" class="w-full">
           <div class="glow-on-hover !w-full px-6 py-3">
-            <p class="text-center font-semibold">Start a project</p>
+            <p class="text-center text-sm font-semibold">Start a project</p>
           </div>
         </a>
       </div>
