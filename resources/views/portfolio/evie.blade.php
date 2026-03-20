@@ -3,12 +3,7 @@
 @section('title', 'Evie Graphic Design Portfolio | Bowerman Digital')
 @section('meta_description', "Clean, fast portfolio that puts Evie's work first — simple to browse, great on mobile, and easy to keep updated.")
 
-@push('head')
-  <meta property="og:title" content="Evie Graphic Design Portfolio | Bowerman Digital">
-  <meta property="og:description" content="Clean, fast portfolio that puts Evie's work first — simple to browse, great on mobile, and easy to keep updated.">
-  <meta property="og:url" content="{{ url('/portfolio/evie-graphic-design') }}">
-  <meta property="og:image" content="{{ asset('images/evie/evie.webp') }}">
-@endpush
+@section('og_image', asset('images/evie/evie.webp'))
 
 @push('schema')
   @include('partials.schema.breadcrumb', ['breadcrumbs' => [

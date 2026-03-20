@@ -3,12 +3,6 @@
 @section('title', 'Services | Bowerman Digital')
 @section('meta_description', 'Web development, technical SEO, email marketing, and CRM setup. We build fast, accessible websites and growth strategies with clear, measurable outcomes.')
 
-@push('head')
-  <meta property="og:title" content="Services | Bowerman Digital">
-  <meta property="og:description" content="Web development, technical SEO, email marketing, and CRM setup. We build fast, accessible websites and growth strategies with clear, measurable outcomes.">
-  <meta property="og:url" content="{{ url('/services') }}">
-  <meta property="og:image" content="{{ asset('images/og-default.webp') }}">
-@endpush
 
 @push('schema')
   @php

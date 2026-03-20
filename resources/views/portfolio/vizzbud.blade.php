@@ -3,12 +3,7 @@
 @section('title', 'Vizzbud | Bowerman Digital')
 @section('meta_description', "Realtime dive conditions and a slick logbook for Sydney divers — fast, accurate, and privacy-first.")
 
-@push('head')
-  <meta property="og:title" content="Vizzbud | Bowerman Digital">
-  <meta property="og:description" content="Realtime dive conditions and a slick logbook for Sydney divers — fast, accurate, and privacy-first.">
-  <meta property="og:url" content="{{ url('/portfolio/vizzbud') }}">
-  <meta property="og:image" content="{{ asset('images/vizzbud/turtle.webp') }}">
-@endpush
+@section('og_image', asset('images/vizzbud/turtle.webp'))
 
 @push('schema')
   @include('partials.schema.breadcrumb', ['breadcrumbs' => [

@@ -3,14 +3,6 @@
 @section('title', 'Web Development & SEO Agency | Bowerman Digital')
 @section('meta_description', "Sydney digital agency specialising in web development, SEO, and email marketing. We partner with one business at a time to deliver real results.")
 
-@push('head')
-  <meta name="robots" content="index,follow">
-  <meta property="og:title" content="Web Development & SEO Agency | Bowerman Digital">
-  <meta property="og:description" content="Sydney digital agency specialising in web development, SEO, and email marketing. We partner with one business at a time to deliver real results.">
-  <meta property="og:url" content="{{ url('/') }}">
-  <meta property="og:image" content="{{ asset('images/og-default.webp') }}">
-  <meta name="twitter:card" content="summary_large_image">
-@endpush
 
 @push('schema')
   @include('partials.schema.organization')

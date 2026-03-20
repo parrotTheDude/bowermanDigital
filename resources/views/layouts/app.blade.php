@@ -23,7 +23,7 @@
   <meta name="twitter:card" content="@yield('twitter_card','summary_large_image')">
   <meta name="twitter:title" content="@yield('twitter_title', trim($__env->yieldContent('title')) ?: 'Bowerman Digital')">
   <meta name="twitter:description" content="@yield('twitter_description', trim($__env->yieldContent('meta_description')) ?: 'Web design & digital marketing with clean code and measurable results.')">
-  <meta name="twitter:image" content="@yield('twitter_image', asset('images/og-default.webp'))">
+  <meta name="twitter:image" content="@yield('twitter_image', trim($__env->yieldContent('og_image')) ?: asset('images/og-default.webp'))">
 
   <meta name="theme-color" content="#000"/>
   

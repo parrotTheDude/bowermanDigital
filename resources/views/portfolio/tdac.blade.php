@@ -3,12 +3,7 @@
 @section('title', 'That Disability Adventure Company | Bowerman Digital')
 @section('meta_description', "Website redesign and growth program for TDAC: clearer story, faster site, better SEO, and a simpler way for families to get in touch.")
 
-@push('head')
-  <meta property="og:title" content="That Disability Adventure Company | Bowerman Digital">
-  <meta property="og:description" content="Website redesign and growth program for TDAC: clearer story, faster site, better SEO, and a simpler way for families to get in touch.">
-  <meta property="og:url" content="{{ url('/portfolio/that-disability-adventure-company') }}">
-  <meta property="og:image" content="{{ asset('images/tdac/tdac.webp') }}">
-@endpush
+@section('og_image', asset('images/tdac/tdac.webp'))
 
 @push('schema')
   @include('partials.schema.breadcrumb', ['breadcrumbs' => [
