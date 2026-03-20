@@ -36,7 +36,7 @@
 <section class="relative bg-black">
   <div class="el pointer-events-none"></div>
 
-    <section class="relative z-10 mx-auto max-w-7xl px-6 pb-12 pt-32 md:pt-32">
+    <section class="relative z-10 mx-auto max-w-7xl px-6 pb-12 pt-20 md:pt-32">
       {{-- Title + summary --}}
       <div class="mx-auto max-w-4xl will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="0">
         <span class="inline-flex w-fit items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] tracking-wide text-white/80 backdrop-blur">

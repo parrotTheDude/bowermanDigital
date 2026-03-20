@@ -25,7 +25,7 @@
 <section class="relative bg-black">
   <div class="el pointer-events-none"></div>
 
-  <div class="relative z-10 mx-auto max-w-7xl px-6 pt-24 pb-10 md:pt-40">
+  <div class="relative z-10 mx-auto max-w-7xl px-6 pt-20 pb-10 md:pt-28">
     <div class="mx-auto max-w-3xl text-center">
       <span class="inline-flex w-fit items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/80 backdrop-blur opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="0">Selected work</span>
       <h1 class="mt-4 text-4xl font-bold text-white md:text-5xl opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="50">Projects that ship and scale</h1>
