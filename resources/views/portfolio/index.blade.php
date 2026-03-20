@@ -37,7 +37,7 @@
       <article class="group rounded-2xl border border-white/10 bg-white/[0.03] p-5 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-white/[0.06] opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="100">
         <a href="{{ url('/portfolio/vizzbud') }}" class="block no-underline">
           <div class="aspect-[16/9] overflow-hidden rounded-xl">
-            <img src="{{ asset('images/vizzbud/turtle.webp') }}" alt="Vizzbud dive conditions platform" class="h-full w-full object-cover object-top rounded-xl transition duration-700 group-hover:scale-[1.03]" loading="lazy">
+            <img src="{{ asset('images/vizzbud/turtle.webp') }}" srcset="{{ asset('images/vizzbud/turtle-sm.webp') }} 640w, {{ asset('images/vizzbud/turtle.webp') }} 1280w" sizes="(max-width: 767px) 90vw, 30vw" alt="Vizzbud dive conditions platform" width="1280" height="720" class="h-full w-full object-cover object-top rounded-xl transition duration-700 group-hover:scale-[1.03]" loading="lazy">
           </div>
           <div class="mt-4 flex flex-wrap gap-2">
             <span class="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-2.5 py-0.5 text-[11px] text-cyan-300">Web App</span>
@@ -54,7 +54,7 @@
       <article class="group rounded-2xl border border-white/10 bg-white/[0.03] p-5 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-white/[0.06] opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="150">
         <a href="{{ url('/portfolio/that-disability-adventure-company') }}" class="block no-underline">
           <div class="aspect-[16/9] overflow-hidden rounded-xl">
-            <img src="{{ asset('images/tdac/tdac.webp') }}" alt="That Disability Adventure Company website" class="h-full w-full object-cover object-center rounded-xl transition duration-700 group-hover:scale-[1.03]" loading="lazy">
+            <img src="{{ asset('images/tdac/tdac.webp') }}" srcset="{{ asset('images/tdac/tdac-sm.webp') }} 640w, {{ asset('images/tdac/tdac.webp') }} 1980w" sizes="(max-width: 767px) 90vw, 30vw" alt="That Disability Adventure Company website" width="1980" height="1080" class="h-full w-full object-cover object-center rounded-xl transition duration-700 group-hover:scale-[1.03]" loading="lazy">
           </div>
           <div class="mt-4 flex flex-wrap gap-2">
             <span class="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-2.5 py-0.5 text-[11px] text-cyan-300">Website</span>
@@ -71,7 +71,7 @@
       <article class="group rounded-2xl border border-white/10 bg-white/[0.03] p-5 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-white/[0.06] opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="200">
         <a href="{{ url('/portfolio/evie-graphic-design') }}" class="block no-underline">
           <div class="aspect-[16/9] overflow-hidden rounded-xl">
-            <img src="{{ asset('images/evie/evie.webp') }}" alt="Evie Bowerman portfolio" class="h-full w-full object-cover object-center rounded-xl transition duration-700 group-hover:scale-[1.03]" loading="lazy">
+            <img src="{{ asset('images/evie/evie.webp') }}" srcset="{{ asset('images/evie/evie-sm.webp') }} 640w, {{ asset('images/evie/evie.webp') }} 1980w" sizes="(max-width: 767px) 90vw, 30vw" alt="Evie Bowerman portfolio" width="1980" height="1080" class="h-full w-full object-cover object-center rounded-xl transition duration-700 group-hover:scale-[1.03]" loading="lazy">
           </div>
           <div class="mt-4 flex flex-wrap gap-2">
             <span class="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-2.5 py-0.5 text-[11px] text-cyan-300">Portfolio</span>

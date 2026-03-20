@@ -47,7 +47,7 @@
 
       {{-- Web Development --}}
       <div class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-white/[0.06] opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="50">
-        <img class="mb-4 h-10 w-10 invert transition-transform duration-500 group-hover:scale-110" src="{{ asset('icons/webDev.svg') }}" alt="Web development icon">
+        <img class="mb-4 h-10 w-10 invert transition-transform duration-500 group-hover:scale-110" width="40" height="40" loading="lazy" src="{{ asset('icons/webDev.svg') }}" alt="Web development icon">
         <h2 class="text-lg font-semibold text-white">Websites That Work</h2>
         <p class="mt-2 text-sm text-white/70">We build websites that look great, load fast, and help you win more customers — without the tech headache.</p>
         <ul class="mt-4 space-y-2 text-sm text-white/60">
@@ -62,7 +62,7 @@
 
       {{-- SEO --}}
       <div class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-white/[0.06] opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="100">
-        <img class="mb-4 h-10 w-10 invert transition-transform duration-500 group-hover:scale-110" src="{{ asset('icons/seo.svg') }}" alt="SEO icon">
+        <img class="mb-4 h-10 w-10 invert transition-transform duration-500 group-hover:scale-110" width="40" height="40" loading="lazy" src="{{ asset('icons/seo.svg') }}" alt="SEO icon">
         <h2 class="text-lg font-semibold text-white">Get Found on Google (SEO)</h2>
         <p class="mt-2 text-sm text-white/70">We fix the issues that stop your site from showing up and create a clear plan to bring in more customers through search engines.</p>
         <ul class="mt-4 space-y-2 text-sm text-white/60">
@@ -77,7 +77,7 @@
 
       {{-- Email Marketing --}}
       <div class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-white/[0.06] opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="150">
-        <img class="mb-4 h-10 w-10 invert transition-transform duration-500 group-hover:scale-110" src="{{ asset('icons/support.svg') }}" alt="Email marketing icon">
+        <img class="mb-4 h-10 w-10 invert transition-transform duration-500 group-hover:scale-110" width="40" height="40" loading="lazy" src="{{ asset('icons/support.svg') }}" alt="Email marketing icon">
         <h2 class="text-lg font-semibold text-white">Smart Email Marketing</h2>
         <p class="mt-2 text-sm text-white/70">Stay in touch with your customers automatically. From first-time buyers to repeat business, we set up emails that convert.</p>
         <ul class="mt-4 space-y-2 text-sm text-white/60">
@@ -92,7 +92,7 @@
 
       {{-- CRM --}}
       <div class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-white/[0.06] opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="50">
-        <img class="mb-4 h-10 w-10 invert transition-transform duration-500 group-hover:scale-110" src="{{ asset('icons/simplify.svg') }}" alt="CRM icon">
+        <img class="mb-4 h-10 w-10 invert transition-transform duration-500 group-hover:scale-110" width="40" height="40" loading="lazy" src="{{ asset('icons/simplify.svg') }}" alt="CRM icon">
         <h2 class="text-lg font-semibold text-white">CRM Setup & Automation</h2>
         <p class="mt-2 text-sm text-white/70">Keep all your leads, customers, and sales in one tidy place. We set up a CRM that fits your business and automate the boring bits.</p>
         <ul class="mt-4 space-y-2 text-sm text-white/60">
@@ -107,7 +107,7 @@
 
       {{-- Privacy & Security --}}
       <div class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-white/[0.06] opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="100">
-        <img class="mb-4 h-10 w-10 invert transition-transform duration-500 group-hover:scale-110" src="{{ asset('icons/quality.svg') }}" alt="Security icon">
+        <img class="mb-4 h-10 w-10 invert transition-transform duration-500 group-hover:scale-110" width="40" height="40" loading="lazy" src="{{ asset('icons/quality.svg') }}" alt="Security icon">
         <h2 class="text-lg font-semibold text-white">Privacy & Security Basics</h2>
         <p class="mt-2 text-sm text-white/70">Protect your business and customer data without the hassle. We set sensible defaults and keep things up to date.</p>
         <ul class="mt-4 space-y-2 text-sm text-white/60">
@@ -122,7 +122,7 @@
 
       {{-- Content & Strategy --}}
       <div class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-white/[0.06] opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="150">
-        <img class="mb-4 h-10 w-10 invert transition-transform duration-500 group-hover:scale-110" src="{{ asset('icons/design.svg') }}" alt="Content strategy icon">
+        <img class="mb-4 h-10 w-10 invert transition-transform duration-500 group-hover:scale-110" width="40" height="40" loading="lazy" src="{{ asset('icons/design.svg') }}" alt="Content strategy icon">
         <h2 class="text-lg font-semibold text-white">Content & Strategy</h2>
         <p class="mt-2 text-sm text-white/70">We help you plan, create, and publish content that connects with your audience and supports your business goals.</p>
         <ul class="mt-4 space-y-2 text-sm text-white/60">

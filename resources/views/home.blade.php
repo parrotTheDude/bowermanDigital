@@ -94,7 +94,7 @@
       <div class="group perspective-1000 opacity-0 transition-all duration-700 ease-out reveal" data-delay="100">
         <a href="{{ url('/portfolio/evie-graphic-design') }}"
           class="inline-block transform-gpu transition will-change-transform origin-bottom group-hover:scale-[1.02] group-hover:-rotate-1">
-          <img class="h-auto w-full max-w-none rounded-2xl" src="{{ asset('images/mockups/evie-desktop.webp') }}" alt="Evie Graphic Design website on desktop" fetchpriority="high" data-perspective-mock>
+          <img class="h-auto w-full max-w-none rounded-2xl" src="{{ asset('images/mockups/evie-desktop.webp') }}" srcset="{{ asset('images/mockups/evie-desktop-sm.webp') }} 800w, {{ asset('images/mockups/evie-desktop.webp') }} 1920w" sizes="(max-width: 767px) 100vw, 58vw" alt="Evie Graphic Design website on desktop" width="1920" height="1080" fetchpriority="high" data-perspective-mock>
         </a>
       </div>
     </div>
@@ -113,7 +113,7 @@
       {{-- 1. Vizzbud (featured) --}}
       <article class="group rounded-2xl border border-white/10 bg-black/60 p-5 backdrop-blur-sm transition-all duration-500 will-change-transform hover:-translate-y-1 hover:border-cyan-400/30 hover:shadow-[0_0_0_1px_rgba(34,211,238,0.15)] opacity-0 translate-y-6 reveal" data-delay="100">
         <div class="aspect-[16/9] overflow-hidden rounded-xl">
-          <img src="{{ asset('images/vizzbud/turtle.webp') }}" alt="Vizzbud dive conditions platform" class="h-full w-full object-cover object-top rounded-xl transform-gpu transition duration-700 group-hover:scale-[1.03]" loading="lazy">
+          <img src="{{ asset('images/vizzbud/turtle.webp') }}" srcset="{{ asset('images/vizzbud/turtle-sm.webp') }} 640w, {{ asset('images/vizzbud/turtle.webp') }} 1280w" sizes="(max-width: 767px) 90vw, 30vw" alt="Vizzbud dive conditions platform" width="1280" height="720" class="h-full w-full object-cover object-top rounded-xl transform-gpu transition duration-700 group-hover:scale-[1.03]" loading="lazy">
         </div>
         <div class="mt-6 text-center">
           <h3 class="text-lg font-semibold text-white">Vizzbud</h3>
@@ -131,7 +131,7 @@
       {{-- 2. TDAC --}}
       <article class="group rounded-2xl border border-white/10 bg-black/60 p-5 backdrop-blur-sm transition-all duration-500 will-change-transform hover:-translate-y-1 hover:border-cyan-400/30 hover:shadow-[0_0_0_1px_rgba(34,211,238,0.15)] opacity-0 translate-y-6 reveal" data-delay="150">
         <div class="aspect-[16/9] overflow-hidden rounded-xl">
-          <img src="{{ asset('images/tdac/tdac.webp') }}" alt="TDAC Promotional Picture" class="h-full w-full object-cover object-center rounded-xl transform-gpu transition duration-700 group-hover:scale-[1.03]" loading="lazy">
+          <img src="{{ asset('images/tdac/tdac.webp') }}" srcset="{{ asset('images/tdac/tdac-sm.webp') }} 640w, {{ asset('images/tdac/tdac.webp') }} 1980w" sizes="(max-width: 767px) 90vw, 30vw" alt="TDAC Promotional Picture" width="1980" height="1080" class="h-full w-full object-cover object-center rounded-xl transform-gpu transition duration-700 group-hover:scale-[1.03]" loading="lazy">
         </div>
         <div class="mt-6 text-center">
           <h3 class="text-lg font-semibold text-white">That Disability Adventure Company</h3>
@@ -149,7 +149,7 @@
       {{-- 3. Evie --}}
       <article class="group rounded-2xl border border-white/10 bg-black/60 p-5 backdrop-blur-sm transition-all duration-500 will-change-transform hover:-translate-y-1 hover:border-cyan-400/30 hover:shadow-[0_0_0_1px_rgba(34,211,238,0.15)] opacity-0 translate-y-6 reveal" data-delay="200">
         <div class="aspect-[16/9] overflow-hidden rounded-xl">
-          <img src="{{ asset('images/evie/evie.webp') }}" alt="Evie Bowerman Promotional Picture" class="h-full w-full object-cover object-center rounded-xl transform-gpu transition duration-700 group-hover:scale-[1.03]" loading="lazy">
+          <img src="{{ asset('images/evie/evie.webp') }}" srcset="{{ asset('images/evie/evie-sm.webp') }} 640w, {{ asset('images/evie/evie.webp') }} 1980w" sizes="(max-width: 767px) 90vw, 30vw" alt="Evie Bowerman Promotional Picture" width="1980" height="1080" class="h-full w-full object-cover object-center rounded-xl transform-gpu transition duration-700 group-hover:scale-[1.03]" loading="lazy">
         </div>
         <div class="mt-6 text-center">
           <h3 class="text-lg font-semibold text-white">Evie's Design Portfolio</h3>
@@ -183,17 +183,17 @@
 
     <div class="mx-auto mt-10 grid w-full grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
       <aside class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 text-center backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-white/[0.06] opacity-0 translate-y-6 reveal" data-delay="100">
-        <img class="mx-auto mb-3 h-16 w-16 invert transition-transform duration-500 will-change-transform group-hover:rotate-3 group-hover:scale-110" alt="Simplified workflow icon representing our streamlined approach" src="{{ asset('icons/simplify.svg') }}">
+        <img class="mx-auto mb-3 h-16 w-16 invert transition-transform duration-500 will-change-transform group-hover:rotate-3 group-hover:scale-110" alt="Simplified workflow icon representing our streamlined approach" src="{{ asset('icons/simplify.svg') }}" width="64" height="64" loading="lazy">
         <h3 class="text-lg font-semibold text-white">Simple</h3>
         <p class="mt-2 text-sm text-white/80">No jargon, no bloat. We keep things straightforward so you can focus on running your business while we handle the digital side.</p>
       </aside>
       <aside class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 text-center backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-white/[0.06] opacity-0 translate-y-6 reveal" data-delay="150">
-        <img class="mx-auto mb-3 h-16 w-16 invert transition-transform duration-500 will-change-transform group-hover:-rotate-3 group-hover:scale-110" alt="Quality badge icon representing high standards in every project" src="{{ asset('icons/quality.svg') }}">
+        <img class="mx-auto mb-3 h-16 w-16 invert transition-transform duration-500 will-change-transform group-hover:-rotate-3 group-hover:scale-110" alt="Quality badge icon representing high standards in every project" src="{{ asset('icons/quality.svg') }}" width="64" height="64" loading="lazy">
         <h3 class="text-lg font-semibold text-white">Quality</h3>
         <p class="mt-2 text-sm text-white/80">Clean code, modern design, and performance-first builds. We treat every project like it's our own because our reputation depends on it.</p>
       </aside>
       <aside class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 text-center backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-white/[0.06] opacity-0 translate-y-6 reveal" data-delay="200">
-        <img class="mx-auto mb-3 h-16 w-16 invert transition-transform duration-500 will-change-transform group-hover:rotate-3 group-hover:scale-110" alt="Handshake icon representing reliable partnership and support" src="{{ asset('icons/handshake.svg') }}">
+        <img class="mx-auto mb-3 h-16 w-16 invert transition-transform duration-500 will-change-transform group-hover:rotate-3 group-hover:scale-110" alt="Handshake icon representing reliable partnership and support" src="{{ asset('icons/handshake.svg') }}" width="64" height="64" loading="lazy">
         <h3 class="text-lg font-semibold text-white">Reliable</h3>
         <p class="mt-2 text-sm text-white/80">We partner with one business at a time so you always get our full attention. Fast replies, clear timelines, and no disappearing acts.</p>
       </aside>
