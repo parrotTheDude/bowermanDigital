@@ -7,7 +7,7 @@
   <meta property="og:title" content="Contact | Bowerman Digital">
   <meta property="og:description" content="Reach out for web, SEO, or email strategy. Sydney-based, boutique and hands-on.">
   <meta property="og:url" content="{{ url('/contact') }}">
-  <meta property="og:image" content="{{ asset('images/og-default.jpg') }}">
+  <meta property="og:image" content="{{ asset('images/og-default.webp') }}">
   <style>
     .grecaptcha-badge { visibility: hidden !important; }
     #submitBtn[data-loading="true"] [data-when="idle"] { display: none; }
