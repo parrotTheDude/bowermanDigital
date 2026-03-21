@@ -16,6 +16,8 @@ class ContactRequest extends FormRequest
             'email'        => ['required','email','max:160'],
             'phone'        => ['nullable','string','max:40'],
             'message'      => ['required','string','max:5000'],
+            // honeypot — must be empty (bots fill it, humans can't see it)
+            'website'      => ['present','max:0'],
             // recaptcha token (client-side)
             'recaptcha_token' => ['required','string'],
         ];
@@ -25,6 +27,7 @@ class ContactRequest extends FormRequest
     {
         return [
             'recaptcha_token.required' => 'reCAPTCHA validation failed. Please refresh and try again.',
+            'website.max'              => 'Form validation failed. Please try again.',
         ];
     }
 

@@ -151,6 +151,12 @@
               @enderror
             </div>
 
+            {{-- Honeypot — hidden from real users, bots will fill it --}}
+            <div aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;height:0;width:0;overflow:hidden;">
+              <label for="website">Website</label>
+              <input type="text" name="website" id="website" tabindex="-1" autocomplete="off" value="">
+            </div>
+
             <input type="hidden" name="recaptcha_token" id="recaptcha_token">
 
             {{-- Actions --}}
