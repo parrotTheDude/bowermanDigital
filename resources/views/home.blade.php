@@ -105,7 +105,7 @@
   </section>
 </section>
 
-<section class="relative z-20 bg-zinc-900 px-6 pt-10 pb-16 md:pt-12 md:pb-20">
+<section class="relative z-20 bg-zinc-900 px-6 pt-6 pb-16 md:pt-6 md:pb-20">
   {{-- Top divider --}}
   <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent"></div>
 
@@ -171,7 +171,7 @@
   </div>
 </section>
 
-<section class="relative z-20 bg-black px-6 pb-16 pt-12">
+<section class="relative z-20 bg-black px-6 pb-16 pt-6">
   {{-- Top divider --}}
   <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent"></div>
 

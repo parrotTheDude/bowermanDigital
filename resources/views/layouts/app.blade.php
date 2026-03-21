@@ -87,7 +87,7 @@
       ];
     @endphp
 
-    <div class="pointer-events-none absolute inset-x-0 bottom-[-1px] h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+    {{-- bottom border removed --}}
 
     <div class="mx-auto max-w-7xl px-4">
       <div class="hidden md:flex items-center justify-between py-4">
