@@ -44,8 +44,8 @@
     // Headline metrics (marketable, diver-friendly)
     'metrics' => [
       ['label' => 'Time to conditions', 'value' => '< 2 seconds'],
-      ['label' => 'Users',      'value' => '5+'],
-      ['label' => 'Dive logs created',  'value' => '10+'],
+      ['label' => 'Users',      'value' => '23+'],
+      ['label' => 'Dive logs created',  'value' => '60+'],
     ],
 
     // Challenge (plain-English)
@@ -81,8 +81,8 @@
     'result' => "Vizzbud gives divers the confidence to plan smarter and log easier. Conditions are clear at a glance, the logbook feels effortless to use, and it all works offline right at the pier. By focusing on speed, simplicity, and privacy, we built something divers actually enjoy coming back to — not just another app they forget about.",
 
     'tools' => [
-      'Laravel', 'Vue.js', 'Tailwind CSS', 'PWA', 'MySQL',
-      'BOM Weather API', 'Leaflet Maps', 'Simple Analytics',
+      'Laravel', 'Tailwind CSS', 'PWA', 'MySQL',
+      'Openmeteo Weather API', 'Mapbox Maps', 'Simple Analytics',
     ],
 
     'faqs' => [

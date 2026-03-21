@@ -129,7 +129,7 @@
 </section>
 
 <section class="bg-white text-black">
-  <div class="mx-auto max-w-6xl px-6 py-12 md:py-16">
+  <div class="mx-auto max-w-6xl px-6 pt-0 py-12 md:py-16">
 
     {{-- Goals / KPIs --}}
     @if(!empty($goals))
@@ -159,7 +159,7 @@
 
     {{-- Challenge --}}
     @if($challenge)
-      <div class="mx-auto mt-12 max-w-4xl will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="50">
+      <div class="mx-auto mt-6 max-w-4xl will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="50">
         <h2 class="text-2xl font-semibold !text-black">The challenge</h2>
         <div class="mt-4 prose prose-neutral max-w-none leading-relaxed">
           {!! nl2br(e($challenge)) !!}
@@ -173,7 +173,7 @@
 
     {{-- Showcase (key visuals) --}}
     @if($beforeAfter && !empty($beforeAfter['before']) && !empty($beforeAfter['after']))
-      <div class="mx-auto mt-10 max-w-5xl will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="100">
+      <div class="mx-auto mt-6 max-w-5xl will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="100">
         <h2 class="text-xl font-semibold !text-black">Highlights</h2>
         <div class="mt-4 grid gap-4 md:grid-cols-2">
           <figure class="rounded-xl border border-black/10 bg-white p-3">
@@ -201,7 +201,7 @@
 
     {{-- What we did --}}
     @if($whatWeDid)
-      <div class="mx-auto mt-12 max-w-4xl will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="150">
+      <div class="mx-auto mt-6 max-w-4xl will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="150">
         <h2 class="text-2xl font-semibold !text-black">What we did</h2>
         <div class="mt-4 prose prose-neutral max-w-none leading-relaxed">
           {!! nl2br(e($whatWeDid)) !!}
@@ -211,7 +211,7 @@
 
   {{-- Chapters (Design / Build / SEO / Email / Ops) --}}
   @if(!empty($chapters))
-    <div class="mx-auto mt-12 max-w-5xl space-y-12">
+    <div class="mx-auto mt-6 max-w-5xl space-y-12">
       @foreach($chapters as $i => $ch)
         <section class="will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="{{ 200 + ($i*50) }}">
           <h2 class="text-xl font-semibold !text-black">{{ $ch['title'] ?? 'Section' }}</h2>
@@ -258,7 +258,7 @@
 
     {{-- Screens showcase (styled like before/after) --}}
     @if(!empty($screens) && count($screens) >= 2)
-      <div class="mx-auto mt-12 max-w-5xl will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="180">
+      <div class="mx-auto mt-6 max-w-5xl will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="180">
         <h2 class="text-xl font-semibold !text-black">Highlights from the build</h2>
         <div class="mt-4 grid gap-6 md:grid-cols-2">
           @foreach($screens as $i => $img)
@@ -290,7 +290,7 @@
 
     {{-- Metrics / Outcomes --}}
     @if(!empty($metrics))
-      <div class="mx-auto mt-12 max-w-5xl will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="250">
+      <div class="mx-auto mt-6 max-w-5xl will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="250">
         <h2 class="text-2xl font-semibold !text-black">Outcomes</h2>
         <div class="mt-5 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
           @foreach($metrics as $m)
@@ -309,7 +309,7 @@
 
     {{-- Result Summary --}}
     @if($result)
-      <div class="mx-auto mt-12 max-w-4xl will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="300">
+      <div class="mx-auto mt-6 max-w-4xl will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="300">
         <h2 class="text-2xl font-semibold !text-black">The result</h2>
         <div class="mt-4 prose prose-neutral max-w-none leading-relaxed">
           {!! nl2br(e($result)) !!}

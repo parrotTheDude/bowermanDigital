@@ -41,7 +41,7 @@
 
     // Headline metrics
     'metrics' => [
-      ['label' => 'Unique Website Visitors',       'value' => '90 → 500+ increase in 6 months'],
+      ['label' => 'Unique Website Visitors',       'value' => '90 → 2000+ increase in 6 months'],
       ['label' => 'Participant records', 'value' => '0 → 300+ managed in CRM'],
       ['label' => 'Email workflows',     'value' => '100% automated for events & updates'],
     ],

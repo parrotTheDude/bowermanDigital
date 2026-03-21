@@ -28,7 +28,7 @@
   <div class="relative z-10 mx-auto max-w-7xl px-6 pt-20 pb-10 md:pt-28">
     <div class="mx-auto max-w-3xl text-center">
       <span class="inline-flex w-fit items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/80 backdrop-blur opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="0">Selected work</span>
-      <h1 class="mt-4 text-4xl font-bold text-white md:text-5xl opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="50">Projects that ship and scale</h1>
+      <h1 class="mt-4 text-4xl font-bold text-white md:text-5xl opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="50">Projects we have made</h1>
       <p class="mt-4 text-white/70 opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="100">Real results for real businesses. Here's a look at what we've built.</p>
     </div>
 
@@ -62,7 +62,7 @@
             <span class="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-2.5 py-0.5 text-[11px] text-cyan-300">Email</span>
           </div>
           <h2 class="mt-3 text-lg font-semibold text-white">That Disability Adventure Company</h2>
-          <p class="mt-1 text-sm text-white/60">A new website, SEO strategy, and EDM program that grew monthly traffic from 90 to 500+ visitors.</p>
+          <p class="mt-1 text-sm text-white/60">A new website, SEO strategy, and CRM program that grew monthly traffic from 90 to 500+ visitors.</p>
           <div class="mt-4 text-sm font-medium text-cyan-300 transition-colors group-hover:text-cyan-200">View case study →</div>
         </a>
       </article>
@@ -86,12 +86,26 @@
     </div>
 
     {{-- Bottom CTA --}}
-    <div class="mx-auto mt-16 max-w-lg text-center opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="100">
-      <p class="text-white/70">Got a project in mind? We'd love to hear about it.</p>
-      <div class="mt-6 flex justify-center">
-        <a href="{{ url('/contact') }}" class="no-underline">
-          <div class="glow-on-hover"><p>Start a Project</p></div>
-        </a>
+    <div class="mx-auto mt-16 max-w-5xl relative overflow-hidden rounded-2xl md:rounded-3xl bg-black opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="100">
+
+      {{-- colour glow orbs --}}
+      <div class="absolute -top-10 left-1/4 h-48 w-48 rounded-full blur-2xl pointer-events-none md:h-72 md:w-72 md:blur-3xl bg-cyan-400/10" aria-hidden="true"></div>
+      <div class="absolute -bottom-10 right-1/4 h-44 w-44 rounded-full blur-2xl pointer-events-none md:h-64 md:w-64 md:blur-3xl bg-fuchsia-400/10" aria-hidden="true"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-32 w-32 rounded-full blur-2xl pointer-events-none md:h-48 md:w-48 md:blur-3xl bg-emerald-400/10" aria-hidden="true"></div>
+
+      <div class="relative flex flex-col items-center px-5 py-10 sm:px-8 sm:py-12 md:px-16 md:py-16">
+        <h2 class="max-w-sm text-xl font-semibold leading-snug text-white text-center sm:max-w-md sm:text-2xl md:text-3xl">
+          Got a project in mind?
+        </h2>
+
+        <div class="mt-6 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-center">
+          <a href="{{ url('/contact') }}" class="no-underline flex justify-center sm:w-auto">
+            <div class="glow-on-hover w-full"><p>Start your brief</p></div>
+          </a>
+          <a href="{{ url('/services') }}" class="rounded-xl border border-white/10 px-6 py-3 text-center text-sm font-medium text-white transition hover:bg-white/10 sm:w-auto">
+            Explore services
+          </a>
+        </div>
       </div>
     </div>
   </div>
