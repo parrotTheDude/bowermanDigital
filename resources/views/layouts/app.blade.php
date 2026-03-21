@@ -164,14 +164,14 @@
         {{-- Get in touch --}}
         <div class="flex flex-col items-center gap-2 text-sm">
           <a href="mailto:hello@bowermandigital.com" class="text-white/70 transition hover:text-cyan-400">hello@bowermandigital.com</a>
-          <span class="text-white/40">Sydney, Australia</span>
+          <span class="text-white/60">Sydney, Australia</span>
         </div>
 
         {{-- Bottom --}}
         <div class="-mt-4 h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
         <div class="-mt-5 flex flex-col items-center gap-3 sm:flex-row sm:justify-between sm:w-full">
-          <p class="text-xs text-white/40">&copy; {{ date('Y') }} Bowerman Digital</p>
-          <div class="flex items-center gap-1.5 text-xs text-white/40">
+          <p class="text-xs text-white/60">&copy; {{ date('Y') }} Bowerman Digital</p>
+          <div class="flex items-center gap-1.5 text-xs text-white/60">
             <span class="inline-block h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
             One client at a time
           </div>
@@ -212,7 +212,7 @@
             <a href="{{ url('/') }}"
               class="flex items-center justify-between rounded-xl px-4 py-3 text-white hover:bg-white/5 focus:bg-white/10 focus:outline-none">
               <span>Home</span>
-              <span class="text-white/40">→</span>
+              <span class="text-white/60">→</span>
             </a>
           </li>
           @foreach ($nav as $item)
@@ -220,7 +220,7 @@
               <a href="{{ $item['href'] }}"
                 class="flex items-center justify-between rounded-xl px-4 py-3 text-white hover:bg-white/5 focus:bg-white/10 focus:outline-none">
                 <span class="capitalize">{{ $item['label'] }}</span>
-                <span class="text-white/40">→</span>
+                <span class="text-white/60">→</span>
               </a>
             </li>
           @endforeach
