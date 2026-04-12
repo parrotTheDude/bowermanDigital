@@ -106,8 +106,9 @@
           <li class="flex gap-2"><span class="text-cyan-400/60">—</span> Structured data and entity-based SEO strategy</li>
           <li class="flex gap-2"><span class="text-cyan-400/60">—</span> Content optimised for AI retrieval and citation</li>
         </ul>
-        <div class="mt-5">
+        <div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-1">
           <a href="{{ url('/contact') }}" class="text-sm font-medium text-cyan-300 transition-colors hover:text-cyan-200">Get an AI audit &rarr;</a>
+          <a href="{{ url('/portfolio/that-disability-adventure-company') }}" class="text-xs text-white/40 transition-colors hover:text-white/70">See TDAC results</a>
         </div>
       </div>
 
@@ -121,8 +122,9 @@
           <li class="flex gap-2"><span class="text-cyan-400/60">—</span> llms.txt implementation for AI agent discovery</li>
           <li class="flex gap-2"><span class="text-cyan-400/60">—</span> Fast, accessible, mobile-first builds</li>
         </ul>
-        <div class="mt-5">
+        <div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-1">
           <a href="{{ url('/portfolio') }}" class="text-sm font-medium text-cyan-300 transition-colors hover:text-cyan-200">See examples &rarr;</a>
+          <a href="{{ url('/portfolio/vizzbud') }}" class="text-xs text-white/40 transition-colors hover:text-white/70">Vizzbud case study</a>
         </div>
       </div>
 
@@ -136,8 +138,9 @@
           <li class="flex gap-2"><span class="text-cyan-400/60">—</span> Workflow automation connecting your existing tools</li>
           <li class="flex gap-2"><span class="text-cyan-400/60">—</span> Team training for responsible AI adoption</li>
         </ul>
-        <div class="mt-5">
+        <div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-1">
           <a href="{{ url('/contact') }}" class="text-sm font-medium text-cyan-300 transition-colors hover:text-cyan-200">Chat about AI tools &rarr;</a>
+          <a href="{{ url('/portfolio/that-disability-adventure-company') }}" class="text-xs text-white/40 transition-colors hover:text-white/70">See TDAC automation</a>
         </div>
       </div>
 
@@ -151,8 +154,9 @@
           <li class="flex gap-2"><span class="text-cyan-400/60">—</span> Automated follow-ups, reminders, and hand-offs</li>
           <li class="flex gap-2"><span class="text-cyan-400/60">—</span> Email marketing that converts</li>
         </ul>
-        <div class="mt-5">
+        <div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-1">
           <a href="{{ url('/contact') }}" class="text-sm font-medium text-cyan-300 transition-colors hover:text-cyan-200">Plan your automation &rarr;</a>
+          <a href="{{ url('/portfolio/that-disability-adventure-company') }}" class="text-xs text-white/40 transition-colors hover:text-white/70">TDAC CRM build</a>
         </div>
       </div>
 
@@ -166,8 +170,9 @@
           <li class="flex gap-2"><span class="text-cyan-400/60">—</span> Content strategy optimised for AI and search</li>
           <li class="flex gap-2"><span class="text-cyan-400/60">—</span> Monthly support and performance reporting</li>
         </ul>
-        <div class="mt-5">
+        <div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-1">
           <a href="{{ url('/contact') }}" class="text-sm font-medium text-cyan-300 transition-colors hover:text-cyan-200">Plan your strategy &rarr;</a>
+          <a href="{{ url('/portfolio/evie-graphic-design') }}" class="text-xs text-white/40 transition-colors hover:text-white/70">Evie's strategy</a>
         </div>
       </div>
 

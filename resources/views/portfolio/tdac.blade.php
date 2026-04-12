@@ -65,6 +65,13 @@
       'Custom CRM', 'Simple Analytics', 'cPanel',
     ],
 
+    'relatedServices' => [
+      ['label' => 'AI Search Optimisation', 'href' => url('/services')],
+      ['label' => 'CRM & Smart Automation', 'href' => url('/services')],
+      ['label' => 'AI-Ready Websites', 'href' => url('/services')],
+      ['label' => 'Digital Strategy & Content', 'href' => url('/services')],
+    ],
+
     'faqs' => [
       ['q' => 'How did the website redesign help TDAC?', 'a' => 'The new site made it immediately clear what TDAC offers and how families can get started. Unique visitors grew from 90 to over 500 per month within six months.'],
       ['q' => 'What does the custom CRM do?', 'a' => 'It manages participant records, automates intake workflows, sends personalised emails for events and updates, and reduces the admin time the team spends on day-to-day operations.'],

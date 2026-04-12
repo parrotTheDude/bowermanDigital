@@ -85,6 +85,12 @@
       'Openmeteo Weather API', 'Mapbox Maps', 'Simple Analytics',
     ],
 
+    'relatedServices' => [
+      ['label' => 'AI-Ready Websites', 'href' => url('/services')],
+      ['label' => 'AI Tool Integration', 'href' => url('/services')],
+      ['label' => 'Privacy & Security', 'href' => url('/services')],
+    ],
+
     'faqs' => [
       ['q' => 'Does Vizzbud work offline?', 'a' => 'Yes — it\'s a Progressive Web App, so divers can check cached conditions and log dives even without reception at the pier.'],
       ['q' => 'Where does the conditions data come from?', 'a' => 'Realtime data is pulled from official Australian Bureau of Meteorology feeds, plus tide and swell sources specific to Sydney dive sites.'],

@@ -31,6 +31,7 @@
   $faqs         = $faqs         ?? [];   // [['q'=>'','a'=>''], ...]
 
   $moreWork     = $moreWork     ?? null; // ['title'=>'','subtitle'=>'','img'=>'','href'=>url(...),'label'=>'...']
+  $relatedServices = $relatedServices ?? []; // [['label'=>'AI Search Optimisation','href'=>url('/services').'#ai-search'], ...]
 @endphp
 
 <section class="relative bg-black">
@@ -333,6 +334,38 @@
       </div>
     @endif
 
+    {{-- Related services --}}
+    @if(!empty($relatedServices))
+      <div class="mx-auto mt-12 max-w-5xl will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="340">
+        <h2 class="text-2xl font-semibold !text-black">Related services</h2>
+        <div class="mt-4 flex flex-wrap gap-2">
+          @foreach($relatedServices as $rs)
+            <a href="{{ $rs['href'] }}" class="rounded-full border border-black/10 bg-black/[0.03] px-4 py-1.5 text-sm font-medium text-black/75 transition-colors hover:border-cyan-400/40 hover:bg-cyan-50 hover:text-cyan-700 no-underline">{{ $rs['label'] }} &rarr;</a>
+          @endforeach
+        </div>
+      </div>
+    @endif
+
+    {{-- FAQs --}}
+    @if(!empty($faqs))
+      <div class="mx-auto mt-12 max-w-4xl will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="360">
+        <h2 class="text-2xl font-semibold !text-black">Frequently asked</h2>
+        <div class="mt-5 space-y-3" id="case-faq-list">
+          @foreach($faqs as $i => $faq)
+            <div class="faq-item rounded-xl border border-black/10 bg-black/[0.02] transition-colors hover:bg-black/[0.04]">
+              <button class="faq-trigger flex w-full items-center justify-between px-5 py-4 text-left" aria-expanded="false">
+                <span class="text-sm font-medium text-black">{{ $faq['q'] }}</span>
+                <svg class="faq-chevron h-4 w-4 shrink-0 text-black/40 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <div class="faq-body hidden px-5 pb-4">
+                <p class="text-sm text-black/60">{{ $faq['a'] }}</p>
+              </div>
+            </div>
+          @endforeach
+        </div>
+      </div>
+    @endif
+
     {{-- Testimonial --}}
     @if($quote && !empty($quote['text']))
       <figure class="mx-auto mt-16 max-w-4xl will-change-transform opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="350">
@@ -433,6 +466,26 @@
 @endif
 
 
+@if(!empty($faqs))
+  @push('schema')
+    @php
+      $faqSchemaItems = array_map(fn($f) => [
+        '@type' => 'Question',
+        'name' => $f['q'],
+        'acceptedAnswer' => [
+          '@type' => 'Answer',
+          'text' => $f['a'],
+        ],
+      ], $faqs);
+    @endphp
+    <script type="application/ld+json">{!! json_encode([
+      '@context' => 'https://schema.org',
+      '@type' => 'FAQPage',
+      'mainEntity' => $faqSchemaItems,
+    ], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}</script>
+  @endpush
+@endif
+
 @once
   @push('head')
     <style>
@@ -469,6 +522,28 @@
           });
         }, { threshold: 0.18 });
         els.forEach(el => io.observe(el));
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-trigger').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const item = btn.closest('.faq-item');
+            const body = item.querySelector('.faq-body');
+            const chevron = item.querySelector('.faq-chevron');
+            const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+            document.querySelectorAll('.faq-item').forEach(other => {
+              if (other !== item) {
+                other.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+                other.querySelector('.faq-body').classList.add('hidden');
+                other.querySelector('.faq-chevron').style.transform = '';
+              }
+            });
+
+            btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+            body.classList.toggle('hidden', isOpen);
+            chevron.style.transform = isOpen ? '' : 'rotate(180deg)';
+          });
+        });
 
         const tiltImg = document.querySelector('[data-tilt]');
         if (tiltImg && window.matchMedia('(pointer:fine)').matches) {

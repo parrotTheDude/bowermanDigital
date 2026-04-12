@@ -61,6 +61,12 @@
       'Simple Analytics', 'Responsive Images',
     ],
 
+    'relatedServices' => [
+      ['label' => 'AI-Ready Websites', 'href' => url('/services')],
+      ['label' => 'AI Search Optimisation', 'href' => url('/services')],
+      ['label' => 'Digital Strategy & Content', 'href' => url('/services')],
+    ],
+
     'faqs' => [
       ['q' => 'How easy is it for Evie to add new projects?', 'a' => 'Very simple — new work can be added in minutes without touching code or needing a developer. The update flow is designed around a designer\'s workflow.'],
       ['q' => 'How does the portfolio perform on mobile?', 'a' => 'Images are optimised, compressed, and lazy-loaded for fast mobile load times. The layout adapts cleanly to any screen size with easy tap targets.'],
