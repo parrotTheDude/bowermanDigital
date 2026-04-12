@@ -16,7 +16,7 @@
 @section('content')
   @include('partials.portfolio.case', [
     'title'     => 'That Disability Adventure Company',
-    'summary'   => "A complete refresh of TDAC's website and outreach — focused on clarity, trust, and making it easy for families to enquire.",
+    'summary'   => "A complete refresh of TDAC's website and outreach, focused on clarity, trust, and making it easy for families to enquire.",
     'liveUrl'   => 'https://thatdisabilityadventurecompany.com.au/',
     'industry'  => 'Disability & Health',
 
@@ -75,15 +75,15 @@
     'faqs' => [
       ['q' => 'How did the website redesign help TDAC?', 'a' => 'The new site made it immediately clear what TDAC offers and how families can get started. Unique visitors grew from 90 to over 500 per month within six months.'],
       ['q' => 'What does the custom CRM do?', 'a' => 'It manages participant records, automates intake workflows, sends personalised emails for events and updates, and reduces the admin time the team spends on day-to-day operations.'],
-      ['q' => 'Can TDAC update the site themselves?', 'a' => 'Yes — the site is built so the team can update content, add events, and manage communications without needing a developer for routine changes.'],
+      ['q' => 'Can TDAC update the site themselves?', 'a' => 'Yes. The site is built so the team can update content, add events, and manage communications without needing a developer for routine changes.'],
     ],
 
     // Showcase (two key visuals)
     'beforeAfter' => [
       'before'          => 'images/tdac/tdacWebScreenGrab.webp',   // refreshed homepage
       'after'           => 'images/tdac/tdacWebScreenGrab2.webp',        // activities page
-      'caption_before'  => 'Refreshed homepage — clearer structure and faster to scan.',
-      'caption_after'   => 'Activities page — services grouped with next steps.',
+      'caption_before'  => 'Refreshed homepage with clearer structure, faster to scan.',
+      'caption_after'   => 'Activities page with services grouped and next steps.',
       // 'caption' => 'Optional overall note, if you want one.'
     ],
 

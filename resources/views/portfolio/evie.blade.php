@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Evie Graphic Design Portfolio | Bowerman Digital')
-@section('meta_description', "Clean, fast portfolio that puts Evie's work first — simple to browse, great on mobile, and easy to keep updated.")
+@section('meta_description', "Clean, fast portfolio that puts Evie's work first. Simple to browse, great on mobile, and easy to keep updated.")
 
 @section('og_image', asset('images/evie/evie.webp'))
 
@@ -45,7 +45,7 @@
       ['label' => 'Project link clicks',     'value' => '3.1× increase'],
     ],
 
-    'challenge' => "Evie's old portfolio made it harder than it should be for people to enjoy her work. She needed a clean, distraction-free site where the projects take centre stage — no bulky CMS, no complex back end. Just a simple, professional portfolio that's easy to browse, quick on mobile, and looks great when shared.",
+    'challenge' => "Evie's old portfolio made it harder than it should be for people to enjoy her work. She needed a clean, distraction-free site where the projects take centre stage. No bulky CMS, no complex back end. Just a simple, professional portfolio that's easy to browse, quick on mobile, and looks great when shared.",
 
     'whatWeDid' => "• Created a clean, type-led layout with consistent imagery and clear captions.\n
     • Structured projects so visitors can scan at a glance or dive deeper into details.\n
@@ -54,7 +54,7 @@
     • Added subtle hover and reveal animations for polish without distraction.\n
     • Built a simple update flow so new work can be added in minutes.",
 
-    'result' => "A clean, fast portfolio that puts Evie's work first — professional to share, effortless to update, and smooth to browse on any device. Studios and clients can quickly explore projects without friction.",
+    'result' => "A clean, fast portfolio that puts Evie's work first. Professional to share, effortless to update, and smooth to browse on any device. Studios and clients can quickly explore projects without friction.",
 
     'tools' => [
       'Laravel', 'Tailwind CSS', 'Vite', 'WebP Optimisation',
@@ -68,17 +68,17 @@
     ],
 
     'faqs' => [
-      ['q' => 'How easy is it for Evie to add new projects?', 'a' => 'Very simple — new work can be added in minutes without touching code or needing a developer. The update flow is designed around a designer\'s workflow.'],
+      ['q' => 'How easy is it for Evie to add new projects?', 'a' => 'Very simple. New work can be added in minutes without touching code or needing a developer. The update flow is designed around a designer\'s workflow.'],
       ['q' => 'How does the portfolio perform on mobile?', 'a' => 'Images are optimised, compressed, and lazy-loaded for fast mobile load times. The layout adapts cleanly to any screen size with easy tap targets.'],
-      ['q' => 'Does the site help with SEO?', 'a' => 'Yes — meaningful titles, meta descriptions, alt text, and Open Graph images are all set up so the portfolio looks professional when shared or found via search.'],
+      ['q' => 'Does the site help with SEO?', 'a' => 'Yes. Meaningful titles, meta descriptions, alt text, and Open Graph images are all set up so the portfolio looks professional when shared or found via search.'],
     ],
 
     // Optional before/after
     'beforeAfter' => [
       'before'         => 'images/evie/home.webp',
       'after'          => 'images/evie/portfolio.webp',
-      'caption_before' => 'Homepage — clean entry, focused intro',
-      'caption_after'  => 'Portfolio showcase — bold imagery, simple navigation',
+      'caption_before' => 'Homepage with clean entry and focused intro',
+      'caption_after'  => 'Portfolio showcase with bold imagery and simple navigation',
       'caption'        => 'Cleaner typography, bigger images, and a navigation that makes the work easy to explore.',
     ],
 
@@ -97,8 +97,8 @@
       'images/evie/contact.webp',
     ],
     'captions' => [
-      'About page — personal yet professional intro',
-      'Contact page — simple form and clear links',
+      'About page, personal yet professional intro',
+      'Contact page with simple form and clear links',
     ],
 
     // Cross-link to TDAC

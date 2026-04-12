@@ -73,7 +73,7 @@
           </h1>
 
           <p class="mt-5 max-w-xl text-white/80">
-            ChatGPT, Perplexity, Google AI Overviews — the way people discover businesses has fundamentally changed. If AI doesn't know about you, neither do your future customers.
+            ChatGPT, Perplexity, Google AI Overviews. The way people discover businesses has fundamentally changed. If AI doesn't know about you, neither do your future customers.
           </p>
           <p class="mt-2 max-w-xl text-white/80">
             We help Australian businesses stay discoverable, competitive, and ready for what's next.
@@ -117,7 +117,7 @@
       <aside class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 text-center backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-white/[0.06] opacity-0 translate-y-6 reveal" data-delay="100">
         <img class="mx-auto mb-3 h-16 w-16 invert transition-transform duration-500 will-change-transform group-hover:rotate-3 group-hover:scale-110" alt="AI search optimisation icon" src="{{ asset('icons/seo.svg') }}" width="64" height="64" loading="lazy">
         <h3 class="text-lg font-semibold text-white">AI Search Optimisation</h3>
-        <p class="mt-2 text-sm text-white/80">We make sure AI systems — ChatGPT, Perplexity, Google AI — can find, understand, and recommend your business to the people asking.</p>
+        <p class="mt-2 text-sm text-white/80">We make sure AI systems like ChatGPT, Perplexity, and Google AI can find, understand, and recommend your business to the people asking.</p>
       </aside>
       <aside class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 text-center backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-white/[0.06] opacity-0 translate-y-6 reveal" data-delay="150">
         <img class="mx-auto mb-3 h-16 w-16 invert transition-transform duration-500 will-change-transform group-hover:-rotate-3 group-hover:scale-110" alt="AI-ready website development icon" src="{{ asset('icons/webDev.svg') }}" width="64" height="64" loading="lazy">
@@ -127,7 +127,7 @@
       <aside class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 text-center backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-white/[0.06] opacity-0 translate-y-6 reveal" data-delay="200">
         <img class="mx-auto mb-3 h-16 w-16 invert transition-transform duration-500 will-change-transform group-hover:rotate-3 group-hover:scale-110" alt="AI automation and tool integration icon" src="{{ asset('icons/simplify.svg') }}" width="64" height="64" loading="lazy">
         <h3 class="text-lg font-semibold text-white">Smart Automation</h3>
-        <p class="mt-2 text-sm text-white/80">AI chatbots, workflow automations, and CRM integrations that save your team hours every week — set up properly, not hacked together.</p>
+        <p class="mt-2 text-sm text-white/80">AI chatbots, workflow automations, and CRM integrations that save your team hours every week. Set up properly, not hacked together.</p>
       </aside>
     </div>
 
@@ -228,12 +228,12 @@
       <aside class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 text-center backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-white/[0.06] opacity-0 translate-y-6 reveal" data-delay="150">
         <img class="mx-auto mb-3 h-16 w-16 invert transition-transform duration-500 will-change-transform group-hover:-rotate-3 group-hover:scale-110" alt="AI expertise icon" src="{{ asset('icons/quality.svg') }}" width="64" height="64" loading="lazy">
         <h3 class="text-lg font-semibold text-white">AI-era expertise</h3>
-        <p class="mt-2 text-sm text-white/80">We don't just build websites — we build digital presences that AI systems can discover, understand, and recommend to your future customers.</p>
+        <p class="mt-2 text-sm text-white/80">We don't just build websites. We build digital presences that AI systems can actually discover, understand, and recommend to your future customers.</p>
       </aside>
       <aside class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 text-center backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-white/[0.06] opacity-0 translate-y-6 reveal" data-delay="200">
         <img class="mx-auto mb-3 h-16 w-16 invert transition-transform duration-500 will-change-transform group-hover:rotate-3 group-hover:scale-110" alt="Full implementation icon" src="{{ asset('icons/simplify.svg') }}" width="64" height="64" loading="lazy">
         <h3 class="text-lg font-semibold text-white">We build, not just advise</h3>
-        <p class="mt-2 text-sm text-white/80">No 50-page reports that collect dust. We implement everything — from AI-optimised websites to automated workflows — and make sure it actually works.</p>
+        <p class="mt-2 text-sm text-white/80">No 50-page reports that collect dust. We implement everything: AI-optimised websites, automated workflows, the lot. And we make sure it actually works.</p>
       </aside>
     </div>
   </div>
@@ -247,7 +247,7 @@
   <div class="relative mx-auto max-w-3xl">
     <span class="mx-auto mb-3 block w-fit rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs tracking-wide text-white/60 opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="0">Ready?</span>
     <h2 class="text-3xl font-semibold text-white md:text-4xl opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="50">Find out if your business is AI-ready</h2>
-    <p class="mx-auto mt-4 max-w-lg text-white/70 opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="100">Tell us about your business and we'll send you a free AI readiness audit — no strings, no jargon, just a clear picture of where you stand.</p>
+    <p class="mx-auto mt-4 max-w-lg text-white/70 opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="100">Tell us about your business and we'll send you a free AI readiness audit. No strings, no jargon. Just a clear picture of where you stand.</p>
     <div class="mx-auto mt-8 flex justify-center opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="150">
       <a href="{{ url('/contact') }}" class="no-underline">
         <div class="glow-on-hover"><p>Get your free AI audit</p></div>

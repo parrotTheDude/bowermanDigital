@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Vizzbud | Bowerman Digital')
-@section('meta_description', "Realtime dive conditions and a slick logbook for Sydney divers — fast, accurate, and privacy-first.")
+@section('meta_description', "Realtime dive conditions and a slick logbook for Sydney divers. Fast, accurate, and privacy-first.")
 
 @section('og_image', asset('images/vizzbud/turtle.webp'))
 
@@ -58,7 +58,7 @@
     • Built a photo-led dive log that auto-fills key info like tide, time, and weather.\n
     • Added handy extras: bookmark favourite sites, get gentle reminders when conditions look good, and keep full control of your privacy.\n
     • Made sure it's fast and reliable, so it works smoothly even with spotty reception.\n
-    • Kept the focus on divers' needs, not ads or noise — just clean, useful tools.",
+    • Kept the focus on divers' needs, not ads or noise. Just clean, useful tools.",
 
     // Highlights (rename images to match your assets)
     'beforeAfter' => [
@@ -78,7 +78,7 @@
       'Dive Logger page',
     ],
 
-    'result' => "Vizzbud gives divers the confidence to plan smarter and log easier. Conditions are clear at a glance, the logbook feels effortless to use, and it all works offline right at the pier. By focusing on speed, simplicity, and privacy, we built something divers actually enjoy coming back to — not just another app they forget about.",
+    'result' => "Vizzbud gives divers the confidence to plan smarter and log easier. Conditions are clear at a glance, the logbook feels effortless to use, and it all works offline right at the pier. By focusing on speed, simplicity, and privacy, we built something divers actually enjoy coming back to. Not just another app they forget about.",
 
     'tools' => [
       'Laravel', 'Tailwind CSS', 'PWA', 'MySQL',
@@ -92,7 +92,7 @@
     ],
 
     'faqs' => [
-      ['q' => 'Does Vizzbud work offline?', 'a' => 'Yes — it\'s a Progressive Web App, so divers can check cached conditions and log dives even without reception at the pier.'],
+      ['q' => 'Does Vizzbud work offline?', 'a' => 'Yes. It\'s a Progressive Web App, so divers can check cached conditions and log dives even without reception at the pier.'],
       ['q' => 'Where does the conditions data come from?', 'a' => 'Realtime data is pulled from official Australian Bureau of Meteorology feeds, plus tide and swell sources specific to Sydney dive sites.'],
       ['q' => 'Is my data private?', 'a' => 'Absolutely. Vizzbud uses privacy-first analytics with no third-party tracking. Dive logs and personal data stay under the diver\'s control.'],
     ],

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Contact | Bowerman Digital')
-@section('meta_description', 'Ready to grow? Contact Bowerman Digital for web, SEO, and email strategy. Based in Sydney, we partner with one business at a time.')
+@section('meta_description', 'Ready to grow? Contact Bowerman Digital for AI search optimisation, AI-ready web development, and digital strategy. Based in Sydney, one client at a time.')
 
 @push('head')
   <style>
@@ -219,7 +219,7 @@
           <ul class="mt-3 space-y-2.5">
             <li class="flex items-start gap-2.5">
               <svg class="mt-0.5 h-4 w-4 shrink-0 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              <span class="text-sm text-white/60">One client at a time — full focus on you</span>
+              <span class="text-sm text-white/60">One client at a time, full focus on you</span>
             </li>
             <li class="flex items-start gap-2.5">
               <svg class="mt-0.5 h-4 w-4 shrink-0 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
@@ -227,7 +227,7 @@
             </li>
             <li class="flex items-start gap-2.5">
               <svg class="mt-0.5 h-4 w-4 shrink-0 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              <span class="text-sm text-white/60">No lock-in contracts — month to month</span>
+              <span class="text-sm text-white/60">No lock-in contracts, month to month</span>
             </li>
             <li class="flex items-start gap-2.5">
               <svg class="mt-0.5 h-4 w-4 shrink-0 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>

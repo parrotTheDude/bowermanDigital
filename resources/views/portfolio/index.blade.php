@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Portfolio | Bowerman Digital')
-@section('meta_description', 'Selected work from Bowerman Digital — AI-ready websites, search optimisation, CRM automation, and digital strategy that delivers measurable growth for Australian businesses.')
+@section('meta_description', 'Selected work from Bowerman Digital. AI-ready websites, search optimisation, CRM automation, and digital strategy that delivers measurable growth for Australian businesses.')
 
 
 @push('schema')
@@ -29,7 +29,7 @@
     <div class="mx-auto max-w-3xl text-center">
       <span class="inline-flex w-fit items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/80 backdrop-blur opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="0">Selected work</span>
       <h1 class="mt-4 text-4xl font-bold text-white md:text-5xl opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="50">Projects we have made</h1>
-      <p class="mt-4 text-white/70 opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="100">Real results for real businesses — from AI-ready websites to full digital strategy. Here's what we've built.</p>
+      <p class="mt-4 text-white/70 opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="100">Real results for real businesses, from AI-ready websites to full digital strategy. Here's what we've built.</p>
     </div>
 
     <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
