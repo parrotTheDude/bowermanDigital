@@ -1,26 +1,77 @@
 @extends('layouts.app')
 
-@section('title', 'Services | Bowerman Digital')
-@section('meta_description', 'Web development, technical SEO, email marketing, and CRM setup. We build fast, accessible websites and growth strategies with clear, measurable outcomes.')
+@section('title', 'AI Digital Strategy Services | Bowerman Digital Sydney')
+@section('meta_description', 'AI search optimisation, AI-ready web development, intelligent automation, and digital strategy. We help Australian businesses stay discoverable and competitive in the age of AI.')
 
 
 @push('schema')
   @php
-    $schema = [
+    $serviceSchema = [
       '@'.'context' => 'https://schema.org',
       '@type' => 'Service',
-      'name' => 'Web Development, SEO & Email',
+      'name' => 'AI Digital Strategy & Web Development',
       'provider' => [
         '@type' => 'Organization',
         'name'  => 'Bowerman Digital',
         'url'   => url('/'),
       ],
       'areaServed' => 'Australia',
-      'serviceType' => ['Web Development','SEO','Email Marketing'],
+      'serviceType' => ['AI Search Optimisation','AI-Ready Web Development','AI Tool Integration','Digital Strategy','SEO','Email Marketing'],
       'url' => url('/services'),
+      'description' => 'Comprehensive AI digital strategy services including AI search optimisation, AI-ready web development, intelligent automation, and content strategy for Australian businesses.',
     ];
   @endphp
-  <script type="application/ld+json">{!! json_encode($schema, JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}</script>
+  <script type="application/ld+json">{!! json_encode($serviceSchema, JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}</script>
+
+  @php
+    $faqSchema = [
+      '@'.'context' => 'https://schema.org',
+      '@type' => 'FAQPage',
+      'mainEntity' => [
+        [
+          '@type' => 'Question',
+          'name' => 'What is AI search optimisation?',
+          'acceptedAnswer' => [
+            '@type' => 'Answer',
+            'text' => 'AI search optimisation ensures your business appears when people use AI tools like ChatGPT, Perplexity, or Google AI Overviews to find products and services. It goes beyond traditional SEO by focusing on structured data, entity recognition, and content that AI systems can parse and recommend.',
+          ],
+        ],
+        [
+          '@type' => 'Question',
+          'name' => 'What is llms.txt and does my business need one?',
+          'acceptedAnswer' => [
+            '@type' => 'Answer',
+            'text' => 'llms.txt is an emerging standard — similar to robots.txt but for AI. It provides a curated, machine-readable summary of your business that AI agents can consume. If AI tools are going to recommend businesses in your industry, having an llms.txt file helps ensure they recommend yours accurately.',
+          ],
+        ],
+        [
+          '@type' => 'Question',
+          'name' => 'How soon can we get started?',
+          'acceptedAnswer' => [
+            '@type' => 'Answer',
+            'text' => 'Most projects kick off in about a week or two. Quick jobs like an AI readiness audit or llms.txt implementation can start even faster.',
+          ],
+        ],
+        [
+          '@type' => 'Question',
+          'name' => 'Will you look after my website once it\'s live?',
+          'acceptedAnswer' => [
+            '@type' => 'Answer',
+            'text' => 'Absolutely. We keep things updated, secure, and optimised so you don\'t have to worry about it. The AI landscape moves fast — we monitor your visibility and adapt your strategy as platforms evolve.',
+          ],
+        ],
+        [
+          '@type' => 'Question',
+          'name' => 'How much does a project cost?',
+          'acceptedAnswer' => [
+            '@type' => 'Answer',
+            'text' => 'It depends on the scope, but we\'re always upfront about pricing. After an initial chat we\'ll give you a clear quote with no hidden fees. AI audits and llms.txt implementation are quick, affordable starting points.',
+          ],
+        ],
+      ],
+    ];
+  @endphp
+  <script type="application/ld+json">{!! json_encode($faqSchema, JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}</script>
 @endpush
 
 @section('content')
@@ -32,8 +83,8 @@
   <div class="relative z-10 mx-auto max-w-7xl px-6 pt-24 pb-12 md:pt-40">
     <div class="mx-auto max-w-3xl text-center">
       <span class="inline-flex w-fit items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/80 backdrop-blur opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="0">What we do</span>
-      <h1 class="mt-4 text-4xl font-bold text-white md:text-5xl opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="50">Build smart. Grow faster.</h1>
-      <p class="mt-4 text-white/70 opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="100">We focus on the fundamentals that compound: performance, accessibility, and a content/search strategy that actually converts.</p>
+      <h1 class="mt-4 text-4xl font-bold text-white md:text-5xl opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="50">Make your business AI-ready</h1>
+      <p class="mt-4 text-white/70 opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="100">From AI search optimisation to intelligent automation, we build the digital infrastructure that keeps your business discoverable, competitive, and growing in the age of AI.</p>
     </div>
   </div>
 </section>
@@ -45,93 +96,93 @@
   <div class="mx-auto max-w-7xl">
     <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 
-      {{-- Web Development --}}
+      {{-- AI Search Optimisation --}}
       <div class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-white/[0.06] opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="50">
-        <img class="mb-4 h-10 w-10 invert transition-transform duration-500 group-hover:scale-110" width="40" height="40" loading="lazy" src="{{ asset('icons/webDev.svg') }}" alt="Web development icon">
-        <h2 class="text-lg font-semibold text-white">Websites That Work</h2>
-        <p class="mt-2 text-sm text-white/70">We build websites that look great, load fast, and help you win more customers — without the tech headache.</p>
+        <img class="mb-4 h-10 w-10 invert transition-transform duration-500 group-hover:scale-110" width="40" height="40" loading="lazy" src="{{ asset('icons/seo.svg') }}" alt="AI search optimisation icon">
+        <h2 class="text-lg font-semibold text-white">AI Search Optimisation</h2>
+        <p class="mt-2 text-sm text-white/70">People search with ChatGPT, Perplexity, and Google AI now — not just the blue links. We make sure AI recommends your business, not your competitor's.</p>
         <ul class="mt-4 space-y-2 text-sm text-white/60">
-          <li class="flex gap-2"><span class="text-cyan-400/60">—</span> Easy for you (and your customers) to use</li>
-          <li class="flex gap-2"><span class="text-cyan-400/60">—</span> Built to show up properly on Google & social media</li>
-          <li class="flex gap-2"><span class="text-cyan-400/60">—</span> Fast, mobile-friendly, and reliable</li>
+          <li class="flex gap-2"><span class="text-cyan-400/60">—</span> Visibility audits across AI search platforms</li>
+          <li class="flex gap-2"><span class="text-cyan-400/60">—</span> Structured data and entity-based SEO strategy</li>
+          <li class="flex gap-2"><span class="text-cyan-400/60">—</span> Content optimised for AI retrieval and citation</li>
         </ul>
         <div class="mt-5">
-          <a href="{{ url('/portfolio') }}" class="text-sm font-medium text-cyan-300 transition-colors hover:text-cyan-200">See examples →</a>
+          <a href="{{ url('/contact') }}" class="text-sm font-medium text-cyan-300 transition-colors hover:text-cyan-200">Get an AI audit &rarr;</a>
         </div>
       </div>
 
-      {{-- SEO --}}
+      {{-- AI-Ready Web Development --}}
       <div class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-white/[0.06] opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="100">
-        <img class="mb-4 h-10 w-10 invert transition-transform duration-500 group-hover:scale-110" width="40" height="40" loading="lazy" src="{{ asset('icons/seo.svg') }}" alt="SEO icon">
-        <h2 class="text-lg font-semibold text-white">Get Found on Google (SEO)</h2>
-        <p class="mt-2 text-sm text-white/70">We fix the issues that stop your site from showing up and create a clear plan to bring in more customers through search engines.</p>
+        <img class="mb-4 h-10 w-10 invert transition-transform duration-500 group-hover:scale-110" width="40" height="40" loading="lazy" src="{{ asset('icons/webDev.svg') }}" alt="AI-ready web development icon">
+        <h2 class="text-lg font-semibold text-white">AI-Ready Websites</h2>
+        <p class="mt-2 text-sm text-white/70">We build websites that work for both humans and machines — clean code, comprehensive structured data, and content architecture AI systems can parse and recommend.</p>
         <ul class="mt-4 space-y-2 text-sm text-white/60">
-          <li class="flex gap-2"><span class="text-cyan-400/60">—</span> Full check-up on your website's health</li>
-          <li class="flex gap-2"><span class="text-cyan-400/60">—</span> Better structure so Google actually shows you</li>
-          <li class="flex gap-2"><span class="text-cyan-400/60">—</span> Content ideas that drive enquiries & sales</li>
+          <li class="flex gap-2"><span class="text-cyan-400/60">—</span> Semantic HTML and Schema.org structured data</li>
+          <li class="flex gap-2"><span class="text-cyan-400/60">—</span> llms.txt implementation for AI agent discovery</li>
+          <li class="flex gap-2"><span class="text-cyan-400/60">—</span> Fast, accessible, mobile-first builds</li>
         </ul>
         <div class="mt-5">
-          <a href="{{ url('/contact') }}" class="text-sm font-medium text-cyan-300 transition-colors hover:text-cyan-200">Get an audit →</a>
+          <a href="{{ url('/portfolio') }}" class="text-sm font-medium text-cyan-300 transition-colors hover:text-cyan-200">See examples &rarr;</a>
         </div>
       </div>
 
-      {{-- Email Marketing --}}
+      {{-- AI Tool Integration --}}
       <div class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-white/[0.06] opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="150">
-        <img class="mb-4 h-10 w-10 invert transition-transform duration-500 group-hover:scale-110" width="40" height="40" loading="lazy" src="{{ asset('icons/support.svg') }}" alt="Email marketing icon">
-        <h2 class="text-lg font-semibold text-white">Smart Email Marketing</h2>
-        <p class="mt-2 text-sm text-white/70">Stay in touch with your customers automatically. From first-time buyers to repeat business, we set up emails that convert.</p>
+        <img class="mb-4 h-10 w-10 invert transition-transform duration-500 group-hover:scale-110" width="40" height="40" loading="lazy" src="{{ asset('icons/simplify.svg') }}" alt="AI tool integration icon">
+        <h2 class="text-lg font-semibold text-white">AI Tool Integration</h2>
+        <p class="mt-2 text-sm text-white/70">From AI chatbots to workflow automations, we set up the tools that save your team time and improve your customer experience — properly, not hacked together.</p>
         <ul class="mt-4 space-y-2 text-sm text-white/60">
-          <li class="flex gap-2"><span class="text-cyan-400/60">—</span> Welcome emails for new customers</li>
-          <li class="flex gap-2"><span class="text-cyan-400/60">—</span> Follow-ups that encourage repeat business</li>
-          <li class="flex gap-2"><span class="text-cyan-400/60">—</span> Clear reporting so you know it's working</li>
+          <li class="flex gap-2"><span class="text-cyan-400/60">—</span> AI chatbots for support and lead qualification</li>
+          <li class="flex gap-2"><span class="text-cyan-400/60">—</span> Workflow automation connecting your existing tools</li>
+          <li class="flex gap-2"><span class="text-cyan-400/60">—</span> Team training for responsible AI adoption</li>
         </ul>
         <div class="mt-5">
-          <a href="{{ url('/contact') }}" class="text-sm font-medium text-cyan-300 transition-colors hover:text-cyan-200">Plan a flow →</a>
+          <a href="{{ url('/contact') }}" class="text-sm font-medium text-cyan-300 transition-colors hover:text-cyan-200">Chat about AI tools &rarr;</a>
         </div>
       </div>
 
-      {{-- CRM --}}
+      {{-- CRM & Automation --}}
       <div class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-white/[0.06] opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="50">
-        <img class="mb-4 h-10 w-10 invert transition-transform duration-500 group-hover:scale-110" width="40" height="40" loading="lazy" src="{{ asset('icons/simplify.svg') }}" alt="CRM icon">
-        <h2 class="text-lg font-semibold text-white">CRM Setup & Automation</h2>
-        <p class="mt-2 text-sm text-white/70">Keep all your leads, customers, and sales in one tidy place. We set up a CRM that fits your business and automate the boring bits.</p>
+        <img class="mb-4 h-10 w-10 invert transition-transform duration-500 group-hover:scale-110" width="40" height="40" loading="lazy" src="{{ asset('icons/support.svg') }}" alt="CRM and automation icon">
+        <h2 class="text-lg font-semibold text-white">CRM & Smart Automation</h2>
+        <p class="mt-2 text-sm text-white/70">Keep all your leads, customers, and sales in one place. We set up a CRM that fits your business and automate the repetitive work so your team can focus on what matters.</p>
         <ul class="mt-4 space-y-2 text-sm text-white/60">
-          <li class="flex gap-2"><span class="text-cyan-400/60">—</span> Pick the right tool (HubSpot, Pipedrive, or simple alternatives)</li>
-          <li class="flex gap-2"><span class="text-cyan-400/60">—</span> Track enquiries from website to sale with clear stages</li>
-          <li class="flex gap-2"><span class="text-cyan-400/60">—</span> Automations for follow-ups, reminders, and hand-offs</li>
+          <li class="flex gap-2"><span class="text-cyan-400/60">—</span> CRM setup (HubSpot, Pipedrive, or alternatives)</li>
+          <li class="flex gap-2"><span class="text-cyan-400/60">—</span> Automated follow-ups, reminders, and hand-offs</li>
+          <li class="flex gap-2"><span class="text-cyan-400/60">—</span> Email marketing that converts</li>
         </ul>
         <div class="mt-5">
-          <a href="{{ url('/contact') }}" class="text-sm font-medium text-cyan-300 transition-colors hover:text-cyan-200">Chat about CRM →</a>
+          <a href="{{ url('/contact') }}" class="text-sm font-medium text-cyan-300 transition-colors hover:text-cyan-200">Plan your automation &rarr;</a>
+        </div>
+      </div>
+
+      {{-- Digital Strategy & Content --}}
+      <div class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-white/[0.06] opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="100">
+        <img class="mb-4 h-10 w-10 invert transition-transform duration-500 group-hover:scale-110" width="40" height="40" loading="lazy" src="{{ asset('icons/design.svg') }}" alt="Digital strategy icon">
+        <h2 class="text-lg font-semibold text-white">Digital Strategy & Content</h2>
+        <p class="mt-2 text-sm text-white/70">A cohesive plan that ties everything together. Content, SEO, email, and AI discoverability working toward your business goals.</p>
+        <ul class="mt-4 space-y-2 text-sm text-white/60">
+          <li class="flex gap-2"><span class="text-cyan-400/60">—</span> AI readiness audits and digital roadmaps</li>
+          <li class="flex gap-2"><span class="text-cyan-400/60">—</span> Content strategy optimised for AI and search</li>
+          <li class="flex gap-2"><span class="text-cyan-400/60">—</span> Monthly support and performance reporting</li>
+        </ul>
+        <div class="mt-5">
+          <a href="{{ url('/contact') }}" class="text-sm font-medium text-cyan-300 transition-colors hover:text-cyan-200">Plan your strategy &rarr;</a>
         </div>
       </div>
 
       {{-- Privacy & Security --}}
-      <div class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-white/[0.06] opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="100">
-        <img class="mb-4 h-10 w-10 invert transition-transform duration-500 group-hover:scale-110" width="40" height="40" loading="lazy" src="{{ asset('icons/quality.svg') }}" alt="Security icon">
-        <h2 class="text-lg font-semibold text-white">Privacy & Security Basics</h2>
-        <p class="mt-2 text-sm text-white/70">Protect your business and customer data without the hassle. We set sensible defaults and keep things up to date.</p>
-        <ul class="mt-4 space-y-2 text-sm text-white/60">
-          <li class="flex gap-2"><span class="text-cyan-400/60">—</span> SSL, backups, access control, and updates covered</li>
-          <li class="flex gap-2"><span class="text-cyan-400/60">—</span> Privacy policy, cookie banner, and data requests made simple</li>
-          <li class="flex gap-2"><span class="text-cyan-400/60">—</span> Best-practice security headers and uptime monitoring</li>
-        </ul>
-        <div class="mt-5">
-          <a href="{{ url('/contact') }}" class="text-sm font-medium text-cyan-300 transition-colors hover:text-cyan-200">Book a quick check →</a>
-        </div>
-      </div>
-
-      {{-- Content & Strategy --}}
       <div class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-white/[0.06] opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="150">
-        <img class="mb-4 h-10 w-10 invert transition-transform duration-500 group-hover:scale-110" width="40" height="40" loading="lazy" src="{{ asset('icons/design.svg') }}" alt="Content strategy icon">
-        <h2 class="text-lg font-semibold text-white">Content & Strategy</h2>
-        <p class="mt-2 text-sm text-white/70">We help you plan, create, and publish content that connects with your audience and supports your business goals.</p>
+        <img class="mb-4 h-10 w-10 invert transition-transform duration-500 group-hover:scale-110" width="40" height="40" loading="lazy" src="{{ asset('icons/quality.svg') }}" alt="Privacy and security icon">
+        <h2 class="text-lg font-semibold text-white">Privacy & Security</h2>
+        <p class="mt-2 text-sm text-white/70">Protect your business and customer data. We set sensible defaults, keep things updated, and ensure your AI integrations handle data responsibly.</p>
         <ul class="mt-4 space-y-2 text-sm text-white/60">
-          <li class="flex gap-2"><span class="text-cyan-400/60">—</span> Blog posts and articles that build trust</li>
-          <li class="flex gap-2"><span class="text-cyan-400/60">—</span> Campaign ideas tailored to your customers</li>
-          <li class="flex gap-2"><span class="text-cyan-400/60">—</span> A clear strategy so content works (not just fills space)</li>
+          <li class="flex gap-2"><span class="text-cyan-400/60">—</span> SSL, backups, access control, and monitoring</li>
+          <li class="flex gap-2"><span class="text-cyan-400/60">—</span> Privacy-first analytics and data handling</li>
+          <li class="flex gap-2"><span class="text-cyan-400/60">—</span> Responsible AI policy and data governance</li>
         </ul>
         <div class="mt-5">
-          <a href="{{ url('/contact') }}" class="text-sm font-medium text-cyan-300 transition-colors hover:text-cyan-200">Plan content →</a>
+          <a href="{{ url('/contact') }}" class="text-sm font-medium text-cyan-300 transition-colors hover:text-cyan-200">Book a check &rarr;</a>
         </div>
       </div>
 
@@ -150,26 +201,23 @@
     </div>
 
     <div class="relative mx-auto mt-12 max-w-2xl">
-      {{-- Timeline line --}}
       <div class="absolute left-5 top-0 bottom-0 w-px bg-gradient-to-b from-cyan-400/40 via-cyan-400/20 to-transparent md:left-1/2 md:-translate-x-px"></div>
 
       @php
         $steps = [
-          ['num' => '01', 'title' => 'Chat', 'desc' => 'We learn about your business, goals, and what you need. No commitments, just a conversation.'],
-          ['num' => '02', 'title' => 'Plan', 'desc' => 'We map out the best approach, timeline, and budget so there are no surprises.'],
-          ['num' => '03', 'title' => 'Build', 'desc' => 'You see regular updates as we bring it to life. Feedback loops keep everything on track.'],
-          ['num' => '04', 'title' => 'Launch', 'desc' => 'We test, fine-tune, and get everything live. You sign off before anything goes public.'],
-          ['num' => '05', 'title' => 'Grow', 'desc' => 'Ongoing support, SEO, and marketing to keep momentum building month after month.'],
+          ['num' => '01', 'title' => 'Chat', 'desc' => 'We learn about your business, goals, and where you stand with AI and digital. No commitments, just a conversation.'],
+          ['num' => '02', 'title' => 'Audit', 'desc' => 'We run a free AI readiness check — how you show up in AI search, what your site signals to machines, and where the gaps are.'],
+          ['num' => '03', 'title' => 'Plan', 'desc' => 'We map out the best approach, timeline, and budget. Clear priorities, no surprises.'],
+          ['num' => '04', 'title' => 'Build', 'desc' => 'You see regular updates as we bring it to life. AI optimisation, web development, and automation — implemented, not just recommended.'],
+          ['num' => '05', 'title' => 'Grow', 'desc' => 'Ongoing support and optimisation. The AI landscape moves fast — we keep your business ahead of it.'],
         ];
       @endphp
 
       @foreach ($steps as $i => $step)
         <div class="relative flex items-start gap-5 pb-10 opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="{{ 50 + $i * 50 }}">
-          {{-- Dot --}}
           <div class="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-cyan-400/30 bg-black text-xs font-bold text-cyan-300">
             {{ $step['num'] }}
           </div>
-          {{-- Content --}}
           <div class="pt-1.5">
             <h3 class="text-base font-semibold text-white">{{ $step['title'] }}</h3>
             <p class="mt-1 text-sm text-white/60">{{ $step['desc'] }}</p>
@@ -193,11 +241,11 @@
     <div class="mt-10 space-y-3" id="faq-list">
       @php
         $faqs = [
-          ['q' => 'How soon can we get started?', 'a' => 'Most projects kick off in about a week or two. Quick jobs can start even faster.'],
-          ['q' => 'Will you look after my website once it\'s live?', 'a' => 'Absolutely. We can keep things updated, secure, and running smoothly so you don\'t have to worry about it.'],
-          ['q' => 'What does "success" mean for my business?', 'a' => 'That depends on your goals — more enquiries, more sales, a faster site, or showing up higher on Google. We set clear targets together.'],
-          ['q' => 'How much does a project cost?', 'a' => 'It depends on the scope, but we\'re always upfront about pricing. After an initial chat we\'ll give you a clear quote with no hidden fees.'],
-          ['q' => 'Do I need to provide content?', 'a' => 'It helps, but it\'s not essential. We can write copy, source imagery, and shape the content strategy for you if needed.'],
+          ['q' => 'What is AI search optimisation?', 'a' => 'AI search optimisation ensures your business appears when people use AI tools like ChatGPT, Perplexity, or Google AI Overviews to find products and services. It goes beyond traditional SEO by focusing on structured data, entity recognition, and content that AI systems can parse and recommend.'],
+          ['q' => 'What is llms.txt and does my business need one?', 'a' => 'llms.txt is an emerging standard — similar to robots.txt but for AI. It provides a curated, machine-readable summary of your business that AI agents can consume. If AI tools are going to recommend businesses in your industry, having an llms.txt file helps ensure they recommend yours accurately.'],
+          ['q' => 'How soon can we get started?', 'a' => 'Most projects kick off in about a week or two. Quick jobs like an AI readiness audit or llms.txt implementation can start even faster.'],
+          ['q' => 'Will you look after my website once it\'s live?', 'a' => 'Absolutely. We keep things updated, secure, and optimised so you don\'t have to worry about it. The AI landscape moves fast — we monitor your visibility and adapt your strategy as platforms evolve.'],
+          ['q' => 'How much does a project cost?', 'a' => 'It depends on the scope, but we\'re always upfront about pricing. After an initial chat we\'ll give you a clear quote with no hidden fees. AI audits and llms.txt implementation are quick, affordable starting points.'],
         ];
       @endphp
 
@@ -223,11 +271,11 @@
 
   <div class="relative mx-auto max-w-3xl opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="0">
     <span class="mx-auto mb-3 block w-fit rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs tracking-wide text-white/60">Ready?</span>
-    <h2 class="text-3xl font-semibold text-white md:text-4xl">Let's build something great together</h2>
-    <p class="mx-auto mt-4 max-w-lg text-white/70">Share a few details about your project and we'll get back to you within one business day.</p>
+    <h2 class="text-3xl font-semibold text-white md:text-4xl">Find out if your business is AI-ready</h2>
+    <p class="mx-auto mt-4 max-w-lg text-white/70">Tell us about your business and we'll send you a free AI readiness audit — no strings, just clarity.</p>
     <div class="mt-8 flex justify-center">
       <a href="{{ url('/contact') }}" class="no-underline">
-        <div class="glow-on-hover"><p>Start a Project</p></div>
+        <div class="glow-on-hover"><p>Get your free AI audit</p></div>
       </a>
     </div>
   </div>
@@ -271,7 +319,6 @@
         const chevron = item.querySelector('.faq-chevron');
         const isOpen = btn.getAttribute('aria-expanded') === 'true';
 
-        // Close all others
         document.querySelectorAll('.faq-item').forEach(other => {
           if (other !== item) {
             other.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
@@ -280,7 +327,6 @@
           }
         });
 
-        // Toggle current
         btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
         body.classList.toggle('hidden', isOpen);
         chevron.style.transform = isOpen ? '' : 'rotate(180deg)';

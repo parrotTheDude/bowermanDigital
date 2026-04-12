@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>@yield('title','Bowerman Digital')</title>
-  <meta name="description" content="@yield('meta_description','Web design & digital marketing with clean code and measurable results.')">
+  <meta name="description" content="@yield('meta_description','AI digital strategy, AI search optimisation, and AI-ready web development for Australian businesses. Stay discoverable in the age of AI.')">
 
   @php
     $canonical = request()->path() === '/' ? url('/') . '/' : url('/'.trim(request()->path(), '/'));
@@ -14,7 +14,7 @@
 
   @php
     $ogTitle = trim($__env->yieldContent('og_title')) ?: trim($__env->yieldContent('title')) ?: 'Bowerman Digital';
-    $ogDesc  = trim($__env->yieldContent('og_description')) ?: trim($__env->yieldContent('meta_description')) ?: 'Web design & digital marketing with clean code and measurable results.';
+    $ogDesc  = trim($__env->yieldContent('og_description')) ?: trim($__env->yieldContent('meta_description')) ?: 'AI digital strategy, AI search optimisation, and AI-ready web development for Australian businesses. Stay discoverable in the age of AI.';
     $ogImage = trim($__env->yieldContent('og_image')) ?: asset('images/og-default.webp');
   @endphp
   <meta property="og:type" content="@yield('og_type','website')" />
@@ -51,7 +51,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="format-detection" content="telephone=no">
   <meta name="author" content="Bowerman Digital">
-  <meta name="robots" content="index,follow"> 
+  <meta name="robots" content="index,follow">
+  <link rel="alternate" hreflang="en-au" href="{{ $canonical }}" />
   <link rel="manifest" href="{{ asset('site.webmanifest') }}">
 
   <link rel="preload" href="{{ asset('fonts/SpaceGrotesk-VariableFont_wght.woff2') }}" as="font" type="font/woff2" crossorigin>

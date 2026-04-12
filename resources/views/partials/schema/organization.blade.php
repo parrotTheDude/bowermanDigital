@@ -4,7 +4,7 @@
     '@type'    => 'LocalBusiness',
     '@id'      => url('/') . '/#business',
     'name'     => 'Bowerman Digital',
-    'description' => 'Sydney digital agency specialising in web development, SEO, and email marketing. We partner with one business at a time to deliver real results.',
+    'description' => 'Sydney digital agency helping businesses stay discoverable in the age of AI. We specialise in AI search optimisation, AI-ready web development, intelligent automation, and digital strategy.',
     'url'      => url('/'),
     'logo'     => asset('images/logo.webp'),
     'image'    => asset('images/og-default.webp'),
