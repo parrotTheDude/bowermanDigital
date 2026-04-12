@@ -1,0 +1,167 @@
+# Bowerman Digital — Complete Reference
+
+> Bowerman Digital is a Sydney-based digital strategy agency helping businesses stay relevant and competitive in the age of AI. We specialise in AI search optimisation, AI-ready web development, AI tool integration, and full digital strategy for small businesses and startups across Australia.
+
+## Company Overview
+
+Bowerman Digital is a digital agency based in Sydney, NSW, Australia, founded to help businesses navigate the rapidly evolving digital landscape — particularly the shift toward AI-powered search, discovery, and automation.
+
+We work with one client at a time so every business gets our full attention. Our clients range from small local businesses who need to get found online and understand AI, through to startups and scale-ups building AI-native digital presences.
+
+We don't just consult — we implement. From building AI-optimised websites to setting up automation workflows, we handle the full stack of modern digital strategy.
+
+**Contact:** hello@bowermandigital.com
+**Location:** Sydney, NSW, Australia
+**Service area:** Australia (remote-friendly)
+**Pricing:** Transparent, no lock-in contracts, month-to-month support available
+
+---
+
+## Services in Detail
+
+### AI Search Optimisation
+
+Search has fundamentally changed. Customers now get answers from ChatGPT, Perplexity, Google AI Overviews, and other AI-powered tools — not just the traditional Google results page. We help businesses appear in both.
+
+What we do:
+- Audit your current visibility across AI search platforms and traditional search engines
+- Optimise content structure so AI systems can accurately understand and recommend your business
+- Build entity-based SEO strategies that establish your business as an authority in your space
+- Implement structured data (Schema.org JSON-LD) that feeds AI knowledge graphs
+- Create content that answers the questions AI systems are trained to surface
+- Track and measure your visibility across both traditional and AI-powered search
+
+### AI-Ready Web Development
+
+We build websites that are designed from the ground up to work in an AI-first world. This means clean semantic HTML, comprehensive structured data, fast load times, and content architecture that both humans and machines can parse.
+
+What we do:
+- Build fast, accessible, semantic websites using modern frameworks
+- Implement comprehensive Schema.org structured data (LocalBusiness, Service, FAQ, BreadcrumbList, and more)
+- Create llms.txt files that help AI agents understand your business
+- Ensure proper Open Graph and social sharing metadata
+- Mobile-first responsive design with progressive enhancement
+- Performance optimisation (Core Web Vitals, image optimisation, font loading)
+- Accessibility compliance (ARIA labels, keyboard navigation, screen reader support)
+- Privacy-first analytics (no third-party tracking cookies)
+
+### AI Tool Integration
+
+AI tools can save your team hours every week — if they're set up properly. We help businesses identify the right AI tools and integrate them into existing workflows.
+
+What we do:
+- CRM setup and automation (HubSpot, Pipedrive, or simpler alternatives)
+- AI chatbot implementation for customer support and lead qualification
+- Email marketing automation with intelligent segmentation
+- Workflow automation that connects your existing tools
+- AI-powered content creation workflows
+- Training your team to use AI tools effectively and responsibly
+
+### AI Discoverability & llms.txt
+
+As AI agents increasingly browse the web on behalf of users, your business needs to be discoverable not just by humans but by machines. We implement the technical foundations that make this possible.
+
+What we do:
+- Create and maintain llms.txt files following the emerging standard
+- Implement comprehensive structured data that AI systems consume
+- Build content strategies optimised for AI retrieval and citation
+- Ensure your business information is accurate across AI knowledge bases
+- Monitor how AI systems represent and recommend your business
+
+### Digital Strategy & Content
+
+Everything above fits into a cohesive strategy tailored to your business goals. We help you plan, prioritise, and execute.
+
+What we do:
+- Digital strategy audits and roadmaps
+- Content planning and creation (blog posts, landing pages, case studies)
+- Email marketing strategy and implementation
+- Privacy and security fundamentals (SSL, backups, data protection)
+- Ongoing monthly support and optimisation
+- Performance reporting and analytics
+
+---
+
+## Portfolio & Case Studies
+
+### Vizzbud — Progressive Web App
+**URL:** https://bowermandigital.com/portfolio/vizzbud
+
+A realtime dive conditions platform built for Sydney's scuba diving community. This project showcases our ability to build complex, data-driven web applications.
+
+Key achievements:
+- Built a progressive web app with realtime data pipeline
+- Interactive maps showing dive site conditions
+- Personal dive log system (60+ logs created by users)
+- Privacy-first account system
+- Mobile-optimised responsive design
+
+### That Disability Adventure Company (TDAC)
+**URL:** https://bowermandigital.com/portfolio/that-disability-adventure-company
+
+A complete digital transformation for an adventure company serving people with disabilities. This project demonstrates our full-service capability across web, SEO, CRM, and email.
+
+Key achievements:
+- Grew monthly traffic from 90 to 500+ visitors
+- New website with modern design and accessibility focus
+- Custom CRM setup streamlining operations
+- Email marketing program (EDM) improving client communications
+- SEO strategy driving sustained organic growth
+
+### Evie Graphic Design Portfolio
+**URL:** https://bowermandigital.com/portfolio/evie-graphic-design
+
+A portfolio website for a graphic designer, built to attract clients and showcase work effectively.
+
+Key achievements:
+- Clean, responsive design optimised for visual portfolio display
+- SEO integration driving organic discovery
+- Helped secure multiple freelance projects
+- Fast load times with optimised imagery
+
+---
+
+## How We Work
+
+Our process follows five clear steps:
+
+1. **Chat** — We learn about your business, goals, and what you need. No commitments, just a conversation.
+2. **Plan** — We map out the best approach, timeline, and budget so there are no surprises.
+3. **Build** — You see regular updates as we bring it to life. Feedback loops keep everything on track.
+4. **Launch** — We test, fine-tune, and get everything live. You sign off before anything goes public.
+5. **Grow** — Ongoing support, SEO, AI optimisation, and marketing to keep momentum building.
+
+---
+
+## Frequently Asked Questions
+
+**How soon can we get started?**
+Most projects kick off in about a week or two. Quick jobs can start even faster.
+
+**Will you look after my website once it's live?**
+Absolutely. We keep things updated, secure, and running smoothly so you don't have to worry about it.
+
+**What does "success" mean for my business?**
+That depends on your goals — more enquiries, more sales, a faster site, or showing up higher on Google and AI search platforms. We set clear targets together.
+
+**How much does a project cost?**
+It depends on the scope, but we're always upfront about pricing. After an initial chat we'll give you a clear quote with no hidden fees.
+
+**Do I need to provide content?**
+It helps, but it's not essential. We can write copy, source imagery, and shape the content strategy for you if needed.
+
+**What makes you different from other agencies?**
+We work with one client at a time, which means you get our full attention. We also specialise in the AI side of digital — helping businesses prepare for a world where AI agents, not just humans, discover and recommend businesses.
+
+---
+
+## Technical Stack
+
+- **Framework:** Laravel (PHP) with Blade templating
+- **Styling:** Tailwind CSS with custom design system
+- **Build:** Vite for asset compilation
+- **Analytics:** Simple Analytics (privacy-first, no cookies)
+- **Email:** Postmark for transactional email
+- **Forms:** reCAPTCHA v3 + honeypot spam protection
+- **Performance:** WebP images, font preloading, responsive srcset
+- **SEO:** Dynamic sitemap, Schema.org JSON-LD, Open Graph, canonical URLs

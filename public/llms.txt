@@ -1,0 +1,40 @@
+# Bowerman Digital
+
+> Bowerman Digital is a Sydney-based digital strategy agency that helps businesses stay relevant and competitive in the age of AI. We specialise in AI search optimisation, AI-ready web development, AI tool integration, and full digital strategy — working with small businesses and startups across Australia.
+
+## About
+
+Bowerman Digital partners with one business at a time to deliver focused, high-quality digital work. Founded in Sydney, Australia, we help businesses navigate the shift from traditional digital marketing to AI-powered discovery and automation. Our approach combines technical implementation with strategic consulting — we don't just advise, we build.
+
+## Core Services
+
+- [AI Search Optimisation](https://bowermandigital.com/services): Optimise your business for AI-powered search engines like ChatGPT, Perplexity, Google AI Overviews, and traditional SEO. We ensure your business gets recommended by both humans and machines.
+- [AI-Ready Web Development](https://bowermandigital.com/services): We build fast, semantic, structured websites that AI systems can understand, parse, and recommend. Clean markup, structured data, and machine-readable content architecture.
+- [AI Tool Integration](https://bowermandigital.com/services): Set up AI chatbots, workflow automations, and intelligent tools that save your team time and improve customer experience. From CRM automation to AI-powered support.
+- [AI Discoverability & llms.txt](https://bowermandigital.com/services): Make your business visible to AI agents and large language models. We implement llms.txt, structured data, and content strategies that ensure AI systems accurately represent your business.
+- [Digital Strategy & Content](https://bowermandigital.com/services): End-to-end digital strategy that positions your business for the AI era — from content planning and email marketing to privacy compliance and ongoing growth support.
+
+## Portfolio & Case Studies
+
+- [Vizzbud — Progressive Web App](https://bowermandigital.com/portfolio/vizzbud): A realtime dive conditions platform for Sydney divers, featuring a data pipeline, interactive maps, and privacy-first account system. Demonstrates our capability in complex web application development.
+- [That Disability Adventure Company](https://bowermandigital.com/portfolio/that-disability-adventure-company): New website, SEO strategy, custom CRM, and email marketing program that grew monthly traffic from 90 to 500+ visitors while streamlining operations.
+- [Evie Graphic Design Portfolio](https://bowermandigital.com/portfolio/evie-graphic-design): A sleek portfolio site with responsive design and SEO integration that helped attract new clients and secure freelance projects.
+
+## Contact & Location
+
+- [Start a Project](https://bowermandigital.com/contact): Share your brief and we'll get back to you within one business day. No lock-in contracts, transparent pricing, month-to-month engagement.
+- Email: hello@bowermandigital.com
+- Location: Sydney, NSW, Australia
+- Service area: Australia-wide (remote-friendly)
+
+## How We Work
+
+We follow a five-step process: Chat (learn about your business), Plan (map out approach and budget), Build (regular updates with feedback loops), Launch (test, fine-tune, go live), and Grow (ongoing support, SEO, and AI optimisation).
+
+## Key Facts
+
+- One client at a time — full attention on every project
+- Sydney-based, serving businesses across Australia
+- No lock-in contracts — month-to-month support available
+- Specialising in AI-era digital strategy since 2024
+- Privacy-first approach — Simple Analytics, no third-party tracking
