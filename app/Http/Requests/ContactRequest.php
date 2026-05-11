@@ -12,14 +12,14 @@ class ContactRequest extends FormRequest
     {
         return [
             // form fields
-            'name'         => ['required','string','max:120','regex:/^[a-zA-Z \'-]+$/u'],
-            'email'        => ['required','email','max:160'],
-            'phone'        => ['nullable','string','max:40'],
-            'message'      => ['required','string','max:5000'],
+            'name' => ['required', 'string', 'max:120', 'regex:/^[a-zA-Z \'-]+$/u'],
+            'email' => ['required', 'email', 'max:160'],
+            'phone' => ['nullable', 'string', 'max:40'],
+            'message' => ['required', 'string', 'max:5000'],
             // honeypot — must be empty (bots fill it, humans can't see it)
-            'website'      => ['present','max:0'],
+            'website' => ['present', 'max:0'],
             // recaptcha token (client-side)
-            'recaptcha_token' => ['required','string'],
+            'recaptcha_token' => ['required', 'string'],
         ];
     }
 
@@ -27,7 +27,7 @@ class ContactRequest extends FormRequest
     {
         return [
             'recaptcha_token.required' => 'reCAPTCHA validation failed. Please refresh and try again.',
-            'website.max'              => 'Form validation failed. Please try again.',
+            'website.max' => 'Form validation failed. Please try again.',
         ];
     }
 
@@ -39,11 +39,12 @@ class ContactRequest extends FormRequest
     public function withValidator(Validator $validator): void
     {
         $validator->after(function (Validator $validator) {
-            $token  = (string) $this->input('recaptcha_token');
+            $token = (string) $this->input('recaptcha_token');
             $secret = config('services.recaptcha.secret_key');
 
-            if (!$token || !$secret) {
+            if (! $token || ! $secret) {
                 $validator->errors()->add('recaptcha_token', 'reCAPTCHA configuration missing.');
+
                 return;
             }
 
@@ -53,30 +54,34 @@ class ContactRequest extends FormRequest
                     ['secret' => $secret, 'response' => $token, 'remoteip' => $this->ip()]
                 );
 
-                if (!$resp->ok()) {
+                if (! $resp->ok()) {
                     $validator->errors()->add('recaptcha_token', 'reCAPTCHA request failed.');
+
                     return;
                 }
 
-                $data     = $resp->json();
-                $success  = (bool)($data['success'] ?? false);
-                $score    = (float)($data['score'] ?? 0);
-                $action   = (string)($data['action'] ?? '');
-                $minScore = (float)config('services.recaptcha.min_score', 0.5);
+                $data = $resp->json();
+                $success = (bool) ($data['success'] ?? false);
+                $score = (float) ($data['score'] ?? 0);
+                $action = (string) ($data['action'] ?? '');
+                $minScore = (float) config('services.recaptcha.min_score', 0.5);
 
-                if (!$success) {
+                if (! $success) {
                     $validator->errors()->add('recaptcha_token', 'reCAPTCHA failed.');
+
                     return;
                 }
 
                 // Optional: enforce action matches what we executed on the client
                 if ($action !== 'contact') {
                     $validator->errors()->add('recaptcha_token', 'reCAPTCHA action mismatch.');
+
                     return;
                 }
 
                 if ($score < $minScore) {
                     $validator->errors()->add('recaptcha_token', 'Looks like automated traffic. Please try again.');
+
                     return;
                 }
             } catch (\Throwable $e) {

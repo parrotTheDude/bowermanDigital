@@ -1,20 +1,20 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\SitemapController;
+use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'home')->name('home');
 
 // Pages
-Route::view('/services',  'services')->name('services');
+Route::view('/services', 'services')->name('services');
 // Route::view('/blog', 'blog')->name('blog'); // uncomment when blog view is built
 
 // Contact
 Route::view('/contact', 'contact')->name('contact');
-Route::post('/contact', [\App\Http\Controllers\ContactController::class, 'submit'])
-  ->name('contact.submit')
-  ->middleware('throttle:5,1');
+Route::post('/contact', [ContactController::class, 'submit'])
+    ->name('contact.submit')
+    ->middleware('throttle:5,1');
 
 // Portfolio index
 Route::view('/portfolio', 'portfolio.index')->name('portfolio');

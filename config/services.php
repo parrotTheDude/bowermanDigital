@@ -15,14 +15,14 @@ return [
     */
 
     'postmark' => [
-        'token'       => env('POSTMARK_TOKEN'),
-        'from'        => env('POSTMARK_FROM', 'hello@bowermandigital.com'),
-        'owner_to'    => env('POSTMARK_OWNER_TO', 'hello@bowermandigital.com'),
-        'stream'      => env('POSTMARK_MESSAGE_STREAM', 'outbound'),
+        'token' => env('POSTMARK_TOKEN'),
+        'from' => env('POSTMARK_FROM', 'hello@bowermandigital.com'),
+        'owner_to' => env('POSTMARK_OWNER_TO', 'hello@bowermandigital.com'),
+        'stream' => env('POSTMARK_MESSAGE_STREAM', 'outbound'),
 
         // template IDs
         'confirmation_template' => env('POSTMARK_CONFIRMATION_TEMPLATE_ID'),
-        'enquiries_template'    => env('POSTMARK_ENQUIRIES_TEMPLATE_ID'),
+        'enquiries_template' => env('POSTMARK_ENQUIRIES_TEMPLATE_ID'),
     ],
 
     'resend' => [
@@ -43,9 +43,9 @@ return [
     ],
 
     'recaptcha' => [
-        'site_key'   => env('RECAPTCHA_SITE_KEY'),
+        'site_key' => env('RECAPTCHA_SITE_KEY'),
         'secret_key' => env('RECAPTCHA_SECRET_KEY'),
-        'min_score'  => env('RECAPTCHA_MIN_SCORE', 0.5),
+        'min_score' => env('RECAPTCHA_MIN_SCORE', 0.5),
     ],
 
 ];
