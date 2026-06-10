@@ -33,3 +33,7 @@ User-agent: Google-Extended
 Allow: /
 
 Sitemap: https://bowermandigital.com/sitemap.xml
+
+# AI-readable site summaries
+# llms.txt: https://bowermandigital.com/llms.txt
+# llms-full.txt: https://bowermandigital.com/llms-full.txt
