@@ -19,16 +19,16 @@
   @endphp
   <meta property="og:type" content="@yield('og_type','website')" />
   <meta property="og:site_name" content="Bowerman Digital" />
-  <meta property="og:title" content="{!! $ogTitle !!}" />
-  <meta property="og:description" content="{!! $ogDesc !!}" />
+  <meta property="og:title" content="{{ $ogTitle }}" />
+  <meta property="og:description" content="{{ $ogDesc }}" />
   <meta property="og:url" content="{{ $canonical }}" />
-  <meta property="og:image" content="{!! $ogImage !!}" />
+  <meta property="og:image" content="{{ $ogImage }}" />
   <meta property="og:locale" content="en_AU"/>
 
   <meta name="twitter:card" content="@yield('twitter_card','summary_large_image')">
-  <meta name="twitter:title" content="{!! $ogTitle !!}">
-  <meta name="twitter:description" content="{!! $ogDesc !!}">
-  <meta name="twitter:image" content="{!! $ogImage !!}">
+  <meta name="twitter:title" content="{{ $ogTitle }}">
+  <meta name="twitter:description" content="{{ $ogDesc }}">
+  <meta name="twitter:image" content="{{ $ogImage }}">
 
   <meta name="theme-color" content="#000"/>
   
@@ -52,7 +52,6 @@
   <meta name="format-detection" content="telephone=no">
   <meta name="author" content="Bowerman Digital">
   <meta name="robots" content="index,follow">
-  <link rel="alternate" hreflang="en-au" href="{{ $canonical }}" />
   <link rel="manifest" href="{{ asset('site.webmanifest') }}">
 
   <link rel="preload" href="{{ asset('fonts/SpaceGrotesk-VariableFont_wght.woff2') }}" as="font" type="font/woff2" crossorigin>
@@ -93,7 +92,7 @@
     <div class="mx-auto max-w-7xl px-4">
       <div class="hidden md:flex items-center justify-between py-4">
         <a href="{{ url('/') }}" class="inline-flex items-center gap-2 group">
-          <img src="{{ asset('images/logo.webp') }}" alt="Bowerman Digital Logo" width="400" height="124" fetchpriority="high" class="h-10 w-auto md:h-12 transition-transform duration-300 group-hover:scale-[1.03]">
+          <img src="{{ asset('images/logo.webp') }}" alt="Bowerman Digital Logo" width="400" height="124" class="h-10 w-auto md:h-12 transition-transform duration-300 group-hover:scale-[1.03]">
         </a>
 
         <nav class="flex items-center gap-6 text-sm">
@@ -118,7 +117,7 @@
     {{-- Mobile header --}}
     <div class="md:hidden flex items-center justify-between py-3 px-4">
     <a href="{{ url('/') }}" class="inline-flex items-center">
-        <img src="{{ asset('images/logo.webp') }}" alt="Bowerman Digital Logo" width="400" height="124" fetchpriority="high" class="h-10 w-auto">
+        <img src="{{ asset('images/logo.webp') }}" alt="Bowerman Digital Logo" width="400" height="124" class="h-10 w-auto">
     </a>
 
     <button id="mnav-trigger"

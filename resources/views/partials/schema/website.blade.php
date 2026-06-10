@@ -4,5 +4,6 @@
     '@type'    => 'WebSite',
     'name'     => 'Bowerman Digital',
     'url'      => url('/'),
+    'publisher' => ['@id' => url('/') . '/#business'],
 ], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}
 </script>
