@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bowerman Digital — homepage mockup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;700;900&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#050509;
+    --bg2:#0a0a14;
+    --ink:#f4f6fb;
+    --muted:rgba(244,246,251,.62);
+    --faint:rgba(244,246,251,.38);
+    --cyan:#22d3ee;
+    --cyan-dim:rgba(34,211,238,.35);
+    --cyan-faint:rgba(34,211,238,.14);
+    --magenta:#e879f9;
+    --line:rgba(244,246,251,.09);
+    --display:'Unbounded',sans-serif;
+    --body:'Instrument Sans',sans-serif;
+    --mono:'Space Mono',monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+  .mono{font-family:var(--mono)}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan)}
+
+  /* ── Nav ── */
+  header{position:fixed;inset:0 0 auto;z-index:50;background:rgba(5,5,9,.78);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{display:flex;align-items:center;gap:14px}
+  .brand svg{height:38px;width:auto;display:block}
+  .brand-name{font-family:var(--display);font-weight:500;font-size:15px;letter-spacing:.04em}
+  .brand-name em{font-style:normal;color:var(--cyan)}
+  nav ul{display:flex;gap:34px;list-style:none;font-size:14.5px}
+  nav a{color:var(--muted);transition:color .25s}
+  nav a:hover{color:var(--cyan)}
+  .btn{display:inline-block;font-family:var(--mono);font-size:13.5px;letter-spacing:.06em;padding:12px 22px;border:1px solid var(--cyan-dim);border-radius:10px;color:var(--cyan);background:var(--cyan-faint);transition:all .25s}
+  .btn:hover{background:rgba(34,211,238,.25);box-shadow:0 0 24px rgba(34,211,238,.25)}
+  .btn-solid{background:var(--cyan);color:#031218;border-color:var(--cyan);font-weight:700}
+  .btn-solid:hover{background:#67e3f4;box-shadow:0 0 32px rgba(34,211,238,.4)}
+  @media(max-width:860px){nav ul{display:none}}
+
+  /* ── Hero ── */
+  .hero{position:relative;padding:188px 0 110px;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;background:
+    radial-gradient(ellipse 70% 50% at 70% 10%,rgba(34,211,238,.08),transparent 60%),
+    radial-gradient(ellipse 50% 40% at 20% 90%,rgba(232,121,249,.06),transparent 60%);pointer-events:none}
+  .grid-bg{position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:72px 72px;mask-image:radial-gradient(ellipse 80% 70% at 50% 0%,black 30%,transparent 75%);pointer-events:none}
+  h1{font-family:var(--display);font-weight:700;font-size:clamp(34px,5.4vw,64px);line-height:1.12;letter-spacing:-.01em;max-width:880px}
+  .echo{color:var(--cyan);text-shadow:5px 5px 0 rgba(34,211,238,.32),10px 10px 0 rgba(34,211,238,.14)}
+  .hero p.lede{margin:28px 0 0;max-width:560px;font-size:19px;color:var(--muted)}
+  .hero-cta{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
+  .hero-stats{margin-top:72px;display:flex;gap:0;border-top:1px solid var(--line);max-width:760px}
+  .stat{padding:22px 36px 0 0;margin-right:36px;border-right:1px solid var(--line);padding-right:36px}
+  .stat:last-child{border-right:0}
+  .stat b{font-family:var(--display);font-weight:700;font-size:26px;color:var(--cyan)}
+  .stat span{display:block;font-size:13px;color:var(--faint);margin-top:4px}
+
+  /* ── Marquee ── */
+  .marquee{border-block:1px solid var(--line);padding:16px 0;overflow:hidden;white-space:nowrap;background:var(--bg2)}
+  .marquee-track{display:inline-block;animation:slide 28s linear infinite;font-family:var(--mono);font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--faint)}
+  .marquee-track i{font-style:normal;color:var(--magenta);margin:0 26px}
+  @keyframes slide{to{transform:translateX(-50%)}}
+
+  /* ── Sections ── */
+  section{padding:104px 0}
+  .sec-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:56px;flex-wrap:wrap}
+  h2{font-family:var(--display);font-weight:700;font-size:clamp(26px,3.4vw,40px);line-height:1.18;max-width:560px}
+  .sec-head p{max-width:380px;color:var(--muted);font-size:16px}
+
+  /* services */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+  .card{position:relative;border:1px solid var(--line);border-radius:18px;padding:30px 26px;background:linear-gradient(180deg,rgba(244,246,251,.025),transparent);transition:border-color .3s,transform .3s}
+  .card:hover{border-color:var(--cyan-dim);transform:translateY(-4px)}
+  .card .num{font-family:var(--mono);font-size:12px;color:var(--magenta);letter-spacing:.2em}
+  .card h3{font-family:var(--display);font-weight:500;font-size:17px;margin:16px 0 12px;line-height:1.35}
+  .card p{font-size:15px;color:var(--muted)}
+
+  /* work */
+  .work{background:var(--bg2);border-block:1px solid var(--line)}
+  .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px}
+  .proj{border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:border-color .3s}
+  .proj:hover{border-color:var(--cyan-dim)}
+  .proj-thumb{aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:700;font-size:24px;letter-spacing:.02em}
+  .proj:nth-child(1) .proj-thumb{background:linear-gradient(135deg,#062a33,#0a4150);color:var(--cyan)}
+  .proj:nth-child(2) .proj-thumb{background:linear-gradient(135deg,#1d1033,#33155c);color:#c4b5fd}
+  .proj:nth-child(3) .proj-thumb{background:linear-gradient(135deg,#2b0b2e,#531358);color:var(--magenta)}
+  .proj-body{padding:22px 24px 26px}
+  .tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+  .tag{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--cyan);border:1px solid var(--cyan-dim);border-radius:99px;padding:3px 10px}
+  .proj-body h3{font-family:var(--display);font-weight:500;font-size:17px;margin-bottom:8px}
+  .proj-body p{font-size:14.5px;color:var(--muted)}
+  .proj-link{display:inline-block;margin-top:14px;font-family:var(--mono);font-size:13px;color:var(--cyan)}
+
+  /* process */
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+  .step{padding:36px 30px;border-right:1px solid var(--line);background:var(--bg2)}
+  .step:last-child{border-right:0}
+  @media(max-width:860px){.step{border-right:0;border-bottom:1px solid var(--line)}.step:last-child{border-bottom:0}}
+  .step .num{font-family:var(--display);font-weight:900;font-size:44px;color:transparent;-webkit-text-stroke:1.5px var(--cyan-dim)}
+  .step h3{font-family:var(--display);font-weight:500;font-size:16px;margin:18px 0 10px}
+  .step p{font-size:14.5px;color:var(--muted)}
+
+  /* CTA */
+  .cta{text-align:center;padding:140px 0}
+  .cta h2{margin:0 auto 18px;max-width:720px;font-size:clamp(30px,4.6vw,54px)}
+  .cta p{color:var(--muted);max-width:480px;margin:0 auto 40px}
+  .pulse{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;color:var(--faint);margin-top:26px}
+  .dot{width:7px;height:7px;border-radius:50%;background:#34d399;animation:pulse 2s infinite}
+  @keyframes pulse{50%{opacity:.3}}
+
+  /* footer */
+  footer{border-top:1px solid var(--line);padding:56px 0 40px;background:var(--bg2)}
+  .foot{display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap}
+  .foot nav ul{display:flex;gap:26px;font-size:14px}
+  .foot-meta{font-family:var(--mono);font-size:12px;color:var(--faint)}
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="brand" aria-label="Bowerman Digital home">
+      <svg viewBox="148 64 250 312" role="img" aria-label="Bowerman Digital mark">
+        <g fill="none" stroke="#22d3ee" stroke-width="9" stroke-linejoin="round">
+          <g opacity="0.14" transform="translate(27,27)"><rect x="180" y="96" width="44" height="344" rx="22"/><path d="M244 96a84 84 0 0 1 0 168z"/><path d="M244 264a88 88 0 0 1 0 176z"/></g>
+          <g opacity="0.3" transform="translate(18,18)"><rect x="180" y="96" width="44" height="344" rx="22"/><path d="M244 96a84 84 0 0 1 0 168z"/><path d="M244 264a88 88 0 0 1 0 176z"/></g>
+          <g opacity="0.55" transform="translate(9,9)"><rect x="180" y="96" width="44" height="344" rx="22"/><path d="M244 96a84 84 0 0 1 0 168z"/><path d="M244 264a88 88 0 0 1 0 176z"/></g>
+          <g><rect x="180" y="96" width="44" height="344" rx="22"/><path d="M244 96a84 84 0 0 1 0 168z"/><path d="M244 264a88 88 0 0 1 0 176z"/></g>
+        </g>
+      </svg>
+      <span class="brand-name">BOWERMAN <em>DIGITAL</em></span>
+    </a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#work">Our work</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">Process</a></li>
+      </ul>
+    </nav>
+    <a class="btn" href="#contact">Start a project</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="grid-bg"></div>
+  <div class="wrap">
+    <p class="eyebrow reveal">AI strategy · web · automation</p>
+    <h1 class="reveal" style="margin-top:22px">Your customers search with AI now.<br>Can they <span class="echo">find you?</span></h1>
+    <p class="lede reveal">ChatGPT, Perplexity, Google AI Overviews — discovery has changed. We make Australian businesses visible to humans and machines alike.</p>
+    <div class="hero-cta reveal">
+      <a class="btn btn-solid" href="#contact">Get your free AI audit</a>
+      <a class="btn" href="#work">See our work</a>
+    </div>
+    <div class="hero-stats reveal">
+      <div class="stat"><b>5×</b><span>traffic growth, TDAC</span></div>
+      <div class="stat"><b>1</b><span>client at a time</span></div>
+      <div class="stat"><b>100%</b><span>built in-house, Sydney</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    AI search optimisation <i>✦</i> llms.txt implementation <i>✦</i> AI-ready web development <i>✦</i> structured data <i>✦</i> intelligent automation <i>✦</i> digital strategy <i>✦</i>
+    AI search optimisation <i>✦</i> llms.txt implementation <i>✦</i> AI-ready web development <i>✦</i> structured data <i>✦</i> intelligent automation <i>✦</i> digital strategy <i>✦</i>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Built to be found, by people and by machines</h2>
+      <p>Four ways we keep your business discoverable as search shifts to AI.</p>
+    </div>
+    <div class="cards">
+      <article class="card reveal"><span class="num">/01</span><h3>AI search optimisation</h3><p>Get recommended by ChatGPT, Perplexity and AI Overviews — not just ranked by Google.</p></article>
+      <article class="card reveal"><span class="num">/02</span><h3>AI-ready web development</h3><p>Fast, semantic, structured sites that AI systems can parse, trust and cite.</p></article>
+      <article class="card reveal"><span class="num">/03</span><h3>Intelligent automation</h3><p>Chatbots, CRM workflows and AI tools that hand your team their time back.</p></article>
+      <article class="card reveal"><span class="num">/04</span><h3>Digital strategy</h3><p>Content, email and growth planning that positions you for the AI era.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="work" id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Real results for real businesses</h2>
+      <a class="proj-link" href="#">All case studies →</a>
+    </div>
+    <div class="projects">
+      <article class="proj reveal">
+        <div class="proj-thumb">Vizzbud</div>
+        <div class="proj-body">
+          <div class="tags"><span class="tag">PWA</span><span class="tag">Realtime data</span></div>
+          <h3>Vizzbud</h3>
+          <p>Realtime dive conditions and a personal logbook for Sydney divers.</p>
+          <a class="proj-link" href="#">View case study →</a>
+        </div>
+      </article>
+      <article class="proj reveal">
+        <div class="proj-thumb">TDAC</div>
+        <div class="proj-body">
+          <div class="tags"><span class="tag">SEO</span><span class="tag">CRM</span><span class="tag">Email</span></div>
+          <h3>That Disability Adventure Company</h3>
+          <p>New site and growth program — monthly traffic from 90 to 500+.</p>
+          <a class="proj-link" href="#">View case study →</a>
+        </div>
+      </article>
+      <article class="proj reveal">
+        <div class="proj-thumb">Evie</div>
+        <div class="proj-body">
+          <div class="tags"><span class="tag">Portfolio</span><span class="tag">Design</span></div>
+          <h3>Evie Graphic Design</h3>
+          <p>A sleek portfolio that wins freelance clients on its own.</p>
+          <a class="proj-link" href="#">View case study →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>One client at a time, start to ship</h2>
+      <p>No account managers, no hand-offs. You work directly with the person building it.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="num">01</div><h3>Audit</h3><p>We map how AI and search engines see you today — and where you're invisible.</p></div>
+      <div class="step reveal"><div class="num">02</div><h3>Build</h3><p>Site, structured data, llms.txt, automations — implemented, not just advised.</p></div>
+      <div class="step reveal"><div class="num">03</div><h3>Grow</h3><p>We monitor your AI visibility and adapt as platforms evolve. Month to month, no lock-in.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="wrap">
+    <p class="eyebrow reveal">Ready when you are</p>
+    <h2 class="reveal" style="margin-top:18px">Let's make you <span class="echo">findable.</span></h2>
+    <p class="reveal">Share your brief and we'll reply within one business day. Transparent pricing, month-to-month.</p>
+    <a class="btn btn-solid reveal" href="mailto:hello@bowermandigital.com">Start a project</a>
+    <div class="pulse reveal"><span class="dot"></span> Currently taking on one new client</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <a href="#" class="brand" aria-label="Bowerman Digital home">
+      <svg viewBox="148 64 250 312" style="height:30px" role="img" aria-label="Bowerman Digital mark">
+        <g fill="none" stroke="#22d3ee" stroke-width="9" stroke-linejoin="round">
+          <g opacity="0.14" transform="translate(27,27)"><rect x="180" y="96" width="44" height="344" rx="22"/><path d="M244 96a84 84 0 0 1 0 168z"/><path d="M244 264a88 88 0 0 1 0 176z"/></g>
+          <g opacity="0.3" transform="translate(18,18)"><rect x="180" y="96" width="44" height="344" rx="22"/><path d="M244 96a84 84 0 0 1 0 168z"/><path d="M244 264a88 88 0 0 1 0 176z"/></g>
+          <g opacity="0.55" transform="translate(9,9)"><rect x="180" y="96" width="44" height="344" rx="22"/><path d="M244 96a84 84 0 0 1 0 168z"/><path d="M244 264a88 88 0 0 1 0 176z"/></g>
+          <g><rect x="180" y="96" width="44" height="344" rx="22"/><path d="M244 96a84 84 0 0 1 0 168z"/><path d="M244 264a88 88 0 0 1 0 176z"/></g>
+        </g>
+      </svg>
+      <span class="brand-name" style="font-size:13px">BOWERMAN <em>DIGITAL</em></span>
+    </a>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="#work">Our work</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="foot-meta">© 2026 Bowerman Digital · Sydney, AU</div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), { threshold: .12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

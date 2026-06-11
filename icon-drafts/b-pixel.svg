@@ -1,0 +1,22 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bowerman Digital B icon, pixel CRT style">
+  <defs>
+    <linearGradient id="px" x1="0" y1="88" x2="0" y2="424" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#e879f9"/>
+    </linearGradient>
+    <pattern id="scan" width="6" height="6" patternUnits="userSpaceOnUse">
+      <rect width="6" height="2" fill="#000"/>
+    </pattern>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="#07070f"/>
+  <g fill="url(#px)">
+    <rect x="136" y="88" width="44" height="44"/><rect x="184" y="88" width="44" height="44"/><rect x="232" y="88" width="44" height="44"/><rect x="280" y="88" width="44" height="44"/>
+    <rect x="136" y="136" width="44" height="44"/><rect x="328" y="136" width="44" height="44"/>
+    <rect x="136" y="184" width="44" height="44"/><rect x="328" y="184" width="44" height="44"/>
+    <rect x="136" y="232" width="44" height="44"/><rect x="184" y="232" width="44" height="44"/><rect x="232" y="232" width="44" height="44"/><rect x="280" y="232" width="44" height="44"/>
+    <rect x="136" y="280" width="44" height="44"/><rect x="328" y="280" width="44" height="44"/>
+    <rect x="136" y="328" width="44" height="44"/><rect x="328" y="328" width="44" height="44"/>
+    <rect x="136" y="376" width="44" height="44"/><rect x="184" y="376" width="44" height="44"/><rect x="232" y="376" width="44" height="44"/><rect x="280" y="376" width="44" height="44"/>
+  </g>
+  <rect width="512" height="512" rx="112" fill="url(#scan)" opacity="0.16"/>
+</svg>

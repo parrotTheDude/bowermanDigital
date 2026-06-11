@@ -30,7 +30,7 @@
   <meta name="twitter:description" content="{{ $ogDesc }}">
   <meta name="twitter:image" content="{{ $ogImage }}">
 
-  <meta name="theme-color" content="#000"/>
+  <meta name="theme-color" content="#f8f1e2"/>
   
   <!-- Standard favicon -->
   <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
@@ -54,8 +54,9 @@
   <meta name="robots" content="index,follow">
   <link rel="manifest" href="{{ asset('site.webmanifest') }}">
 
-  <link rel="preload" href="{{ asset('fonts/SpaceGrotesk-VariableFont_wght.woff2') }}" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="{{ asset('fonts/ShareTechMono-Regular.woff2') }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ asset('fonts/Fraunces-Variable.woff2') }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ asset('fonts/Karla-Variable.woff2') }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ asset('fonts/CourierPrime-Regular.woff2') }}" as="font" type="font/woff2" crossorigin>
 
   @vite(['resources/js/app.js'])
 
@@ -63,21 +64,21 @@
   @stack('schema')
 
   <style>
-    :where(a,button,[role="button"],input,textarea,select):focus-visible{outline:2px solid rgba(34,211,238,.9);outline-offset:2px;border-radius:.5rem}
+    :where(a,button,[role="button"],input,textarea,select):focus-visible{outline:2px solid rgba(189,79,26,.9);outline-offset:2px;border-radius:.5rem}
     @media (prefers-reduced-motion: reduce){
       *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}
     }
     /* header scroll state + animated underline for nav links */
-    #header.scrolled{background:rgba(0,0,0,.85) !important; box-shadow:0 8px 30px rgba(0,0,0,.25);}
+    #header.scrolled{background:rgba(248,241,226,.95) !important; box-shadow:0 8px 30px rgba(59,42,29,.12);}
     .nav-underline a{position:relative}
-    .nav-underline a::after{content:""; position:absolute; left:0; right:0; bottom:-6px; height:2px; background:linear-gradient(90deg,rgba(34,211,238,.0),rgba(34,211,238,.9),rgba(34,211,238,.0)); transform:scaleX(0); transform-origin:center; transition:transform .35s ease}
+    .nav-underline a::after{content:""; position:absolute; left:0; right:0; bottom:-6px; height:2px; background:linear-gradient(90deg,rgba(189,79,26,0),rgba(189,79,26,.9),rgba(189,79,26,0)); transform:scaleX(0); transform-origin:center; transition:transform .35s ease}
     .nav-underline a:hover::after{transform:scaleX(1)}
   </style>
 </head>
-<body id="top" class="bg-black text-white font-sans antialiased">
+<body id="top" class="bg-cream text-ink font-sans antialiased">
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 rounded bg-white px-3 py-2 text-black">Skip to content</a>
 
-  <header id="header" class="fixed inset-x-0 top-0 z-[100] bg-black/70 backdrop-blur supports-[backdrop-filter]:bg-black/60 transition-[background,box-shadow] duration-300">
+  <header id="header" class="fixed inset-x-0 top-0 z-[100] border-b-2 border-ink bg-cream/90 backdrop-blur supports-[backdrop-filter]:bg-cream/80 transition-[background,box-shadow] duration-300">
 
     @php
       $nav = [
@@ -90,24 +91,24 @@
     {{-- bottom border removed --}}
 
     <div class="mx-auto max-w-7xl px-4">
-      <div class="hidden md:flex items-center justify-between py-4">
-        <a href="{{ url('/') }}" class="inline-flex items-center gap-2 group">
-          <img src="{{ asset('images/logo.webp') }}" alt="Bowerman Digital Logo" width="400" height="124" class="h-10 w-auto md:h-12 transition-transform duration-300 group-hover:scale-[1.03]">
+      <div class="hidden md:flex items-center justify-between py-2.5">
+        <a href="{{ url('/') }}" class="inline-flex items-center gap-3 group">
+          @include('partials.mark', ['class' => 'h-9 w-auto transition-transform duration-300 group-hover:scale-[1.03]'])
+          <span class="font-display text-lg font-semibold tracking-tight">Bowerman <em class="not-italic font-display italic text-rust-deep">Digital</em></span>
         </a>
 
         <nav class="flex items-center gap-6 text-sm">
-          <ul class="nav-underline flex gap-6 [&_a]:text-white [&_a:hover]:text-cyan-400 [&_a:visited]:text-white">
+          <ul class="nav-underline flex gap-6 font-medium [&_a]:text-ink-soft [&_a:hover]:text-rust-deep [&_a:visited]:text-ink-soft">
             @foreach ($nav as $item)
               <li>
-                <a href="{{ $item['href'] }}" class="{{ request()->is($item['match'].'*') ? 'text-cyan-400' : '' }}" {!! request()->is($item['match'].'*') ? 'aria-current="page"' : '' !!}>
+                <a href="{{ $item['href'] }}" class="{{ request()->is($item['match'].'*') ? '!text-rust-deep' : '' }}" {!! request()->is($item['match'].'*') ? 'aria-current="page"' : '' !!}>
                   {{ $item['label'] }}
                 </a>
               </li>
             @endforeach
           </ul>
 
-          <a href="{{ url('/contact') }}"
-            class="hidden md:inline-flex glow-static items-center rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/60">
+          <a href="{{ url('/contact') }}" class="hidden md:inline-flex btn-retro btn-retro-solid items-center !py-2.5 !px-5 text-sm">
             Start a Project
           </a>
         </nav>
@@ -115,13 +116,14 @@
     </div>
 
     {{-- Mobile header --}}
-    <div class="md:hidden flex items-center justify-between py-3 px-4">
-    <a href="{{ url('/') }}" class="inline-flex items-center">
-        <img src="{{ asset('images/logo.webp') }}" alt="Bowerman Digital Logo" width="400" height="124" class="h-10 w-auto">
+    <div class="md:hidden flex items-center justify-between py-2 px-4">
+    <a href="{{ url('/') }}" class="inline-flex items-center gap-2.5">
+        @include('partials.mark', ['class' => 'h-9 w-auto'])
+        <span class="font-display text-base font-semibold tracking-tight">Bowerman <em class="not-italic font-display italic text-rust-deep">Digital</em></span>
     </a>
 
     <button id="mnav-trigger"
-            class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 active:scale-95 transition"
+            class="inline-flex h-11 w-11 items-center justify-center rounded-xl border-2 border-ink bg-cream active:scale-95 transition"
             aria-controls="mnav-panel"
             aria-expanded="false"
             aria-label="Open menu">
@@ -139,40 +141,39 @@
     @yield('content')
   </main>
 
-  <footer class="relative z-[101] bg-black px-6 pb-10">
+  <footer class="relative z-[101] bg-ink px-6 pb-10 pt-12 text-cream">
     <div class="mx-auto max-w-6xl">
-
-      <div class="h-px w-full bg-gradient-to-r from-transparent via-white/15 to-transparent mb-12"></div>
 
       <div class="flex flex-col items-center text-center gap-8">
 
         {{-- Logo --}}
-        <a href="{{ url('/') }}" class="group inline-block">
-          <img class="h-10 w-auto transition-transform duration-300 group-hover:scale-[1.03]" src="{{ asset('images/logo.webp') }}" alt="Bowerman Digital Logo" width="400" height="124">
+        <a href="{{ url('/') }}" class="group inline-flex items-center gap-3">
+          @include('partials.mark', ['main' => '#f8f1e2', 'class' => 'h-10 w-auto transition-transform duration-300 group-hover:scale-[1.03]'])
+          <span class="font-display text-lg font-semibold text-cream">Bowerman <em class="not-italic font-display italic text-mustard">Digital</em></span>
         </a>
 
         {{-- Navigate --}}
         <nav>
           <ul class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
-            <li><a href="{{ url('/') }}" class="text-white/70 transition hover:text-cyan-400">Home</a></li>
-            <li><a href="{{ url('/portfolio') }}" class="text-white/70 transition hover:text-cyan-400">Our Work</a></li>
-            <li><a href="{{ url('/services') }}" class="text-white/70 transition hover:text-cyan-400">Services</a></li>
-            <li><a href="{{ url('/contact') }}" class="text-white/70 transition hover:text-cyan-400">Start a Project</a></li>
+            <li><a href="{{ url('/') }}" class="text-cream/75 transition hover:text-mustard">Home</a></li>
+            <li><a href="{{ url('/portfolio') }}" class="text-cream/75 transition hover:text-mustard">Our Work</a></li>
+            <li><a href="{{ url('/services') }}" class="text-cream/75 transition hover:text-mustard">Services</a></li>
+            <li><a href="{{ url('/contact') }}" class="text-cream/75 transition hover:text-mustard">Start a Project</a></li>
           </ul>
         </nav>
 
         {{-- Get in touch --}}
         <div class="flex flex-col items-center gap-2 text-sm">
-          <a href="mailto:hello@bowermandigital.com" class="text-white/70 transition hover:text-cyan-400">hello@bowermandigital.com</a>
-          <span class="text-white/60">Sydney, Australia</span>
+          <a href="mailto:hello@bowermandigital.com" class="font-mono text-cream/75 transition hover:text-mustard">hello@bowermandigital.com</a>
+          <span class="text-cream/60">Sydney, Australia</span>
         </div>
 
         {{-- Bottom --}}
-        <div class="-mt-4 h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
-        <div class="-mt-5 flex flex-col items-center gap-3 sm:flex-row sm:justify-between sm:w-full">
-          <p class="text-xs text-white/60">&copy; {{ date('Y') }} Bowerman Digital</p>
-          <div class="flex items-center gap-1.5 text-xs text-white/60">
-            <span class="inline-block h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        <div class="h-px w-full bg-cream/15"></div>
+        <div class="-mt-3 flex flex-col items-center gap-3 sm:flex-row sm:justify-between sm:w-full">
+          <p class="font-mono text-xs text-cream/60">&copy; {{ date('Y') }} Bowerman Digital</p>
+          <div class="flex items-center gap-1.5 font-mono text-xs text-cream/60">
+            <span class="inline-block h-1.5 w-1.5 rounded-full bg-mustard animate-pulse"></span>
             One client at a time
           </div>
         </div>
@@ -189,16 +190,16 @@
   {{-- Mobile nav: backdrop + panel --}}
   <div id="mnav-root" class="md:hidden">
     <div id="mnav-backdrop"
-        class="fixed inset-0 z-[9998] bg-black/70 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300"></div>
+        class="fixed inset-0 z-[9998] bg-ink/50 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300"></div>
 
     <aside id="mnav-panel"
           class="fixed inset-y-0 right-0 z-[9999] w-[86%] max-w-[20rem]
                   translate-x-full transition-transform duration-300 will-change-transform
-                  bg-black/90 border-l border-white/10 backdrop-blur-xl
+                  bg-cream border-l-2 border-ink
                   px-5 pt-4 pb-[max(1rem,env(safe-area-inset-bottom))] flex flex-col">
       <div class="flex items-center justify-end">
         <button id="mnav-close"
-                class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/5"
+                class="inline-flex h-10 w-10 items-center justify-center rounded-lg border-2 border-ink bg-cream"
                 aria-label="Close menu">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-width="1.8" stroke-linecap="round" d="M6 6l12 12M18 6l-12 12"/>
@@ -210,25 +211,25 @@
         <ul class="space-y-1 text-base">
           <li class="md:hidden">
             <a href="{{ url('/') }}"
-              class="flex items-center justify-between rounded-xl px-4 py-3 text-white hover:bg-white/5 focus:bg-white/10 focus:outline-none">
+              class="flex items-center justify-between rounded-xl px-4 py-3 text-ink hover:bg-ink/5 focus:bg-ink/10 focus:outline-none">
               <span>Home</span>
-              <span class="text-white/60">→</span>
+              <span class="text-ink-faint">→</span>
             </a>
           </li>
           @foreach ($nav as $item)
             <li>
               <a href="{{ $item['href'] }}"
-                class="flex items-center justify-between rounded-xl px-4 py-3 text-white hover:bg-white/5 focus:bg-white/10 focus:outline-none">
+                class="flex items-center justify-between rounded-xl px-4 py-3 text-ink hover:bg-ink/5 focus:bg-ink/10 focus:outline-none">
                 <span class="capitalize">{{ $item['label'] }}</span>
-                <span class="text-white/60">→</span>
+                <span class="text-ink-faint">→</span>
               </a>
             </li>
           @endforeach
-          <li>
+          <li class="pt-2">
             <a href="{{ url('/contact') }}"
-              class="glow-static bg-white/5 flex items-center justify-between rounded-xl border border-white/10 px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400/60">
+              class="btn-retro btn-retro-solid flex items-center justify-between !rounded-xl">
               <span class="font-medium">Start a Project</span>
-              <span class="text-white/60">→</span>
+              <span>→</span>
             </a>
           </li>
         </ul>

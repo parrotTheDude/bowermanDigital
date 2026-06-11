@@ -1,0 +1,25 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bowerman Digital B icon, rising echo">
+  <rect width="512" height="512" rx="112" fill="#07070f"/>
+  <g fill="none" stroke-width="7" stroke-linejoin="round">
+    <g stroke="#312e81" transform="translate(-27,-27)">
+      <rect x="194" y="110" width="44" height="344" rx="22"/>
+      <path d="M258 110a84 84 0 0 1 0 168z"/>
+      <path d="M258 278a88 88 0 0 1 0 176z"/>
+    </g>
+    <g stroke="#7c3aed" transform="translate(-18,-18)">
+      <rect x="194" y="110" width="44" height="344" rx="22"/>
+      <path d="M258 110a84 84 0 0 1 0 168z"/>
+      <path d="M258 278a88 88 0 0 1 0 176z"/>
+    </g>
+    <g stroke="#d946ef" transform="translate(-9,-9)">
+      <rect x="194" y="110" width="44" height="344" rx="22"/>
+      <path d="M258 110a84 84 0 0 1 0 168z"/>
+      <path d="M258 278a88 88 0 0 1 0 176z"/>
+    </g>
+    <g stroke="#22d3ee">
+      <rect x="194" y="110" width="44" height="344" rx="22"/>
+      <path d="M258 110a84 84 0 0 1 0 168z"/>
+      <path d="M258 278a88 88 0 0 1 0 176z"/>
+    </g>
+  </g>
+</svg>

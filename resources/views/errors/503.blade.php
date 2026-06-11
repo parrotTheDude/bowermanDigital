@@ -23,8 +23,8 @@
 
         body {
             font-family: 'Space Grotesk', system-ui, sans-serif;
-            background: #000;
-            color: #fff;
+            background: #f8f1e2;
+            color: #3b2a1d;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -40,8 +40,8 @@
         .spinner {
             width: 48px;
             height: 48px;
-            border: 3px solid rgba(34, 211, 238, 0.2);
-            border-top-color: rgba(34, 211, 238, 0.9);
+            border: 3px solid rgba(217, 109, 49, 0.25);
+            border-top-color: #bd4f1a;
             border-radius: 50%;
             animation: spin 0.8s linear infinite;
             margin: 0 auto 2rem;
@@ -53,20 +53,20 @@
 
         h1 {
             font-size: 1.5rem;
-            font-weight: 500;
+            font-weight: 700;
             margin-bottom: 0.75rem;
             letter-spacing: -0.02em;
         }
 
         p {
-            color: rgba(255, 255, 255, 0.6);
+            color: rgba(59, 42, 29, 0.7);
             font-size: 1rem;
             line-height: 1.6;
         }
 
         .countdown {
             display: inline-block;
-            color: rgba(34, 211, 238, 0.9);
+            color: #bd4f1a;
             font-variant-numeric: tabular-nums;
             min-width: 2ch;
         }
@@ -74,7 +74,7 @@
         @media (prefers-reduced-motion: reduce) {
             .spinner {
                 animation: none;
-                border-top-color: rgba(34, 211, 238, 0.9);
+                border-top-color: #bd4f1a;
             }
         }
     </style>

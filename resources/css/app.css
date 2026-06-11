@@ -27,17 +27,136 @@
   font-display: swap;
 }
 
-/* Tailwind v4 theme tokens */
-@theme {
-  --font-sans: "SpaceGrotesk", ui-sans-serif, system-ui, sans-serif,
-               "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  --font-mono: "ShareTechMono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+/* ── 70s theme fonts (self-hosted — see fonts/README-FONTS.md for downloads) ── */
+@font-face {
+  font-family: "Fraunces";
+  src: url("/fonts/Fraunces-Variable.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("/fonts/Fraunces-Italic-Variable.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Karla";
+  src: url("/fonts/Karla-Variable.woff2") format("woff2-variations");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Karla";
+  src: url("/fonts/Karla-Italic-Variable.woff2") format("woff2-variations");
+  font-weight: 200 800;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CourierPrime";
+  src: url("/fonts/CourierPrime-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CourierPrime";
+  src: url("/fonts/CourierPrime-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
-/* Base (dark-first) */
+/* Tailwind v4 theme tokens */
+@theme {
+  --font-sans: "Karla", "SpaceGrotesk", ui-sans-serif, system-ui, sans-serif,
+               "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  --font-mono: "CourierPrime", "ShareTechMono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-display: "Fraunces", Georgia, serif;
+
+  /* 70s palette */
+  --color-cream: #f8f1e2;
+  --color-cream-2: #efe4cd;
+  --color-cream-3: #f3dfc0;
+  --color-ink: #3b2a1d;
+  --color-ink-soft: rgba(59,42,29,.74);
+  --color-ink-faint: rgba(59,42,29,.48);
+  --color-rust: #d96d31;
+  --color-rust-deep: #bd4f1a;
+  --color-mustard: #e3a72f;
+  --color-olive: #8a9a5b;
+  --color-retro-teal: #2d7d6e;
+}
+
+/* Base (warm-light) */
 html { scroll-behavior: smooth; }
-body { @apply bg-black text-white antialiased; }
-h1, h2, h3, h4, h5, h6 { @apply text-white; }
+body { @apply bg-cream text-ink antialiased; position: relative; }
+h1, h2, h3, h4, h5, h6 { @apply text-ink; font-family: var(--font-display); }
+
+/* Film grain overlay */
+body::after{
+  content:""; position:fixed; inset:0; pointer-events:none; opacity:.04; z-index:90;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Retro components */
+.btn-retro{
+  display:inline-block; font-family:var(--font-mono); font-weight:700; font-size:.9rem; letter-spacing:.04em;
+  padding:.85rem 1.6rem; border:2px solid var(--color-ink); border-radius:999px;
+  color:var(--color-ink); background:var(--color-cream); box-shadow:3px 3px 0 var(--color-ink);
+  transition:transform .15s, box-shadow .15s;
+}
+.btn-retro:hover{ transform:translate(2px,2px); box-shadow:1px 1px 0 var(--color-ink); }
+.btn-retro-solid{ background:var(--color-rust); color:#fff7ea; }
+.echo-retro{ color:var(--color-rust-deep); text-shadow:5px 5px 0 var(--color-mustard); animation:echo-breathe 4s ease-in-out infinite; }
+@keyframes echo-breathe{
+  0%,100%{ text-shadow:5px 5px 0 var(--color-mustard); }
+  50%{ text-shadow:7px 7px 0 var(--color-mustard); }
+}
+
+/* Highlight draws itself in once the heading is revealed */
+.und-retro{
+  background-image:linear-gradient(rgba(227,167,47,.5), rgba(227,167,47,.5));
+  background-repeat:no-repeat; background-position:0 82%; background-size:0% .42em;
+  transition:background-size .9s cubic-bezier(.25,.7,.3,1) .35s;
+}
+.reveal:not(.opacity-0) .und-retro{ background-size:100% .42em; }
+
+/* Warm film grade for screenshots; full colour on hover */
+.retro-img{ filter:sepia(.22) saturate(.8) contrast(.92) brightness(1.03); transition:filter .5s ease, transform .7s; }
+.sticker:hover .retro-img{ filter:none; }
+
+.sticker{ border:2px solid var(--color-ink); border-radius:1.25rem; transition:transform .2s, box-shadow .2s, rotate .3s; }
+.sticker:hover{ transform:translateY(-4px); box-shadow:4px 6px 0 var(--color-ink); }
+/* Hand-placed sticker tilt; straightens on hover */
+.tilt-l{ rotate:-1deg; } .tilt-r{ rotate:1deg; }
+.tilt-l:hover, .tilt-r:hover{ rotate:0deg; }
+@media (prefers-reduced-motion: reduce){
+  .echo-retro{ animation:none; }
+  .und-retro{ background-size:100% .42em; }
+}
+/* Hero sunburst — slow-rotating 70s rays, fading out radially */
+.hero-burst{
+  position:absolute; left:50%; top:58%; width:1700px; height:1700px;
+  transform:translate(-50%,-50%);
+  background:repeating-conic-gradient(rgba(227,167,47,.13) 0deg 4deg, transparent 4deg 11deg);
+  -webkit-mask-image:radial-gradient(circle, black 0%, rgba(0,0,0,.4) 30%, transparent 52%);
+  mask-image:radial-gradient(circle, black 0%, rgba(0,0,0,.4) 30%, transparent 52%);
+  animation:burst-spin 120s linear infinite;
+  pointer-events:none;
+}
+@keyframes burst-spin{ to{ transform:translate(-50%,-50%) rotate(360deg); } }
+@media (prefers-reduced-motion: reduce){ .hero-burst{ animation:none; } }
+
+.marquee-retro{ overflow:hidden; white-space:nowrap; }
+.marquee-track{ display:inline-block; animation:marquee-slide 30s linear infinite; }
+.marquee-retro:hover .marquee-track{ animation-play-state:paused; }
+@keyframes marquee-slide{ to{ transform:translateX(-50%); } }
+@media (prefers-reduced-motion: reduce){ .marquee-track{ animation:none; } }
 
 /* Conic “el” background — solid black base + conic layer */
 .el{

@@ -1,0 +1,25 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bowerman Digital B icon, retro sunset style">
+  <defs>
+    <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="0.5" stop-color="#818cf8"/>
+      <stop offset="1" stop-color="#e879f9"/>
+    </linearGradient>
+    <clipPath id="bshape">
+      <rect x="176" y="72" width="52" height="368"/>
+      <path d="M244 72a92 92 0 0 1 0 184z"/>
+      <path d="M244 256a92 92 0 0 1 0 184z"/>
+    </clipPath>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="#07070f"/>
+  <g clip-path="url(#bshape)">
+    <rect x="160" y="56" width="200" height="400" fill="url(#sun)"/>
+    <g fill="#07070f">
+      <rect x="160" y="268" width="200" height="5"/>
+      <rect x="160" y="296" width="200" height="8"/>
+      <rect x="160" y="328" width="200" height="11"/>
+      <rect x="160" y="364" width="200" height="14"/>
+      <rect x="160" y="404" width="200" height="17"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bowerman Digital — 70s homepage mockup v2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,650;0,9..144,900;1,9..144,500&family=Karla:ital,wght@0,400;0,500;0,700;1,400&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#f8f1e2;
+    --cream2:#efe4cd;
+    --ink:#3b2a1d;
+    --ink-soft:rgba(59,42,29,.74);
+    --ink-faint:rgba(59,42,29,.48);
+    --orange:#d96d31;
+    --orange-deep:#bd4f1a;
+    --mustard:#e3a72f;
+    --olive:#8a9a5b;
+    --teal:#2d7d6e;
+    --line:rgba(59,42,29,.18);
+    --display:'Fraunces',serif;
+    --body:'Karla',sans-serif;
+    --mono:'Courier Prime',monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--ink);font-family:var(--body);font-size:18.5px;line-height:1.7;-webkit-font-smoothing:antialiased;position:relative}
+  body::after{content:"";position:fixed;inset:0;pointer-events:none;opacity:.04;z-index:99;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+  .eyebrow{font-family:var(--mono);font-size:13.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--orange-deep)}
+
+  /* ── Nav ── */
+  header{position:fixed;inset:0 0 auto;z-index:50;background:rgba(248,241,226,.9);backdrop-filter:blur(10px);border-bottom:2px solid var(--ink)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+  .brand{display:flex;align-items:center;gap:13px}
+  .brand svg{height:40px;width:auto;display:block}
+  .brand-name{font-family:var(--display);font-weight:650;font-size:17px;letter-spacing:.01em}
+  .brand-name em{font-style:italic;color:var(--orange-deep)}
+  nav ul{display:flex;gap:34px;list-style:none;font-size:15.5px;font-weight:500}
+  nav a{color:var(--ink-soft);transition:color .2s}
+  nav a:hover{color:var(--orange-deep)}
+  .btn{display:inline-block;font-family:var(--mono);font-weight:700;font-size:14.5px;letter-spacing:.04em;padding:14px 26px;border:2px solid var(--ink);border-radius:999px;color:var(--ink);background:var(--cream);box-shadow:3px 3px 0 var(--ink);transition:transform .15s,box-shadow .15s}
+  .btn:hover{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+  .btn-solid{background:var(--orange);color:#fff7ea}
+  @media(max-width:860px){nav ul{display:none}}
+
+  /* ── Hero ── */
+  .hero{position:relative;padding:200px 0 110px;overflow:hidden}
+  .sun{position:absolute;top:130px;right:4%;width:min(360px,32vw);opacity:.95}
+  @media(max-width:980px){.sun{display:none}}
+  h1{font-family:var(--display);font-weight:900;font-size:clamp(38px,5.6vw,68px);line-height:1.06;letter-spacing:-.015em;max-width:780px}
+  .echo{color:var(--orange-deep);text-shadow:5px 5px 0 var(--mustard)}
+  .hero p.lede{margin:30px 0 0;max-width:560px;font-size:20.5px;color:var(--ink-soft)}
+  .hero-cta{margin-top:42px;display:flex;gap:18px;flex-wrap:wrap}
+  .hero-stats{margin-top:76px;display:flex;flex-wrap:wrap;border-top:2px solid var(--ink);max-width:780px}
+  .stat{padding:22px 36px 0 0;margin-right:36px}
+  .stat b{font-family:var(--display);font-weight:900;font-size:30px;color:var(--orange-deep)}
+  .stat span{display:block;font-size:14px;color:var(--ink-faint);margin-top:2px;font-family:var(--mono)}
+
+  /* ── Marquee ── */
+  .marquee{border-block:2px solid var(--ink);padding:14px 0;overflow:hidden;white-space:nowrap;background:var(--ink);color:var(--cream)}
+  .marquee-track{display:inline-block;animation:slide 30s linear infinite;font-family:var(--mono);font-size:13.5px;letter-spacing:.16em;text-transform:uppercase}
+  .marquee-track i{font-style:normal;color:var(--mustard);margin:0 24px}
+  @keyframes slide{to{transform:translateX(-50%)}}
+
+  /* ── Sections ── */
+  section{padding:108px 0}
+  .sec-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:58px;flex-wrap:wrap}
+  h2{font-family:var(--display);font-weight:900;font-size:clamp(28px,3.6vw,44px);line-height:1.14;max-width:600px}
+  h2 .und{box-shadow:inset 0 -14px 0 rgba(227,167,47,.5)}
+  .sec-head p{max-width:380px;color:var(--ink-soft);font-size:17px}
+
+  /* services */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+  .card{border:2px solid var(--ink);border-radius:20px;padding:32px 28px;background:var(--cream);transition:transform .2s,box-shadow .2s}
+  .card:hover{transform:translateY(-4px);box-shadow:4px 6px 0 var(--ink)}
+  .card:nth-child(1){background:#f3dfc0}
+  .card:nth-child(2){background:#eed9b2}
+  .card:nth-child(3){background:#e9e3c6}
+  .card:nth-child(4){background:#f0d9c8}
+  .card .num{font-family:var(--mono);font-weight:700;font-size:13.5px;color:var(--orange-deep);letter-spacing:.15em}
+  .card h3{font-family:var(--display);font-weight:650;font-size:21px;margin:16px 0 10px;line-height:1.3}
+  .card p{font-size:16px;color:var(--ink-soft)}
+
+  /* work */
+  .work{background:var(--cream2);border-block:2px solid var(--ink)}
+  .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
+  .proj{border:2px solid var(--ink);border-radius:20px;overflow:hidden;background:var(--cream);transition:transform .2s,box-shadow .2s}
+  .proj:hover{transform:translateY(-4px);box-shadow:4px 6px 0 var(--ink)}
+  .proj-thumb{aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:900;font-size:30px;color:var(--cream);border-bottom:2px solid var(--ink)}
+  .proj:nth-child(1) .proj-thumb{background:var(--teal)}
+  .proj:nth-child(2) .proj-thumb{background:var(--orange)}
+  .proj:nth-child(3) .proj-thumb{background:var(--olive)}
+  .proj-body{padding:22px 24px 26px}
+  .tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+  .tag{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--ink);border:1.5px solid var(--ink);border-radius:99px;padding:3px 11px;background:var(--cream)}
+  .proj-body h3{font-family:var(--display);font-weight:650;font-size:19.5px;margin-bottom:8px}
+  .proj-body p{font-size:15.5px;color:var(--ink-soft)}
+  .proj-link{display:inline-block;margin-top:14px;font-family:var(--mono);font-weight:700;font-size:14px;color:var(--orange-deep)}
+
+  /* process */
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));border:2px solid var(--ink);border-radius:20px;overflow:hidden}
+  .step{padding:40px 32px;border-right:2px solid var(--ink);background:var(--cream)}
+  .step:nth-child(2){background:#f3dfc0}
+  .step:last-child{border-right:0;background:#e9e3c6}
+  @media(max-width:860px){.step{border-right:0;border-bottom:2px solid var(--ink)}.step:last-child{border-bottom:0}}
+  .step .num{font-family:var(--display);font-weight:900;font-size:52px;color:var(--orange)}
+  .step h3{font-family:var(--display);font-weight:650;font-size:20px;margin:14px 0 10px}
+  .step p{font-size:15.5px;color:var(--ink-soft)}
+
+  /* founder + testimonial */
+  .founder{background:var(--cream)}
+  .founder-grid{display:grid;grid-template-columns:300px 1fr;gap:64px;align-items:center}
+  @media(max-width:860px){.founder-grid{grid-template-columns:1fr;gap:40px}}
+  .portrait{position:relative;width:280px;height:280px;margin:0 auto}
+  .portrait .frame{width:100%;height:100%;border-radius:50%;border:2px solid var(--ink);background:#eed9b2;display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .portrait .frame span{font-family:var(--mono);font-size:13px;color:var(--ink-faint);text-align:center;line-height:1.5}
+  .portrait::before{content:"";position:absolute;inset:0;border-radius:50%;transform:translate(12px,12px);background:var(--mustard);z-index:-1;border:2px solid var(--ink)}
+  .founder h2{margin-bottom:18px}
+  .founder p{color:var(--ink-soft);max-width:560px}
+  .founder .sig{font-family:var(--display);font-style:italic;font-weight:500;font-size:22px;color:var(--orange-deep);margin-top:18px}
+  blockquote{margin-top:36px;border:2px solid var(--ink);border-radius:20px;background:#f3dfc0;padding:28px 30px;max-width:600px}
+  blockquote p{font-family:var(--display);font-weight:500;font-style:italic;font-size:19.5px;line-height:1.5;color:var(--ink)}
+  blockquote footer{margin-top:14px;font-family:var(--mono);font-size:13px;color:var(--ink-faint)}
+
+  /* CTA */
+  .cta-band{background:var(--orange);border-top:2px solid var(--ink);text-align:center;padding:120px 0}
+  .cta-band h2{margin:0 auto 18px;max-width:760px;font-size:clamp(32px,5vw,58px);color:#fff7ea}
+  .cta-band h2 .echo2{text-shadow:5px 5px 0 var(--orange-deep)}
+  .cta-band p{color:rgba(255,247,234,.88);max-width:500px;margin:0 auto 40px;font-size:19px}
+  .cta-band .btn{background:var(--cream)}
+  .pulse{display:flex;justify-content:center;align-items:center;gap:8px;font-family:var(--mono);font-size:13px;color:rgba(255,247,234,.85);margin-top:28px}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--mustard);animation:pulse 2s infinite}
+  @keyframes pulse{50%{opacity:.3}}
+
+  /* footer */
+  footer{padding:56px 0 42px;background:var(--ink);color:var(--cream)}
+  .foot{display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap}
+  .foot nav ul{display:flex;gap:26px;font-size:15px}
+  .foot nav a{color:rgba(248,241,226,.75)}
+  .foot nav a:hover{color:var(--mustard)}
+  .foot .brand-name{color:var(--cream)}
+  .foot .brand-name em{color:var(--mustard)}
+  .foot-meta{font-family:var(--mono);font-size:13px;color:rgba(248,241,226,.55)}
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="brand" aria-label="Bowerman Digital home">
+      <svg viewBox="148 64 250 312" role="img" aria-label="Bowerman Digital mark">
+        <g fill="none" stroke-width="9" stroke-linejoin="round">
+          <g stroke="#8a9a5b" transform="translate(27,27)"><rect x="180" y="96" width="44" height="344" rx="22"/><path d="M244 96a84 84 0 0 1 0 168z"/><path d="M244 264a88 88 0 0 1 0 176z"/></g>
+          <g stroke="#e3a72f" transform="translate(18,18)"><rect x="180" y="96" width="44" height="344" rx="22"/><path d="M244 96a84 84 0 0 1 0 168z"/><path d="M244 264a88 88 0 0 1 0 176z"/></g>
+          <g stroke="#d96d31" transform="translate(9,9)"><rect x="180" y="96" width="44" height="344" rx="22"/><path d="M244 96a84 84 0 0 1 0 168z"/><path d="M244 264a88 88 0 0 1 0 176z"/></g>
+          <g stroke="#3b2a1d"><rect x="180" y="96" width="44" height="344" rx="22"/><path d="M244 96a84 84 0 0 1 0 168z"/><path d="M244 264a88 88 0 0 1 0 176z"/></g>
+        </g>
+      </svg>
+      <span class="brand-name">Bowerman <em>Digital</em></span>
+    </a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#work">Our work</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-solid" href="#contact">Start a project</a>
+  </div>
+</header>
+
+<section class="hero">
+  <svg class="sun" viewBox="0 0 200 200" aria-hidden="true">
+    <defs>
+      <clipPath id="sunclip"><circle cx="100" cy="100" r="86"/></clipPath>
+    </defs>
+    <g clip-path="url(#sunclip)">
+      <rect x="0" y="0" width="200" height="104" fill="#e3a72f"/>
+      <rect x="0" y="104" width="200" height="26" fill="#d96d31"/>
+      <rect x="0" y="136" width="200" height="20" fill="#bd4f1a"/>
+      <rect x="0" y="162" width="200" height="14" fill="#2d7d6e"/>
+      <rect x="0" y="182" width="200" height="18" fill="#8a9a5b"/>
+    </g>
+    <circle cx="100" cy="100" r="86" fill="none" stroke="#3b2a1d" stroke-width="2.5"/>
+  </svg>
+  <div class="wrap">
+    <p class="eyebrow reveal">AI strategy ★ web ★ automation</p>
+    <h1 class="reveal" style="margin-top:24px">Get found the old-fashioned way.<br>Now the robots do the <span class="echo">talking.</span></h1>
+    <p class="lede reveal">Before the feeds, good businesses got found by word of mouth. Today the word of mouth is ChatGPT, Perplexity and Google's AI — and we make sure they're talking about you.</p>
+    <div class="hero-cta reveal">
+      <a class="btn btn-solid" href="#contact">Get your free AI audit</a>
+      <a class="btn" href="#work">See our work</a>
+    </div>
+    <div class="hero-stats reveal">
+      <div class="stat"><b>5×</b><span>traffic growth, TDAC</span></div>
+      <div class="stat"><b>1</b><span>client at a time</span></div>
+      <div class="stat"><b>0</b><span>account managers</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    AI search optimisation <i>✿</i> llms.txt implementation <i>✿</i> AI-ready web development <i>✿</i> structured data <i>✿</i> intelligent automation <i>✿</i> digital strategy <i>✿</i>
+    AI search optimisation <i>✿</i> llms.txt implementation <i>✿</i> AI-ready web development <i>✿</i> structured data <i>✿</i> intelligent automation <i>✿</i> digital strategy <i>✿</i>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Built to be found, <span class="und">by people and by machines</span></h2>
+      <p>Four ways we keep your business discoverable as search shifts to AI.</p>
+    </div>
+    <div class="cards">
+      <article class="card reveal"><span class="num">No. 01</span><h3>AI search optimisation</h3><p>Get recommended by ChatGPT, Perplexity and AI Overviews — not just ranked by Google.</p></article>
+      <article class="card reveal"><span class="num">No. 02</span><h3>AI-ready web development</h3><p>Fast, semantic, structured sites that AI systems can parse, trust and cite.</p></article>
+      <article class="card reveal"><span class="num">No. 03</span><h3>Intelligent automation</h3><p>Chatbots, CRM workflows and AI tools that hand your team their time back.</p></article>
+      <article class="card reveal"><span class="num">No. 04</span><h3>Digital strategy</h3><p>Content, email and growth planning that positions you for the AI era.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="work" id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Real results for real businesses</h2>
+      <a class="proj-link" href="#">All case studies →</a>
+    </div>
+    <div class="projects">
+      <article class="proj reveal">
+        <div class="proj-thumb">Vizzbud</div>
+        <div class="proj-body">
+          <div class="tags"><span class="tag">PWA</span><span class="tag">Realtime data</span></div>
+          <h3>Vizzbud</h3>
+          <p>Realtime dive conditions and a personal logbook for Sydney divers.</p>
+          <a class="proj-link" href="#">View case study →</a>
+        </div>
+      </article>
+      <article class="proj reveal">
+        <div class="proj-thumb">TDAC</div>
+        <div class="proj-body">
+          <div class="tags"><span class="tag">SEO</span><span class="tag">CRM</span><span class="tag">Email</span></div>
+          <h3>That Disability Adventure Company</h3>
+          <p>New site and growth program — monthly traffic from 90 to 500+.</p>
+          <a class="proj-link" href="#">View case study →</a>
+        </div>
+      </article>
+      <article class="proj reveal">
+        <div class="proj-thumb">Evie</div>
+        <div class="proj-body">
+          <div class="tags"><span class="tag">Portfolio</span><span class="tag">Design</span></div>
+          <h3>Evie Graphic Design</h3>
+          <p>A sleek portfolio that wins freelance clients on its own.</p>
+          <a class="proj-link" href="#">View case study →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="process" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>One client at a time, start to ship</h2>
+      <p>No account managers, no hand-offs. You work directly with the person building it.</p>
+    </div>
+    <div class="steps reveal">
+      <div class="step"><div class="num">01</div><h3>Audit</h3><p>We map how AI and search engines see you today — and where you're invisible.</p></div>
+      <div class="step"><div class="num">02</div><h3>Build</h3><p>Site, structured data, llms.txt, automations — implemented, not just advised.</p></div>
+      <div class="step"><div class="num">03</div><h3>Grow</h3><p>We monitor your AI visibility and adapt as platforms evolve. Month to month, no lock-in.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="founder" id="about" style="padding-top:0">
+  <div class="wrap">
+    <div class="founder-grid">
+      <div class="portrait reveal">
+        <div class="frame"><span>[ your photo here ]<br>warm, outdoors,<br>not a suit</span></div>
+      </div>
+      <div class="reveal">
+        <p class="eyebrow">Who you'll work with</p>
+        <h2 style="margin-top:14px">Hi, I'm Jacob.</h2>
+        <p>I build websites and digital strategy for Australian small businesses — one client at a time, so your project is never the small one on someone's list. You deal with me from first chat to launch and beyond. No jargon unless you ask for it, no lock-in contracts, and I'll explain what the robots are doing in plain English.</p>
+        <p class="sig">— Jacob, Bowerman Digital</p>
+        <blockquote>
+          <p>"Jacob rebuilt our website and quietly fixed things we didn't know were broken. Bookings went up, admin went down, and I finally understand where our enquiries come from."</p>
+          <footer>That Disability Adventure Company — placeholder quote, swap in a real one</footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band" id="contact">
+  <div class="wrap">
+    <h2 class="reveal">Let's make you <span class="echo2">findable.</span></h2>
+    <p class="reveal">Share your brief and we'll reply within one business day. Transparent pricing, month-to-month, no lock-in.</p>
+    <a class="btn reveal" href="mailto:hello@bowermandigital.com">Start a project</a>
+    <div class="pulse reveal"><span class="dot"></span> Currently taking on one new client</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <a href="#" class="brand" aria-label="Bowerman Digital home">
+      <svg viewBox="148 64 250 312" style="height:32px" role="img" aria-label="Bowerman Digital mark">
+        <g fill="none" stroke-width="9" stroke-linejoin="round">
+          <g stroke="#8a9a5b" transform="translate(27,27)"><rect x="180" y="96" width="44" height="344" rx="22"/><path d="M244 96a84 84 0 0 1 0 168z"/><path d="M244 264a88 88 0 0 1 0 176z"/></g>
+          <g stroke="#e3a72f" transform="translate(18,18)"><rect x="180" y="96" width="44" height="344" rx="22"/><path d="M244 96a84 84 0 0 1 0 168z"/><path d="M244 264a88 88 0 0 1 0 176z"/></g>
+          <g stroke="#d96d31" transform="translate(9,9)"><rect x="180" y="96" width="44" height="344" rx="22"/><path d="M244 96a84 84 0 0 1 0 168z"/><path d="M244 264a88 88 0 0 1 0 176z"/></g>
+          <g stroke="#f8f1e2"><rect x="180" y="96" width="44" height="344" rx="22"/><path d="M244 96a84 84 0 0 1 0 168z"/><path d="M244 264a88 88 0 0 1 0 176z"/></g>
+        </g>
+      </svg>
+      <span class="brand-name" style="font-size:14px">Bowerman <em>Digital</em></span>
+    </a>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="#work">Our work</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="foot-meta">© 2026 Bowerman Digital · Sydney, AU</div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), { threshold: .12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
