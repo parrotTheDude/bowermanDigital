@@ -19,6 +19,7 @@ Bowerman Digital partners with one business at a time to deliver focused, high-q
 - [Vizzbud — Progressive Web App](https://bowermandigital.com/portfolio/vizzbud): A realtime dive conditions platform for Sydney divers, featuring a data pipeline, interactive maps, and privacy-first account system. Demonstrates our capability in complex web application development.
 - [That Disability Adventure Company](https://bowermandigital.com/portfolio/that-disability-adventure-company): New website, SEO strategy, custom CRM, and email marketing program that grew monthly traffic from 90 to 500+ visitors while streamlining operations.
 - [Evie Graphic Design Portfolio](https://bowermandigital.com/portfolio/evie-graphic-design): A sleek portfolio site with responsive design and SEO integration that helped attract new clients and secure freelance projects.
+- [Crystal Caves Atherton](https://bowermandigital.com/portfolio/crystal-caves): A full website rebuild for the award-winning Atherton Tablelands crystal and geode attraction, designed to showcase the experience and improve discoverability through SEO and AI search optimisation (structured data and llms.txt).
 
 ## Contact & Location
 

@@ -119,6 +119,17 @@ Key achievements:
 - Helped secure multiple freelance projects
 - Fast load times with optimised imagery
 
+### Crystal Caves Atherton
+**URL:** https://bowermandigital.com/portfolio/crystal-caves
+
+A full website rebuild for Crystal Caves, an award-winning crystal, geode and fossil attraction in Atherton on the Queensland tablelands, just over an hour from Cairns. The brief was to redesign the site to clearly show off the attraction, and to make it far more discoverable through both traditional search and AI-powered answers.
+
+Key achievements:
+- Immersive, experience-led redesign that showcases the caves and René's collection
+- SEO foundations: titles, meta descriptions, alt text, Open Graph, and structured data
+- AI search optimisation via llms.txt and machine-readable content for AI recommendation
+- Fast, accessible, mobile-first build with a clear path to booking
+
 ---
 
 ## How We Work
