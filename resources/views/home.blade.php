@@ -43,38 +43,6 @@
   </div>
 </div>
 
-{{-- ─── Founder + testimonial ─── --}}
-<section class="bg-cream px-6 py-20 md:py-24">
-  <div class="mx-auto max-w-7xl">
-    {{-- Photo hidden until there's a real one. To restore: change the div below back to
-         class="grid items-center gap-10 md:grid-cols-[300px_1fr] md:gap-16" and uncomment the portrait. --}}
-    {{--
-      <div class="relative mx-auto h-[280px] w-[280px] opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="0">
-        <div class="absolute inset-0 translate-x-3 translate-y-3 rounded-full border-2 border-ink bg-mustard"></div>
-        <div class="relative flex h-full w-full items-center justify-center overflow-hidden rounded-full border-2 border-ink bg-[#eed9b2]">
-          <img src="{{ asset('images/jacob.webp') }}" alt="Jacob, founder of Bowerman Digital" class="h-full w-full object-cover">
-        </div>
-      </div>
-    --}}
-    <div class="mx-auto max-w-3xl text-center">
-      <div class="opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="0">
-        <p class="font-mono text-[13px] uppercase tracking-[0.2em] text-rust-deep">Who you'll work with</p>
-        <h2 class="mt-3.5 font-display text-3xl font-black md:text-4xl">Hi, I'm Jacob.</h2>
-        <p class="mx-auto mt-4 max-w-xl text-ink-soft">
-          I build websites and digital strategy for Australian small businesses. You deal with me from first chat to launch and beyond, so nothing gets lost in a hand-off. I'll explain what the robots are doing in plain English, and I won't use jargon unless you ask for it.
-        </p>
-        <p class="mt-4 font-display text-xl italic text-rust-deep">— Jacob, Bowerman Digital</p>
-
-        {{-- TODO: swap in a real client quote --}}
-        <blockquote class="sticker tilt-l mx-auto mt-8 max-w-xl bg-cream-3 px-8 py-7 text-left">
-          <p class="font-display text-lg italic leading-normal">"Jacob rebuilt our website and quietly fixed things we didn't know were broken. Bookings went up, admin went down, and I finally understand where our enquiries come from."</p>
-          <footer class="mt-3.5 font-mono text-[13px] text-ink-faint">That Disability Adventure Company</footer>
-        </blockquote>
-      </div>
-    </div>
-  </div>
-</section>
-
 {{-- ─── Work ─── --}}
 <section class="border-y-2 border-ink bg-cream-2 px-6 py-20 md:py-28">
   <div class="mx-auto max-w-7xl">
