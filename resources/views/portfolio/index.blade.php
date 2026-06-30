@@ -32,8 +32,27 @@
     </div>
 
     <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-      {{-- 1. Vizzbud --}}
-      <article class="sticker tilt-l overflow-hidden bg-cream opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="100">
+      {{-- 1. Crystal Caves (newest) --}}
+      <article class="sticker tilt-l overflow-hidden bg-cream-3 opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="100">
+        <a href="{{ url('/portfolio/crystal-caves') }}" class="block no-underline">
+          <div class="aspect-[16/9] overflow-hidden border-b-2 border-ink">
+            <img src="{{ asset('images/crystal/crystalHero.webp') }}" srcset="{{ asset('images/crystal/crystalHero-sm.webp') }} 640w, {{ asset('images/crystal/crystalHero.webp') }} 1920w" sizes="(max-width: 767px) 90vw, 30vw" alt="Crystal Caves Atherton website" width="1920" height="1280" class="retro-img h-full w-full object-cover object-center transition duration-700 hover:scale-[1.03]" loading="lazy">
+          </div>
+          <div class="p-6">
+            <div class="flex flex-wrap gap-2">
+              <span class="rounded-full border-[1.5px] border-ink bg-cream px-2.5 py-0.5 font-mono text-[11.5px] text-ink">Website Rebuild</span>
+              <span class="rounded-full border-[1.5px] border-ink bg-cream px-2.5 py-0.5 font-mono text-[11.5px] text-ink">SEO & AI Search</span>
+              <span class="rounded-full border-[1.5px] border-ink bg-cream px-2.5 py-0.5 font-mono text-[11.5px] text-ink">Tourism</span>
+            </div>
+            <h2 class="mt-3 font-display text-lg font-semibold">Crystal Caves</h2>
+            <p class="mt-1 text-sm text-ink-soft">A rebuild for the award-winning Atherton attraction, built to show off the experience and get discovered by AI and search.</p>
+            <div class="mt-4 font-mono text-sm font-bold text-rust-deep">View case study →</div>
+          </div>
+        </a>
+      </article>
+
+      {{-- 2. Vizzbud --}}
+      <article class="sticker tilt-r overflow-hidden bg-cream opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="150">
         <a href="{{ url('/portfolio/vizzbud') }}" class="block no-underline">
           <div class="aspect-[16/9] overflow-hidden border-b-2 border-ink">
             <img src="{{ asset('images/vizzbud/turtle.webp') }}" srcset="{{ asset('images/vizzbud/turtle-sm.webp') }} 640w, {{ asset('images/vizzbud/turtle.webp') }} 1280w" sizes="(max-width: 767px) 90vw, 30vw" alt="Vizzbud dive conditions platform" width="1280" height="720" class="retro-img h-full w-full object-cover object-top transition duration-700 hover:scale-[1.03]" loading="lazy">
@@ -51,8 +70,8 @@
         </a>
       </article>
 
-      {{-- 2. TDAC --}}
-      <article class="sticker tilt-r overflow-hidden bg-cream-3 opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="150">
+      {{-- 3. TDAC --}}
+      <article class="sticker tilt-l overflow-hidden bg-cream-3 opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="200">
         <a href="{{ url('/portfolio/that-disability-adventure-company') }}" class="block no-underline">
           <div class="aspect-[16/9] overflow-hidden border-b-2 border-ink">
             <img src="{{ asset('images/tdac/tdac.webp') }}" srcset="{{ asset('images/tdac/tdac-sm.webp') }} 640w, {{ asset('images/tdac/tdac.webp') }} 1980w" sizes="(max-width: 767px) 90vw, 30vw" alt="That Disability Adventure Company website" width="1980" height="1080" class="retro-img h-full w-full object-cover object-center transition duration-700 hover:scale-[1.03]" loading="lazy">
@@ -70,8 +89,8 @@
         </a>
       </article>
 
-      {{-- 3. Evie --}}
-      <article class="sticker tilt-l overflow-hidden bg-[#eed9b2] opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="200">
+      {{-- 4. Evie --}}
+      <article class="sticker tilt-r overflow-hidden bg-[#eed9b2] opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="250">
         <a href="{{ url('/portfolio/evie-graphic-design') }}" class="block no-underline">
           <div class="aspect-[16/9] overflow-hidden border-b-2 border-ink">
             <img src="{{ asset('images/evie/evie.webp') }}" srcset="{{ asset('images/evie/evie-sm.webp') }} 640w, {{ asset('images/evie/evie.webp') }} 1980w" sizes="(max-width: 767px) 90vw, 30vw" alt="Evie Bowerman portfolio" width="1980" height="1080" class="retro-img h-full w-full object-cover object-center transition duration-700 hover:scale-[1.03]" loading="lazy">

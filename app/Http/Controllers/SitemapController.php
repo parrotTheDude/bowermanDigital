@@ -21,6 +21,7 @@ class SitemapController extends Controller
             ['url' => '/portfolio/vizzbud',                     'priority' => 0.8,  'freq' => Url::CHANGE_FREQUENCY_MONTHLY, 'lastmod' => '2026-04-13'],
             ['url' => '/portfolio/that-disability-adventure-company', 'priority' => 0.8, 'freq' => Url::CHANGE_FREQUENCY_MONTHLY, 'lastmod' => '2026-04-13'],
             ['url' => '/portfolio/evie-graphic-design',         'priority' => 0.8,  'freq' => Url::CHANGE_FREQUENCY_MONTHLY, 'lastmod' => '2026-04-13'],
+            ['url' => '/portfolio/crystal-caves',               'priority' => 0.8,  'freq' => Url::CHANGE_FREQUENCY_MONTHLY, 'lastmod' => '2026-06-16'],
             ['url' => '/contact',                               'priority' => 0.7,  'freq' => Url::CHANGE_FREQUENCY_MONTHLY, 'lastmod' => '2026-04-13'],
         ];
 

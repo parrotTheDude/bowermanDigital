@@ -110,8 +110,25 @@
       </a>
     </article>
 
-    {{-- Supporting: Vizzbud + Evie --}}
-    <div class="mt-5 grid gap-5 md:grid-cols-2">
+    {{-- Supporting: Crystal Caves + Vizzbud + Evie --}}
+    <div class="mt-5 grid gap-5 md:grid-cols-3">
+      {{-- Crystal Caves (newest) — placeholder tile until a screenshot lands --}}
+      <article class="sticker tilt-l overflow-hidden bg-cream opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="150">
+        <a href="{{ url('/portfolio/crystal-caves') }}" class="block no-underline">
+          <div class="aspect-[16/9] overflow-hidden border-b-2 border-ink">
+            <img src="{{ asset('images/crystal/crystalHero.webp') }}" srcset="{{ asset('images/crystal/crystalHero-sm.webp') }} 640w, {{ asset('images/crystal/crystalHero.webp') }} 1920w" sizes="(max-width: 767px) 90vw, 30vw" alt="Crystal Caves Atherton website" width="1920" height="1280" class="retro-img h-full w-full object-cover object-center transition duration-700 hover:scale-[1.03]" loading="lazy">
+          </div>
+          <div class="p-6">
+            <div class="mb-3 flex flex-wrap gap-2">
+              <span class="rounded-full border-[1.5px] border-ink bg-cream px-2.5 py-0.5 font-mono text-[11.5px]">Tourism</span>
+              <span class="rounded-full border-[1.5px] border-ink bg-cream px-2.5 py-0.5 font-mono text-[11.5px]">SEO &amp; AI</span>
+            </div>
+            <h3 class="font-display text-lg font-semibold">Crystal Caves</h3>
+            <p class="mt-1.5 text-[15px] text-ink-soft">Rebuilt the site for an award-winning Atherton attraction to show it off and get it found by AI and search.</p>
+            <span class="mt-3.5 inline-block font-mono text-sm font-bold text-rust-deep">View case study →</span>
+          </div>
+        </a>
+      </article>
       @php
         $projects = [
           ['href' => '/portfolio/vizzbud', 'img' => 'images/vizzbud/turtle', 'alt' => 'Vizzbud dive conditions platform', 'tags' => ['iOS','Android','Web'], 'h' => 'Vizzbud', 'p' => 'My own project: realtime dive conditions and a logbook for divers, on web, iOS and Android.'],
@@ -119,7 +136,7 @@
         ];
       @endphp
       @foreach ($projects as $i => $pr)
-        <article class="sticker {{ $i % 2 ? 'tilt-r' : 'tilt-l' }} overflow-hidden bg-cream opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="{{ 150 + $i*50 }}">
+        <article class="sticker {{ $i % 2 ? 'tilt-l' : 'tilt-r' }} overflow-hidden bg-cream opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="{{ 200 + $i*50 }}">
           <a href="{{ url($pr['href']) }}" class="block no-underline">
             <div class="aspect-[16/9] overflow-hidden border-b-2 border-ink">
               <img src="{{ asset($pr['img'].'.webp') }}"
