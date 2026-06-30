@@ -23,6 +23,7 @@ class SitemapController extends Controller
             ['url' => '/portfolio/evie-graphic-design',         'priority' => 0.8,  'freq' => Url::CHANGE_FREQUENCY_MONTHLY, 'lastmod' => '2026-06-30'],
             ['url' => '/portfolio/crystal-caves',               'priority' => 0.8,  'freq' => Url::CHANGE_FREQUENCY_MONTHLY, 'lastmod' => '2026-06-30'],
             ['url' => '/contact',                               'priority' => 0.7,  'freq' => Url::CHANGE_FREQUENCY_MONTHLY, 'lastmod' => '2026-06-30'],
+            ['url' => '/privacy',                               'priority' => 0.3,  'freq' => Url::CHANGE_FREQUENCY_YEARLY,  'lastmod' => '2026-06-30'],
         ];
 
         foreach ($pages as $page) {

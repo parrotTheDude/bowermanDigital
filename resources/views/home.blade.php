@@ -195,7 +195,7 @@
       <a href="{{ url('/contact') }}" class="btn-retro">Start a project with us</a>
     </div>
     <div class="mt-7 flex items-center justify-center gap-2 font-mono text-[13px] text-[#fff7ea]/85 opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="150">
-      <span class="inline-block h-2 w-2 animate-pulse rounded-full bg-mustard"></span>
+      <span class="inline-block h-2 w-2 animate-pulse rounded-full bg-emerald-400"></span>
       Currently open for new projects
     </div>
   </div>

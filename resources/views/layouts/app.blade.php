@@ -171,9 +171,9 @@
         {{-- Bottom --}}
         <div class="h-px w-full bg-cream/15"></div>
         <div class="-mt-3 flex flex-col items-center gap-3 sm:flex-row sm:justify-between sm:w-full">
-          <p class="font-mono text-xs text-cream/60">&copy; {{ date('Y') }} Bowerman Digital</p>
+          <p class="font-mono text-xs text-cream/60">&copy; {{ date('Y') }} Bowerman Digital &middot; <a href="{{ url('/privacy') }}" class="transition hover:text-mustard">Privacy</a></p>
           <div class="flex items-center gap-1.5 font-mono text-xs text-cream/60">
-            <span class="inline-block h-1.5 w-1.5 rounded-full bg-mustard animate-pulse"></span>
+            <span class="inline-block h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
             Open for new projects
           </div>
         </div>

@@ -10,6 +10,9 @@ Route::view('/', 'home')->name('home');
 Route::view('/services', 'services')->name('services');
 // Route::view('/blog', 'blog')->name('blog'); // uncomment when blog view is built
 
+// Legal
+Route::view('/privacy', 'privacy')->name('privacy');
+
 // Contact
 Route::view('/contact', 'contact')->name('contact');
 Route::post('/contact', [ContactController::class, 'submit'])
