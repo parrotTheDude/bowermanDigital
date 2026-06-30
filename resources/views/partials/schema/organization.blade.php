@@ -26,6 +26,12 @@
     ],
     'priceRange' => '$$',
     'knowsLanguage' => 'en-AU',
-    'sameAs' => [],
+    // sameAs links your business to its profiles elsewhere — strengthens entity/AI recognition.
+    // Uncomment and set your real profile URLs (LinkedIn, Instagram, Google Business Profile, etc.).
+    'sameAs' => array_values(array_filter([
+        // 'https://www.linkedin.com/company/bowerman-digital',
+        // 'https://www.instagram.com/bowermandigital',
+        // 'https://www.facebook.com/bowermandigital',
+    ])),
 ], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}
 </script>

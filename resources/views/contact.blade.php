@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Contact | Bowerman Digital')
-@section('meta_description', 'Ready to grow? Contact Bowerman Digital for AI search optimisation, AI-ready web development, and digital strategy. Based in Sydney, one client at a time.')
+@section('meta_description', 'Ready to grow? Contact Bowerman Digital for AI search optimisation, AI-ready web development, and digital strategy. Based in Sydney, same-day replies.')
 
 @push('head')
   <style>
@@ -215,7 +215,7 @@
           <ul class="mt-3 space-y-2.5">
             <li class="flex items-start gap-2.5">
               <svg class="mt-0.5 h-4 w-4 shrink-0 text-rust-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              <span class="text-sm text-ink-soft">One client at a time, full focus on you</span>
+              <span class="text-sm text-ink-soft">You work directly with the person building it</span>
             </li>
             <li class="flex items-start gap-2.5">
               <svg class="mt-0.5 h-4 w-4 shrink-0 text-rust-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>

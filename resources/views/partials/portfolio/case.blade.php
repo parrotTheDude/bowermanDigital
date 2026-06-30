@@ -32,6 +32,27 @@
 
   $moreWork     = $moreWork     ?? null; // ['title'=>'','subtitle'=>'','img'=>'','href'=>url(...),'label'=>'...']
   $relatedServices = $relatedServices ?? []; // [['label'=>'AI Search Optimisation','href'=>url('/services').'#ai-search'], ...]
+
+  // ===== Responsive image helpers =====
+  // Resolve a path that may be local ('images/..') or absolute ('http..'/'/..').
+  $imgSrc = function ($p) {
+    return \Illuminate\Support\Str::startsWith($p, ['http', '/']) ? $p : asset($p);
+  };
+  // Emit a srcset using a '-sm' variant for local .webp images (mobile gets the small file).
+  // Falls back to no srcset for absolute URLs or non-webp.
+  $imgSrcset = function ($p, $fullW = 1600) {
+    if (\Illuminate\Support\Str::startsWith($p, ['http']) || ! \Illuminate\Support\Str::endsWith($p, '.webp')) {
+      return null;
+    }
+    $sm = preg_replace('/\.webp$/', '-sm.webp', $p);
+    $smPath = public_path(ltrim($sm, '/'));
+    if (! is_file($smPath)) {
+      return null; // no -sm generated; skip srcset rather than 404
+    }
+    $base = \Illuminate\Support\Str::startsWith($p, '/') ? $p : asset($p);
+    $smUrl = \Illuminate\Support\Str::startsWith($sm, '/') ? $sm : asset($sm);
+    return $smUrl . ' 640w, ' . $base . ' ' . $fullW . 'w';
+  };
 @endphp
 
 <section class="relative bg-cream">
@@ -103,10 +124,9 @@
               <div class="aspect-[16/9]">
                 <picture>
                   @php
-                    $isAbsolute = \Illuminate\Support\Str::startsWith($heroImage, ['http','/']);
-                    $src = $isAbsolute ? $heroImage : asset($heroImage);
+                    $src = $imgSrc($heroImage);
+                    $set = $imgSrcset($heroImage, 1600);
                   @endphp
-                  <source srcset="{{ $src }}" type="image/webp">
                   <img
                     src="{{ $src }}"
                     alt="{{ $title }} hero"
@@ -115,9 +135,7 @@
                     decoding="async"
                     fetchpriority="high"
                     sizes="(min-width: 1280px) 960px, (min-width: 768px) 80vw, 100vw"
-                    srcset="
-                      {{ $src }} 960w
-                    "
+                    @if($set) srcset="{{ $set }}" @endif
                   >
                 </picture>
               </div>
@@ -174,13 +192,13 @@
         <h2 class="font-display text-xl font-black text-ink">Highlights</h2>
         <div class="mt-4 grid gap-4 md:grid-cols-2">
           <figure class="sticker tilt-l bg-cream p-3">
-            <img class="retro-img w-full rounded-lg" src="{{ asset($beforeAfter['before']) }}" alt="{{ $beforeAfter['caption_before'] ?? $title . ' — before' }}" loading="lazy" width="800" height="450">
+            <img class="retro-img w-full rounded-lg" src="{{ $imgSrc($beforeAfter['before']) }}" @if($s = $imgSrcset($beforeAfter['before'], 1200)) srcset="{{ $s }}" sizes="(min-width: 768px) 45vw, 90vw" @endif alt="{{ $beforeAfter['caption_before'] ?? $title . ' — before' }}" loading="lazy" width="800" height="450">
             <figcaption class="mt-2 font-mono text-[13px] text-ink-faint">
               {{ $beforeAfter['caption_before'] ?? 'Refreshed homepage' }}
             </figcaption>
           </figure>
           <figure class="sticker tilt-r bg-cream p-3">
-            <img class="retro-img w-full rounded-lg" src="{{ asset($beforeAfter['after']) }}" alt="{{ $beforeAfter['caption_after'] ?? $title . ' — after' }}" loading="lazy" width="800" height="450">
+            <img class="retro-img w-full rounded-lg" src="{{ $imgSrc($beforeAfter['after']) }}" @if($s = $imgSrcset($beforeAfter['after'], 1200)) srcset="{{ $s }}" sizes="(min-width: 768px) 45vw, 90vw" @endif alt="{{ $beforeAfter['caption_after'] ?? $title . ' — after' }}" loading="lazy" width="800" height="450">
             <figcaption class="mt-2 font-mono text-[13px] text-ink-faint">
               {{ $beforeAfter['caption_after'] ?? 'Activities page' }}
             </figcaption>
@@ -224,7 +242,8 @@
               {{-- Single image — centered --}}
               <div class="mt-5 flex justify-center">
                 <div class="sticker overflow-hidden bg-cream max-w-md">
-                  <img src="{{ \Illuminate\Support\Str::startsWith($ch['images'][0],['http','/']) ? $ch['images'][0] : asset($ch['images'][0]) }}"
+                  <img src="{{ $imgSrc($ch['images'][0]) }}"
+                      @if($s = $imgSrcset($ch['images'][0], 900)) srcset="{{ $s }}" sizes="(min-width: 768px) 28rem, 90vw" @endif
                       alt="{{ $ch['title'] ?? 'chapter' }}"
                       class="retro-img w-full"
                       loading="lazy">
@@ -235,7 +254,8 @@
               <div class="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2">
                 @foreach($ch['images'] as $img)
                   <div class="sticker {{ $loop->index % 2 ? 'tilt-r' : 'tilt-l' }} overflow-hidden bg-cream">
-                    <img src="{{ \Illuminate\Support\Str::startsWith($img,['http','/']) ? $img : asset($img) }}"
+                    <img src="{{ $imgSrc($img) }}"
+                        @if($s = $imgSrcset($img, 1200)) srcset="{{ $s }}" sizes="(min-width: 768px) 45vw, 90vw" @endif
                         alt="{{ $ch['title'] ?? 'chapter' }}"
                         class="retro-img w-full"
                         loading="lazy">
@@ -260,7 +280,8 @@
         <div class="mt-4 grid gap-6 md:grid-cols-2">
           @foreach($screens as $i => $img)
             <figure class="sticker {{ $i % 2 ? 'tilt-r' : 'tilt-l' }} bg-cream p-3">
-              <img src="{{ \Illuminate\Support\Str::startsWith($img, ['http','/']) ? $img : asset($img) }}"
+              <img src="{{ $imgSrc($img) }}"
+                  @if($s = $imgSrcset($img, 1200)) srcset="{{ $s }}" sizes="(min-width: 768px) 45vw, 90vw" @endif
                   alt="{{ $captions[$i] ?? $title . ' screenshot ' . ($i+1) }}"
                   class="retro-img w-full rounded-lg"
                   loading="lazy"
@@ -275,7 +296,8 @@
     @elseif(!empty($screens))
       <div class="mx-auto mt-12 max-w-5xl flex justify-center">
         <div class="sticker w-full max-w-5xl overflow-hidden bg-cream">
-          <img src="{{ \Illuminate\Support\Str::startsWith($screens[0], ['http','/']) ? $screens[0] : asset($screens[0]) }}"
+          <img src="{{ $imgSrc($screens[0]) }}"
+              @if($s = $imgSrcset($screens[0], 1600)) srcset="{{ $s }}" sizes="(min-width: 1024px) 64rem, 90vw" @endif
               alt="{{ $title }} screenshot"
               class="retro-img w-full"
               loading="lazy" width="960" height="490">
@@ -428,7 +450,8 @@
           <div class="sticker tilt-l relative bg-cream-3 p-5">
             @if(!empty($moreWork['img']))
               <div class="flex justify-center overflow-hidden rounded-xl border-2 border-ink">
-                <img src="{{ asset($moreWork['img']) }}" alt="{{ $moreWork['title'] ?? 'Project' }}"
+                <img src="{{ $imgSrc($moreWork['img']) }}" alt="{{ $moreWork['title'] ?? 'Project' }}"
+                     @if($s = $imgSrcset($moreWork['img'], 1200)) srcset="{{ $s }}" sizes="(min-width: 768px) 56rem, 90vw" @endif
                      class="retro-img max-w-full transform-gpu transition duration-700 group-hover:scale-[1.02]"
                      loading="lazy" width="800" height="437">
               </div>

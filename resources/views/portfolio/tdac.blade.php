@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'That Disability Adventure Company | Bowerman Digital')
+@section('title', 'That Disability Adventure Company Case Study | Bowerman Digital')
 @section('meta_description', "Website redesign and growth program for TDAC: clearer story, faster site, better SEO, and a simpler way for families to get in touch.")
 
 @section('og_image', asset('images/tdac/tdac.webp'))

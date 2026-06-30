@@ -49,7 +49,7 @@
           'name' => 'How soon can we get started?',
           'acceptedAnswer' => [
             '@type' => 'Answer',
-            'text' => 'Most projects kick off in about a week or two. Quick jobs like an AI readiness audit or llms.txt implementation can start even faster.',
+            'text' => 'Most projects kick off in about a week or two. Quick jobs like an llms.txt implementation or a single landing page can start even faster.',
           ],
         ],
         [
@@ -65,7 +65,7 @@
           'name' => 'How much does a project cost?',
           'acceptedAnswer' => [
             '@type' => 'Answer',
-            'text' => 'It depends on the scope, but we\'re always upfront about pricing. After an initial chat we\'ll give you a clear quote with no hidden fees. AI audits and llms.txt implementation are quick, affordable starting points.',
+            'text' => 'It depends on the scope, but we\'re always upfront about pricing. After an initial chat we\'ll give you a clear quote with no hidden fees. An llms.txt implementation or a single landing page are quick, affordable starting points.',
           ],
         ],
       ],
@@ -103,7 +103,7 @@
           <li class="flex gap-2"><span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rust"></span> Content optimised for AI retrieval and citation</li>
         </ul>
         <div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-1">
-          <a href="{{ url('/contact') }}" class="font-mono text-sm font-bold text-rust-deep transition-colors hover:text-rust-deep">Get an AI audit &rarr;</a>
+          <a href="{{ url('/contact') }}" class="font-mono text-sm font-bold text-rust-deep transition-colors hover:text-rust-deep">Start a project &rarr;</a>
           <a href="{{ url('/portfolio/that-disability-adventure-company') }}" class="font-mono text-xs text-ink-faint transition-colors hover:text-ink">See TDAC results</a>
         </div>
       </div>
@@ -205,7 +205,7 @@
       @php
         $steps = [
           ['num' => '01', 'title' => 'Chat', 'desc' => 'We learn about your business, goals, and where you stand with AI and digital. No commitments, just a conversation.'],
-          ['num' => '02', 'title' => 'Audit', 'desc' => 'We run a free AI readiness check: how you show up in AI search, what your site signals to machines, and where the gaps are.'],
+          ['num' => '02', 'title' => 'Review', 'desc' => 'We look at how you show up in AI search, what your site signals to machines, and where the gaps are.'],
           ['num' => '03', 'title' => 'Plan', 'desc' => 'We map out the best approach, timeline, and budget. Clear priorities, no surprises.'],
           ['num' => '04', 'title' => 'Build', 'desc' => 'You see regular updates as we bring it to life. AI optimisation, web development, and automation. Implemented, not just recommended.'],
           ['num' => '05', 'title' => 'Grow', 'desc' => 'Ongoing support and optimisation. The AI landscape moves fast, and we keep your business ahead of it.'],
@@ -265,10 +265,10 @@
 <section class="relative z-20 overflow-hidden border-t-2 border-ink bg-rust px-6 pt-14 pb-16 md:pt-20 md:pb-24 text-center">
   <div class="relative mx-auto max-w-3xl opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="0">
     <span class="mx-auto mb-3 block w-fit font-mono text-[13px] uppercase tracking-[0.2em] text-[#fff7ea]/85">Ready?</span>
-    <h2 class="font-display text-3xl font-black !text-[#fff7ea] md:text-4xl">Find out if your business is AI-ready</h2>
-    <p class="mx-auto mt-4 max-w-lg text-[#fff7ea]/90">Tell us about your business and we'll send you a free AI readiness audit. No strings. Just clarity.</p>
+    <h2 class="font-display text-3xl font-black !text-[#fff7ea] md:text-4xl">Ready when you are</h2>
+    <p class="mx-auto mt-4 max-w-lg text-[#fff7ea]/90">Tell us about your business and what you need. We'll come back with a clear, no-obligation proposal in plain English.</p>
     <div class="mt-8 flex justify-center">
-      <a href="{{ url('/contact') }}" class="btn-retro">Get your free AI audit</a>
+      <a href="{{ url('/contact') }}" class="btn-retro">Start a project with us</a>
     </div>
   </div>
 </section>

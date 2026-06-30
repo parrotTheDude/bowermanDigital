@@ -15,14 +15,14 @@ class SitemapController extends Controller
         // 'lastmod': update when the page's content actually changes.
         // Using real dates (not now()) so crawlers can trust the signal.
         $pages = [
-            ['url' => '/',                                      'priority' => 1.0,  'freq' => Url::CHANGE_FREQUENCY_WEEKLY,  'lastmod' => '2026-04-13'],
-            ['url' => '/services',                              'priority' => 0.9,  'freq' => Url::CHANGE_FREQUENCY_MONTHLY, 'lastmod' => '2026-04-13'],
-            ['url' => '/portfolio',                             'priority' => 0.9,  'freq' => Url::CHANGE_FREQUENCY_MONTHLY, 'lastmod' => '2026-04-13'],
-            ['url' => '/portfolio/vizzbud',                     'priority' => 0.8,  'freq' => Url::CHANGE_FREQUENCY_MONTHLY, 'lastmod' => '2026-04-13'],
-            ['url' => '/portfolio/that-disability-adventure-company', 'priority' => 0.8, 'freq' => Url::CHANGE_FREQUENCY_MONTHLY, 'lastmod' => '2026-04-13'],
-            ['url' => '/portfolio/evie-graphic-design',         'priority' => 0.8,  'freq' => Url::CHANGE_FREQUENCY_MONTHLY, 'lastmod' => '2026-04-13'],
-            ['url' => '/portfolio/crystal-caves',               'priority' => 0.8,  'freq' => Url::CHANGE_FREQUENCY_MONTHLY, 'lastmod' => '2026-06-16'],
-            ['url' => '/contact',                               'priority' => 0.7,  'freq' => Url::CHANGE_FREQUENCY_MONTHLY, 'lastmod' => '2026-04-13'],
+            ['url' => '/',                                      'priority' => 1.0,  'freq' => Url::CHANGE_FREQUENCY_WEEKLY,  'lastmod' => '2026-06-30'],
+            ['url' => '/services',                              'priority' => 0.9,  'freq' => Url::CHANGE_FREQUENCY_MONTHLY, 'lastmod' => '2026-06-30'],
+            ['url' => '/portfolio',                             'priority' => 0.9,  'freq' => Url::CHANGE_FREQUENCY_MONTHLY, 'lastmod' => '2026-06-30'],
+            ['url' => '/portfolio/vizzbud',                     'priority' => 0.8,  'freq' => Url::CHANGE_FREQUENCY_MONTHLY, 'lastmod' => '2026-06-30'],
+            ['url' => '/portfolio/that-disability-adventure-company', 'priority' => 0.8, 'freq' => Url::CHANGE_FREQUENCY_MONTHLY, 'lastmod' => '2026-06-30'],
+            ['url' => '/portfolio/evie-graphic-design',         'priority' => 0.8,  'freq' => Url::CHANGE_FREQUENCY_MONTHLY, 'lastmod' => '2026-06-30'],
+            ['url' => '/portfolio/crystal-caves',               'priority' => 0.8,  'freq' => Url::CHANGE_FREQUENCY_MONTHLY, 'lastmod' => '2026-06-30'],
+            ['url' => '/contact',                               'priority' => 0.7,  'freq' => Url::CHANGE_FREQUENCY_MONTHLY, 'lastmod' => '2026-06-30'],
         ];
 
         foreach ($pages as $page) {

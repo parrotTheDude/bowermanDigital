@@ -14,19 +14,19 @@
 {{-- ─── Hero ─── --}}
 <section class="relative overflow-hidden bg-cream">
   <div class="hero-burst" aria-hidden="true"></div>
-  <div class="relative mx-auto max-w-7xl px-6 pt-28 pb-16 text-center md:pt-36 md:pb-20">
-    <p class="font-mono text-[13px] uppercase tracking-[0.2em] text-rust-deep opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="0">Sydney, Australia &middot; a one-person studio</p>
+  <div class="relative mx-auto max-w-7xl px-6 pt-28 pb-16 text-center md:pl-24 md:pt-36 md:pb-20">
+    <p class="font-mono text-[13px] uppercase tracking-[0.2em] text-rust-deep opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="0">Web, AI &amp; automation &middot; Sydney, Australia</p>
 
     <h1 class="mx-auto mt-6 max-w-3xl font-display text-4xl font-black leading-[1.06] tracking-tight md:text-6xl opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="50">
-      Tired of web devs who <span class="echo-retro">ghost</span> you?
+      Tired of your web person <span class="echo-retro">not replying</span> for days?
     </h1>
 
-    <p class="mx-auto mt-7 max-w-xl text-lg text-ink-soft md:text-xl opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="100">
-      I answer the same day, build things properly, and get your website ready for the AI era. So when someone asks AI for the best in your industry, the answer is you.
-    </p>
+    <h2 class="mx-auto mt-6 max-w-2xl font-display text-xl font-semibold text-ink md:text-2xl opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="75">
+      Website design, SEO and AI search optimisation for Australian small businesses.
+    </h2>
 
     <div class="mt-10 flex flex-wrap justify-center gap-4 opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="150">
-      <a href="{{ url('/contact') }}" class="btn-retro btn-retro-solid">Get your free AI audit</a>
+      <a href="{{ url('/contact') }}" class="btn-retro btn-retro-solid">Start a project with us</a>
       <a href="{{ url('/portfolio') }}" class="btn-retro">See our work</a>
     </div>
 
@@ -61,7 +61,7 @@
         <p class="font-mono text-[13px] uppercase tracking-[0.2em] text-rust-deep">Who you'll work with</p>
         <h2 class="mt-3.5 font-display text-3xl font-black md:text-4xl">Hi, I'm Jacob.</h2>
         <p class="mx-auto mt-4 max-w-xl text-ink-soft">
-          I build websites and digital strategy for Australian small businesses, one client at a time, so your project is never the small one on someone's list. You deal with me from first chat to launch and beyond. I'll explain what the robots are doing in plain English, and I won't use jargon unless you ask for it.
+          I build websites and digital strategy for Australian small businesses. You deal with me from first chat to launch and beyond, so nothing gets lost in a hand-off. I'll explain what the robots are doing in plain English, and I won't use jargon unless you ask for it.
         </p>
         <p class="mt-4 font-display text-xl italic text-rust-deep">— Jacob, Bowerman Digital</p>
 
@@ -83,66 +83,50 @@
       <a href="{{ url('/portfolio') }}" class="font-mono text-sm font-bold text-rust-deep opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="50">All case studies →</a>
     </div>
 
-    {{-- Featured: TDAC --}}
+    {{-- Featured: Crystal Caves (newest) --}}
     <article class="sticker overflow-hidden bg-cream opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="100">
-      <a href="{{ url('/portfolio/that-disability-adventure-company') }}" class="grid no-underline md:grid-cols-2">
+      <a href="{{ url('/portfolio/crystal-caves') }}" class="grid no-underline md:grid-cols-2">
         <div class="overflow-hidden border-b-2 border-ink md:border-b-0 md:border-r-2">
-          <img src="{{ asset('images/tdac/tdac.webp') }}"
-               srcset="{{ asset('images/tdac/tdac-sm.webp') }} 640w, {{ asset('images/tdac/tdac.webp') }} 1280w"
+          <img src="{{ asset('images/crystal/crystalHero.webp') }}"
+               srcset="{{ asset('images/crystal/crystalHero-sm.webp') }} 640w, {{ asset('images/crystal/crystalHero.webp') }} 1600w"
                sizes="(max-width: 767px) 90vw, 45vw"
-               alt="That Disability Adventure Company website" width="1280" height="720" loading="lazy"
-               class="retro-img h-full w-full object-cover object-top transition duration-700 hover:scale-[1.02]">
+               alt="Crystal Caves Atherton website" width="1600" height="1067" loading="lazy"
+               class="retro-img h-full w-full object-cover object-center transition duration-700 hover:scale-[1.02]">
         </div>
         <div class="flex flex-col justify-center p-7 md:p-10">
           <div class="flex flex-wrap gap-2">
-            <span class="rounded-full border-[1.5px] border-ink bg-cream px-2.5 py-0.5 font-mono text-[11.5px]">SEO</span>
-            <span class="rounded-full border-[1.5px] border-ink bg-cream px-2.5 py-0.5 font-mono text-[11.5px]">CRM</span>
-            <span class="rounded-full border-[1.5px] border-ink bg-cream px-2.5 py-0.5 font-mono text-[11.5px]">Email</span>
+            <span class="rounded-full border-[1.5px] border-ink bg-cream px-2.5 py-0.5 font-mono text-[11.5px]">Website Rebuild</span>
+            <span class="rounded-full border-[1.5px] border-ink bg-cream px-2.5 py-0.5 font-mono text-[11.5px]">SEO &amp; AI Search</span>
+            <span class="rounded-full border-[1.5px] border-ink bg-cream px-2.5 py-0.5 font-mono text-[11.5px]">Tourism</span>
           </div>
-          <h3 class="mt-4 font-display text-2xl font-black md:text-3xl">That Disability Adventure Company</h3>
-          <p class="mt-3 text-ink-soft">Rebuilt the website to get them discovered, and built the CRM that now runs their participants, staff and bookings.</p>
+          <h3 class="mt-4 font-display text-2xl font-black md:text-3xl">Crystal Caves</h3>
+          <p class="mt-3 text-ink-soft">A rebuild for one of the Atherton Tablelands' best-loved attractions, designed to show off René's caves and get the whole experience found by AI and search.</p>
           <div class="mt-6 border-t-2 border-ink pt-4">
-            <b class="font-display text-3xl font-black text-rust-deep md:text-4xl">90 &rarr; 500+</b>
-            <span class="block font-mono text-[13px] text-ink-faint">monthly visitors after the rebuild</span>
+            <b class="font-display text-2xl font-black text-rust-deep md:text-3xl">Award-winning attraction</b>
+            <span class="block font-mono text-[13px] text-ink-faint">600+ crystals, just over an hour from Cairns</span>
           </div>
           <span class="mt-6 inline-block font-mono text-sm font-bold text-rust-deep">Read the full story →</span>
         </div>
       </a>
     </article>
 
-    {{-- Supporting: Crystal Caves + Vizzbud + Evie --}}
+    {{-- Supporting: Vizzbud + TDAC + Evie --}}
     <div class="mt-5 grid gap-5 md:grid-cols-3">
-      {{-- Crystal Caves (newest) — placeholder tile until a screenshot lands --}}
-      <article class="sticker tilt-l overflow-hidden bg-cream opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="150">
-        <a href="{{ url('/portfolio/crystal-caves') }}" class="block no-underline">
-          <div class="aspect-[16/9] overflow-hidden border-b-2 border-ink">
-            <img src="{{ asset('images/crystal/crystalHero.webp') }}" srcset="{{ asset('images/crystal/crystalHero-sm.webp') }} 640w, {{ asset('images/crystal/crystalHero.webp') }} 1920w" sizes="(max-width: 767px) 90vw, 30vw" alt="Crystal Caves Atherton website" width="1920" height="1280" class="retro-img h-full w-full object-cover object-center transition duration-700 hover:scale-[1.03]" loading="lazy">
-          </div>
-          <div class="p-6">
-            <div class="mb-3 flex flex-wrap gap-2">
-              <span class="rounded-full border-[1.5px] border-ink bg-cream px-2.5 py-0.5 font-mono text-[11.5px]">Tourism</span>
-              <span class="rounded-full border-[1.5px] border-ink bg-cream px-2.5 py-0.5 font-mono text-[11.5px]">SEO &amp; AI</span>
-            </div>
-            <h3 class="font-display text-lg font-semibold">Crystal Caves</h3>
-            <p class="mt-1.5 text-[15px] text-ink-soft">Rebuilt the site for an award-winning Atherton attraction to show it off and get it found by AI and search.</p>
-            <span class="mt-3.5 inline-block font-mono text-sm font-bold text-rust-deep">View case study →</span>
-          </div>
-        </a>
-      </article>
       @php
         $projects = [
-          ['href' => '/portfolio/vizzbud', 'img' => 'images/vizzbud/turtle', 'alt' => 'Vizzbud dive conditions platform', 'tags' => ['iOS','Android','Web'], 'h' => 'Vizzbud', 'p' => 'My own project: realtime dive conditions and a logbook for divers, on web, iOS and Android.'],
-          ['href' => '/portfolio/evie-graphic-design', 'img' => 'images/evie/evie', 'alt' => 'Evie graphic design portfolio website', 'tags' => ['Portfolio','Design'], 'h' => 'Evie Graphic Design', 'p' => 'A sleek portfolio that wins freelance clients on its own.'],
+          ['href' => '/portfolio/vizzbud', 'img' => 'images/vizzbud/vizzbud-feature', 'w' => 992, 'alt' => 'Vizzbud dive conditions platform', 'tags' => ['iOS','Android','Web'], 'h' => 'Vizzbud', 'p' => 'My own project: realtime dive conditions and a logbook for divers, on web, iOS and Android.'],
+          ['href' => '/portfolio/that-disability-adventure-company', 'img' => 'images/tdac/tdac', 'w' => 1280, 'alt' => 'That Disability Adventure Company website', 'tags' => ['SEO','CRM','Email'], 'h' => 'That Disability Adventure Company', 'p' => 'Rebuilt the site and built the CRM that runs their participants and staff. Traffic went 90 to 500+.'],
+          ['href' => '/portfolio/evie-graphic-design', 'img' => 'images/evie/evie', 'w' => 1280, 'alt' => 'Evie graphic design portfolio website', 'tags' => ['Portfolio','Design'], 'h' => 'Evie Graphic Design', 'p' => 'A sleek portfolio that wins freelance clients on its own.'],
         ];
       @endphp
       @foreach ($projects as $i => $pr)
-        <article class="sticker {{ $i % 2 ? 'tilt-l' : 'tilt-r' }} overflow-hidden bg-cream opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="{{ 200 + $i*50 }}">
+        <article class="sticker {{ $i % 2 ? 'tilt-r' : 'tilt-l' }} overflow-hidden bg-cream opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="{{ 150 + $i*50 }}">
           <a href="{{ url($pr['href']) }}" class="block no-underline">
             <div class="aspect-[16/9] overflow-hidden border-b-2 border-ink">
               <img src="{{ asset($pr['img'].'.webp') }}"
-                   srcset="{{ asset($pr['img'].'-sm.webp') }} 640w, {{ asset($pr['img'].'.webp') }} 1280w"
-                   sizes="(max-width: 767px) 90vw, 45vw"
-                   alt="{{ $pr['alt'] }}" width="1280" height="720" loading="lazy"
+                   srcset="{{ asset($pr['img'].'-sm.webp') }} 640w, {{ asset($pr['img'].'.webp') }} {{ $pr['w'] }}w"
+                   sizes="(max-width: 767px) 90vw, 30vw"
+                   alt="{{ $pr['alt'] }}" width="{{ $pr['w'] }}" height="720" loading="lazy"
                    class="retro-img h-full w-full object-cover object-top transition duration-700 hover:scale-[1.03]">
             </div>
             <div class="p-6">
@@ -205,33 +189,27 @@
       <p class="max-w-sm text-ink-soft opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="50">You deal with me the whole way through. There is no one to be handed off to.</p>
     </div>
 
-    <div class="relative grid overflow-hidden rounded-[20px] border-2 border-ink md:grid-cols-3 opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="100">
+    <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
       @php
         $steps = [
-          ['n' => '01', 'w' => 'Week one',      'bg' => 'bg-cream',     'h' => 'Audit', 'p' => "First I look at what the robots currently say about you. Sometimes it's nothing. Sometimes it's worse than nothing.", 'g' => 'you get: a plain-English report, free'],
-          ['n' => '02', 'w' => 'Weeks two on',  'bg' => 'bg-cream-3',   'h' => 'Build', 'p' => "Then I fix it: site, structured data, llms.txt, automations. I build things rather than write reports about them.", 'g' => 'you get: weekly updates, a site you own'],
-          ['n' => '03', 'w' => 'Ongoing',       'bg' => 'bg-[#e9e3c6]', 'h' => 'Grow',  'p' => "The platforms keep moving, so we keep adjusting. Month to month. Leave whenever you like.", 'g' => 'you get: monthly check-ins, no lock-in'],
+          ['n' => '01', 'bg' => 'bg-cream',     'h' => 'You get in touch', 'p' => "Tell me what's not working. You'll hear back from me, not a form letter — usually the same day.", 'g' => 'a real reply, fast'],
+          ['n' => '02', 'bg' => 'bg-cream-3',   'h' => 'We have a chat',    'p' => "A proper call to talk through what you want and set clear expectations, so we both know what 'done' looks like.", 'g' => 'a call, no pressure'],
+          ['n' => '03', 'bg' => 'bg-[#eed9b2]', 'h' => 'A free proposal',   'p' => "I put together a clear proposal — what I'll do, what it costs, how long it takes — in plain English. No obligation.", 'g' => 'a clear proposal, free'],
+          ['n' => '04', 'bg' => 'bg-[#e9e3c6]', 'h' => 'We build it',       'p' => "If you're happy, we kick off. I keep you in the loop the whole way through, until it's finished and handed over.", 'g' => 'updates the whole way'],
         ];
       @endphp
       @foreach ($steps as $i => $st)
-        <div class="{{ $st['bg'] }} flex flex-col border-ink p-9 {{ $i < 2 ? 'border-b-2 md:border-b-0 md:border-r-2' : '' }}">
-          <div class="flex items-baseline justify-between gap-3">
-            <span class="font-display text-5xl font-black text-rust">{{ $st['n'] }}</span>
-            <span class="font-mono text-[12px] uppercase tracking-[0.15em] text-ink-faint">{{ $st['w'] }}</span>
-          </div>
-          <h3 class="mt-3.5 mb-2.5 font-display text-xl font-semibold">{{ $st['h'] }}</h3>
-          <p class="text-[15.5px] text-ink-soft">{{ $st['p'] }}</p>
-          <p class="mt-auto pt-5 font-mono text-[12px] font-bold text-rust-deep">{{ $st['g'] }}</p>
-        </div>
+        <article class="sticker {{ $i % 2 ? 'tilt-r' : 'tilt-l' }} {{ $st['bg'] }} flex flex-col p-7 opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="{{ 100 + $i*50 }}">
+          <span class="font-display text-4xl font-black text-rust">{{ $st['n'] }}</span>
+          <h3 class="mt-3.5 mb-2 font-display text-xl font-semibold">{{ $st['h'] }}</h3>
+          <p class="text-[15px] text-ink-soft">{{ $st['p'] }}</p>
+          <p class="mt-auto pt-5 font-mono text-[12px] font-bold text-rust-deep">you get: {{ $st['g'] }}</p>
+        </article>
       @endforeach
-
-      {{-- Arrow badges on the seams (desktop) --}}
-      <div class="pointer-events-none absolute left-1/3 top-1/2 hidden h-10 w-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 border-ink bg-mustard font-display text-lg font-black text-ink md:flex" aria-hidden="true">→</div>
-      <div class="pointer-events-none absolute left-2/3 top-1/2 hidden h-10 w-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 border-ink bg-mustard font-display text-lg font-black text-ink md:flex" aria-hidden="true">→</div>
     </div>
 
     <p class="mt-8 text-center font-mono text-[13px] text-ink-faint opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="150">
-      Most projects kick off within a week or two. And yes, I really do reply the same day.
+      No jargon, no lock-in, and no disappearing — you're kept in the loop from the first chat to the finished site.
     </p>
   </div>
 </section>
@@ -243,14 +221,14 @@
       Let's make you <span class="[text-shadow:5px_5px_0_#bd4f1a]">findable.</span>
     </h2>
     <p class="mx-auto mt-5 mb-10 max-w-lg text-lg text-[#fff7ea]/90 opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="50">
-      Tell me about your business and I'll send back a free, plain-English read on how visible you are to AI, and whether it's worth fixing.
+      Tell me about your business and what's not working. I'll come back to you the same day with a plan, in plain English and no obligation.
     </p>
     <div class="opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="100">
-      <a href="{{ url('/contact') }}" class="btn-retro">Get your free AI audit</a>
+      <a href="{{ url('/contact') }}" class="btn-retro">Start a project with us</a>
     </div>
     <div class="mt-7 flex items-center justify-center gap-2 font-mono text-[13px] text-[#fff7ea]/85 opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="150">
       <span class="inline-block h-2 w-2 animate-pulse rounded-full bg-mustard"></span>
-      Currently taking on one new client
+      Currently open for new projects
     </div>
   </div>
 </section>

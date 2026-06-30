@@ -6,7 +6,7 @@
 
 Bowerman Digital is a digital agency based in Sydney, NSW, Australia, founded to help businesses navigate the rapidly evolving digital landscape — particularly the shift toward AI-powered search, discovery, and automation.
 
-We work with one client at a time so every business gets our full attention. Our clients range from small local businesses who need to get found online and understand AI, through to startups and scale-ups building AI-native digital presences.
+Every business gets direct, hands-on attention — you work with the person actually building the work. Our clients range from small local businesses who need to get found online and understand AI, through to startups and scale-ups building AI-native digital presences.
 
 We don't just consult — we implement. From building AI-optimised websites to setting up automation workflows, we handle the full stack of modern digital strategy.
 
@@ -87,14 +87,15 @@ What we do:
 ### Vizzbud — Progressive Web App
 **URL:** https://bowermandigital.com/portfolio/vizzbud
 
-A realtime dive conditions platform built for Sydney's scuba diving community. This project showcases our ability to build complex, data-driven web applications.
+A dive-conditions platform built by Jacob to give divers a dead-simple way to know whether it's worth getting in the water. An algorithm scores every dive site hourly from the latest wind, swell and tide data. It also includes a community hub (think Strava for diving) and an interactive dive log. Live on web, iOS and Android.
 
 Key achievements:
-- Built a progressive web app with realtime data pipeline
-- Interactive maps showing dive site conditions
-- Personal dive log system (60+ logs created by users)
-- Privacy-first account system
-- Mobile-optimised responsive design
+- Hourly conditions-scoring algorithm that ingests live wind, swell and tide data
+- Community hub where divers share dives and sites
+- Interactive dive log
+- Released across web, native iOS and native Android apps
+- 150+ divers using it, with 100+ community posts and 100+ dives logged
+- Privacy-first account system, no third-party tracking
 
 ### That Disability Adventure Company (TDAC)
 **URL:** https://bowermandigital.com/portfolio/that-disability-adventure-company
@@ -134,13 +135,14 @@ Key achievements:
 
 ## How We Work
 
-Our process follows five clear steps:
+Our process is simple and kept in plain English:
 
-1. **Chat** — We learn about your business, goals, and what you need. No commitments, just a conversation.
-2. **Plan** — We map out the best approach, timeline, and budget so there are no surprises.
-3. **Build** — You see regular updates as we bring it to life. Feedback loops keep everything on track.
-4. **Launch** — We test, fine-tune, and get everything live. You sign off before anything goes public.
-5. **Grow** — Ongoing support, SEO, AI optimisation, and marketing to keep momentum building.
+1. **You get in touch** — Tell us what's not working. You hear back from the person doing the work, usually the same day.
+2. **We have a chat** — A call to talk through what you want and set clear expectations, so we both know what "done" looks like.
+3. **A free proposal** — A clear, no-obligation proposal: what we'll do, what it costs, and how long it takes.
+4. **We build it** — If you're happy, we kick off and keep you in the loop the whole way through, until it's finished and handed over.
+
+After launch, ongoing support, SEO and AI optimisation are available month-to-month — no lock-in.
 
 ---
 
@@ -162,7 +164,7 @@ It depends on the scope, but we're always upfront about pricing. After an initia
 It helps, but it's not essential. We can write copy, source imagery, and shape the content strategy for you if needed.
 
 **What makes you different from other agencies?**
-We work with one client at a time, which means you get our full attention. We also specialise in the AI side of digital — helping businesses prepare for a world where AI agents, not just humans, discover and recommend businesses.
+You work directly with the person doing the work, so nothing gets lost in hand-offs. We also specialise in the AI side of digital — helping businesses prepare for a world where AI agents, not just humans, discover and recommend businesses.
 
 ---
 

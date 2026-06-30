@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Evie Graphic Design Portfolio | Bowerman Digital')
+@section('title', 'Evie Graphic Design Portfolio Case Study | Bowerman Digital')
 @section('meta_description', "Clean, fast portfolio that puts Evie's work first. Simple to browse, great on mobile, and easy to keep updated.")
 
 @section('og_image', asset('images/evie/evie.webp'))

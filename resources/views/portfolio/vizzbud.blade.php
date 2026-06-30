@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
-@section('title', 'Vizzbud | Bowerman Digital')
-@section('meta_description', "Realtime dive conditions and a slick logbook for Sydney divers. Fast, accurate, and privacy-first.")
+@section('title', 'Vizzbud — Dive Conditions App Case Study | Bowerman Digital')
+@section('meta_description', "Vizzbud scores dive conditions hourly so divers know if it's worth getting in the water, with a community hub and dive log. Live on web, iOS and Android.")
 
-@section('og_image', asset('images/vizzbud/turtle.webp'))
+@section('og_image', asset('images/vizzbud/vizzbud-feature.webp'))
 
 @push('schema')
   @include('partials.schema.breadcrumb', ['breadcrumbs' => [
@@ -16,69 +16,68 @@
 @section('content')
   @include('partials.portfolio.case', [
     'title'     => 'Vizzbud',
-    'summary'   => "A lightweight tool that gives Sydney divers realtime site conditions (wind, swell, tides & more) plus a beautifully simple dive log. Built for speed, accuracy, and repeat use.",
+    'summary'   => "Vizzbud is a project I built to give divers a dead-simple way to check dive conditions. An algorithm scores every site hourly from the latest wind, swell and tide data, so you know at a glance whether it's worth getting in the water. There's also a community hub — think Strava for diving — and an interactive dive log. Now live on web, iOS and Android.",
     'liveUrl'   => 'https://vizzbud.com/',
     'industry'  => 'Outdoor Recreation / Marine',
 
     // Keep services human + outcome-oriented
     'services'  => [
-      'Progressive Web App (PWA)',
-      'Realtime conditions pipeline (wind/swell/tide)',
-      'Sydney site database + map',
-      'Dive log with photos, stats & gear',
-      'Account system + privacy controls',
-      'Email notices (tide windows, conditions)',
-      'Analytics with zero tracking creep',
+      'Hourly conditions-scoring algorithm',
+      'Web app + native iOS & Android apps',
+      'Community hub (like Strava for diving)',
+      'Interactive dive log',
+      'Live wind, swell & tide ingestion',
+      'Dive site database + map',
+      'Accounts + privacy controls',
     ],
 
     // Hero (swap to your preferred hero asset)
-    'heroImage' => 'images/vizzbud/turtle.webp',
+    'heroImage' => 'images/vizzbud/vizzbud-feature.webp',
 
     // Goals (clear, user-centric)
     'goals' => [
-      ['label' => "Check if it's worth the drive", 'value' => 'Realtime local conditions at a glance'],
-      ['label' => "Log dives you're proud of",     'value' => 'Fast, photo-first, auto-captured stats'],
-      ['label' => 'Come back often',               'value' => 'Snappy PWA + useful notifications'],
+      ['label' => "Know if it's worth the drive", 'value' => 'An hourly score for every site'],
+      ['label' => 'Share the stoke',              'value' => 'A community hub built for divers'],
+      ['label' => 'Log every dive',               'value' => 'A dive log you actually use'],
     ],
 
-    // Headline metrics (marketable, diver-friendly)
+    // Headline metrics
     'metrics' => [
-      ['label' => 'Time to conditions', 'value' => '< 2 seconds'],
-      ['label' => 'Users',      'value' => '23+'],
-      ['label' => 'Dive logs created',  'value' => '60+'],
+      ['label' => 'Divers using it', 'value' => '150+'],
+      ['label' => 'Community posts', 'value' => '100+'],
+      ['label' => 'Dives logged',    'value' => '100+'],
     ],
 
     // Challenge (plain-English)
-    'challenge' => "Divers needed one trustworthy place to check today's conditions per site (not generic ocean forecasts) and a way to log dives quickly without wrestling a bloated app. Prior tools were either slow, global, or ad-heavy, and didn't fit how Sydney shore dives actually work.",
+    'challenge' => "Divers had no easy way to know whether a site was worth the drive. Generic ocean forecasts don't tell you much about a specific shore dive, and the apps that existed were slow, global, or buried under ads. I wanted one place that scored real conditions for each site, and gave divers somewhere to log and share their dives.",
 
-    // What we did (concise, user-first)
-    'whatWeDid' => "• Created a lightweight app divers can save to their phone and use anywhere.\n
-    • Pulled in the latest wind, swell, and tide data for each Sydney dive site.\n
-    • Designed simple cards that highlight if conditions look good, with details just a tap away.\n
-    • Built a photo-led dive log that auto-fills key info like tide, time, and weather.\n
-    • Added handy extras: bookmark favourite sites, get gentle reminders when conditions look good, and keep full control of your privacy.\n
-    • Made sure it's fast and reliable, so it works smoothly even with spotty reception.\n
-    • Kept the focus on divers' needs, not ads or noise. Just clean, useful tools.",
+    // What I did (concise, first-person — it's my own project)
+    'whatWeDid' => "• Built an algorithm that ingests the latest wind, swell and tide data every hour and turns it into a simple score for each dive site.\n
+    • Designed clean cards so you can tell at a glance whether it's worth getting in the water.\n
+    • Added a community hub — think Strava for diving — where divers share dives and sites.\n
+    • Built an interactive dive log that records your dives and auto-fills the conditions.\n
+    • Released it everywhere: a fast web app plus native iOS and Android apps.\n
+    • Kept it quick, private, and free of ads or noise.",
 
     // Highlights (rename images to match your assets)
     'beforeAfter' => [
-      'before'         => 'images/vizzbud/sitemap.webp', // dive site map / conditions
-      'after'          => 'images/vizzbud/divelog.webp', // dive logbook entry
+      'before'         => 'images/vizzbud/sitemap2.webp', // dive site map / conditions
+      'after'          => 'images/vizzbud/divelog2.webp', // dive logbook entry
       'caption_before' => 'Interactive dive site map with live conditions',
       'caption_after'  => 'Streamlined dive log to record dives quickly',
     ],
 
     // Screens (extra showcase)
     'screens' => [
-      'images/vizzbud/home.webp',
-      'images/vizzbud/divelogger.webp',
+      'images/vizzbud/home2.webp',
+      'images/vizzbud/community.webp',
     ],
     'captions' => [
       'Home page for Vizzbud',
-      'Dive Logger page',
+      'Community page',
     ],
 
-    'result' => "Vizzbud gives divers the confidence to plan smarter and log easier. Conditions are clear at a glance, the logbook feels effortless to use, and it all works offline right at the pier. By focusing on speed, simplicity, and privacy, we built something divers actually enjoy coming back to. Not just another app they forget about.",
+    'result' => "Vizzbud now has 150+ divers using it, with 100+ community posts and 100+ dives logged, across web, iOS and Android. Divers get a clear read on conditions before they leave home, a community to share with, and a logbook they actually come back to. Not just another app they forget about.",
 
     'tools' => [
       'Laravel', 'Tailwind CSS', 'PWA', 'MySQL',
@@ -92,8 +91,9 @@
     ],
 
     'faqs' => [
-      ['q' => 'Does Vizzbud work offline?', 'a' => 'Yes. It\'s a Progressive Web App, so divers can check cached conditions and log dives even without reception at the pier.'],
-      ['q' => 'Where does the conditions data come from?', 'a' => 'Realtime data is pulled from official Australian Bureau of Meteorology feeds, plus tide and swell sources specific to Sydney dive sites.'],
+      ['q' => 'How does the conditions score work?', 'a' => 'An algorithm ingests the latest wind, swell and tide data for each dive site every hour and turns it into a single, easy score, so you can tell at a glance whether it\'s worth getting in the water without reading a full forecast.'],
+      ['q' => 'Can I get Vizzbud on my phone?', 'a' => 'Yes. Vizzbud is live on web plus native iOS and Android apps, so you can check conditions, log dives and join the community wherever you are.'],
+      ['q' => 'What\'s the community hub?', 'a' => 'It\'s a bit like Strava for diving: divers share their dives and favourite sites, and interact with each other\'s logs. There are already 100+ community posts and 100+ dives logged.'],
       ['q' => 'Is my data private?', 'a' => 'Absolutely. Vizzbud uses privacy-first analytics with no third-party tracking. Dive logs and personal data stay under the diver\'s control.'],
     ],
 

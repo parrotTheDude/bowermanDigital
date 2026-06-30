@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Portfolio | Bowerman Digital')
+@section('title', 'Our Work — Web, SEO &amp; AI Case Studies | Bowerman Digital')
 @section('meta_description', 'Selected work from Bowerman Digital. AI-ready websites, search optimisation, CRM automation, and digital strategy that delivers measurable growth for Australian businesses.')
 
 
@@ -36,7 +36,7 @@
       <article class="sticker tilt-l overflow-hidden bg-cream-3 opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="100">
         <a href="{{ url('/portfolio/crystal-caves') }}" class="block no-underline">
           <div class="aspect-[16/9] overflow-hidden border-b-2 border-ink">
-            <img src="{{ asset('images/crystal/crystalHero.webp') }}" srcset="{{ asset('images/crystal/crystalHero-sm.webp') }} 640w, {{ asset('images/crystal/crystalHero.webp') }} 1920w" sizes="(max-width: 767px) 90vw, 30vw" alt="Crystal Caves Atherton website" width="1920" height="1280" class="retro-img h-full w-full object-cover object-center transition duration-700 hover:scale-[1.03]" loading="lazy">
+            <img src="{{ asset('images/crystal/crystalHero.webp') }}" srcset="{{ asset('images/crystal/crystalHero-sm.webp') }} 640w, {{ asset('images/crystal/crystalHero.webp') }} 1600w" sizes="(max-width: 767px) 90vw, 30vw" alt="Crystal Caves Atherton website" width="1600" height="1067" class="retro-img h-full w-full object-cover object-center transition duration-700 hover:scale-[1.03]" loading="lazy">
           </div>
           <div class="p-6">
             <div class="flex flex-wrap gap-2">
@@ -55,7 +55,7 @@
       <article class="sticker tilt-r overflow-hidden bg-cream opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="150">
         <a href="{{ url('/portfolio/vizzbud') }}" class="block no-underline">
           <div class="aspect-[16/9] overflow-hidden border-b-2 border-ink">
-            <img src="{{ asset('images/vizzbud/turtle.webp') }}" srcset="{{ asset('images/vizzbud/turtle-sm.webp') }} 640w, {{ asset('images/vizzbud/turtle.webp') }} 1280w" sizes="(max-width: 767px) 90vw, 30vw" alt="Vizzbud dive conditions platform" width="1280" height="720" class="retro-img h-full w-full object-cover object-top transition duration-700 hover:scale-[1.03]" loading="lazy">
+            <img src="{{ asset('images/vizzbud/vizzbud-feature.webp') }}" srcset="{{ asset('images/vizzbud/vizzbud-feature-sm.webp') }} 640w, {{ asset('images/vizzbud/vizzbud-feature.webp') }} 992w" sizes="(max-width: 767px) 90vw, 30vw" alt="Vizzbud dive conditions platform" width="992" height="500" class="retro-img h-full w-full object-cover object-center transition duration-700 hover:scale-[1.03]" loading="lazy">
           </div>
           <div class="p-6">
             <div class="flex flex-wrap gap-2">
@@ -118,7 +118,7 @@
         </h2>
 
         <div class="mt-6 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-center">
-          <a href="{{ url('/contact') }}" class="btn-retro btn-retro-solid text-center sm:w-auto">Get your free AI audit</a>
+          <a href="{{ url('/contact') }}" class="btn-retro btn-retro-solid text-center sm:w-auto">Start a project with us</a>
           <a href="{{ url('/services') }}" class="btn-retro text-center sm:w-auto">Explore services</a>
         </div>
       </div>

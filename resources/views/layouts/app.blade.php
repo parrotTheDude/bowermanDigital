@@ -174,7 +174,7 @@
           <p class="font-mono text-xs text-cream/60">&copy; {{ date('Y') }} Bowerman Digital</p>
           <div class="flex items-center gap-1.5 font-mono text-xs text-cream/60">
             <span class="inline-block h-1.5 w-1.5 rounded-full bg-mustard animate-pulse"></span>
-            One client at a time
+            Open for new projects
           </div>
         </div>
 

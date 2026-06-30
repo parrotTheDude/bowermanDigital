@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Crystal Caves Atherton | Bowerman Digital')
+@section('title', 'Crystal Caves Atherton Website Case Study | Bowerman Digital')
 @section('meta_description', "Website rebuild for Crystal Caves, the award-winning Atherton Tablelands attraction. Built to show off the experience and get discovered by AI and search.")
 
 @section('og_image', asset('images/crystal/crystalHero.webp'))
@@ -38,16 +38,16 @@
       ['label' => 'Make booking easy',       'value' => 'Clear path to "Book Now"'],
     ],
 
-    'challenge' => "Crystal Caves is a genuinely one-of-a-kind experience: a man-made cave packed with over 600 crystals and fossils, built over decades by René Boissevain. The brief was twofold. First, the site needed to do the attraction justice, conveying the wonder of actually walking through the caves rather than just describing it. Second, it needed to be far more discoverable, both in traditional search and in the new world of AI-powered answers, so that a family searching for things to do near Cairns actually finds it.",
+    'challenge' => "Crystal Caves is a one-of-a-kind experience: a man-made cave packed with over 600 crystals and fossils, built over decades by René Boissevain. The owner came with a clear, forward-looking brief. She wanted a modern website ready for the AI era, not just one that ranked on Google, but one that AI crawlers could read and understand, so Crystal Caves would show up in AI answers when someone asks what to do in Cairns or the Atherton Tablelands. The old site didn't show off the attraction, and AI had very little to go on.",
 
-    'whatWeDid' => "• Redesigned the site around the experience, leading with bold, immersive imagery so visitors feel the caves before they arrive.\n
+    'whatWeDid' => "• Built a clean, modern website that finally shows off the attraction, leading with bold imagery of the caves.\n
     • Told René's story properly, giving the man and his lifelong collection the spotlight they deserve.\n
-    • Built strong SEO foundations: clean titles, meta descriptions, alt text, Open Graph, and structured data throughout.\n
-    • Implemented AI search optimisation, including an llms.txt and machine-readable content, so AI tools can accurately recommend Crystal Caves.\n
-    • Made the path to booking obvious, with a clear, repeated route to 'Book Now'.\n
-    • Built it fast, accessible, and mobile-first, with an accessibility menu for every kind of visitor.",
+    • Engineered for ultra crawlability: clean semantic markup, fast loads, and structured data throughout.\n
+    • Implemented AI search optimisation with an llms.txt and machine-readable content, so AI tools can read and recommend Crystal Caves for Cairns and Atherton Tablelands questions.\n
+    • Covered the SEO foundations: titles, meta descriptions, alt text, Open Graph, and schema.\n
+    • Made it fast, accessible, and mobile-first, with a clear path to 'Book Now' and an accessibility menu for every kind of visitor.",
 
-    'result' => "A site that finally matches the attraction: immersive, fast, and genuinely discoverable. Visitors get a real sense of René's world before they arrive, and both search engines and AI tools can now understand and recommend Crystal Caves with confidence.",
+    'result' => "A new, clean website that shows off the business the way it deserves, and is built for the AI era. Visitors get a real feel for René's world before they arrive, while ultra-crawlable markup and AI search optimisation mean Crystal Caves can now surface in AI answers when people ask what to do around Cairns and the Atherton Tablelands.",
 
     'tools' => [
       'Laravel', 'Tailwind CSS', 'Vite', 'WebP Optimisation',
@@ -66,7 +66,18 @@
       ['q' => 'Is the site accessible?', 'a' => 'Yes. It is built mobile-first and includes an accessibility menu with options for vision, reading, motion and contrast, so the experience works for as many visitors as possible.'],
     ],
 
-    {{-- TODO (images): once you have screenshots, add 'beforeAfter', 'screens' + 'captions', and/or 'chapters' here. The case template renders them automatically. --}}
+    'screens' => [
+      'images/crystal/home.webp',
+      'images/crystal/home2.webp',
+      'images/crystal/home3.webp',
+      'images/crystal/home4.webp',
+    ],
+    'captions' => [
+      'A bold new homepage that leads with the caves',
+      "René's story and the experience, told properly",
+      'Clean, fast, and easy to navigate to a booking',
+      'Built to show off the attraction at every scroll',
+    ],
 
     'moreWork'  => [
       'title'    => 'That Disability Adventure Company',
