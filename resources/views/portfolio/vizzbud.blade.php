@@ -16,7 +16,7 @@
 @section('content')
   @include('partials.portfolio.case', [
     'title'     => 'Vizzbud',
-    'summary'   => "Vizzbud is a project I built to give divers a dead-simple way to check dive conditions. An algorithm scores every site hourly from the latest wind, swell and tide data, so you know at a glance whether it's worth getting in the water. There's also a community hub — think Strava for diving — and an interactive dive log. Now live on web, iOS and Android.",
+    'summary'   => "Vizzbud is a project we built to give divers a dead-simple way to check dive conditions. An algorithm scores every site hourly from the latest wind, swell and tide data, so you know at a glance whether it's worth getting in the water. There's also a community hub — think Strava for diving — and an interactive dive log. Now live on web, iOS and Android.",
     'liveUrl'   => 'https://vizzbud.com/',
     'industry'  => 'Outdoor Recreation / Marine',
 
@@ -49,9 +49,9 @@
     ],
 
     // Challenge (plain-English)
-    'challenge' => "Divers had no easy way to know whether a site was worth the drive. Generic ocean forecasts don't tell you much about a specific shore dive, and the apps that existed were slow, global, or buried under ads. I wanted one place that scored real conditions for each site, and gave divers somewhere to log and share their dives.",
+    'challenge' => "Divers had no easy way to know whether a site was worth the drive. Generic ocean forecasts don't tell you much about a specific shore dive, and the apps that existed were slow, global, or buried under ads. We wanted one place that scored real conditions for each site, and gave divers somewhere to log and share their dives.",
 
-    // What I did (concise, first-person — it's my own project)
+    // What we did (concise)
     'whatWeDid' => "• Built an algorithm that ingests the latest wind, swell and tide data every hour and turns it into a simple score for each dive site.\n
     • Designed clean cards so you can tell at a glance whether it's worth getting in the water.\n
     • Added a community hub — think Strava for diving — where divers share dives and sites.\n

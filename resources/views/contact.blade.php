@@ -179,6 +179,8 @@
               </button>
             </div>
             <p class="mt-3 text-xs text-ink-faint">
+              We'll only use your details to reply to your enquiry — see our
+              <a href="{{ url('/privacy') }}" class="underline">Privacy Policy</a>.
               This site is protected by reCAPTCHA and the Google
               <a href="https://policies.google.com/privacy" class="underline" rel="noopener noreferrer">Privacy Policy</a> and
               <a href="https://policies.google.com/terms" class="underline" rel="noopener noreferrer">Terms of Service</a> apply.
@@ -196,15 +198,15 @@
           <ol class="mt-3 space-y-3">
             <li class="flex items-start gap-3">
               <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border-2 border-ink bg-mustard text-xs font-bold text-ink">1</span>
-              <p class="text-sm text-ink-soft">We'll review your brief within one business day.</p>
+              <p class="text-base text-ink-soft">We'll review your brief within one business day.</p>
             </li>
             <li class="flex items-start gap-3">
               <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border-2 border-ink bg-mustard text-xs font-bold text-ink">2</span>
-              <p class="text-sm text-ink-soft">We'll reply with questions or a free proposal.</p>
+              <p class="text-base text-ink-soft">We'll reply with questions or a free proposal.</p>
             </li>
             <li class="flex items-start gap-3">
               <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border-2 border-ink bg-mustard text-xs font-bold text-ink">3</span>
-              <p class="text-sm text-ink-soft">Once aligned, we kick off and keep you in the loop weekly.</p>
+              <p class="text-base text-ink-soft">Once aligned, we kick off and keep you in the loop weekly.</p>
             </li>
           </ol>
         </div>
@@ -215,19 +217,19 @@
           <ul class="mt-3 space-y-2.5">
             <li class="flex items-start gap-2.5">
               <svg class="mt-0.5 h-4 w-4 shrink-0 text-rust-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              <span class="text-sm text-ink-soft">You work directly with the person building it</span>
+              <span class="text-base text-ink-soft">You work directly with the person building it</span>
             </li>
             <li class="flex items-start gap-2.5">
               <svg class="mt-0.5 h-4 w-4 shrink-0 text-rust-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              <span class="text-sm text-ink-soft">Sydney-based, available AEST hours</span>
+              <span class="text-base text-ink-soft">Sydney-based, available AEST hours</span>
             </li>
             <li class="flex items-start gap-2.5">
               <svg class="mt-0.5 h-4 w-4 shrink-0 text-rust-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              <span class="text-sm text-ink-soft">No lock-in contracts, month to month</span>
+              <span class="text-base text-ink-soft">No lock-in contracts, month to month</span>
             </li>
             <li class="flex items-start gap-2.5">
               <svg class="mt-0.5 h-4 w-4 shrink-0 text-rust-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              <span class="text-sm text-ink-soft">Transparent pricing, no hidden fees</span>
+              <span class="text-base text-ink-soft">Transparent pricing, no hidden fees</span>
             </li>
           </ul>
         </div>
@@ -257,7 +259,7 @@
           <svg class="h-5 w-5 text-ink" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
         </div>
         <h2 class="mt-3 font-display text-sm font-black text-ink">Based in</h2>
-        <p class="mt-1 text-sm text-ink-soft">Sydney, Australia</p>
+        <p class="mt-1 text-base text-ink-soft">Sydney, Australia</p>
       </div>
 
       {{-- Response time --}}
@@ -266,7 +268,7 @@
           <svg class="h-5 w-5 text-ink" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
         </div>
         <h2 class="mt-3 font-display text-sm font-black text-ink">Response time</h2>
-        <p class="mt-1 text-sm text-ink-soft">Within 1 business day</p>
+        <p class="mt-1 text-base text-ink-soft">Within 1 business day</p>
       </div>
 
     </div>

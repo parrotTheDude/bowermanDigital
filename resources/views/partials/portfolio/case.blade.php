@@ -67,7 +67,7 @@
           {{ $title }} <span class="flash align-baseline text-rust">|</span>
         </h1>
         @if($summary)
-          <p class="mt-2 text-sm text-ink-soft md:mt-4 md:text-base">{{ $summary }}</p>
+          <p class="mt-2 text-base text-ink-soft md:mt-4">{{ $summary }}</p>
         @endif
       </div>
 
@@ -378,7 +378,7 @@
                 <svg class="faq-chevron h-4 w-4 shrink-0 text-ink-faint transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
               </button>
               <div class="faq-body hidden px-5 pb-4">
-                <p class="text-sm text-ink-soft">{{ $faq['a'] }}</p>
+                <p class="text-base text-ink-soft">{{ $faq['a'] }}</p>
               </div>
             </div>
           @endforeach

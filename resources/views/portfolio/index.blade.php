@@ -27,83 +27,83 @@
   <div class="relative z-10 mx-auto max-w-7xl px-6 pt-20 pb-10 md:pt-28">
     <div class="mx-auto max-w-3xl text-center">
       <p class="font-mono text-[13px] uppercase tracking-[0.2em] text-rust-deep opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="0">Selected work</p>
-      <h1 class="mt-4 font-display text-4xl font-black md:text-5xl opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="50">Projects we have made</h1>
-      <p class="mt-4 text-ink-soft opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="100">Real results for real businesses, from AI-ready websites to full digital strategy. Here's what we've built.</p>
+      <h1 class="mt-4 font-display text-4xl font-black md:text-5xl opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="50">Work we're proud of</h1>
+      <p class="mt-4 text-ink-soft opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="100">Real results for real businesses — from AI-ready websites to full digital strategy. Here's a look at what we've built.</p>
     </div>
 
     <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       {{-- 1. Crystal Caves (newest) --}}
       <article class="sticker tilt-l overflow-hidden bg-cream-3 opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="100">
-        <a href="{{ url('/portfolio/crystal-caves') }}" class="block no-underline">
+        <a href="{{ url('/portfolio/crystal-caves') }}" class="flex h-full flex-col no-underline">
           <div class="aspect-[16/9] overflow-hidden border-b-2 border-ink">
             <img src="{{ asset('images/crystal/crystalHero.webp') }}" srcset="{{ asset('images/crystal/crystalHero-sm.webp') }} 640w, {{ asset('images/crystal/crystalHero.webp') }} 1600w" sizes="(max-width: 767px) 90vw, 30vw" alt="Crystal Caves Atherton website" width="1600" height="1067" class="retro-img h-full w-full object-cover object-center transition duration-700 hover:scale-[1.03]" loading="lazy">
           </div>
-          <div class="p-6">
+          <div class="flex flex-1 flex-col p-6">
             <div class="flex flex-wrap gap-2">
               <span class="rounded-full border-[1.5px] border-ink bg-cream px-2.5 py-0.5 font-mono text-[11.5px] text-ink">Website Rebuild</span>
               <span class="rounded-full border-[1.5px] border-ink bg-cream px-2.5 py-0.5 font-mono text-[11.5px] text-ink">SEO & AI Search</span>
               <span class="rounded-full border-[1.5px] border-ink bg-cream px-2.5 py-0.5 font-mono text-[11.5px] text-ink">Tourism</span>
             </div>
             <h2 class="mt-3 font-display text-lg font-semibold">Crystal Caves</h2>
-            <p class="mt-1 text-sm text-ink-soft">A rebuild for the award-winning Atherton attraction, built to show off the experience and get discovered by AI and search.</p>
-            <div class="mt-4 font-mono text-sm font-bold text-rust-deep">View case study →</div>
+            <p class="mt-1 text-base text-ink-soft">A rebuild for the award-winning Atherton attraction, built to show off the experience and get discovered by AI and search.</p>
+            <div class="mt-auto pt-4 font-mono text-sm font-bold text-rust-deep">View case study →</div>
           </div>
         </a>
       </article>
 
       {{-- 2. Vizzbud --}}
       <article class="sticker tilt-r overflow-hidden bg-cream opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="150">
-        <a href="{{ url('/portfolio/vizzbud') }}" class="block no-underline">
+        <a href="{{ url('/portfolio/vizzbud') }}" class="flex h-full flex-col no-underline">
           <div class="aspect-[16/9] overflow-hidden border-b-2 border-ink">
             <img src="{{ asset('images/vizzbud/vizzbud-feature.webp') }}" srcset="{{ asset('images/vizzbud/vizzbud-feature-sm.webp') }} 640w, {{ asset('images/vizzbud/vizzbud-feature.webp') }} 992w" sizes="(max-width: 767px) 90vw, 30vw" alt="Vizzbud dive conditions platform" width="992" height="500" class="retro-img h-full w-full object-cover object-center transition duration-700 hover:scale-[1.03]" loading="lazy">
           </div>
-          <div class="p-6">
+          <div class="flex flex-1 flex-col p-6">
             <div class="flex flex-wrap gap-2">
               <span class="rounded-full border-[1.5px] border-ink bg-cream px-2.5 py-0.5 font-mono text-[11.5px] text-ink">AI-Ready Web App</span>
               <span class="rounded-full border-[1.5px] border-ink bg-cream px-2.5 py-0.5 font-mono text-[11.5px] text-ink">PWA</span>
               <span class="rounded-full border-[1.5px] border-ink bg-cream px-2.5 py-0.5 font-mono text-[11.5px] text-ink">Realtime Data</span>
             </div>
             <h2 class="mt-3 font-display text-lg font-semibold">Vizzbud</h2>
-            <p class="mt-1 text-sm text-ink-soft">A progressive web app giving Sydney divers realtime conditions, tide windows, and a personal dive log.</p>
-            <div class="mt-4 font-mono text-sm font-bold text-rust-deep">View case study →</div>
+            <p class="mt-1 text-base text-ink-soft">A progressive web app giving Sydney divers realtime conditions, tide windows, and a personal dive log.</p>
+            <div class="mt-auto pt-4 font-mono text-sm font-bold text-rust-deep">View case study →</div>
           </div>
         </a>
       </article>
 
       {{-- 3. TDAC --}}
       <article class="sticker tilt-l overflow-hidden bg-cream-3 opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="200">
-        <a href="{{ url('/portfolio/that-disability-adventure-company') }}" class="block no-underline">
+        <a href="{{ url('/portfolio/that-disability-adventure-company') }}" class="flex h-full flex-col no-underline">
           <div class="aspect-[16/9] overflow-hidden border-b-2 border-ink">
             <img src="{{ asset('images/tdac/tdac.webp') }}" srcset="{{ asset('images/tdac/tdac-sm.webp') }} 640w, {{ asset('images/tdac/tdac.webp') }} 1980w" sizes="(max-width: 767px) 90vw, 30vw" alt="That Disability Adventure Company website" width="1980" height="1080" class="retro-img h-full w-full object-cover object-center transition duration-700 hover:scale-[1.03]" loading="lazy">
           </div>
-          <div class="p-6">
+          <div class="flex flex-1 flex-col p-6">
             <div class="flex flex-wrap gap-2">
               <span class="rounded-full border-[1.5px] border-ink bg-cream px-2.5 py-0.5 font-mono text-[11.5px] text-ink">AI-Ready Website</span>
               <span class="rounded-full border-[1.5px] border-ink bg-cream px-2.5 py-0.5 font-mono text-[11.5px] text-ink">SEO & AI Search</span>
               <span class="rounded-full border-[1.5px] border-ink bg-cream px-2.5 py-0.5 font-mono text-[11.5px] text-ink">CRM Automation</span>
             </div>
             <h2 class="mt-3 font-display text-lg font-semibold">That Disability Adventure Company</h2>
-            <p class="mt-1 text-sm text-ink-soft">A new website, SEO strategy, and CRM program that grew monthly traffic from 90 to 500+ visitors.</p>
-            <div class="mt-4 font-mono text-sm font-bold text-rust-deep">View case study →</div>
+            <p class="mt-1 text-base text-ink-soft">A new website, SEO strategy, and CRM program that grew monthly traffic from 90 to 500+ visitors.</p>
+            <div class="mt-auto pt-4 font-mono text-sm font-bold text-rust-deep">View case study →</div>
           </div>
         </a>
       </article>
 
       {{-- 4. Evie --}}
       <article class="sticker tilt-r overflow-hidden bg-[#eed9b2] opacity-0 translate-y-6 transition-all duration-700 ease-out reveal" data-delay="250">
-        <a href="{{ url('/portfolio/evie-graphic-design') }}" class="block no-underline">
+        <a href="{{ url('/portfolio/evie-graphic-design') }}" class="flex h-full flex-col no-underline">
           <div class="aspect-[16/9] overflow-hidden border-b-2 border-ink">
             <img src="{{ asset('images/evie/evie.webp') }}" srcset="{{ asset('images/evie/evie-sm.webp') }} 640w, {{ asset('images/evie/evie.webp') }} 1980w" sizes="(max-width: 767px) 90vw, 30vw" alt="Evie Bowerman portfolio" width="1980" height="1080" class="retro-img h-full w-full object-cover object-center transition duration-700 hover:scale-[1.03]" loading="lazy">
           </div>
-          <div class="p-6">
+          <div class="flex flex-1 flex-col p-6">
             <div class="flex flex-wrap gap-2">
               <span class="rounded-full border-[1.5px] border-ink bg-cream px-2.5 py-0.5 font-mono text-[11.5px] text-ink">Portfolio</span>
               <span class="rounded-full border-[1.5px] border-ink bg-cream px-2.5 py-0.5 font-mono text-[11.5px] text-ink">AI Search Optimisation</span>
               <span class="rounded-full border-[1.5px] border-ink bg-cream px-2.5 py-0.5 font-mono text-[11.5px] text-ink">Strategy</span>
             </div>
             <h2 class="mt-3 font-display text-lg font-semibold">Evie's Design Portfolio</h2>
-            <p class="mt-1 text-sm text-ink-soft">A sleek portfolio with clean UX and SEO integration that helped Evie attract clients and land freelance projects.</p>
-            <div class="mt-4 font-mono text-sm font-bold text-rust-deep">View case study →</div>
+            <p class="mt-1 text-base text-ink-soft">A sleek portfolio with clean UX and SEO integration that helped Evie attract clients and land freelance projects.</p>
+            <div class="mt-auto pt-4 font-mono text-sm font-bold text-rust-deep">View case study →</div>
           </div>
         </a>
       </article>

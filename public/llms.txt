@@ -1,6 +1,6 @@
 # Bowerman Digital
 
-> Bowerman Digital is a Sydney-based digital strategy agency that helps businesses stay relevant and competitive in the age of AI. We specialise in AI search optimisation, AI-ready web development, AI tool integration, and full digital strategy — working with small businesses and startups across Australia.
+> Bowerman Digital is a Sydney-based digital agency that helps Australian small businesses get online, get found, and grow. We do website rebuilds, custom CRM builds, SEO and AI search optimisation, fast Australian hosting and maintenance, and automation — working directly with each client, in plain English.
 
 ## About
 
@@ -8,11 +8,12 @@ Bowerman Digital gives every project direct, hands-on attention — you work wit
 
 ## Core Services
 
-- [AI Search Optimisation](https://bowermandigital.com/services): Optimise your business for AI-powered search engines like ChatGPT, Perplexity, Google AI Overviews, and traditional SEO. We ensure your business gets recommended by both humans and machines.
-- [AI-Ready Web Development](https://bowermandigital.com/services): We build fast, semantic, structured websites that AI systems can understand, parse, and recommend. Clean markup, structured data, and machine-readable content architecture.
-- [AI Tool Integration](https://bowermandigital.com/services): Set up AI chatbots, workflow automations, and intelligent tools that save your team time and improve customer experience. From CRM automation to AI-powered support.
-- [AI Discoverability & llms.txt](https://bowermandigital.com/services): Make your business visible to AI agents and large language models. We implement llms.txt, structured data, and content strategies that ensure AI systems accurately represent your business.
-- [Digital Strategy & Content](https://bowermandigital.com/services): End-to-end digital strategy that positions your business for the AI era — from content planning and email marketing to privacy compliance and ongoing growth support.
+- [Website Rebuilds](https://bowermandigital.com/services): Fresh, fast, easy-to-use websites that bring in enquiries. Clean, modern builds that work on any device, load quickly, and are simple to update. No page builders, no bloat.
+- [CRM Builds](https://bowermandigital.com/services): Custom CRMs that keep customers, bookings and follow-ups in one place, built around how a business actually works — with automated reminders and follow-ups so nothing slips through.
+- [SEO & AI Optimisation](https://bowermandigital.com/services): Get found on Google and recommended by AI tools like ChatGPT, Perplexity and Google AI Overviews. We use structured data, llms.txt and clear content that both humans and AI systems can understand and recommend.
+- [Hosting & Maintenance](https://bowermandigital.com/services): Fast, secure website hosting on Australian servers, kept updated, backed up and monitored. We spot and fix problems proactively so clients don't have to think about it.
+- [Automation](https://bowermandigital.com/services): Automating the repetitive jobs — follow-up emails, bookings, data entry — with AI tools and workflows set up properly, not hacked together.
+- [Digital Strategy & Content](https://bowermandigital.com/services): A clear plan that ties it all together — content, email, and where to focus. Plain-English advice for small businesses navigating the shift to AI-powered discovery.
 
 ## Portfolio & Case Studies
 
@@ -30,12 +31,13 @@ Bowerman Digital gives every project direct, hands-on attention — you work wit
 
 ## How We Work
 
-Getting started is simple: you get in touch and hear back fast (usually the same day); we have a call to talk through what you want and set clear expectations; I put together a free, no-obligation proposal in plain English; and if you're happy, we kick off — keeping you in the loop the whole way to completion. Ongoing support, SEO and AI optimisation are available month-to-month after launch.
+Getting started is simple: you get in touch and hear back fast (usually the same day); we have a call to talk through what you want and set clear expectations; we put together a free, no-obligation proposal in plain English; and if you're happy, we kick off — keeping you in the loop the whole way to completion. Ongoing support, SEO and AI optimisation are available month-to-month after launch.
 
 ## Key Facts
 
 - Direct, hands-on attention on every project — you work with the person building it
 - Sydney-based, serving businesses across Australia
 - No lock-in contracts — month-to-month support available
+- Website hosting and maintenance on secure Australian servers
 - Specialising in AI-era digital strategy since 2024
 - Privacy-first approach — Simple Analytics, no third-party tracking
